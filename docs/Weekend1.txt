@@ -1,0 +1,92 @@
+﻿1. sobota 07.10.2017
+a) wprowadzenie
+- powitanie uczestników, przedstawienie siebie, powiedzieć o idei szkolenia 
+- omówienie kursu
+	- przypomnienie terminów i miejsc spotkań
+	- praca z własnymi komputerami
+	- głównie warsztaty, przed każdym będzie wprowadzenie
+	- praca domowa
+	- pytania
+	- materiały dodatkowe
+- oczekiwania uczestników względem kursu
+- programista, kto to jest, na co to komu
+	- czy programista to nerd?
+	- kto może nim zostać
+	- jak to jest z hajsem - dużo ale to nie najważniejsze, nie dajcie się zniewolić
+	- jak się uczyć
+- praca
+	- skład zespołu: pm, analityk, dev, tester, ux, grafik
+	- czas życia oprogramowania: zapytanie, estymacja, projektowanie, analiza, development+testy, utrzymanie
+
+b) architektura nowych systemów
+- różne rodzaje oprogramowania: embedded, desktop, web, mobile itp
+- skupiamy się na web. omówić klient-serwer
+- języki programowania
+- język to nie wszystko - co to takiego i po co framework. Prezentacja ogólnych informacji o frameworkach
+- dodatkowe narzędzia: programowanie, system kontroli wersji, narzędzie do zadań, continuous integration
+
+c) wstęp do C# i .NET
+- co to język wysokiego i niskiego poziomu
+- co to język C#, czy można pisać bez .NET
+- co to .NET
+- po co kompilacja
+- zapoznanie się z Visual Studio
+
+d) pierwsza aplikacja C#
+- tworzenie projektu, wyjaśnienie różnicy pomiędzy szablonami projektów
+- omówienie wyglądu pliku
+- napisanie pierwszej bardzo prostej aplikacji "hello, world!"
+- uruchamianie programu w vs i poza vs
+- omówienie profilu kompilacji: debug i release
+- zrozumienie co to *.sln i *.csproj
+- dobre praktyki nazywania projektów
+
+2. niedziela 08.10.2017
+a) podstawy języka i debugowanie w C#
+- typy danych: value, reference, pointer
+- tworzenie zmiennych i ich konwersja explicit (int)x oraz implicit .ToString()
+- tablice
+- tworzenie const - przypisanie do zmiennych oraz znaki specjalne w string np. \n \t \r \v
+
+b) kontynuacja nauki c#
+- operatory: arytmetyczne, porównania, logiczne
+- podejmowanie decyzji: if, if+else, switch, a ? b : c
+- pętle: for, foreach, while, do while. Omówienie słów kluczowych break, continue;
+- enkapsulacja: public, private, protected, internal
+- metodyk
+- enumeracje
+- przestrzenie nazw
+
+c) git podstawy
+- wyjaśnienie ogólne na przykładzie domków: local, origin, pull, push, commit, branch
+- zakładanie konta na github
+- tworzenie repozytorium na github
+- instalacja git + turtoise git
+- przećwiczenie git add - jeden wspólny plik z listą obecności + plik z regulaminem zajęć
+- przećwiczenie git pull
+- przećwiczenie git push
+
+d) git aspekty zaawansowane
+- przećwieczenie tworzenia brancha
+- merge branchy
+- rozwiązywanie konfliktów na przykładzie wspólnej zmiany
+- omówienie gitflow
+
+
+ZADANIE DOMOWE Ex0.Introduction
+Stworzyć program konsolowy, który przyjmuje dowolne parametry poprzez wywołanie pliku exe z konsoli windows. Rezultatem działania programu ma być wyświetlony w konsoli tekst:
+
+Exercise 1 - Introduction
+----------------------------------------------------
+Today is {aktualna data}
+
+Console arguments:
+
+Argument {argument_index} of {arguments_count}
+Value: {argument_value}
+Upper letters: {x}
+Lower letters: {x}
+Digits: {x}
+
+Click any key to continue...
+

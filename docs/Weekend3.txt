@@ -1,0 +1,65 @@
+﻿1. sobota 04.11.2017
+a) Zaawansowane aspekty C#
+ - przypomnieć o klasach List<T> i Dictionary<TKey, TObject> oraz o interfejsach IList, ICollection, IEnumerable, IDictionary - są to generyki!
+ - zmienne nullable. Poćwiczyć przekazanie zmiennej int? do metody i wyświetli informację w konsoli czy ma wartość czy nie. Dodać zmienną nullable jako prop w klasie
+ - atrybuty - służą do dodania metainformacji do elementów (klasa, interfejs, propercja) itp. Podać jako przykład istniejące atrybuty w serializacji. Omówić na szybko co to serializacja i przedstawić atrybut DataContract i DataMember. Pokazać skutek poprzez serializację do JSON MemoryStream stream1 = new MemoryStream(); DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person)); ser.WriteObject(stream1, p);
+ - napisać własny atrybut AuthorName zawierający nazwisko i email autora
+ - delegaty - wyjasnić że jest to referencja na metodę. Przy deklaracji delegatu musimy znać typ zwracany i parametry. Ciało metody może się zmieniać, ale nie może się zmieniać sygnatura (argumenty i rezultat). Deklarujemy delegat jako: public delegate int MyDelegate(string s); dzięki czemu mamy typ MyDelegate. Możemy zrobić instancję delegatu poprzez MyDelegate x = new MyDelegate(Metoda1); a następnie wywołać go poprzez x("test");
+ - wyrażenia lambda - to fajniejszy skosób na zapis delegatu
+ - linq = toEntity, toSql, 
+ 
+b) wiele projektów w solucji - referencje bibliotek
+ - wyjaśnić po co w ogóle robimy wiele projektów i dlaczego nie wszystko w 1 projekcie (wielouzywalność)
+ - napisać aplikację z 3 projektami: Services, Data, Console. Podzielić aplikację biblioteki na części
+ - nuget - wyjasnić co to jest i jak działa. Pobrać paczkę newtonsoft json. Pokazać szukanie przez web, dodatek do vs i konsolę
+   
+c) Protokół HTTP
+ - omówić pojęcie aplikacji webowej jako 1 program współdzielony pomiędzy wielu userów
+ - opowiedzieć jak to wygląda od requestu do tekstowej odpowiedzi.
+ - rodzaje odpowiedzi tekstowej: plain, html, xml, json
+ - opowiedzieć o farmie serwerów
+ - co to protokuł. Co opisuje http. Cechy: bezstanowość, tekstowy, żądanie-odpowiedź. Czym się różni od https. metody przesyłania: get, post, put, delete, head. Kody odpowiedzi
+d) Podejście Microsoft do tworzenia aplikacji webowych
+ - opowiedzieć o historii aplikacji webowych - asp web forms (podobne do winforms)
+ - minusy web forms
+ - wzorzec MVC
+ - zastosowanie MVC w web
+ - potok przetwarzania w mvc: routing, fabryka kontrolerów, fabryka akcji, filtry akcji, akcja, odpowiedź
+ - razor - tylko wspomnieć
+
+2. Niedziela 05.11.2017
+a) Tworzenie aplikacji ASP.NET MVC5
+ - omówić katalogi i ich zawartość
+ - utworzyć prostą plikację która zwróci hello world
+ - wyjaśnić hostowanie w IIS express
+ - pokazać IIS
+ - zwrócić html
+ - przekazać model do widoku
+b) Routing po stronie serwera
+ - omówić podstawowy wpis w tablicy routing
+ - utworzyć niestandardowy routing
+ - opowiedzieć o parametrach opcjonalnych, liczbie segmentów, ważnej kolejności
+ - zrobić ćwiczenie z datą /data/teraz /data/teraz/format /data/wczoraj/format
+c) Podział logiki na kontrolery i akcje
+ - utworzyć kilka podston i kilka kontrolerów
+ - zwrócenie json
+ - zwrócenie widoku
+ - przekierowanie do innej akcji
+ - przekierwoanie do innego kontrolera
+ - aplikacja testowa
+d) Silnik razor
+- renderowanie danych z modelu
+- słowo kluczowe @model @Model
+- oferacje foreach, if, @function
+- przekazać jakis złożony model do widoku
+- klasa statyczna @Html
+- tworzenie komponentów poprzez @Html
+- własna metoda @Html.HelloWorldText - powiedzieć co to extension method
+
+Zadanie domowe:
+- mamy listę produktów
+- zrobić stronę internetową na której wyświetlimy następujące strony:
+(get)domain.com/ - wyświetlenie tekstu powitalnego i informacji ile mamy produktów
+(get)domain.com/products - lista wszystkich produktów
+(get)domain.com/prodcuts?page=1&items=10 - pobranie części produktów
+(get)domain.com/about - proste informacje o autorze strony
