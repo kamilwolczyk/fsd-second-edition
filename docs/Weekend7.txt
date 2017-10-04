@@ -1,0 +1,40 @@
+﻿1. sobota 13.01.2018
+a) Trendy w programowaniu warstwy klienta
+ - Node package manager
+ - Webpack
+ - EcmaScript 6 i babel
+ - Frameworki MVVM i MVC w warstwie klienta
+b) Angular CLI
+- tworzenie nowej aplikacji z użyciem narzędzia angular CLI
+- omówienie struktury nowego projektu
+- przedstawienie modułu i komponentu głównego
+- generowanie komponentu z tekstem "Hello, world"
+c) Typescript
+- zmienne i funkcje
+- klasy i interfejsy
+- enumeracje
+- moduły i importy
+- dekoratory
+- wyrażenia lambda, interpolacja stringów
+d) Podejście tworzenia komponentów w aplikacji
+- generowanie komponentów poprzez CLI
+- two ways data binding i możliwa synchronizacja js-html
+- dyrektywy *ng-If/else i *ng-For
+- ćwiczenie "strona z zegarem"
+
+2. Niedziela 14.01.2018
+a) Obsługa zdarzeń
+- możliwe hooki na przykładzie ngOnInit()
+- wywoływanie callbacków akcji użytkownika
+b) Wiele komponentów i reużywanie istniejących
+- przekazywanie parametrów do komponentu
+- zakres zmiennych
+- komunikacja przez @Input() i @Output. Klasa EventEmitter
+c) Dependency injection i serwisy
+- omówienie potrzeby stosowania serwisów
+- wstrzykiwanie zależności w UI
+d) Zastosowanie wszystkich poznanych aspektów w praktyce
+- tworzenie mini aplikacji "zarządzanie składem zespołu"
+
+W domu
+system rezerwacji potraw w restauracji

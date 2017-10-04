@@ -1,0 +1,24 @@
+﻿1. sobota 27.01.2018
+a) Transkluzja
+- problem komponentów, które mają podobne zachowanie oraz wygląd ale odmienną zawartość np. tabela, modal
+- podstawowy zapis transkluzji z uzyciem ng-content na przykładzie graficznego elementu
+- transkluzja wielu elementów - komponent cytatu (quotation)
+- zadanie "dialog modal" z ostylowaniem i animacją komponentu
+
+b) dyrektywa ngModel i formularze template driven
+- wyjaśnienie dyrektywy ngModal: one & two way data binding
+- zbudowanie formularza logowania 
+- omówienie potrzeby przechowania kopii obiektu do czasu jego wysłania
+- dyrektywa ngForm i #form="ngForm" (form.invalid, form.value)
+- wprowadzenie do zmiennych template'u: #someVariable i przechwycenie wartości dyrektywy ngModel
+- walidacja formularza: wygląd kontrolki i tekst błędu
+- pobranie informacji o stanie konkretnej kontrolki poprzez control.hasError('xx')
+
+c) formularz model driven
+d) rxjs, routing i zapytanie http
+
+2. Niedziela 28.01.2018
+a) Omówienie wymagań projektu
+b) Projektowanie aplikacji: warstwy, dobór technologii
+c) Projektowanie domeny biznesowej: baza, encje, powiązanie
+d) Projektowanie architektury serwera i klienta

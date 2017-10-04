@@ -1,0 +1,53 @@
+﻿1. sobota 18.11.2017
+a) Omówienie zadania domowego i prezentacja dodatkowych elementów: @Html, ViewBag, Dependency Injection
+ - prezentacja architektury rozwiązania
+ - @Html w widokach
+ - napisanie własnej funkcji (extension method) dla klasy @Html
+ - wyjasnić zasadę DependencyInjection i dodać Autofac jako kontener DI
+ - zainstalować Autofac, Autofac.Mvc z nugeta. Dodać konfigurację kontenera
+
+b) Przesyłanie informacji z klienta do serwera - mechanizm Post-Back
+ - utworzyć formularz rejestracji nowego użytkownika z imie|nazwisko|adres|login|email|hasło|powtórzenie hasła poprzez @Html
+ - objaśnić request zwrotny - postback
+ - odebrać dane z formularza
+ - omówić atak cross-site request forgery CSRF i anti forgery. Zapobieganie atakowi [ValidateAntiForgeryToken]
+ - walidacja formularza
+c) IIS
+ - instalacja IIS
+ - plik web.config
+ - dodawanie aplikacji
+ - debugowanie aplikacji IIS
+ - plik hosts w Windows
+d) Layout, PartialView, ActionView
+ - przekazywanie elementu do layoyut (ViewBag)
+ - body() i sections() w layoucie
+ - wyświetlenie takiej samej informacji na wielu stronach - PartialView
+ - wyświetlenie informacji po pewnej akcji - ActionView
+
+2. Niedziela 19.11.2017
+a) Instalacja SQL Server Express 2014
+ - nowa instancja SQL
+ - instalacja SQL Management Studio
+ - poznanie DBMS
+ - tworzenie prostej bazy danych samochodów
+b) Ćwiczenie podstawowych zapytań
+ - select * form ...
+ - select distinct|all|top(n), orderby asc|desc
+ - where
+ - złączenia: wewnętrzne i zewnętrze
+ - groupby + funkcje skalarne: min, max, anv, sum, count
+ - having
+ - podzapytania
+ - insert into xxx values ('')
+ - update xxx set pole=value where ...
+ - delete from xxx where ...
+c) Połączenie z bazą danych poprzez ADO.NET
+ - utworzyć nowego usera w bazie na potrzeby aplikacji
+ - dodać connection string
+ - połączyć się do bazy poprzez data reader
+ - pobrać przykładowe dane z bazy i zapisać do obiektu
+
+d) Użycie połączenia bazy SQL we własnej aplikacji
+ - utworzyć tabele w bazie pozwalające przechować produkty
+ - wypełnić tabelę danymi
+ - napisać własną mini bibliotekę do pobierania elementów i mapowania na klasy
