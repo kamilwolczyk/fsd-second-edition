@@ -1,0 +1,40 @@
+body{
+  background: deepskyblue url(assets/sky.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: black;
+  text-align: center;
+}
+
+button {
+  background: black;
+  color: white;
+  padding: 10px;
+  border: solid 1px silver;
+  border-radius: 5px;
+}
+
+.selected {
+  background-color: orange;
+}
+
+#answers-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#answers-container button {
+  width: 50%;
+}
+
+#result-container {
+  margin: 0 auto; 
+  background: blue;
+  color: white;
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 10px;
+  width: 80%;
+}

@@ -1,0 +1,22 @@
+﻿@using Fsd.Kamil.Cs.Ex4.Data.Enums
+@model ProductModel
+
+@{ 
+    IDictionary<ProductType, string> productViews = new Dictionary<ProductType, string>
+        {
+            {ProductType.Keyboard, "Keyboard" },
+            {ProductType.Monitor, "Monitor" },
+            {ProductType.Mouse, "Mouse" },
+            {ProductType.Phone, "Phone" },
+            {ProductType.Tablet, "Tablet" },
+            {ProductType.Notebook, "Notebook" }
+        };
+}
+
+@using (Html.BeginForm()) 
+{ 
+    @Html.Partial("Forms/_BaseFields", Model)
+    @Html.Partial(string.Format("Forms/Types/_{0}", productViews[Model.Type]), Model)
+
+    <input type="submit" value="Wyślij" />
+}

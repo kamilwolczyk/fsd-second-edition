@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: brown;
+    color: white;
+}
+
+td,
+th {
+    border: 1px solid gray;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.total{
+    background: gray;
+    color: white;
+    font-weight: bold;
+}
+
+.action-cell {
+    width: 100px;
+}
+
+.no-items{
+    text-align: center;
+    font-size: 0.7em;
+    color: gray;
+    padding: 20px;
+}
+
+.empty-cell{
+    border: none;
+}

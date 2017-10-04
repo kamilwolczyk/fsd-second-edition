@@ -1,0 +1,25 @@
+﻿@model ProductModel
+
+<div class="form-group">
+    @Html.LabelFor(model=>model.Producer)
+    @Html.EditorFor(model => model.Producer, new { @class= "form-control" })
+    @Html.ValidationMessageFor(model => model.Producer)
+</div>
+<div class="form-group">
+    @Html.LabelFor(model=>model.Model)
+    @Html.EditorFor(model => model.Model, new { @class= "form-control" })
+    @Html.ValidationMessageFor(model => model.Model)
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.Price)
+    @Html.EditorFor(model => model.Price, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.Price)
+</div>
+<div class="form-group">
+    @Html.LabelFor(model => model.ProductionDate)
+    @Html.EditorFor(model => model.ProductionDate, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.ProductionDate)
+</div>
+
+@Html.HiddenFor(model=>model.Id)
+@Html.HiddenFor(model => model.Type)
