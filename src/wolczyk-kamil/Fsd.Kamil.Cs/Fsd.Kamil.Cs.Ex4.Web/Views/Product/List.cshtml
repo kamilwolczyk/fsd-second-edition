@@ -1,0 +1,71 @@
+﻿@using Fsd.Kamil.Cs.Ex4.Data.Enums
+@model DataPart<ProductModel>
+@{ 
+    int pages = Model.TotalCount / Model.Take;
+
+    if (Model.TotalCount % Model.Take > 0)
+    {
+        pages = pages + 1;
+    }
+}
+<h2>Available products</h2>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Add new product <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        @foreach (ProductType type in Enum.GetValues(typeof(ProductType)))
+        {
+            <li>@Html.ActionLink(type.ToString(), "Create", new { type = type })</li>
+        }
+    </ul>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producer</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Production date</th>
+            <th>Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductModel product in Model.Items)
+        {
+            <tr>
+                <td>@product.Producer</td>
+                <td>@product.Model</td>
+                <td>@product.Price zł</td>
+                <td>@product.ProductionDate.ToShortDateString()</td>
+                <td>@product.Type</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = product.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= pages; i++)
+                        {
+                            <li>
+                                @Html.RouteLink(i.ToString(), "Product", new { items = Model.Take, page = i })
+                            </li>
+                        }
+                    </ul>
+                </nav>
+                
+                Items: @Model.Take
+            </td>
+            <td>Total items: @Model.TotalCount</td>
+        </tr>
+    </tfoot>
+</table>
+
