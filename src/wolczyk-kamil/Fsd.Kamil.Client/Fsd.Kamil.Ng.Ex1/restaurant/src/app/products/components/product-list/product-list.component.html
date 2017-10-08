@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Cena</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items; let i = index" [attr.data-index]="i">
+      <td class="text-center">{{i+1}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.description}}</td>
+      <td class="text-center">{{item.price|number:'.2'}} zł</td>
+      <td class="action-cell text-center">
+        <kw-grid-button (action)="selectProduct(item)" text="+"></kw-grid-button>
+      </td>
+    </tr>
+  </tbody>
+</table>

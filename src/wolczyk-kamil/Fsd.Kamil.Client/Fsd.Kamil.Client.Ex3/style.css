@@ -1,0 +1,73 @@
+#app {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#selector-panel {
+  border-right: dashed 1px gray;
+  width: 50%;
+  flex: none;
+}
+
+#preview-box {
+  width: 50%;
+  height: 50%;
+  margin: 20px;
+  padding: 20px;
+  border: solid 2px black;
+}
+
+.selector-color {
+  display: inline-block;
+  width: 100px;
+  height: 100px;  
+  padding: 5px;
+  border: solid 1px silver;
+  cursor: pointer;
+}
+
+.selected {
+  border: solid 1px black;
+  box-shadow: 5px 5px 13px #888888;  
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.silver {
+  background-color: silver;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.orange {
+  background-color:orange;
+}
+
+.purple {
+  background-color: purple;
+}

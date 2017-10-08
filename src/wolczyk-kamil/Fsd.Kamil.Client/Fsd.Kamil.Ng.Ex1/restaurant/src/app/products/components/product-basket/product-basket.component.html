@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Produkt</th>
+      <th>Cena</th>
+      <th>Ilość</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="order.items.length>0">
+    <tr *ngFor="let orderItem of order.items; let i = index" [attr.data-index]="i">
+      <td>{{i+1}}</td>
+      <td>{{orderItem.product.title}}</td>
+      <td class="text-center">{{orderItem.product.price|number:'.2'}} zł</td>
+      <td>{{orderItem.quantity|number}}</td>
+      <td class="action-cell text-center">
+        <kw-grid-button (action)="removeProduct(orderItem.product)" text="-"></kw-grid-button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="total">Do zapłaty:</td>
+      <td colspan="2" class="text-center total">{{order.totalPrice|number:'.2'}} zł</td>
+      <td class="empty-cell"></td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="order.items.length==0">
+    <tr>
+      <td colspan="5" class="no-items">
+        Nie dodano produktow
+      </td>
+    </tr>
+  </tbody>
+</table>
