@@ -53,7 +53,7 @@ b) kontynuacja nauki c#
 - podejmowanie decyzji: if, if+else, switch, a ? b : c
 - pętle: for, foreach, while, do while. Omówienie słów kluczowych break, continue;
 - enkapsulacja: public, private, protected, internal
-- metodyk
+- metody
 - enumeracje
 - przestrzenie nazw
 
