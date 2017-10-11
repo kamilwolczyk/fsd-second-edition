@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fsd.porowiec.michal.Cs1
+namespace Fsd.Porowiec.Michal.Cs1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Main start = new Main();
+            StringAnalyzer start = new StringAnalyzer();
             start.Run(args);
-
         }
     }
 }

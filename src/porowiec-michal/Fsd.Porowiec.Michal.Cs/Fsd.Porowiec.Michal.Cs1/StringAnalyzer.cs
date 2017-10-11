@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fsd.porowiec.michal.Cs1
+namespace Fsd.Porowiec.Michal.Cs1
 {
-    class Main
+    class StringAnalyzer
     {
         public void Run(string[] args)
         {
-            Console.WriteLine("Today is: " + DateTime.Now + "\n");
+            Console.WriteLine($"Today is: {DateTime.Now} \n");
             Console.WriteLine("Console Arguments: \n");
+
             for (int i = 0; i<args.Length; i++)
             {
                 Console.WriteLine($"This is argument number {i+1} of {args.Length}");
-                Console.WriteLine("Argument Value: " + args[i]);
-                Console.WriteLine("Upper Letters: " + Uppers(args[i]));
-                Console.WriteLine("Lower Letters: " + Lowers(args[i]));
-                Console.WriteLine("Digits: " + Digits(args[i]) + "\n");
+                Console.WriteLine($"Argument Value: {args[i]}");
+                Console.WriteLine($"Upper Letters: {Uppers(args[i])}");
+                Console.WriteLine($"Lower Letters: {Lowers(args[i])}");
+                Console.WriteLine($"Digits: {Digits(args[i])} \n");
             }
          
             Console.ReadKey();
@@ -26,14 +27,14 @@ namespace Fsd.porowiec.michal.Cs1
 
         private int Uppers(string sentence)
         {
-            int numberOfUpers = 0;
+            int numberOfUppers = 0;
 
             for(int i =0; i<sentence.Length; i++)
             {
                 if (char.IsUpper(sentence[i]))
-                    numberOfUpers++;
+                    numberOfUppers++;
             }
-            return numberOfUpers;
+            return numberOfUppers;
         }
 
         private int Lowers(string sentence)

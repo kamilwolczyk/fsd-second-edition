@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("Fsd.porowiec.michal.Cs1")]
+[assembly: AssemblyTitle("Fsd.Porowiec.Michal.Cs1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Fsd.porowiec.michal.Cs1")]
+[assembly: AssemblyProduct("Fsd.Porowiec.Michal.Cs1")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Następujący identyfikator GUID jest identyfikatorem biblioteki typów w przypadku udostępnienia tego projektu w modelu COM
-[assembly: Guid("0746f1c1-94e6-4ab4-85f6-7d5ec6618224")]
+[assembly: Guid("657d6530-258e-4428-81c0-35501388885f")]
 
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
