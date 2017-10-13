@@ -1,6 +1,6 @@
 ﻿namespace Fsd.Sebastian.Cs1
 {
-    enum CType
+    enum CharType
     {
         Upper,
         Lower,

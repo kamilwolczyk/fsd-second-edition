@@ -2,7 +2,7 @@
 
 namespace Fsd.Sebastian.Cs1
 {
-    class HeaderAndFooter
+    class ContentPresenter
     {
         public void Header()
         {

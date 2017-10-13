@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharCounter.cs" />
-    <Compile Include="CType.cs" />
-    <Compile Include="HeaderAndFooter.cs" />
+    <Compile Include="CharType.cs" />
+    <Compile Include="ContentPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

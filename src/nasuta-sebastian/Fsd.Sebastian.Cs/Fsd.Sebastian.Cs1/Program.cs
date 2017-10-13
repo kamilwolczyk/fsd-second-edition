@@ -6,11 +6,9 @@ namespace Fsd.Sebastian.Cs1
     {
         static void Main(string[] args)
         {
-            HeaderAndFooter hf = new HeaderAndFooter();
-            hf.Header();
-            CharCounter cc = new CharCounter();
-            cc.Run(args);
-            hf.Footer();
+            new ContentPresenter().Header();
+            new CharCounter().Run(args);
+            new ContentPresenter().Footer();
         }
     }
 }
