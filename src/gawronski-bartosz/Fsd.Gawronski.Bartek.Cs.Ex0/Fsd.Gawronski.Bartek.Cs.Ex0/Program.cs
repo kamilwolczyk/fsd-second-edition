@@ -10,6 +10,37 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
     {
         static void Main(string[] args)
         {
+            Console.WriteLine($"Today is: {DateTime.Now}");
+            Console.WriteLine();
+
+            for (int i = 0; i<args.Length; i++)
+            {
+                Console.WriteLine($"Argument {i} of {args.Length}");
+                Console.WriteLine($"Value: {args[i]}");
+                Console.WriteLine($"Upper letters: {UppercaseDetect(args[i])}");
+                Console.WriteLine($"Lower letters: {LowercaseDetect(args[i])}");
+                Console.WriteLine($"Digits: {DigitDetect(args[i])}");
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Click any key to continue...");
+            Console.ReadKey();
+        }
+
+        static int UppercaseDetect(string args)
+        {
+            return 0;
+        }
+
+        static int LowercaseDetect(string args)
+        {
+            return 0;
+        }
+
+        static int DigitDetect(string args)
+        {
+            return 0;
         }
     }
 }
