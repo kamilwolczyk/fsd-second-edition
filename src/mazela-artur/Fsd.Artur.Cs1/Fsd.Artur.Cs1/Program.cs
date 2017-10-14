@@ -12,12 +12,13 @@ namespace Fsd.Artur.Cs1
         {
             Writing();
             Checking(args);
+            Console.WriteLine($"{Environment.NewLine}Click any key to continue...");
             Console.ReadKey();
         }
         static void Writing()
         {
-            string marks = "--------------------------------------";
-            Console.WriteLine($"Exercise 1 - Introduction {Environment.NewLine}{marks}{Environment.NewLine}{DateTime.Now.ToShortDateString()}{Environment.NewLine}Console arguments:{Environment.NewLine}");
+            string marks = "---------------------------------------------";
+            Console.WriteLine($"Exercise 1 - Introduction {Environment.NewLine}{marks}{Environment.NewLine}Today is {DateTime.Now.ToShortDateString()}{Environment.NewLine}{Environment.NewLine}Console arguments:{Environment.NewLine}");
  
         }
         static void Checking(string[] args)
