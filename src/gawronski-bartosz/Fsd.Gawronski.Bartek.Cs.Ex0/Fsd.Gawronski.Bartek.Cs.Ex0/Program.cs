@@ -24,7 +24,7 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
             Console.WriteLine("Click any key to continue...");
             Console.ReadKey();
         }
-
+        
         static int UppercaseDetect(string args)
         {
             int sum = 0;
