@@ -8,9 +8,8 @@ namespace Fsd.Excercise1.Cs
 {
     enum ArgumentType
     {
-        Number,
-        UpperLet,
-        LowerLet
-
+        Digit,
+        UpperChar,
+        LowerChar
     }
 }

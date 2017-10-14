@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{66F2FB97-DE83-462E-858F-E144512691DB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fsd.Excercise1.Cs</RootNamespace>
-    <AssemblyName>Fsd.Excercise1.Cs</AssemblyName>
+    <RootNamespace>Fsd.Pawelak.Cs</RootNamespace>
+    <AssemblyName>Fsd.Pawelak.Cs</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
