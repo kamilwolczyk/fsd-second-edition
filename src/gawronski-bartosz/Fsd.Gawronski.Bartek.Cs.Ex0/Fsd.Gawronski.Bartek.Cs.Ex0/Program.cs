@@ -10,8 +10,7 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"Today is: {DateTime.Now}");
-            Console.WriteLine();
+            Console.WriteLine($"Today is: {DateTime.Now} \n");
 
             for (int i = 0; i<args.Length; i++)
             {
@@ -19,28 +18,53 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
                 Console.WriteLine($"Value: {args[i]}");
                 Console.WriteLine($"Upper letters: {UppercaseDetect(args[i])}");
                 Console.WriteLine($"Lower letters: {LowercaseDetect(args[i])}");
-                Console.WriteLine($"Digits: {DigitDetect(args[i])}");
-                Console.WriteLine();
+                Console.WriteLine($"Digits: {DigitDetect(args[i])} \n");
             }
 
-            Console.WriteLine();
             Console.WriteLine("Click any key to continue...");
             Console.ReadKey();
         }
 
         static int UppercaseDetect(string args)
         {
-            return 0;
+            int sum = 0;
+
+            for(int i = 0; i<args.Length; i++)
+            {
+                int letter = (int)args[i];
+                if (letter >= 65 && letter <= 90)
+                    sum++;
+            }
+
+            return sum;
         }
 
         static int LowercaseDetect(string args)
         {
-            return 0;
+            int sum = 0;
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                int letter = (int)args[i];
+                if (letter >= 97 && letter <= 122)
+                    sum++;
+            }
+
+            return sum;
         }
 
         static int DigitDetect(string args)
         {
-            return 0;
+            int sum = 0;
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                int letter = (int)args[i];
+                if (letter >= 48 && letter <= 57)
+                    sum++;
+            }
+
+            return sum;
         }
     }
 }
