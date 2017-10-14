@@ -9,7 +9,9 @@ namespace Fsd.Sebastian.Cs1
             Console.WriteLine("Console arguments:\n");
 
             if (args.Length == 0)
+            {
                 Console.WriteLine("No arguments\n");
+            }
             else
             {
                 for (int i = 0; i < args.Length; i++)
