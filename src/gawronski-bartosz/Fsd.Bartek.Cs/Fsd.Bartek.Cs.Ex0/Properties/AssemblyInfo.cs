@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // powiązane z zestawem.
-[assembly: AssemblyTitle("Fsd.Gawronski.Bartek.Cs.Ex0")]
+[assembly: AssemblyTitle("Fsd.Bartek.Cs.Ex0")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Fsd.Gawronski.Bartek.Cs.Ex0")]
+[assembly: AssemblyProduct("Fsd.Bartek.Cs.Ex0")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Następujący identyfikator GUID jest identyfikatorem biblioteki typów w przypadku udostępnienia tego projektu w modelu COM
-[assembly: Guid("2a30cbb1-2805-45ea-9476-7b95a1ff2a7c")]
+[assembly: Guid("deddee34-846e-4e40-bf49-7b5b7d59c012")]
 
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //

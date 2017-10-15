@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A30CBB1-2805-45EA-9476-7B95A1FF2A7C}</ProjectGuid>
+    <ProjectGuid>{DEDDEE34-846E-4E40-BF49-7B5B7D59C012}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fsd.Gawronski.Bartek.Cs.Ex0</RootNamespace>
-    <AssemblyName>Fsd.Gawronski.Bartek.Cs.Ex0</AssemblyName>
+    <RootNamespace>Fsd.Bartek.Cs.Ex0</RootNamespace>
+    <AssemblyName>Fsd.Bartek.Cs.Ex0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

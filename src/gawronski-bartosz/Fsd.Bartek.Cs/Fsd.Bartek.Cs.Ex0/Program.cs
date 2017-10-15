@@ -12,7 +12,7 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
         {
             Console.WriteLine($"Today is: {DateTime.Now} \n");
 
-            for (int i = 0; i<args.Length; i++)
+            for (int i = 0; i < args.Length; i++)
             {
                 Console.WriteLine($"Argument {i} of {args.Length}");
                 Console.WriteLine($"Value: {args[i]}");
@@ -24,14 +24,15 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
             Console.WriteLine("Click any key to continue...");
             Console.ReadKey();
         }
-        
+
         static int UppercaseDetect(string args)
         {
             int sum = 0;
 
-            for(int i = 0; i<args.Length; i++)
+            for (int i = 0; i < args.Length; i++)
             {
                 int letter = (int)args[i];
+
                 if (letter >= 65 && letter <= 90)
                     sum++;
             }
@@ -46,6 +47,7 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
             for (int i = 0; i < args.Length; i++)
             {
                 int letter = (int)args[i];
+
                 if (letter >= 97 && letter <= 122)
                     sum++;
             }
@@ -60,6 +62,7 @@ namespace Fsd.Gawronski.Bartek.Cs.Ex0
             for (int i = 0; i < args.Length; i++)
             {
                 int letter = (int)args[i];
+
                 if (letter >= 48 && letter <= 57)
                     sum++;
             }
