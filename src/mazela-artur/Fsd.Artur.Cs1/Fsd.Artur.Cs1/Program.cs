@@ -10,18 +10,18 @@ namespace Fsd.Artur.Cs1
     {
         static void Main(string[] args)
         {
-            Writing();
-            Checking(args);
+            WritingMessage();
+            CheckingArguments(args);
             Console.WriteLine($"{Environment.NewLine}Click any key to continue...");
             Console.ReadKey();
         }
-        static void Writing()
+        static void WritingMessage()
         {
             string marks = "---------------------------------------------";
             Console.WriteLine($"Exercise 1 - Introduction {Environment.NewLine}{marks}{Environment.NewLine}Today is {DateTime.Now.ToShortDateString()}{Environment.NewLine}{Environment.NewLine}Console arguments:{Environment.NewLine}");
  
         }
-        static void Checking(string[] args)
+        static void CheckingArguments(string[] args)
         {
             if (args.Length == 0)
             {
@@ -37,7 +37,7 @@ namespace Fsd.Artur.Cs1
         {
             {
                 Console.WriteLine($"Argument {argument_index} of {arguments_count}{Environment.NewLine}Value: {argument_value}");
-                Console.WriteLine($"Upper letters: { Analysis.UpperCounter(argument_value)}{Environment.NewLine}Lower letters: { Analysis.LowerCounter(argument_value)}{Environment.NewLine}Digits: { Analysis.DigitCounter(argument_value)}");  
+                Console.WriteLine($"Upper letters: { AnalysisSymbols.UpperCounter(argument_value)}{Environment.NewLine}Lower letters: {AnalysisSymbols.LowerCounter(argument_value)}{Environment.NewLine}Digits: { AnalysisSymbols.DigitCounter(argument_value)}");  
             }
         }
     }

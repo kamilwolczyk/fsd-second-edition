@@ -6,32 +6,28 @@ using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs1
 {
-    public class Analysis
+    public class AnalysisSymbols
     {
-        private static int Check(string parameter, int instruction)
+        private static int Check(string parameter, NumberOfInstruction instruction)
         {
             int counter = 0;
 
-            if(instruction == 1)
+            if(instruction == NumberOfInstruction.First)
             {
                 for (var i = 0; i < parameter.Length; i++)
                 {
                     char item = parameter[i];
                     if(Char.IsUpper(item) == true)
-                    {
                         counter++;
-                    }
                 }
             }
-            else if(instruction == 2)
+            else if(instruction == NumberOfInstruction.Second)
             {
                 for (var i = 0; i < parameter.Length; i++)
                 {
                     char item = parameter[i];
                     if (Char.IsLower(item) == true)
-                    {
                         counter++;
-                    }
                 }               
             }
             else
@@ -40,9 +36,7 @@ namespace Fsd.Artur.Cs1
                 {
                     char item = parameter[i];
                     if (Char.IsDigit(item) == true)
-                    {
                         counter++;
-                    }
                 }            
             }
             
@@ -51,17 +45,17 @@ namespace Fsd.Artur.Cs1
 
         public static int UpperCounter(string parameter)
         {
-            return Check(parameter, 1);
+            return Check(parameter, NumberOfInstruction.First);
         }
 
         public static int LowerCounter(string parameter)
         {
-            return Check(parameter, 2);
+            return Check(parameter, NumberOfInstruction.Second);
         }
 
         public static int DigitCounter(string parameter)
         {
-            return Check(parameter, 3);
+            return Check(parameter, NumberOfInstruction.Third);
         }
     }
 }
