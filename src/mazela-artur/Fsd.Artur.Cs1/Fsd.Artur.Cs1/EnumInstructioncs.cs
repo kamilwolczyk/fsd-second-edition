@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs1
 {
-    enum NumberOfInstruction
+    enum TypeOfChar
     {
-        First,
-        Second,
-        Third,
+        Upper,
+        Lower,
+        Digit,
     }
 }

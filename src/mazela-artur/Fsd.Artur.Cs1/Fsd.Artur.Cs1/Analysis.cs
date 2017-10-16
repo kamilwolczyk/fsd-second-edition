@@ -8,11 +8,11 @@ namespace Fsd.Artur.Cs1
 {
     public class AnalysisSymbols
     {
-        private static int Check(string parameter, NumberOfInstruction instruction)
+        private static int Check(string parameter, TypeOfChar instruction)
         {
             int counter = 0;
 
-            if(instruction == NumberOfInstruction.First)
+            if(instruction == TypeOfChar.Upper)
             {
                 for (var i = 0; i < parameter.Length; i++)
                 {
@@ -21,7 +21,7 @@ namespace Fsd.Artur.Cs1
                         counter++;
                 }
             }
-            else if(instruction == NumberOfInstruction.Second)
+            else if(instruction == TypeOfChar.Lower)
             {
                 for (var i = 0; i < parameter.Length; i++)
                 {
@@ -45,17 +45,17 @@ namespace Fsd.Artur.Cs1
 
         public static int UpperCounter(string parameter)
         {
-            return Check(parameter, NumberOfInstruction.First);
+            return Check(parameter, TypeOfChar.Upper);
         }
 
         public static int LowerCounter(string parameter)
         {
-            return Check(parameter, NumberOfInstruction.Second);
+            return Check(parameter, TypeOfChar.Lower);
         }
 
         public static int DigitCounter(string parameter)
         {
-            return Check(parameter, NumberOfInstruction.Third);
+            return Check(parameter, TypeOfChar.Digit);
         }
     }
 }
