@@ -1,19 +1,20 @@
 ﻿using System;
 
-namespace homework.week1
+namespace Fsd.Exercise1
 {
     public class CheckCharInMyArgs
     {
-        private int _digitsCount = 0, _upperCount = 0, _lowerCount = 0;
+        private int _digitsCount = 0;
+        private int _upperCount = 0;
+        private int _lowerCount = 0;
 
-        public void Check(string[] ArgsToCheck)
+        public void CountCharactersInArguments(string[] argsToCheck)
         {
-            int argsCount = ArgsToCheck.Length;
-            for (int i = 0; i < argsCount; i++)
+            for (int i = 0; i < argsToCheck.Length; i++)
             {
-                Console.WriteLine($"Argument {i + 1} of {argsCount }");
-                Console.WriteLine($"Value: {ArgsToCheck[i]}");
-                CountCharactersByType(ArgsToCheck[i]);
+                Console.WriteLine($"Argument {i + 1} of {argsToCheck.Length}");
+                Console.WriteLine($"Value: {argsToCheck[i]}");
+                CountCharactersByType(argsToCheck[i]);
                 PrintCounters();
                 ResetCounters();
             }
@@ -33,11 +34,12 @@ namespace homework.week1
             _lowerCount = 0;
         }
 
-        private void CountCharactersByType(string ArgsToCheck)
+        private void CountCharactersByType(string argsToCheck)
         {
-            for (int j = 0; j < ArgsToCheck.Length; j++)
+            for (int j = 0; j < argsToCheck.Length; j++)
             {
-                char charToCheck = ArgsToCheck[j];
+                char charToCheck = argsToCheck[j];
+
                 if (char.IsDigit(charToCheck))
                 {
                     _digitsCount++;
@@ -56,14 +58,6 @@ namespace homework.week1
                     continue;
                 }
             }
-        }
-
-        private int CheckMyChar(char myChartoCheck)
-        {
-            if (char.IsDigit(myChartoCheck))
-                return 1;
-
-            return 0;
         }
     }
 }
