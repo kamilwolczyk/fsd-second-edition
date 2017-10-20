@@ -1,5 +1,5 @@
 Full Stack Development Workshops
 Edition 2
 
-Kamil Wo³czyk
+Kamil Wolczyk
 HeadChannel Ltd
