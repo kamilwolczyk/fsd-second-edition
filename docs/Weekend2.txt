@@ -1,4 +1,4 @@
-﻿1. sobota 21.10.2017 - 2
+﻿1. sobota 21.10.2017
 a) scrum
 - czy są inne metodyki, dlaczego zwinne sa lepsze
 - role w zespole scrumowym: product owner, scrum master, developer
