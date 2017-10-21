@@ -8,7 +8,7 @@
 
         public override string SayHello()
         {
-            return $"Jestem {FirstName} i jestem tu szefem";
+            return $"{HelloPrefix} jestem {FirstName} i jestem tu szefem";
         }
     }
 }
