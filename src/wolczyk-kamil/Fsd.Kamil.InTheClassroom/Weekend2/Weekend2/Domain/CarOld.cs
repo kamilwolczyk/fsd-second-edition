@@ -2,9 +2,11 @@
 
 namespace Weekend2.Domain
 {
-    public class Car
+    public class CarOld : IClimatronic, ISecurity
     {
         bool _isRunning;
+
+        public int WindowCount { get; set; }
 
         public string Producer { get; set; }
 
@@ -14,7 +16,9 @@ namespace Weekend2.Domain
 
         public string Voice { get; private set; }
 
-        public Car(string name)
+        public bool HasAlarm { get; }
+
+        public CarOld(string name)
         {
             string[] parts = name.Split(' ');
 
@@ -24,16 +28,18 @@ namespace Weekend2.Domain
             Producer = parts[0];
             Model = parts[1];
             DoorCount = 3;
+            WindowCount = 3;
+            HasAlarm = true;
         }
 
-        public Car(string producer, string model, int doorCount)
+        public CarOld(string producer, string model, int doorCount)
         {
             Producer = producer;
             Model = model;
             DoorCount = doorCount;
         }
 
-        ~Car()
+        ~CarOld()
         {
             System.Console.WriteLine("Destruktor działa");
         }
@@ -48,6 +54,16 @@ namespace Weekend2.Domain
         {
             _isRunning = false;
             Voice = string.Empty;
+        }
+
+        public string ClimatronicOn()
+        {
+            return "zimnoooo";
+        }
+
+        public string ClimatronicOff()
+        {
+            return "ciepłoo";
         }
     }
 }

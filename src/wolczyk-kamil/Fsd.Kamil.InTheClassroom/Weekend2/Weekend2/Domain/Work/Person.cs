@@ -1,4 +1,4 @@
-﻿namespace Weekend2.Domain
+﻿namespace Weekend2.Domain.Work
 {
     public class Person
     {
