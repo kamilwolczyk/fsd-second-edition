@@ -47,6 +47,17 @@
     <Compile Include="Domain\Game.cs" />
     <Compile Include="Domain\IClimatronic.cs" />
     <Compile Include="Domain\ISecurity.cs" />
+    <Compile Include="Domain\Library\Book.cs" />
+    <Compile Include="Domain\Library\HeadLibrary.cs" />
+    <Compile Include="Domain\Library\ICloseable.cs" />
+    <Compile Include="Domain\Library\IRental.cs" />
+    <Compile Include="Domain\Library\Persons\BookReader.cs" />
+    <Compile Include="Domain\Library\BooksSource.cs" />
+    <Compile Include="Domain\Library\BookType.cs" />
+    <Compile Include="Domain\Library\Persons\LibraryWorker.cs" />
+    <Compile Include="Domain\Library\Persons\Person.cs" />
+    <Compile Include="Domain\Library\RentInfo.cs" />
+    <Compile Include="Domain\Library\RentResult.cs" />
     <Compile Include="Domain\Machines\Bike.cs" />
     <Compile Include="Domain\Machines\Car.cs" />
     <Compile Include="Domain\Machines\Motorbike.cs" />
