@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Pawelak.Cs1", "Fsd.Pawelak.Cs1\Fsd.Pawelak.Cs1.csproj", "{66F2FB97-DE83-462E-858F-E144512691DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Arek.Cs2", "Fsd.Arek.Cs2\Fsd.Arek.Cs2.csproj", "{4A745F53-EEA7-4000-87C4-7E377D079E1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{66F2FB97-DE83-462E-858F-E144512691DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66F2FB97-DE83-462E-858F-E144512691DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66F2FB97-DE83-462E-858F-E144512691DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A745F53-EEA7-4000-87C4-7E377D079E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A745F53-EEA7-4000-87C4-7E377D079E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A745F53-EEA7-4000-87C4-7E377D079E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A745F53-EEA7-4000-87C4-7E377D079E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
