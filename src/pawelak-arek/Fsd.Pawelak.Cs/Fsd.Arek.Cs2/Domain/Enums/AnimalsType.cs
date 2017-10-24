@@ -8,11 +8,10 @@ namespace Fsd.Arek.Cs2.Domain.Enum
 {
     public enum AnimalsType
     {
-        dogs,
+        dog,
         cat,
-        cows,
-        pigs,
-        NumberOfTypes
+        cow,
+        pig
     }
 
     

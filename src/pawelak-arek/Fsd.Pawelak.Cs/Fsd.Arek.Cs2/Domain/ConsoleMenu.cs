@@ -7,30 +7,21 @@ namespace Fsd.Arek.Cs2.Domain
     public class ConsoleMenu
     {
         const string line = "-----------------------------------";
-       
+
         public void Run()
         {
-            AnimalsFactory animalsFactory = new AnimalsFactory();
+            AnimalsFactory AnimalsFactory = new AnimalsFactory();
             SetHeader(2, line);
 
-            int numberOfAnimals = GetInformationFromUser(AnimalsType.cat);
-            animalsFactory.CreateAnimalsInFactory(numberOfAnimals, AnimalsType.cat);
+            GetUserInformation(AnimalsFactory, AnimalsType.cat);
+            GetUserInformation(AnimalsFactory, AnimalsType.cow);
+            GetUserInformation(AnimalsFactory, AnimalsType.dog);
+            GetUserInformation(AnimalsFactory, AnimalsType.pig);
 
+            foreach (Animal animal in AnimalsFactory.AnimalList)
+                Console.WriteLine(animal.SayHello());
 
-
-
-            WriteInformationAboutObject("cat name: ", animalsFactory.CatList);
-
-
-            numberOfAnimals = GetInformationFromUser(AnimalsType.cows);
-
-            
-
-            animalsFactory.CreateAnimalsInFactory(numberOfAnimals, AnimalsType.cows);
-            numberOfAnimals = GetInformationFromUser(AnimalsType.dogs);
-            animalsFactory.CreateAnimalsInFactory(numberOfAnimals, AnimalsType.dogs);
-            numberOfAnimals = GetInformationFromUser(AnimalsType.pigs);
-            animalsFactory.CreateAnimalsInFactory(numberOfAnimals, AnimalsType.pigs);
+            Console.ReadKey();
         }
 
         public void SetHeader(int numberExcercise, string line)
@@ -38,18 +29,23 @@ namespace Fsd.Arek.Cs2.Domain
             Console.WriteLine($"Excercise nr {numberExcercise} \n{line}");
         }
 
-        public int GetInformationFromUser(AnimalsType type)
+        public int GetIntDataFromUser(AnimalsType type)
         {
             Console.WriteLine($"Insert number of {type}");
             return int.Parse(Console.ReadLine());
         }
 
-        public void WriteInformationAboutObject(string content, List<Cat> animalList)
+        public void WriteInformationFromList(List<string> list)
         {
-            foreach(Animal animal in animalList)
-            Console.WriteLine($"{content}: {animal.Name}");
+            foreach (string text in list)
+                Console.WriteLine($"{text}");
         }
 
-        
+        public void GetUserInformation(AnimalsFactory factory, AnimalsType animalsType)
+        {
+            int numberOfAnimals = GetIntDataFromUser(animalsType);
+            factory.CreateAnimalsInFactory(numberOfAnimals, animalsType);
+            WriteInformationFromList(factory.GetNameAnimals(animalsType));
+        }
     }
 }

@@ -7,5 +7,12 @@
         Name = name;
     }
 
+    public abstract string FullPresent();
+    
     public abstract string GiveVoice();
+
+    public virtual string SayHello()
+    {
+        return $"Hello, my name is: {Name}, {GiveVoice()}";
+    }
 }

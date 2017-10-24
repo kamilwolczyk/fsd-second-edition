@@ -11,8 +11,8 @@ namespace Fsd.Arek.Cs2
     {
         static void Main(string[] args)
         {
-            ConsoleMenu consoleMenu = new ConsoleMenu();
-            consoleMenu.Run();
+            ConsoleMenu FactoryAnimalsProg = new ConsoleMenu();
+            FactoryAnimalsProg.Run();
         }
     }
 }

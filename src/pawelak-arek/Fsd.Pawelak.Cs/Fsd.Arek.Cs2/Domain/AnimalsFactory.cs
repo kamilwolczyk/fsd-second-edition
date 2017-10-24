@@ -7,55 +7,55 @@ using System.Threading.Tasks;
 
 namespace Fsd.Arek.Cs2.Domain
 {
-    class AnimalsFactory
+    public class AnimalsFactory
     {
-        List<Animal> _animalList = new List<Animal>();
+        // public List<Animal> AnimalList { get; set; }
 
-        public List<Cat> CatList { get; set; }
+        private List<Animal> _animalList = new List<Animal>();
 
-        public List<Cow> CowList { get; set; }
-
-        public List<Dog> DogList { get; set; }
-
-        public List<Pig> PigList { get; set; }
+        public List<Animal> AnimalList
+        {
+            get
+            {
+                return _animalList;
+            }
+            private set
+            {
+            }
+        }
 
         public void CreateAnimalsInFactory(int numberOfAnimal, AnimalsType animalsType)
         {
-            for (int i = 0; i < numberOfAnimal; i++)
+            for (int i = 1; i <= numberOfAnimal; i++)
             {
                 if (animalsType == AnimalsType.cat)
                     _animalList.Add(new Cat("cat" + i));
-                else if (animalsType == AnimalsType.cows)
+                else if (animalsType == AnimalsType.cow)
                     _animalList.Add(new Cow("cow" + i));
-                else if (animalsType == AnimalsType.dogs)
+                else if (animalsType == AnimalsType.dog)
                     _animalList.Add(new Dog("dog" + i));
-                else if (animalsType == AnimalsType.pigs)
+                else if (animalsType == AnimalsType.pig)
                     _animalList.Add(new Pig("pig" + i));
             }
         }
 
-        public void GetCatList()
+        public List<string> GetNameAnimals(AnimalsType animalsType)
         {
-            foreach (Cat cat in _animalList)
-                CatList.Add(cat);
-        }
+            List<string> nameAnimals = new List<string>();
 
-        public void GetCowList()
-        {
-            foreach (Cow cow in _animalList)
-                CowList.Add(cow);
-        }
+            foreach (Animal animal in AnimalList)
+            {
+                if (animal is Cat && animalsType == AnimalsType.cat)
+                    nameAnimals.Add(animal.FullPresent());
+                else if (animal is Cow && animalsType == AnimalsType.cow)
+                    nameAnimals.Add(animal.FullPresent());
+                else if (animal is Dog && animalsType == AnimalsType.dog)
+                    nameAnimals.Add(animal.FullPresent());
+                else if (animal is Pig && animalsType == AnimalsType.pig)
+                    nameAnimals.Add(animal.FullPresent());
+            }
 
-        public void GetDogList()
-        {
-            foreach (Dog dog in _animalList)
-                DogList.Add(dog);
-        }
-
-        public void GetPigList()
-        {
-            foreach (Pig pig in _animalList)
-                PigList.Add(pig);
+            return nameAnimals;
         }
     }
 }
