@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
 {
-    public interface Animal
+    public interface IAnimal
     {
         string Name { get; set; }
 

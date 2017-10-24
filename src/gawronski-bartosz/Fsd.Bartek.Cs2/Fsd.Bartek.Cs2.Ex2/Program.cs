@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fsd.Bartek.Cs2.Ex2.Domain.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace Fsd.Bartek.Cs2.Ex2
     {
         static void Main(string[] args)
         {
+            BasicUi.Introducion(2, "Interface");
+            ProgramUi.InsertNumber();
+            BasicUi.End();
+
         }
     }
 }

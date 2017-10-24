@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Fsd.Bartek.Cs2.Ex2.Domain.UI;
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain
 {
@@ -23,7 +24,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain
 
             for (int i = 0; i < count; i++)
             {
-                Cat[i] = new Animals.Cat(""); //interface method to ask name
+                Cat[i] = new Animals.Cat(ProgramUi.InsertName("cat")); //interface method to ask name
             }
         }
 
@@ -33,7 +34,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain
 
             for (int i = 0; i < count; i++)
             {
-                Dog[i] = new Animals.Dog(""); //interface method to ask name
+                Dog[i] = new Animals.Dog(ProgramUi.InsertName("dog")); //interface method to ask name
             }
         }
 
@@ -43,7 +44,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain
 
             for (int i = 0; i < count; i++)
             {
-                Pig[i] = new Animals.Pig(""); //interface method to ask name
+                Pig[i] = new Animals.Pig(ProgramUi.InsertName("pat")); //interface method to ask name
             }
         }
 
@@ -53,7 +54,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain
 
             for (int i = 0; i < count; i++)
             {
-                Cow[i] = new Animals.Cow(""); //interface method to ask name
+                Cow[i] = new Animals.Cow(ProgramUi.InsertName("cow")); //interface method to ask name
             }
         }
     }

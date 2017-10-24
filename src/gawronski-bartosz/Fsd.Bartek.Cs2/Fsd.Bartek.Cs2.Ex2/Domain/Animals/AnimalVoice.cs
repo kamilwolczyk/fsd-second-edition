@@ -2,7 +2,7 @@
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
 {
-    public class AnimalVoice : Animal
+    public class AnimalVoice : IAnimal
     {
         public string Name { get; set; }
 
