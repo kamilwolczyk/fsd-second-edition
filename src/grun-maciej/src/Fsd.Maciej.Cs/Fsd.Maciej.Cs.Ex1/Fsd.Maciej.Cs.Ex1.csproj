@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E59B86B8-24D5-4242-97D5-8B92567BAE22}</ProjectGuid>
+    <ProjectGuid>{EC3D0179-6A3A-4F40-9BBC-FEFE487CA769}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fsd.Exercise1</RootNamespace>
-    <AssemblyName>Fsd.Exercise1</AssemblyName>
+    <RootNamespace>Fsd.Maciej.Cs.Ex1</RootNamespace>
+    <AssemblyName>Fsd.Maciej.Cs.Ex1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
