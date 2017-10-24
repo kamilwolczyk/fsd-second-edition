@@ -31,7 +31,9 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
                         Producent.FabricCow(int.Parse(number));
                         break;
                 }
-            }          
+            }
+
+            DisplayAnimals(Producent);
         }
 
         public static string InsertName(string type)
@@ -40,6 +42,14 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             string name = Console.ReadLine();
             Console.WriteLine();
             return name;
+        }
+
+        public static void DisplayAnimals(Fabric producent)
+        {
+            foreach (var item in producent.Cat)
+            {
+
+            }
         }
     }
 }

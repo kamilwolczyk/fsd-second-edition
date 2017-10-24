@@ -14,7 +14,6 @@ namespace Fsd.Bartek.Cs2.Ex2
             BasicUi.Introducion(2, "Interface");
             ProgramUi.InsertNumber();
             BasicUi.End();
-
         }
     }
 }
