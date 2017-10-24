@@ -10,8 +10,6 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
     {
         string Name { get; set; }
 
-        string VoiceString { get; }
-
         string Voice();
     }
 }
