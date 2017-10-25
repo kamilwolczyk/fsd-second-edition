@@ -15,7 +15,6 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             {
                 Console.Write($"Insert number of {item}: ");
                 string number = Console.ReadLine();
-                Console.WriteLine();
                 switch (item)
                 {
                     case "cats":
@@ -40,7 +39,6 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
         {
             Console.Write($"{type} name:");
             string name = Console.ReadLine();
-            Console.WriteLine();
             return name;
         }
 
@@ -48,7 +46,19 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
         {
             foreach (var item in producent.Cat)
             {
-
+                Console.WriteLine(item.Voice());
+            }
+            foreach (var item in producent.Dog)
+            {
+                Console.WriteLine(item.Voice());
+            }
+            foreach (var item in producent.Pig)
+            {
+                Console.WriteLine(item.Voice());
+            }
+            foreach (var item in producent.Cow)
+            {
+                Console.WriteLine(item.Voice());
             }
         }
     }

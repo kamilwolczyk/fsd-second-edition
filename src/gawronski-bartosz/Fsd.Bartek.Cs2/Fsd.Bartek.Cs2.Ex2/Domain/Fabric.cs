@@ -18,43 +18,6 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain
 
         public Cow[] Cow;
 
-        public string DisplayAnimal()
-        {
-            string animals = "";
-
-            int animalindex = 0;
-
-            AnimalVoice[] index = new AnimalVoice[Cat.Length+Dog.Length+Pig.Length+Cow.Length];
-
-            for (int i = 0; i < Cat.Length; i++)
-            {
-                index[animalindex] = Cat[i];
-                animalindex++;
-            }
-
-            for (int i = 0; i < Dog.Length; i++)
-            {
-                index[animalindex] = Dog[i];
-                animalindex++;
-            }
-
-            for (int i = 0; i < Pig.Length; i++)
-            {
-                index[animalindex] = Pig[i];
-                animalindex++;
-            }
-
-            for (int i = 0; i < Cow.Length; i++)
-            {
-                index[animalindex] = Cow[i];
-                animalindex++;
-            }
-
-            //łączenioe stringów i przekazanie tego do interfejsu(zrobić metode dla każdej tablicy i nie kombinować )
-
-            return animals;
-        }
-
         public void FabricCat(int count)
         {
             Cat = new Cat[count];
