@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Menu\ConsoleMenu.cs" />
-    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\Menu\SubMenu.cs" />
+    <Compile Include="Domain\Product\Product.cs" />
+    <Compile Include="Domain\ProductSource.cs" />
     <Compile Include="Domain\Warehouse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,5 +53,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

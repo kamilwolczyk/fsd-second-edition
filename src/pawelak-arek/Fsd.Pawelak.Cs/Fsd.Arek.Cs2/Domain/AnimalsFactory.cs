@@ -9,8 +9,6 @@ namespace Fsd.Arek.Cs2.Domain
 {
     public class AnimalsFactory
     {
-        // public List<Animal> AnimalList { get; set; }
-
         private List<Animal> _animalList = new List<Animal>();
 
         public List<Animal> AnimalList
@@ -46,15 +44,14 @@ namespace Fsd.Arek.Cs2.Domain
             foreach (Animal animal in AnimalList)
             {
                 if (animal is Cat && animalsType == AnimalsType.cat)
-                    nameAnimals.Add(animal.FullPresent());
+                    nameAnimals.Add(animal.GetInformationAboutAnimal());
                 else if (animal is Cow && animalsType == AnimalsType.cow)
-                    nameAnimals.Add(animal.FullPresent());
+                    nameAnimals.Add(animal.GetInformationAboutAnimal());
                 else if (animal is Dog && animalsType == AnimalsType.dog)
-                    nameAnimals.Add(animal.FullPresent());
+                    nameAnimals.Add(animal.GetInformationAboutAnimal());
                 else if (animal is Pig && animalsType == AnimalsType.pig)
-                    nameAnimals.Add(animal.FullPresent());
+                    nameAnimals.Add(animal.GetInformationAboutAnimal());
             }
-
             return nameAnimals;
         }
     }

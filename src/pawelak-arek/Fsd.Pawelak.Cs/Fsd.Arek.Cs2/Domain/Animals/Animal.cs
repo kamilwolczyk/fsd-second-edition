@@ -1,4 +1,6 @@
-﻿public abstract class Animal
+﻿using Fsd.Arek.Cs2.Domain.Animals;
+
+public abstract class Animal
 {
     public string Name { get; set; }
 
@@ -7,12 +9,8 @@
         Name = name;
     }
 
-    public abstract string FullPresent();
-    
-    public abstract string GiveVoice();
+    public abstract string GetInformationAboutAnimal();
 
-    public virtual string SayHello()
-    {
-        return $"Hello, my name is: {Name}, {GiveVoice()}";
-    }
+    public abstract string SayHello();
+ 
 }
