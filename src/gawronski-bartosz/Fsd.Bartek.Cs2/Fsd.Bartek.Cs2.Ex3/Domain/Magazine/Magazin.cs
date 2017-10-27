@@ -10,7 +10,7 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
 
         List<Product> Ware = new List<Product>
         {
-            new Product("Lenove Tab", 950, 10),
+            new Product("Lenovo Tab", 950, 10),
             new Product("Asus Zenfone 5", 499, 5)
         };
 
@@ -21,11 +21,11 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
 
         public string BuyItem(string name)
         {
-            //zrobić zminane stringów na małe litery
-
             foreach (Product item in Ware)
-            {   
-                if(item.Name == name)
+            {
+                string itemName = item.Name.ToLower();
+
+                if(itemName == name)
                 {
                     there = true;
 
@@ -47,7 +47,7 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
             }
             else
             {
-                throw new Exception("Item dont exist!");
+                return "Item dont exist!";
             }
         }
 

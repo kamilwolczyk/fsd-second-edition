@@ -20,6 +20,8 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
                     break;
                 case 4:
                     break;
+                default:
+                    break;
             }
         }
 
@@ -27,16 +29,20 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
         {
             switch (check)
             {
-                case "Y":
+                case "y":
                     break;
-                case "N":
+                case "n":
                     ProgramUi.Decision(true, shop);
+                    break;
+                default:
                     break;
             }
         }
 
         public static string SearchProduct(string name, Magazin shop)
         {
+            name = name.ToLower();
+
             return shop.BuyItem(name) ;
         }
     } 
