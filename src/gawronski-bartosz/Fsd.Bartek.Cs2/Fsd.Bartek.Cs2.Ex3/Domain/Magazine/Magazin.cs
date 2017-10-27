@@ -14,8 +14,15 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
             new Product("Asus Zenfone 5", 499, 5)
         };
 
+        public List<Product> WareReturn()
+        {
+            return Ware;
+        }
+
         public string BuyItem(string name)
         {
+            //zrobić zminane stringów na małe litery
+
             foreach (Product item in Ware)
             {   
                 if(item.Name == name)

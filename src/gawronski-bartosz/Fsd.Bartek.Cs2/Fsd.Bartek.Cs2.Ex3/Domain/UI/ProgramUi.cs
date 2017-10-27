@@ -42,9 +42,12 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             Console.Clear();
             Console.WriteLine("PRODUCTS");
             Console.WriteLine(line);
-            Console.WriteLine("|                                NAME|PRICE|COUNT|");
+            Console.WriteLine("|NAME                                 PRICE  COUNT|");
             Console.WriteLine(line);
-            Console.WriteLine();
+            foreach (var item in shop.WareReturn())
+            {
+                Console.WriteLine($"|{item.Name}                              {item.Price}  {item.Count}|");
+            }
             Console.WriteLine(line);
 
             Console.Write("Do you want to leave shop? [(Y)es] [(N)o]");
