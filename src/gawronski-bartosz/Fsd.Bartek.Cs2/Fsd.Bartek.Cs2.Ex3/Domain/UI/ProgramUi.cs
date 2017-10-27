@@ -31,6 +31,8 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             Console.Write("Count:");
             string count = Console.ReadLine();
 
+            Console.WriteLine(shop.AddItem(name, double.Parse(price), int.Parse(count)));
+
             Console.Write("Do you want to leave shop? [(Y)es] [(N)o]");
             LogicUi.LeaveShop(Console.ReadLine(), shop);
         }

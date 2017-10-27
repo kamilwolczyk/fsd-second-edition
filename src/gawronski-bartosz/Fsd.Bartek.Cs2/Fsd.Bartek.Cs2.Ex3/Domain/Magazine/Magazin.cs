@@ -50,5 +50,12 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
                 throw new Exception("Item dont exist!");
             }
         }
+
+        public string AddItem(string name, double price, int count)
+        {
+            Ware.Add(new Product(name, price, count));
+
+            return "Product add";
+        }
     }
 }
