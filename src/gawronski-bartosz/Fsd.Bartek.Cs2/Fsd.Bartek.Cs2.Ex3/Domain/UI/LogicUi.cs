@@ -1,54 +1,43 @@
-﻿using System;
+﻿using Fsd.Bartek.Cs2.Ex3.Domain.Magazine;
+using System;
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
 {
     public abstract class LogicUi
     {
-        public static void Check(int decision)
+        
+        public static void Check(int decision, Magazin shop)
         {
             switch(decision){
                 case 1:
-                    ProgramUi.BuyProducts();
+                    ProgramUi.BuyProducts(shop);
                     break;
                 case 2:
-                    ProgramUi.CheckProducts();
+                    ProgramUi.CheckProducts(shop);
                     break;
                 case 3:
-                    ProgramUi.AddProducts();
+                    ProgramUi.AddProducts(shop);
                     break;
                 case 4:
                     break;
             }
         }
 
-        public static void LeaveShop(string check)
+        public static void LeaveShop(string check, Magazin shop)
         {
             switch (check)
             {
                 case "Y":
                     break;
                 case "N":
-                    ProgramUi.Decision(true);
+                    ProgramUi.Decision(true, shop);
                     break;
             }
         }
 
-        public static string SearchProduct(string name)
+        public static string SearchProduct(string name, Magazin shop)
         {
-            return "bartek";
-        }
-
-        public static string Buy(string check)
-        {
-            switch (check)
-            {
-                case "Y":
-                    return "Products buy positive";
-                case "N":
-                    ProgramUi.Decision(true);
-                    break;
-            }
-            return "";
+            return shop.BuyItem(name) ;
         }
     } 
 }

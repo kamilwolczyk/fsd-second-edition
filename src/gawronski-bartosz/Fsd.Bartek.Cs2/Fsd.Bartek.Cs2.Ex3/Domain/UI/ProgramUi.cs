@@ -1,11 +1,12 @@
 ﻿using Fsd.Bartek.Cs2.Ex2.Domain.UI;
+using Fsd.Bartek.Cs2.Ex3.Domain.Magazine;
 using System;
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
 {
     public abstract class ProgramUi
     {
-        public static void Decision(bool clear)
+        public static void Decision(bool clear, Magazin shop)
         {
             if (clear)
                 Console.Clear();
@@ -17,10 +18,10 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             Console.WriteLine("[4] Leave");
             Console.Write("Decision:");
 
-            LogicUi.Check(int.Parse(Console.ReadLine()));
+            LogicUi.Check(int.Parse(Console.ReadLine()), shop);
         }
         
-        public static void AddProducts()
+        public static void AddProducts(Magazin shop)
         {
             Console.Clear();
             Console.Write("Name:");
@@ -31,10 +32,10 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             string count = Console.ReadLine();
 
             Console.Write("Do you want to leave shop? [(Y)es] [(N)o]");
-            LogicUi.LeaveShop(Console.ReadLine());
+            LogicUi.LeaveShop(Console.ReadLine(), shop);
         }
 
-        public static void CheckProducts()
+        public static void CheckProducts(Magazin shop)
         {
             string line = "--------------------------------------------------";
 
@@ -47,19 +48,17 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             Console.WriteLine(line);
 
             Console.Write("Do you want to leave shop? [(Y)es] [(N)o]");
-            LogicUi.LeaveShop(Console.ReadLine());
+            LogicUi.LeaveShop(Console.ReadLine(), shop);
         }
 
-        public static void BuyProducts()
+        public static void BuyProducts(Magazin shop)
         {
             Console.Clear();
             Console.Write("Search Product (Name): ");
-            Console.WriteLine(LogicUi.SearchProduct(Console.ReadLine()));
-            Console.Write("Do you want buy it? [(Y)es] [(N)o]");
-            Console.WriteLine(LogicUi.Buy(Console.ReadLine()));
+            Console.WriteLine(LogicUi.SearchProduct(Console.ReadLine(), shop));
 
             Console.Write("Do you want to leave shop? [(Y)es] [(N)o]");
-            LogicUi.LeaveShop(Console.ReadLine());
+            LogicUi.LeaveShop(Console.ReadLine(), shop);
         }
     }
 }
