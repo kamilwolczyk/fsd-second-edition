@@ -8,6 +8,6 @@ namespace Fsd.Arek.Cs2.Domain.Animals
 {
     interface IVoice
     {
-        string GiveVoice();
+        string GetVoice();
     }
 }

@@ -1,28 +1,21 @@
 ﻿using Fsd.Arek.Cs3.Domain;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 public class Warehouse
 {
     private List<Product> _stock = new List<Product>();
 
-    private ProductSource _productSource = new ProductSource();
-
     public List<Product> WarehouseState
     {
         get
         {
-            return _stock = _productSource.GetProduct();
+            return _stock;
         }
         set
         {
-
         }
-    }
-
-    public Product[,] ListWarehouseState()
-    {
-        return null;
     }
 
     public int GetUniqecount(int productID, List<Product> list)
@@ -43,14 +36,10 @@ public class Warehouse
                 bCopy = false;
 
                 if (item1.ProductId == item2.ProductId)
-                {
                     bCopy = true;
-                }
                 if (bCopy)
-                {
-                    if (!uniqueList.Exists(x=>x.ProductId.Equals(item1.ProductId)))
+                    if (!uniqueList.Exists(x => x.ProductId.Equals(item1.ProductId)))
                         uniqueList.Add(item1);
-                }
             }
         }
         return uniqueList;
@@ -59,13 +48,16 @@ public class Warehouse
     public void AddProductToWareHouse(int count, Product product)
     {
         for (int i = 0; i < count; i++)
-            _stock.Add(product);
+            WarehouseState.Add(product);
     }
 
     public void SellProduct(int count, Product product)
     {
-        for (int i = 0; i < count; i++)
-            _stock.Remove(product);
+        int uniqeCount = GetUniqecount(product.ProductId, _stock);
+
+        if (uniqeCount >= count)
+            for (int i = 0; i < count; i++)
+                _stock.Remove(product);
     }
 }
 

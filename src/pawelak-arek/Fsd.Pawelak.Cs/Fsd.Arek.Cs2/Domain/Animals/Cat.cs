@@ -1,7 +1,7 @@
 ﻿using Fsd.Arek.Cs2.Domain.Animals;
 using Fsd.Arek.Cs2.Domain.Enum;
 
-public class Cat : Animal,IVoice
+public class Cat : Animal, IVoice
 {
     public Cat(string name)
         : base(name)
@@ -13,13 +13,13 @@ public class Cat : Animal,IVoice
         return $"{AnimalsType.cat} name: {Name}";
     }
 
-    public string GiveVoice()
+    public string GetVoice()
     {
         return "Miauuuu";
     }
 
     public override string SayHello()
     {
-        return $"Hello, my name is: {Name}, {GiveVoice()}";
+        return $"Hello, my name is: {Name}, {GetVoice()}";
     }
 }

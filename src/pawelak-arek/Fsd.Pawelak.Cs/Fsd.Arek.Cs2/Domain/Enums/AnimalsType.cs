@@ -13,6 +13,4 @@ namespace Fsd.Arek.Cs2.Domain.Enum
         cow,
         pig
     }
-
-    
 }

@@ -31,8 +31,18 @@ namespace Fsd.Arek.Cs2.Domain
 
         public int GetIntDataFromUser(AnimalsType type)
         {
+            int number = 0;
             Console.WriteLine($"Insert number of {type}");
-            return int.Parse(Console.ReadLine());
+
+            try
+            {
+                number = int.Parse(Console.ReadLine());
+            }
+            catch (FormatException fex)
+            {
+                Console.WriteLine(fex.Message);
+            }
+            return number;
         }
 
         public void WriteInformationFromList(List<string> list)

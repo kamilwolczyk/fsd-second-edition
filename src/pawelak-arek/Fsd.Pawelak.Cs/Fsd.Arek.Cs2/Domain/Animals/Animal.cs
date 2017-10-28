@@ -12,5 +12,5 @@ public abstract class Animal
     public abstract string GetInformationAboutAnimal();
 
     public abstract string SayHello();
- 
+
 }
