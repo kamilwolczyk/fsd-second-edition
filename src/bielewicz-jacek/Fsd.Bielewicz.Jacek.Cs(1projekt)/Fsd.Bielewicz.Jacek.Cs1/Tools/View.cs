@@ -10,7 +10,7 @@ namespace Fsd.Bielewicz.Jacek.Cs1.Tools
     {
         public void Begining()
         {
-            Console.WriteLine($"\nExcercise 1 - Inroducktion\n-----------------------------------------------\n");
+            Console.WriteLine($"\nExcercise 1 - Inroducktion\n----------------------------------------------\n");
             Console.WriteLine(DateTime.Today.ToString("D"));
 
         }

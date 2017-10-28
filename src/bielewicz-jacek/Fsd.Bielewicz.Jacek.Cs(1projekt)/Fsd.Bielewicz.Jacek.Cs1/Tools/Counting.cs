@@ -41,7 +41,7 @@ namespace Fsd.Bielewicz.Jacek.Cs1.Tools
             {
                 if (argumentsLength > 0)
                 {
-                    Console.WriteLine(value: $"\n\nConsole Arguments: " + "\n");
+                    Console.WriteLine(value: $"\nConsole Arguments: " + "\n");
                     sentence = args[numberOfIndexAtEachIteration];
                     for (j = 0; j < sentence.Length; j++)
                     {

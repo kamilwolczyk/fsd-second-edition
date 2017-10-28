@@ -11,10 +11,10 @@ namespace Fsd.Bielewicz.Jacek.Cs1
     { 
         static void Main(string[] args)
         {
-            View view = new View();
-            view.Begining();
-            Counting counting = new Counting();
-            counting.Count(args);
+             View view = new View();
+             view.Begining();
+             Counting counting = new Counting();
+             counting.Count(args);
         } 
     }
 }
