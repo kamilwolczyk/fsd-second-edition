@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Sebastian.Cs1", "Fsd.Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Sebastian.Cs2", "Fsd.Sebastian.Cs2\Fsd.Sebastian.Cs2.csproj", "{59F0AFB2-84A0-4239-BA9F-31AC789500C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Sebastian.Cs3", "Fsd.Sebastian.Cs3\Fsd.Sebastian.Cs3.csproj", "{32283274-0877-4858-A4BE-7617BEAE18D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{59F0AFB2-84A0-4239-BA9F-31AC789500C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59F0AFB2-84A0-4239-BA9F-31AC789500C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59F0AFB2-84A0-4239-BA9F-31AC789500C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32283274-0877-4858-A4BE-7617BEAE18D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32283274-0877-4858-A4BE-7617BEAE18D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32283274-0877-4858-A4BE-7617BEAE18D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32283274-0877-4858-A4BE-7617BEAE18D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
