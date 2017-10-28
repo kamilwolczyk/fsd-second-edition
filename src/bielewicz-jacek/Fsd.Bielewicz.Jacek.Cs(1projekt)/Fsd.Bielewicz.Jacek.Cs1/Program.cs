@@ -17,12 +17,6 @@ namespace Fsd.Bielewicz.Jacek.Cs1
             counting.Count(args);
         } 
     }
-
-
-
-
-
-
 }
 
     
