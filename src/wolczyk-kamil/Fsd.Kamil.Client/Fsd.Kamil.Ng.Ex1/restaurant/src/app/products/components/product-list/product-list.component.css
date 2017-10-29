@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: aquamarine;
+}
+
+td,
+th {
+    border: 1px solid gray;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.action-cell {
+    width: 100px;
+}

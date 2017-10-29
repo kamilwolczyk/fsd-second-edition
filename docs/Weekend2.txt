@@ -1,0 +1,60 @@
+﻿1. sobota 21.10.2017
+a) scrum
+- czy są inne metodyki, dlaczego zwinne sa lepsze
+- role w zespole scrumowym: product owner, scrum master, developer
+- proces scruma
+- spotkania: plannning, ds, review, retrospektywa
+
+b) pojęcie klasy
+- podać wstępnie informacje o elemencie opisanym przez x atrybutów (struct). Troche więcej to klasa, ponieważ posiada oprócz stanów możliwe zachowania
+- definicja klasy na przykładzie class Car. Napisać klasę car która będzie miał DoorCount, Colour, IsRunning oraz metodę Go() i Stop()
+- co to słowo kluczowe this
+- tworzenie obiektów klasy - operator new
+- różnica pomiędzy klasą a instancją
+
+c) zawartość klas
+- elementy klasy: pola, propercje, metody. różnica pomiędzy polami i propercjami
+- konstruktory: domyślny, parametryczny
+- destruktory ~NazwaKlasy() - mało czasu na to (jedynie wzmianka)
+- elementy statyczne klasy (static). Klasa statyczna
+- dobre praktyki nazewnictwa
+
+d) dziedziczenie
+- przykład zwykłego dziedziczenia:
+poprosić o utworzenie następujących klas: *wszystkie posiadają elementy vehicle (id, name, price)
++boat(passengerCount)
++car(colour, doorCount)
++tank(gunCount, gunType-string np. "A", "B")
++paraglider(twoPersonAvailable:bool)
++airplane(wingCount, engineCount)
++fighter(gun
+później poprosić o rozdzielenie name na Producer i Model. Omówić problem redundancji (nadmiarowość)
+- polimorfizm: virtual+override (nawiązać, że będzie jeszcze inna odmiana polimorfizmu ale to przy klasach abstrakcyjnych)
+przykład metody run() w każdej z klas. Dodać implementację domyślną z console.log()
+- przeciążanie metod
+
+2. Niedziela 22.10.2017
+a) klasy abstrakcyjne
+ - pokazać że inny developer może utworzyć element vehicle co jest bez sensu. Oznaczyć klasę abstract
+ - polimorfizm w klasie abstrakcyjnej: metoda abstract + override np. zrobić metodę repair() która nie może mieć domyślnej implementacji
+
+b) interfejsy
+ - wyjaśnić co to jest
+ - dobra praktyka nazewnictwa IXXX
+ - interfejs, co może zawierać - propercje i metody
+ - pokazać przykład zrobienia new z typem IXXX - powinien być błąd bo nie można tworzyć instancji interfejsów
+ - przykład interfejsów np. dodać interfejs IFly(Speed, Distance) do Airplane i Paraglider
+ - dodać kolejny interfejs IFuel(IsReserve:bool, type: "on | pb", fill(int litres), tankCapacity: int)
+ - interfejs to też typ (pokazać przy przekazaniu do metody albo robiąc foreach po elementach listy) - wyświetlić prędkość pojazdów z latania
+
+c) dobre praktyki tworzenia obiektów, dziedziczenia i interfejsów
+ - SOLID - nie wymieniać poszczególnych liter, jedynie powiedzieć że takie coś jest
+ - KISS 
+ - separować odpowiedzialności (S) 
+ - wstrzykiwać zależności aby mieć kontrolę nad new
+ - przewidywać zmiany, zamykać elementy niezmienne, umozliwiać rozbudowę elementów zmiennych
+ - układać odpowiednio katalogi
+ - dzielić interfejsy względem logiki
+
+d) ewentualnie rozpoczęcie pisania pracy domowej (2 zadania)
+

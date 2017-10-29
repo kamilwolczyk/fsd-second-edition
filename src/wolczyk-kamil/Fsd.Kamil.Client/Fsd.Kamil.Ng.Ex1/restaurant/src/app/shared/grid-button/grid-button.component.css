@@ -1,0 +1,12 @@
+button{
+  border: solid 1px black;
+  cursor: pointer;
+  transition: 1s; 
+  background-color: darkorange; 
+}
+
+button:hover{
+  background-color: teal;
+  color: white;
+  transition: 1s;
+}

@@ -1,0 +1,115 @@
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  background: silver;
+  font-family: Georgia, Times, serif;
+}
+
+.yellow{
+  color: rgb(182,138,3);
+}
+
+.red{
+  color: rgb(163,62,80);
+}
+
+.blue {
+  color: rgb(40,37,54);;
+}
+
+#page {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 2%;
+  bottom: 2%;
+  box-shadow: 0px 0px 42px -1px rgba(0,0,0,0.75);
+  background: white;
+}
+
+header{
+  background: transparent url('images/header.jpg') no-repeat top right;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  position: relative;
+  top: 10%;
+  left: 20%;
+}
+
+#content h1{
+  margin: 20px;
+  border-bottom: dotted 1px silver;
+  color: gray;
+}
+
+footer{
+  background-color: #333;
+  position: absolute;
+  bottom: 0px;
+  left:0px;
+  right: 0px;
+}
+
+footer p {
+  background: black;
+  color: gray;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+/*top menu*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0px 15px 44px -12px rgba(0,0,0,0.75);
+  border-top: solid 3px rgb(182,138,3);
+}
+
+nav ul li {
+  float: left;
+  width: 33.33%;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+nav ul li a:hover {
+  background: rgb(182,138,3);
+  color: silver;
+}
+
+/*footer menu*/
+.footer-menu {
+  list-style-type: none;
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+
+.footer-menu a{
+  color: silver;
+  text-decoration: none;
+}
+
+.footer-menu a:hover{
+  color: rgb(182,138,3);
+  text-decoration: underline;
+}
