@@ -1,7 +1,6 @@
 ﻿namespace Fsd.Sebastian.Cs2.Animals
 {
-    public interface IAnimal {  }
-    public class Animal
+    public class Animal : IAnimalPresenter
     {
         public string Name { get; }
 

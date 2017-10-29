@@ -6,35 +6,16 @@ namespace Fsd.Sebastian.Cs2
 {
     public class AnimalFactory
     {
-        private List<Animal> _animals;
-
-        private int numberOfAnimals;
-
-        private string animalType;
+        private List<IAnimalPresenter> _animals;
 
         public void Start()
         {
-            _animals = new List<Animal>();
+            _animals = new List<IAnimalPresenter>();
 
-            animalType = "cat";
-            numberOfAnimals = SetAnimalsCount(animalType);
-            for (int i = 0; i < numberOfAnimals; i++)
-                _animals.Add(new Cat(ConsolePresenter.GetString($"{animalType} name: ")));
-
-            animalType = "dog";
-            numberOfAnimals = SetAnimalsCount(animalType);
-            for (int i = 0; i < numberOfAnimals; i++)
-                _animals.Add(new Dog(ConsolePresenter.GetString($"{animalType} name: ")));
-
-            animalType = "cow";
-            numberOfAnimals = SetAnimalsCount(animalType);
-            for (int i = 0; i < numberOfAnimals; i++)
-                _animals.Add(new Cow(ConsolePresenter.GetString($"{animalType} name: ")));
-
-            animalType = "sheep";
-            numberOfAnimals = SetAnimalsCount(animalType);
-            for (int i = 0; i < numberOfAnimals; i++)
-                _animals.Add(new Sheep(ConsolePresenter.GetString($"{animalType} name: ")));
+            _animals.AddRange(CreateAnimals<Cat>("cat"));
+            _animals.AddRange(CreateAnimals<Dog>("dog"));
+            _animals.AddRange(CreateAnimals<Cow>("cow"));
+            _animals.AddRange(CreateAnimals<Sheep>("sheep"));
 
             foreach (var animal in _animals)
             {
@@ -42,11 +23,15 @@ namespace Fsd.Sebastian.Cs2
             }
         }
 
-        private int SetAnimalsCount(string speciesType)
+        private List<IAnimalPresenter> CreateAnimals<T>(string animalType) where T : IAnimalPresenter
         {
-            int numberOfAnimals = int.Parse(ConsolePresenter.GetString($"Insert number of {speciesType}s: "));
+            List<IAnimalPresenter> animals = new List<IAnimalPresenter>();
+            int numberOfAnimals = ConsolePresenter.GetInt($"Insert number of {animalType}s: ");
 
-            return numberOfAnimals;
+            for (var i = 0; i < numberOfAnimals; i++)
+                animals.Add((T)Activator.CreateInstance(typeof(T), ConsolePresenter.GetString($"{animalType} name: ")));
+            
+            return animals;
         }
     }
 }
