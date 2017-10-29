@@ -28,7 +28,7 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
             switch (item)
             {
                 case '1':
-                    Products=TradingConsole.Buy(Products);
+                    TradingConsole.Buy(Products);
                     MainMenu();
                     break;
                 case '2':
@@ -36,7 +36,7 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
                     Leave();
                     break;
                 case '3':
-                    Products=AddingConsole.Add(Products);
+                    AddingConsole.Add(Products);
                     MainMenu();
                     break;
                 case '4':

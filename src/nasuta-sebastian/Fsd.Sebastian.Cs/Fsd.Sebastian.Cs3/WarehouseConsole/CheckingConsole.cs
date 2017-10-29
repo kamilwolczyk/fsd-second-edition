@@ -16,8 +16,10 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
             ConsolePresenter.PrintString($"{Line(tableWidth)}");
             ConsolePresenter.PrintString($"|{Indent("Name", spaceForName)}|{Indent("Price", spaceForPrice)}|{Indent("Count", spaceForCount)}|");
             ConsolePresenter.PrintString($"{Line(tableWidth)}");
+
             foreach (var product in products)
                 ConsolePresenter.PrintString($"|{Indent(product.Name, spaceForName)}|{Indent(product.Price, spaceForPrice)}|{Indent(product.Count, spaceForCount)}|");
+
             ConsolePresenter.PrintString($"{Line(tableWidth)}");
         }
 

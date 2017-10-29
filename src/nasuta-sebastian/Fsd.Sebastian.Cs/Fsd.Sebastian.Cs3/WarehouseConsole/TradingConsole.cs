@@ -5,7 +5,7 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
 {
     public class TradingConsole
     {
-        public static List<Product> Buy(List<Product> products)
+        public static void Buy(List<Product> products)
         {
             string toFind;
 
@@ -20,7 +20,7 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
                 if (toFind == "QUIT")
                 {
                     ConsolePresenter.ClearConsole();
-                    return products;
+                    return;
                 }
 
                 if (products.Exists(item => item.Name.Contains(toFind)) == false)
@@ -41,7 +41,7 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
                 if (count == 0)
                 {
                     ConsolePresenter.ClearConsole();
-                    return products;
+                    return;
                 }
             }
 
@@ -55,8 +55,6 @@ namespace Fsd.Sebastian.Cs3.WarehouseConsole
 
             if (answer == 'y' || answer == 'Y')
                 products.Find(item => item.Name.Contains(toFind)).Count = foundItem.Count - count;
-
-            return products;
         }
     }
 }
