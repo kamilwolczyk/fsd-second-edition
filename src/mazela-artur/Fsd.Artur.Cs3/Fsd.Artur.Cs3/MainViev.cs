@@ -15,12 +15,7 @@ namespace Fsd.Artur.Cs3
             if(isNew==EnumAboutConsole.Old)
                 Console.Clear();
 
-            Console.WriteLine("What do you want?");
-            Console.WriteLine("[1] Buy our product");
-            Console.WriteLine("[2] Check our warehouse state");
-            Console.WriteLine("[3] Add new product");
-            Console.WriteLine("[4] Leave");
-            Console.Write("Decision:");
+            Console.WriteLine($"What do you want?{Environment.NewLine}[1] Buy our product{Environment.NewLine}[2] Check our warehouse state{Environment.NewLine}[3] Add new product{Environment.NewLine}[4] Leave{Environment.NewLine}Decision:");
 
             CheckingDecision.Check(int.Parse(Console.ReadLine()), store);
         }
