@@ -16,12 +16,12 @@ namespace Fsd.Artur.Cs2
         {
             StartMessage.BeginMessage();
 
-            var animalReader = new AnimalReader();
-            var animalsCreator = new CreateAnimals(animalReader);
-            var animals = animalsCreator.CreatListOfAnimals();
+            AnimalReader animalReader = new AnimalReader();
+            CreateAnimals animalsCreator = new CreateAnimals(animalReader);
+            List<string>[] animals = animalsCreator.CreatListOfAnimals();
 
             EndMessage Animal = new EndMessage();
-            Animal.MakeSomeNoise(animals);
+            Animal.MakeNoise(animals);
         }
     }
 }

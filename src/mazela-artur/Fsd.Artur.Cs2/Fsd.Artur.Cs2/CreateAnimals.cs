@@ -31,14 +31,13 @@ namespace Fsd.Artur.Cs2
 
         private List<string> Animal(string animalName)
         {
-            var animalNumber = _readAnimal.GetCount(animalName);
-            var animals = new List<string>();
+            int animalNumber = _readAnimal.GetCount(animalName);
+            List < string > animals = new List<string>();
 
             for (var i = 0; i < animalNumber; i++)
             {
                 animals.Add(_readAnimal.GetName(animalName));
             }
-
 
            return animals;
         }

@@ -9,7 +9,6 @@ namespace Fsd.Artur.Cs3.WareHouse
 {
     public class Warehouse
     {
-        EnumAboutBuy AreBought = EnumAboutBuy.NotBought;
 
         List<Product> Shop = new List<Product>
         {
@@ -21,6 +20,8 @@ namespace Fsd.Artur.Cs3.WareHouse
         {
             return Shop;
         }
+
+        EnumAboutBuy AreBought = EnumAboutBuy.NotBought;
 
         public string BuyItem(string name)
         {
@@ -38,7 +39,6 @@ namespace Fsd.Artur.Cs3.WareHouse
                         Shop.Remove(item);
                     else
                         item.Count--;
-
                 }
             }
 
@@ -53,9 +53,9 @@ namespace Fsd.Artur.Cs3.WareHouse
             }
         }
 
-        public string AddProduct(string _name, double _price, int _count)
+        public string AddProduct(string name, double price, int count)
         {
-            Shop.Add(new Product(_name, _price, _count));
+            Shop.Add(new Product(name, price, count));
 
             return "Product added to the Warehouse. Thank you.";
         }
