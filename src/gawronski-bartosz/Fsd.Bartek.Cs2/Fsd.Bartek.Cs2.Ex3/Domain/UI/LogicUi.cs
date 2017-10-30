@@ -6,7 +6,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
     public abstract class LogicUi
     {
         
-        public static void Check(int decision, Magazin shop)
+        public static void Check(int decision, Warehouse shop)
         {
             switch(decision){
                 case 1:
@@ -25,7 +25,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             }
         }
 
-        public static void LeaveShop(string check, Magazin shop)
+        public static void LeaveShop(string check, Warehouse shop)
         {
             switch (check)
             {
@@ -39,7 +39,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             }
         }
 
-        public static string SearchProduct(string name, Magazin shop)
+        public static string SearchProduct(string name, Warehouse shop)
         {
             name = name.ToLower();
 

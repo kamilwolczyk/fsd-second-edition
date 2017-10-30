@@ -1,15 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
 {
-    public interface IAnimal
+    public abstract class Animal
     {
-        string Name { get; set; }
+        public string Name { get; set; }
 
-        string Voice();
+        public string VoiceString { get; set; }
+
+        public Animal(string name)
+        {
+            Name = name;
+        }
+
+        public virtual string Voice()
+        {
+            return $"Hello, my name is {Name}";
+        }
     }
 }

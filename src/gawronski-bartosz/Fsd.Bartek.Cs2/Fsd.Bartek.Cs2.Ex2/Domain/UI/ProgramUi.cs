@@ -18,16 +18,16 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
                 switch (item)
                 {
                     case "cats":
-                        Producent.FabricCat(int.Parse(number));
+                        Producent.FabricAnimal(int.Parse(number),item);
                         break;
                     case "dogs":
-                        Producent.FabricDog(int.Parse(number));
+                        Producent.FabricAnimal(int.Parse(number),item);
                         break;
                     case "pigs":
-                        Producent.FabricPig(int.Parse(number));
+                        Producent.FabricAnimal(int.Parse(number),item);
                         break;
                     case "cows":
-                        Producent.FabricCow(int.Parse(number));
+                        Producent.FabricAnimal(int.Parse(number),item);
                         break;
                 }
             }
@@ -44,19 +44,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
 
         public static void DisplayAnimals(Fabric producent)
         {
-            foreach (var item in producent.Cat)
-            {
-                Console.WriteLine(item.Voice());
-            }
-            foreach (var item in producent.Dog)
-            {
-                Console.WriteLine(item.Voice());
-            }
-            foreach (var item in producent.Pig)
-            {
-                Console.WriteLine(item.Voice());
-            }
-            foreach (var item in producent.Cow)
+            foreach (var item in producent.Animals)
             {
                 Console.WriteLine(item.Voice());
             }

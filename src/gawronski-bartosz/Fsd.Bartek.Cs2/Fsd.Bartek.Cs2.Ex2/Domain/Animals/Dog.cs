@@ -2,13 +2,11 @@
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
 {
-    public class Dog : AnimalVoice
+    public class Dog : Animal
     {
-        public string VoiceString { get; }
-
         public Dog(string name) : base(name)
         {
-            VoiceString = "Hau hau hau";
+            base.VoiceString = "Hau hau hau";
         }
 
         public override string Voice()

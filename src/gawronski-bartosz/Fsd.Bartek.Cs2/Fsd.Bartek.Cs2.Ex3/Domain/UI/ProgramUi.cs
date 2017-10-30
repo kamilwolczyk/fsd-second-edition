@@ -6,7 +6,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
 {
     public abstract class ProgramUi
     {
-        public static void Decision(bool clear, Magazin shop)
+        public static void Decision(bool clear, Warehouse shop)
         {
             if (clear)
                 Console.Clear();
@@ -28,7 +28,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             }
         }
         
-        public static void AddProducts(Magazin shop)
+        public static void AddProducts(Warehouse shop)
         {
             Console.Clear();
             try
@@ -37,10 +37,8 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
                 string name = Console.ReadLine();
                 Console.Write("Price:");
                 double price = double.Parse(Console.ReadLine());
-                Console.WriteLine("Its not price");
+                Console.WriteLine("Count:");
                 int count = int.Parse(Console.ReadLine());    
-                Console.WriteLine("Its not price");
-                Console.Write("Count:");
 
                 Console.WriteLine(shop.AddItem(name, price, count));
             }
@@ -49,12 +47,11 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
                 Console.WriteLine("Incorrect data");
             }
 
-
             Console.Write("Do you want to leave shop? [(Y)es] [(N)o]");
             LogicUi.LeaveShop(Console.ReadLine().ToLower(), shop);
         }
 
-        public static void CheckProducts(Magazin shop)
+        public static void CheckProducts(Warehouse shop)
         {
             string line = "--------------------------------------------------";
 
@@ -63,7 +60,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             Console.WriteLine(line);
             Console.WriteLine("|NAME                                 PRICE  COUNT|");
             Console.WriteLine(line);
-            foreach (var item in shop.WareReturn())
+            foreach (var item in shop.Wares)
             {
                 Console.WriteLine($"|{item.Name}                              {item.Price}  {item.Count}|");
             }
@@ -73,7 +70,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             LogicUi.LeaveShop(Console.ReadLine().ToLower(), shop);
         }
 
-        public static void BuyProducts(Magazin shop)
+        public static void BuyProducts(Warehouse shop)
         {
             Console.Clear();
             Console.Write("Search Product (Name): ");

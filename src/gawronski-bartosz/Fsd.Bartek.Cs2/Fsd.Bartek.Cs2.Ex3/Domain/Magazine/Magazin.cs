@@ -4,45 +4,44 @@ using System.Collections.Generic;
 
 namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
 {
-    public class Magazin
+    public class Warehouse
     {
-        bool there = false;
-
-        List<Product> Ware = new List<Product>
+        public List<Product> Wares = new List<Product>
         {
             new Product("Lenovo Tab", 950, 10),
             new Product("Asus Zenfone 5", 499, 5)
         };
 
-        public List<Product> WareReturn()
+        public Product FindWare(string name)
         {
-            return Ware;
+            foreach (Product item in Wares)
+            {
+                string itemName = item.Name.ToLower();
+
+                if (itemName == name)
+                {
+                    return item;
+                }
+            }
+
+            return null;
         }
 
         public string BuyItem(string name)
         {
-            foreach (Product item in Ware)
-            {
-                string itemName = item.Name.ToLower();
+            Product item = FindWare(name);
 
-                if(itemName == name)
+            if(item != null)
+            {
+                if (item.Count == 1)
                 {
-                    there = true;
-
-                    if(item.Count == 1)
-                    {
-                        Ware.Remove(item);
-                    }
-                    else
-                    {
-                        item.Count--;
-                    }
+                    Wares.Remove(item);
                 }
-            }
+                else
+                {
+                    item.Count--;
+                }
 
-            if (there)
-            {
-                there = false;
                 return "Thank's for buy!";
             }
             else
@@ -53,7 +52,7 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
 
         public string AddItem(string name, double price, int count)
         {
-            Ware.Add(new Product(name, price, count));
+            Wares.Add(new Product(name, price, count));
 
             return "Product add";
         }

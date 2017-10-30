@@ -12,7 +12,7 @@ namespace Fsd.Bartek.Cs2.Ex3
     {
         static void Main(string[] args)
         {
-            Magazin Shop = new Magazin();
+            Warehouse Shop = new Warehouse();
 
             BasicUi.Introducion(3, "Objects");
             ProgramUi.Decision(false, Shop);

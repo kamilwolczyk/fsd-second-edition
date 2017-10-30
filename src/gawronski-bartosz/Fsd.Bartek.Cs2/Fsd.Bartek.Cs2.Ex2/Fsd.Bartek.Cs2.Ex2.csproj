@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Animals\Animal.cs" />
-    <Compile Include="Domain\Animals\AnimalVoice.cs" />
     <Compile Include="Domain\Animals\Cat.cs" />
     <Compile Include="Domain\Animals\Cow.cs" />
     <Compile Include="Domain\Animals\Dog.cs" />
