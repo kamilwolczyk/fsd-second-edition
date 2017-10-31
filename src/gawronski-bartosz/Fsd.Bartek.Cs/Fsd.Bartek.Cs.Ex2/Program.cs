@@ -1,21 +1,19 @@
 ﻿using Fsd.Bartek.Cs2.Ex2.Domain.UI;
-using Fsd.Bartek.Cs2.Ex3.Domain.Magazine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fsd.Bartek.Cs2.Ex3
+namespace Fsd.Bartek.Cs.Ex2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Warehouse Shop = new Warehouse();
-
-            BasicUi.Introducion(3, "Objects");
-            ProgramUi.Decision(false, Shop);
+            BasicUi.Introducion(2, "Interface");
+            ProgramUi.InsertNumber();
+            BasicUi.End();
         }
     }
 }

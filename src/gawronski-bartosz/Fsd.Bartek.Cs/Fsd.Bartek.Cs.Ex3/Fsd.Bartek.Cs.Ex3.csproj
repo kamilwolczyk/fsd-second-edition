@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03E4753C-76E5-498C-935D-5F23A032F9BE}</ProjectGuid>
+    <ProjectGuid>{E8A1EB0F-3E20-4351-978E-2B90DB0D8EE7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fsd.Bartek.Cs2.Ex3</RootNamespace>
-    <AssemblyName>Fsd.Bartek.Cs2.Ex3</AssemblyName>
+    <RootNamespace>Fsd.Bartek.Cs.Ex3</RootNamespace>
+    <AssemblyName>Fsd.Bartek.Cs.Ex3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Magazine\Magazin.cs" />
     <Compile Include="Domain\Magazine\Products\Product.cs" />
     <Compile Include="Domain\UI\BasicUI.cs" />
     <Compile Include="Domain\UI\LogicUi.cs" />
     <Compile Include="Domain\UI\ProgramUi.cs" />
-    <Compile Include="Domain\Magazine\Magazin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

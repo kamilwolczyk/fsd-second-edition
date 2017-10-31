@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{04E3235F-E2F2-4E74-A35D-9BD883E6A898}</ProjectGuid>
+    <ProjectGuid>{ADFE3A0F-52B8-477B-AC6F-5AA06447C094}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fsd.Bartek.Cs2.Ex2</RootNamespace>
-    <AssemblyName>Fsd.Bartek.Cs2.Ex2</AssemblyName>
+    <RootNamespace>Fsd.Bartek.Cs.Ex2</RootNamespace>
+    <AssemblyName>Fsd.Bartek.Cs.Ex2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,8 +47,8 @@
     <Compile Include="Domain\Animals\Cow.cs" />
     <Compile Include="Domain\Animals\Dog.cs" />
     <Compile Include="Domain\Animals\Pig.cs" />
-    <Compile Include="Domain\UI\BasicUI.cs" />
     <Compile Include="Domain\Fabric.cs" />
+    <Compile Include="Domain\UI\BasicUI.cs" />
     <Compile Include="Domain\UI\ProgramUi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,6 +56,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
