@@ -3,40 +3,40 @@ using System.Collections.Generic;
 
 namespace Fsd.Maciej.Cs.Ex2
 {
-    class Program
+    public enum AnimalType
+    {
+        cat = 1,
+        cow,
+        dog,
+        sheep,
+    }
+
+    partial class Program
     {
         private static void Main(string[] args)
         {
             Introduction.ViewHeader();
 
-            CatFactory newCat = new CatFactory();
-            List<Cat> catList = newCat.MakeAnimal();
+            GetAnimalName animalName = new GetAnimalName();
 
-            CowFactory newCow = new CowFactory();
-            List<Cow> cowList = newCow.MakeAnimal();
+            AnimalFactory newCat = new AnimalFactory();
+            int animalType = (int)AnimalType.cat;
+            List<Animal> myList = newCat.MakeAnimal(animalType, animalName.GetName(animalType));
 
-            DogFactory newDog = new DogFactory();
-            List<Dog> dogList = newDog.MakeAnimal();
+            AnimalFactory newDog = new AnimalFactory();
+            animalType = (int)AnimalType.dog;
+            myList.AddRange(newDog.MakeAnimal(animalType, animalName.GetName(animalType)));
 
-            SheepFactory newSheep = new SheepFactory();
-            List<Sheep> sheepList = newSheep.MakeAnimal();
+            AnimalFactory newCow = new AnimalFactory();
+            animalType = (int)AnimalType.cow;
+            myList.AddRange(newCow.MakeAnimal(animalType, animalName.GetName(animalType)));
 
-            newCat.View(catList);
-            newCow.View(cowList);
-            newDog.View(dogList);
-            newSheep.View(sheepList);
+            AnimalFactory newSheep = new AnimalFactory();
+            animalType = (int)AnimalType.sheep;
+            myList.AddRange(newSheep.MakeAnimal(animalType, animalName.GetName(animalType)));
 
+            PresentMyAnimals.Show(myList);
             Console.ReadKey();
-        }
-        static class Introduction
-        {
-            public static  void ViewHeader()
-            {
-                Console.WriteLine("Exercise 2");
-                Console.WriteLine("------------------------------------------");
-            }
-
-
         }
     }
 }

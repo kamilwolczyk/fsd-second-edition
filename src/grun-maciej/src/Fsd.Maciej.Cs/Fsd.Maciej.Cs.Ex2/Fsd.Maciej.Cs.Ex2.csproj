@@ -42,17 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\AnimalFactory.cs" />
     <Compile Include="Animals\Animal.cs" />
     <Compile Include="Animals\Cat.cs" />
-    <Compile Include="Factory\CatFactory.cs" />
     <Compile Include="Animals\Cow.cs" />
     <Compile Include="Animals\Dog.cs" />
-    <Compile Include="Factory\CowFactory.cs" />
-    <Compile Include="Factory\DogFactory.cs" />
+    <Compile Include="Factory\GetNameForAnimal.cs" />
+    <Compile Include="Library\PresentMyAnimals.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Library\Program.Introduction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Animals\Sheep.cs" />
-    <Compile Include="Factory\SheepFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

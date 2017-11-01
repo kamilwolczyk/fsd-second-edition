@@ -2,9 +2,9 @@
 {
     public abstract class Animal
     {
-        public string Name { get; set; }
+        public abstract string Name { get; set; }
 
-        public abstract string MakeSomeNois();
+        public abstract string MakeSomeNoise();
 
         public virtual string AbautMe()
         {
