@@ -1,16 +1,11 @@
-﻿using Fsd.Arek.Cs2.Domain.Animals;
-using Fsd.Arek.Cs2.Domain.Enum;
+﻿using Fsd.Arek.Cs2.Domain;
+using Fsd.Arek.Cs2.Domain.Animals;
 
 public class Pig : Animal, IVoice
 {
     public Pig(string name)
         : base(name)
     {
-    }
-
-    public override string GetInformationAboutAnimal()
-    {
-        return $"{AnimalsType.pig} name: {Name}";
     }
 
     public string GetVoice()

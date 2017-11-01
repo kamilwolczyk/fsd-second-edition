@@ -50,7 +50,7 @@
     <Compile Include="Domain\Animals\Interfaces\IVoice.cs" />
     <Compile Include="Domain\Animals\Pig.cs" />
     <Compile Include="Domain\ConsoleMenu.cs" />
-    <Compile Include="Domain\Enums\AnimalsType.cs" />
+    <Compile Include="Domain\Animals\AnimalType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

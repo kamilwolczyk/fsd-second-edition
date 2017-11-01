@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fsd.Arek.Cs2.Domain.Enum
+namespace Fsd.Arek.Cs2.Domain
 {
-    public enum AnimalsType
+    public enum AnimalType
     {
-        dog,
-        cat,
-        cow,
-        pig
+        Dog,
+        Cat,
+        Cow,
+        Pig
     }
 }

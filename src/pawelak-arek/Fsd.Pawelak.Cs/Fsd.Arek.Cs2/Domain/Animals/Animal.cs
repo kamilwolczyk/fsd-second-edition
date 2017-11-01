@@ -1,4 +1,6 @@
 ﻿using Fsd.Arek.Cs2.Domain.Animals;
+using Fsd.Arek.Cs2.Domain;
+using System;
 
 public abstract class Animal
 {
@@ -9,8 +11,5 @@ public abstract class Animal
         Name = name;
     }
 
-    public abstract string GetInformationAboutAnimal();
-
     public abstract string SayHello();
-
 }

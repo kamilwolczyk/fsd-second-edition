@@ -12,7 +12,7 @@ namespace Fsd.Arek.Cs3
         static void Main(string[] args)
         {
             AplicationMenu aplicationMenu = new AplicationMenu();
-            aplicationMenu.Run();
+            aplicationMenu.Start();
         }
     }
 }

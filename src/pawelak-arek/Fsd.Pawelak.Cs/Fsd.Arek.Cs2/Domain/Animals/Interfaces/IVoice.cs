@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fsd.Arek.Cs2.Domain.Animals
 {
-    interface IVoice
+    public interface IVoice
     {
         string GetVoice();
     }

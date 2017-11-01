@@ -6,9 +6,10 @@ using System.Linq;
 public class AplicationMenu
 {
     const string _line = "-----------------------------";
-    Warehouse _warehouse = new Warehouse();
 
-    public void Run()
+    private Warehouse _warehouse = new Warehouse();
+
+    public void Start()
     {
         int option = ShowMainMenu();
 
@@ -35,7 +36,7 @@ public class AplicationMenu
                     Console.WriteLine(exception.Message);
                     Console.WriteLine("Press any key");
                     Console.ReadKey();
-                    Run();
+                    Start();
                     break;
                 }
         }
@@ -64,8 +65,8 @@ public class AplicationMenu
         Console.Clear();
         WareHauseStateTable();
 
-        if (IfCloseAplication())
-            Run();
+        if (AskUser())
+            Start();
         else
             ShowWareHauseState();
     }
@@ -107,9 +108,9 @@ public class AplicationMenu
             {
                 Console.WriteLine(fex.Message);
             }
-            close = IfCloseAplication();
+            close = AskUser();
         } while (!close);
-        Run();
+        Start();
     }
 
     public void AddProductMenu()
@@ -127,18 +128,18 @@ public class AplicationMenu
                 int price = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter count of product: ");
                 int count = int.Parse(Console.ReadLine());
-                _warehouse.AddProductToWareHouse(count, new Product(_warehouse, name, price));
+                _warehouse.AddProductToWareHouse(count, new Product(name, price, _warehouse.CreateProductID(name, price)));
             }
             catch (FormatException fex)
             {
                 Console.WriteLine(fex.Message);
             }
-            close = IfCloseAplication();
+            close = AskUser();
         } while (!close);
-        Run();
+        Start();
     }
 
-    public bool IfCloseAplication()
+    public bool AskUser()
     {
         Console.WriteLine("Do you want to leave [(Y)es] [(N)o] ?");
         return Console.ReadLine() == "Y" ? true : false;

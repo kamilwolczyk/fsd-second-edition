@@ -5,18 +5,7 @@ using System;
 
 public class Warehouse
 {
-    private List<Product> _stock = new List<Product>();
-
-    public List<Product> WarehouseState
-    {
-        get
-        {
-            return _stock;
-        }
-        set
-        {
-        }
-    }
+    public List<Product> WarehouseState { get; set; } = new List<Product>();
 
     public int GetUniqecount(int productID, List<Product> list)
     {
@@ -25,21 +14,25 @@ public class Warehouse
 
     public List<Product> GetUniqeProduct()
     {
-        List<Product> tempList = WarehouseState;
+        List<Product> productList = WarehouseState;
         bool bCopy = false;
         List<Product> uniqueList = new List<Product>();
 
         foreach (Product item1 in WarehouseState)
         {
-            foreach (Product item2 in tempList)
+            foreach (Product item2 in productList)
             {
                 bCopy = false;
 
                 if (item1.ProductId == item2.ProductId)
+                {
                     bCopy = true;
+                }
                 if (bCopy)
+                {
                     if (!uniqueList.Exists(x => x.ProductId.Equals(item1.ProductId)))
                         uniqueList.Add(item1);
+                }
             }
         }
         return uniqueList;
@@ -53,11 +46,47 @@ public class Warehouse
 
     public void SellProduct(int count, Product product)
     {
-        int uniqeCount = GetUniqecount(product.ProductId, _stock);
+        int uniqeCount = GetUniqecount(product.ProductId, WarehouseState);
 
         if (uniqeCount >= count)
             for (int i = 0; i < count; i++)
-                _stock.Remove(product);
+                WarehouseState.Remove(product);
+    }
+
+    public int CreateProductID(string name, decimal price)
+    {
+        int id = 0;
+        bool state;
+
+        try
+        {
+            state = WarehouseState.Exists(x => x.Name == name) && WarehouseState.Exists(x => x.Price == price) ? true : false;
+        }
+        catch
+        {
+            state = false;
+        }
+        List<int> listId = new List<int>();
+
+        if (state)
+        {
+            foreach (Product product in WarehouseState)
+            {
+                if (product.Name == name && product.Price == price)
+                    return product.ProductId;
+            }
+        }
+        else
+        {
+            Random random = new Random();
+
+            foreach (var property in GetUniqeProduct())
+                listId.Add(property.ProductId);
+
+            do id = random.Next();
+            while (listId.Contains(id));
+        }
+        return id;
     }
 }
 

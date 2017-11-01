@@ -1,5 +1,4 @@
-﻿using Fsd.Arek.Cs2.Domain.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,48 +8,59 @@ namespace Fsd.Arek.Cs2.Domain
 {
     public class AnimalsFactory
     {
-        private List<Animal> _animalList = new List<Animal>();
+        public List<Animal> AnimalList { get; set; } = new List<Animal>();
 
-        public List<Animal> AnimalList
-        {
-            get
-            {
-                return _animalList;
-            }
-            private set
-            {
-            }
-        }
-
-        public void CreateAnimalsInFactory(int numberOfAnimal, AnimalsType animalsType)
+        public void CreateAnimalsInFactory(int numberOfAnimal, AnimalType animalsType)
         {
             for (int i = 1; i <= numberOfAnimal; i++)
             {
-                if (animalsType == AnimalsType.cat)
-                    _animalList.Add(new Cat("cat" + i));
-                else if (animalsType == AnimalsType.cow)
-                    _animalList.Add(new Cow("cow" + i));
-                else if (animalsType == AnimalsType.dog)
-                    _animalList.Add(new Dog("dog" + i));
-                else if (animalsType == AnimalsType.pig)
-                    _animalList.Add(new Pig("pig" + i));
+                switch (animalsType)
+                {
+                    case AnimalType.Dog:
+                        AnimalList.Add(new Dog($"dog{i}"));
+                        break;
+                    case AnimalType.Cat:
+                        AnimalList.Add(new Cat($"cat{i}"));
+                        break;
+                    case AnimalType.Cow:
+                        AnimalList.Add(new Cow($"cow{i}"));
+                        break;
+                    case AnimalType.Pig:
+                        AnimalList.Add(new Pig($"pig{i}"));
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
-        public List<string> GetNameAnimals(AnimalsType animalsType)
+        public List<string> PresentAnimals(AnimalType animalsType)
         {
             List<string> nameAnimals = new List<string>();
 
             foreach (Animal animal in AnimalList)
             {
-                if (animal is Cat && animalsType == AnimalsType.cat)
-                    nameAnimals.Add(animal.GetInformationAboutAnimal());
-                else if (animal is Cow && animalsType == AnimalsType.cow)
-                    nameAnimals.Add(animal.GetInformationAboutAnimal());
-                else if (animal is Dog && animalsType == AnimalsType.dog)
-                    nameAnimals.Add(animal.GetInformationAboutAnimal());
-                else if (animal is Pig && animalsType == AnimalsType.pig)
-                    nameAnimals.Add(animal.GetInformationAboutAnimal());
+                switch (animalsType)
+                {
+                    case AnimalType.Dog:
+                        if (animal is Dog)
+                            nameAnimals.Add($"{AnimalType.Dog} name: {animal.Name}");
+                        break;
+                    case AnimalType.Cat:
+                        if (animal is Cat)
+                            nameAnimals.Add($"{AnimalType.Cat} name: {animal.Name}");
+                        break;
+                    case AnimalType.Cow:
+                        if (animal is Cow)
+                            nameAnimals.Add($"{AnimalType.Cow} name: {animal.Name}");
+                        break;
+                    case AnimalType.Pig:
+                        if (animal is Pig)
+                            nameAnimals.Add($"{AnimalType.Pig} name: {animal.Name}");
+                        break;
+                    default:
+                        break;
+                }
             }
             return nameAnimals;
         }

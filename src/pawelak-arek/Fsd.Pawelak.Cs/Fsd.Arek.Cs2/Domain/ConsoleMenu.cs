@@ -1,5 +1,4 @@
-﻿using Fsd.Arek.Cs2.Domain.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Fsd.Arek.Cs2.Domain
@@ -13,10 +12,8 @@ namespace Fsd.Arek.Cs2.Domain
             AnimalsFactory AnimalsFactory = new AnimalsFactory();
             SetHeader(2, line);
 
-            GetUserInformation(AnimalsFactory, AnimalsType.cat);
-            GetUserInformation(AnimalsFactory, AnimalsType.cow);
-            GetUserInformation(AnimalsFactory, AnimalsType.dog);
-            GetUserInformation(AnimalsFactory, AnimalsType.pig);
+            foreach (AnimalType animalType in Enum.GetValues(typeof(AnimalType)))
+                GetUserInformation(AnimalsFactory, animalType);
 
             foreach (Animal animal in AnimalsFactory.AnimalList)
                 Console.WriteLine(animal.SayHello());
@@ -29,7 +26,7 @@ namespace Fsd.Arek.Cs2.Domain
             Console.WriteLine($"Excercise nr {numberExcercise} \n{line}");
         }
 
-        public int GetIntDataFromUser(AnimalsType type)
+        public int GetIntDataFromUser(AnimalType type)
         {
             int number = 0;
             Console.WriteLine($"Insert number of {type}");
@@ -51,11 +48,11 @@ namespace Fsd.Arek.Cs2.Domain
                 Console.WriteLine($"{text}");
         }
 
-        public void GetUserInformation(AnimalsFactory factory, AnimalsType animalsType)
+        public void GetUserInformation(AnimalsFactory factory, AnimalType animalsType)
         {
             int numberOfAnimals = GetIntDataFromUser(animalsType);
             factory.CreateAnimalsInFactory(numberOfAnimals, animalsType);
-            WriteInformationFromList(factory.GetNameAnimals(animalsType));
+            WriteInformationFromList(factory.PresentAnimals(animalsType));
         }
     }
 }
