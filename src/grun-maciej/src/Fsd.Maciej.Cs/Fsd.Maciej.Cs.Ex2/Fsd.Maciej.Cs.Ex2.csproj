@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animals\AnimalType.cs" />
     <Compile Include="Factory\AnimalFactory.cs" />
     <Compile Include="Animals\Animal.cs" />
     <Compile Include="Animals\Cat.cs" />

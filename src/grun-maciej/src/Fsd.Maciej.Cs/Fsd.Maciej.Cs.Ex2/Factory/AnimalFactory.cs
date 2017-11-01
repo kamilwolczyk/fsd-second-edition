@@ -4,34 +4,34 @@ namespace Fsd.Maciej.Cs.Ex2
 {
     public class AnimalFactory
     {
-        public List<Animal> MakeAnimal(int animalType, string[] animalName)
+        public List<Animal> CreateAnimal(AnimalType animalType, string[] animalName)
         {
             List<Animal> animalList = new List<Animal>();
 
-            switch ((int)animalType)
+            switch (animalType)
             {
-                case 1:
+                case AnimalType.Cat:
                     for (int i = 0; i < animalName.Length; i++)
                     {
                         animalList.Add(new Cat { Name = animalName[i] });
                     }
                     break;
 
-                case 2:
+                case AnimalType.Cow:
                     for (int i = 0; i < animalName.Length; i++)
                     {
                         animalList.Add(new Cow { Name = animalName[i] });
                     }
                     break;
 
-                case 3:
+                case AnimalType.Dog:
                     for (int i = 0; i < animalName.Length; i++)
                     {
                         animalList.Add(new Dog { Name = animalName[i] });
                     }
                     break;
 
-                case 4:
+                case AnimalType.Sheep:
                     for (int i = 0; i < animalName.Length; i++)
                     {
                         animalList.Add(new Sheep { Name = animalName[i] });

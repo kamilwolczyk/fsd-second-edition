@@ -2,17 +2,9 @@
 {
     public class Dog : Animal
     {
-        public override string Name { get; set; }
-
-        public override string MakeSomeNoise()
+        public Dog()
         {
-            return "Hau Hau Hau";
-        }
-
-        public override string AbautMe()
-        {
-            string whoAmI = $"{base.AbautMe()}{Name}, {MakeSomeNoise()}";
-            return whoAmI;
+            base.MakeSomeNoise = "Hau Hau Hau";
         }
     }
 }

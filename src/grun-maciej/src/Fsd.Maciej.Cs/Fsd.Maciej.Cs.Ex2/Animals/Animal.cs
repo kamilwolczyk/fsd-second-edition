@@ -2,13 +2,13 @@
 {
     public abstract class Animal
     {
-        public abstract string Name { get; set; }
+        public string Name { get; set; }
 
-        public abstract string MakeSomeNoise();
+        public string MakeSomeNoise { get; protected set; }
 
-        public virtual string AbautMe()
+        public string AbautMe()
         {
-            return "Hello, my name is ";
+            return $"Hello, my name is {Name}, {MakeSomeNoise}";
         }
     }
 }

@@ -3,14 +3,6 @@ using System.Collections.Generic;
 
 namespace Fsd.Maciej.Cs.Ex2
 {
-    public enum AnimalType
-    {
-        cat = 1,
-        cow,
-        dog,
-        sheep,
-    }
-
     partial class Program
     {
         private static void Main(string[] args)
@@ -20,20 +12,16 @@ namespace Fsd.Maciej.Cs.Ex2
             GetAnimalName animalName = new GetAnimalName();
 
             AnimalFactory newCat = new AnimalFactory();
-            int animalType = (int)AnimalType.cat;
-            List<Animal> myList = newCat.MakeAnimal(animalType, animalName.GetName(animalType));
+            List<Animal> myList = newCat.CreateAnimal(AnimalType.Cat, animalName.GetName(AnimalType.Cat));
 
             AnimalFactory newDog = new AnimalFactory();
-            animalType = (int)AnimalType.dog;
-            myList.AddRange(newDog.MakeAnimal(animalType, animalName.GetName(animalType)));
+            myList.AddRange(newDog.CreateAnimal(AnimalType.Dog, animalName.GetName(AnimalType.Dog)));
 
             AnimalFactory newCow = new AnimalFactory();
-            animalType = (int)AnimalType.cow;
-            myList.AddRange(newCow.MakeAnimal(animalType, animalName.GetName(animalType)));
+            myList.AddRange(newCow.CreateAnimal(AnimalType.Cow, animalName.GetName(AnimalType.Cow)));
 
             AnimalFactory newSheep = new AnimalFactory();
-            animalType = (int)AnimalType.sheep;
-            myList.AddRange(newSheep.MakeAnimal(animalType, animalName.GetName(animalType)));
+            myList.AddRange(newSheep.CreateAnimal(AnimalType.Sheep, animalName.GetName(AnimalType.Sheep)));
 
             PresentMyAnimals.Show(myList);
             Console.ReadKey();

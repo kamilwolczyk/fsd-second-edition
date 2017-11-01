@@ -4,32 +4,32 @@ namespace Fsd.Maciej.Cs.Ex2
 {
     public class GetAnimalName
     {
-        public string[] GetName(int typeOfAnimal)
+        public string[] GetName(AnimalType animalType)
         {
             string[] animalName;
             int animalCount = 0;
 
-            switch ((int)typeOfAnimal)
+            switch (animalType)
             {
-                case 1:
+                case AnimalType.Cat:
                     animalCount = AnimalCount("how many cats do you need? ");
                     animalName = new string[animalCount];
                     animalName = GetNameAnimal(animalCount);
                     return animalName;
 
-                case 2:
+                case AnimalType.Cow:
                     animalCount = AnimalCount("how many cows do you need? ");
                     animalName = new string[animalCount];
                     animalName = GetNameAnimal(animalCount);
                     return animalName;
 
-                case 3:
+                case AnimalType.Dog:
                     animalCount = AnimalCount("how many dogs do you need? ");
                     animalName = new string[animalCount];
                     animalName = GetNameAnimal(animalCount);
                     return animalName;
 
-                case 4:
+                case AnimalType.Sheep:
                     animalCount = AnimalCount("how many sheep do you need? ");
                     animalName = new string[animalCount];
                     animalName = GetNameAnimal(animalCount);
@@ -47,13 +47,13 @@ namespace Fsd.Maciej.Cs.Ex2
                 string number = Console.ReadLine();
                 bool checkMyNumber = Int32.TryParse(number, out int checkedNumber);
 
-                if (checkMyNumber)
+                if (checkMyNumber & checkedNumber >= 0)
                 {
                     return checkedNumber;
                 }
                 else
                 {
-                    Console.WriteLine("wrong arguments please try again");
+                    Console.WriteLine("\nValue incorrect! Please try again.\n");
                     Console.Write(question);
                 }
             }
