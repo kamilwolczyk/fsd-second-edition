@@ -14,9 +14,8 @@ namespace Fsd.Sebastian.Cs2
 
         public static char GetChar(string message)
         {
-            ConsoleKeyInfo userInput;
             Console.Write(message);
-            userInput = Console.ReadKey();
+            ConsoleKeyInfo userInput = Console.ReadKey();
 
             return char.Parse(userInput.KeyChar.ToString());
         }
