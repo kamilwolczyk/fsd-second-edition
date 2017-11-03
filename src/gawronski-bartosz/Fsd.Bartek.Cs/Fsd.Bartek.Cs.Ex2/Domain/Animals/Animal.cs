@@ -8,14 +8,15 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
 
         public string VoiceString { get; set; }
 
-        public Animal(string name)
+        public Animal(string name, string voicestring)
         {
             Name = name;
+            VoiceString = voicestring;
         }
 
         public virtual string Voice()
         {
-            return $"Hello, my name is {Name}";
+            return $"Hello, my name is {Name}, {VoiceString}";
         }
     }
 }

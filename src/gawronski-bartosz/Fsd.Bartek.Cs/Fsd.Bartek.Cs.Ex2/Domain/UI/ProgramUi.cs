@@ -7,7 +7,7 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
     {
         public static void InsertNumber()
         {
-            Fabric Producent = new Fabric();
+            AnimalFactory Producer = new AnimalFactory();
 
             string[] animals = { "cats", "dogs", "cows", "pigs" };
 
@@ -15,24 +15,11 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             {
                 Console.Write($"Insert number of {item}: ");
                 string number = Console.ReadLine();
-                switch (item)
-                {
-                    case "cats":
-                        Producent.FabricAnimal(int.Parse(number),item);
-                        break;
-                    case "dogs":
-                        Producent.FabricAnimal(int.Parse(number),item);
-                        break;
-                    case "pigs":
-                        Producent.FabricAnimal(int.Parse(number),item);
-                        break;
-                    case "cows":
-                        Producent.FabricAnimal(int.Parse(number),item);
-                        break;
-                }
+
+                Producer.FabricAnimal(int.Parse(number), item);
             }
 
-            DisplayAnimals(Producent);
+            DisplayAnimals(Producer);
         }
 
         public static string InsertName(string type)
@@ -42,9 +29,9 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.UI
             return name;
         }
 
-        public static void DisplayAnimals(Fabric producent)
+        public static void DisplayAnimals(AnimalFactory producer)
         {
-            foreach (var item in producent.Animals)
+            foreach (var item in producer.Animals)
             {
                 Console.WriteLine(item.Voice());
             }

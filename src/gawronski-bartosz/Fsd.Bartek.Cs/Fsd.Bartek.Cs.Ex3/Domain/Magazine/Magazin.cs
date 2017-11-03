@@ -6,11 +6,13 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
 {
     public class Warehouse
     {
-        public List<Product> Wares = new List<Product>
+        public List<Product> Wares { get; set; }
+
+       public Warehouse()
         {
-            new Product("Lenovo Tab", 950, 10),
-            new Product("Asus Zenfone 5", 499, 5)
-        };
+            Wares.Add( new Product("Lenovo Tab", 950, 10));
+            Wares.Add(new Product("Asus Zenfone 5", 499, 5));
+        }
 
         public Product FindWare(string name)
         {
@@ -33,14 +35,10 @@ namespace Fsd.Bartek.Cs2.Ex3.Domain.Magazine
 
             if(item != null)
             {
-                if (item.Count == 1)
-                {
-                    Wares.Remove(item);
-                }
-                else
-                {
-                    item.Count--;
-                }
+                if (item.Count == 1)                
+                    Wares.Remove(item);                
+                else                
+                    item.Count--;                
 
                 return "Thank's for buy!";
             }

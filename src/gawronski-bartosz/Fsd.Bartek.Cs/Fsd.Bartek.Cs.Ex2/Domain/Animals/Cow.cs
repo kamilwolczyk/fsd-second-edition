@@ -4,14 +4,9 @@ namespace Fsd.Bartek.Cs2.Ex2.Domain.Animals
 {
     public class Cow : Animal
     {
-        public Cow(string name) : base(name)
+        public Cow(string name) : base(name, "Muu Muuuu")
         {
-            base.VoiceString = "Muu Muuuu";
-        }
 
-        public override string Voice()
-        {
-            return $"{base.Voice()}, {VoiceString}";
         }
     }
 }

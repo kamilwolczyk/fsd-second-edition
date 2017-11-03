@@ -8,9 +8,14 @@ using Fsd.Bartek.Cs2.Ex2.Domain.UI;
 
 namespace Fsd.Bartek.Cs2.Ex2.Domain
 {
-    public class Fabric
+    public class AnimalFactory
     {
-        public List<Animal> Animals = new List<Animal>();
+        public List<Animal> Animals { get;  private set; }
+
+        public AnimalFactory()
+        {
+            Animals = new List<Animal>();
+        }
 
         public void FabricAnimal(int count, string type)
         {
