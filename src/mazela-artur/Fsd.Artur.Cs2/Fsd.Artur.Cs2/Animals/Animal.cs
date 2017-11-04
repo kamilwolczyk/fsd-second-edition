@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs2.Animals
 {
-    public  class Animal
+    public class Animal
     {
-        private  string _name;
+        private string _name;
 
         protected Animal(string name)
         {

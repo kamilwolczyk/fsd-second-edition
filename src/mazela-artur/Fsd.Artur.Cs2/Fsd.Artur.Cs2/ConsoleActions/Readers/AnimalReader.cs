@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs2.ConsoleActions.Readers
 {
-    public class AnimalReader : IAnimalReader
+    public class ConsoleAnimalReader : IAnimalReader
     {
         public int GetCount(string name)
         {

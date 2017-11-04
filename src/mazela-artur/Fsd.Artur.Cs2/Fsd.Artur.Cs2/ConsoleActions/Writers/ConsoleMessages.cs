@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs2.ConsoleActions.Writers
 {
-    public class StartMessage
+    public class ConsoleMessages
     {
-        public static void BeginMessage()
+        public static void Start()
         {
             Console.WriteLine("Exercise 2 - Interfaces");
             Console.WriteLine("----------------------------------------------------------");

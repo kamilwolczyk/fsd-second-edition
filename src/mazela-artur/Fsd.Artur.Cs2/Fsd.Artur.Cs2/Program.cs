@@ -14,14 +14,14 @@ namespace Fsd.Artur.Cs2
     {
         private static void Main(string[] args)
         {
-            StartMessage.BeginMessage();
+            ConsoleMessages.Start();
 
-            AnimalReader animalReader = new AnimalReader();
-            CreateAnimals animalsCreator = new CreateAnimals(animalReader);
+            ConsoleAnimalReader animalReader = new ConsoleAnimalReader();
+            AnimalsFactory animalsCreator = new AnimalsFactory(animalReader);
             List<string>[] animals = animalsCreator.CreatListOfAnimals();
 
-            EndMessage Animal = new EndMessage();
-            Animal.MakeNoise(animals);
+            AnimalsPresenter animal = new AnimalsPresenter();
+            animal.ShowAnimals(animals);
         }
     }
 }

@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs2
 {
-    public class CreateAnimals
+    public class AnimalsFactory
     {
         private IAnimalReader _readAnimal;
 
-        public CreateAnimals(IAnimalReader readAnimal)
+        public AnimalsFactory(IAnimalReader readAnimal)
         {
             _readAnimal = readAnimal;
         }
@@ -22,24 +22,24 @@ namespace Fsd.Artur.Cs2
         public List<string>[] CreatListOfAnimals()
         {
             List<string>[] animals = new List<string>[4];
-            animals[0] = Animal("Cat");
-            animals[1] = Animal("Dog");
-            animals[2] = Animal("Cow");
-            animals[3] = Animal("Pig");
+            animals[0] = GetAnimalNames("Cat");
+            animals[1] = GetAnimalNames("Dog");
+            animals[2] = GetAnimalNames("Cow");
+            animals[3] = GetAnimalNames("Pig");
             return animals;
         }
 
-        private List<string> Animal(string animalName)
+        private List<string> GetAnimalNames(string animalName)
         {
             int animalNumber = _readAnimal.GetCount(animalName);
-            List < string > animals = new List<string>();
+            List<string> animals = new List<string>();
 
             for (var i = 0; i < animalNumber; i++)
             {
                 animals.Add(_readAnimal.GetName(animalName));
             }
 
-           return animals;
+            return animals;
         }
     }
 }
