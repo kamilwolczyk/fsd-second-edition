@@ -5,8 +5,8 @@ namespace Weekend3.Services.Services
 {
     public interface IFarm
     {
-        void AddNewAnimals(List<Animal> animals);
+        void AddNewAnimals(IEnumerable<Animal> animals);
 
-        List<string> IntroduceAllAnimals();
+        IEnumerable<string> IntroduceAllAnimals();
     }
 }

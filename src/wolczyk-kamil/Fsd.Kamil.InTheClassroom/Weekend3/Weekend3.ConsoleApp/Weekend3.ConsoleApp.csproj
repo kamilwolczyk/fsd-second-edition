@@ -42,10 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animals\Controllers\Farmer.cs" />
-    <Compile Include="Animals\Controllers\IFarmer.cs" />
     <Compile Include="Animals\Views\ConsoleUserInterface.cs" />
-    <Compile Include="Animals\Views\IUserInterface.cs" />
     <Compile Include="Generics\KwList.cs" />
     <Compile Include="LinqTest\BankAccount.cs" />
     <Compile Include="LinqTest\LinqLearning.cs" />

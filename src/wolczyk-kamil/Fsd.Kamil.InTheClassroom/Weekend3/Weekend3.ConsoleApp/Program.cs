@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using Weekend3.ConsoleApp.LinqTest;
+﻿using Weekend3.ConsoleApp.Animals.Views;
+using Weekend3.Services.Providers;
+using Weekend3.Services.Services;
 
 namespace Weekend3.ConsoleApp
 {
@@ -7,37 +8,9 @@ namespace Weekend3.ConsoleApp
     {
         static void Main(string[] args)
         {
-            //IFarmer farmer = new Farmer();
-            //farmer.DoWork();
-
-            //KwList<int> list = new KwList<int>(10);
-            //list.Add(2);
-            //list.Add(3);
-
-            LinqLearning linq = new LinqLearning();
-            linq.Test();
-
-            Test("x");
-            Test("x", "y");
-            Test("x", "y", 3);
-            Test(
-                x:"x", 
-                z: 2, 
-                y:"y");
+            INamesProvider provider = new ConsoleUserInterface();
+            IFarmer farmer = new Farmer(provider);
+            farmer.DoWork();
         }
-
-        static void Test(string x="", string y = "", int z = 1)
-        {
-
-        }
-
-        static void ShowAllItems(IEnumerable<int> items)
-        {
-            foreach (var item in items)
-                System.Console.WriteLine(item);
-        }
-
-
-        
     }
 }

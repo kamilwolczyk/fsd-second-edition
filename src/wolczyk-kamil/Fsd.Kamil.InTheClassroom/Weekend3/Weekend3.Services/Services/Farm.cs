@@ -1,20 +1,26 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Weekend3.Data.Entities;
 
 namespace Weekend3.Services.Services
 {
     public class Farm : IFarm
     {
-        public void AddNewAnimals(List<Animal> animals)
+        private List<Animal> _animals;
+
+        public Farm()
         {
-            //throw new System.NotImplementedException();
+            _animals = new List<Animal>();
         }
 
-        public List<string> IntroduceAllAnimals()
+        public void AddNewAnimals(IEnumerable<Animal> animals)
         {
-            //throw new System.NotImplementedException();
+            _animals.AddRange(animals);
+        }
 
-            return new List<string>();
+        public IEnumerable<string> IntroduceAllAnimals()
+        {
+            return _animals.Select(animal => animal.SayHello());
         }
     }
 }

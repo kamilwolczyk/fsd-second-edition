@@ -43,8 +43,11 @@
     <Compile Include="Factories\AnimalFactory.cs" />
     <Compile Include="Factories\IAnimalFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\INamesProvider.cs" />
     <Compile Include="Services\Farm.cs" />
+    <Compile Include="Services\Farmer.cs" />
     <Compile Include="Services\IFarm.cs" />
+    <Compile Include="Services\IFarmer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Weekend3.Data\Weekend3.Data.csproj">

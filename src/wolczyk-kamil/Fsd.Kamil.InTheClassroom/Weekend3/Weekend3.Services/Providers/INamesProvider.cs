@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using Weekend3.Data.Enums;
 
-namespace Weekend3.ConsoleApp.Animals.Views
+namespace Weekend3.Services.Providers
 {
-    public interface IUserInterface
+    public interface INamesProvider
     {
         List<string> GetNames(AnimalSpecies animalSpecies);
 

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Weekend3.Data.Enums;
+using Weekend3.Services.Providers;
 
 namespace Weekend3.ConsoleApp.Animals.Views
 {
-    public class ConsoleUserInterface : IUserInterface
+    public class ConsoleUserInterface : INamesProvider
     {
         public List<string> GetNames(AnimalSpecies animalSpecies)
         {
