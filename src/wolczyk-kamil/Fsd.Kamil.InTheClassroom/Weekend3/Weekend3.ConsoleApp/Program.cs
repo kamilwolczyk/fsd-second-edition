@@ -16,6 +16,19 @@ namespace Weekend3.ConsoleApp
 
             LinqLearning linq = new LinqLearning();
             linq.Test();
+
+            Test("x");
+            Test("x", "y");
+            Test("x", "y", 3);
+            Test(
+                x:"x", 
+                z: 2, 
+                y:"y");
+        }
+
+        static void Test(string x="", string y = "", int z = 1)
+        {
+
         }
 
         static void ShowAllItems(IEnumerable<int> items)
@@ -23,5 +36,8 @@ namespace Weekend3.ConsoleApp
             foreach (var item in items)
                 System.Console.WriteLine(item);
         }
+
+
+        
     }
 }
