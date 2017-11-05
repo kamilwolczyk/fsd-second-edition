@@ -49,7 +49,7 @@
     <Compile Include="Services\IFarm.cs" />
     <Compile Include="Services\IFarmer.cs" />
     <Compile Include="Services\Users\IUserService.cs" />
-    <Compile Include="Services\Users\UserService.cs" />
+    <Compile Include="Services\Users\FakeUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Weekend3.Data\Weekend3.Data.csproj">
