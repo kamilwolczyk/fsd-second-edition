@@ -1,4 +1,4 @@
-﻿namespace Weekend3.ConsoleApp.Animals.Models.Entities
+﻿namespace Weekend3.Data.Entities
 {
     public class Cat : Animal
     {

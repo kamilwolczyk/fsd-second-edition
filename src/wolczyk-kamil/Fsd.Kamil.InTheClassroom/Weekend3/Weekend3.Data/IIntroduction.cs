@@ -1,4 +1,4 @@
-﻿namespace Weekend3.ConsoleApp.Animals.Models
+﻿namespace Weekend3.Data
 {
     public interface IIntroduction
     {

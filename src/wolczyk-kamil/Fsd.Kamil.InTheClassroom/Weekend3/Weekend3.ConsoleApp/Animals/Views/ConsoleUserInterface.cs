@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Weekend3.ConsoleApp.Animals.Models.Enums;
+using Weekend3.Data.Enums;
 
 namespace Weekend3.ConsoleApp.Animals.Views
 {

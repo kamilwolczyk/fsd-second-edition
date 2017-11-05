@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Weekend3.ConsoleApp.Animals.Models.Entities;
-using Weekend3.ConsoleApp.Animals.Models.Enums;
+using Weekend3.Data.Entities;
+using Weekend3.Data.Enums;
 
-namespace Weekend3.ConsoleApp.Animals.Models.Factories
+namespace Weekend3.Services.Factories
 {
     public interface IAnimalFactory
     {

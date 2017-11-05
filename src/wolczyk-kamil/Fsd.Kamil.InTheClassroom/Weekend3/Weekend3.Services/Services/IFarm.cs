@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Weekend3.ConsoleApp.Animals.Models.Entities;
+using Weekend3.Data.Entities;
 
-namespace Weekend3.ConsoleApp.Animals.Models.Services
+namespace Weekend3.Services.Services
 {
     public interface IFarm
     {

@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-using Weekend3.ConsoleApp.Animals.Models.Entities;
-using Weekend3.ConsoleApp.Animals.Models.Enums;
-using Weekend3.ConsoleApp.Animals.Models.Factories;
 using Weekend3.ConsoleApp.Animals.Views;
+using Weekend3.Data.Entities;
+using Weekend3.Data.Enums;
+using Weekend3.Services.Factories;
+using Weekend3.Services.Services;
 
-namespace Weekend3.ConsoleApp.Animals.Models.Services
+namespace Weekend3.ConsoleApp.Animals.Controllers
 {
     public class Farmer : IFarmer
     {

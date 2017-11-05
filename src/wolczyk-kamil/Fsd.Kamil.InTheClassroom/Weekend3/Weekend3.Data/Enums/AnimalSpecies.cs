@@ -1,4 +1,4 @@
-﻿namespace Weekend3.ConsoleApp.Animals.Models.Enums
+﻿namespace Weekend3.Data.Enums
 {
     public enum AnimalSpecies
     {

@@ -1,4 +1,4 @@
-﻿namespace Weekend3.ConsoleApp.Animals.Models.Services
+﻿namespace Weekend3.ConsoleApp.Animals.Controllers
 {
     public interface IFarmer
     {
