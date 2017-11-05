@@ -142,8 +142,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Core\HtmlHelperExtensions.cs" />
+    <Compile Include="Core\StringExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,6 +195,7 @@
     <Content Include="Views\Home\HelloWorld.cshtml" />
     <Content Include="Views\Home\Date.cshtml" />
     <Content Include="Views\User\List.cshtml" />
+    <Content Include="Views\Date\FormattedDateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -45,7 +45,7 @@ namespace Weekend3.Web.Controllers
                     LastName = entity.LastName
                 })
             };
-
+            return Json(list, JsonRequestBehavior.AllowGet);
             return View(list);
         }
     }

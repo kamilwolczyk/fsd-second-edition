@@ -13,9 +13,11 @@ namespace Weekend3.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes.MapRoute("user-list", "user/list", new { controller = "User", action = "List" });
+            routes.MapRoute("user-list", "user/list", new { controller = "User", action = "List" });
             //routes.MapRoute("myRoute", "start/info", new { controller = "Home", action = "HelloWorld" });
             //routes.MapRoute("date", "date", new { controller = "Home", action = "Date" });
+
+            routes.MapRoute("date", "date/{action}/{format}", new { controller = "Date", format = UrlParameter.Optional });
 
             routes.MapRoute(
                 name: "Default",
