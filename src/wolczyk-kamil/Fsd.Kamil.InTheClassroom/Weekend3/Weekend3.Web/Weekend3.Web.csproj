@@ -143,10 +143,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\HelloWorldModel.cs" />
+    <Compile Include="Models\Users\UserListModel.cs" />
+    <Compile Include="Models\Users\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +191,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\HelloWorld.cshtml" />
     <Content Include="Views\Home\Date.cshtml" />
+    <Content Include="Views\User\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -204,6 +208,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weekend3.Data\Weekend3.Data.csproj">
+      <Project>{D698FF26-1734-4FE0-9BB6-4AD8D1EA813F}</Project>
+      <Name>Weekend3.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weekend3.Services\Weekend3.Services.csproj">
+      <Project>{06FC9C7E-3861-41E4-B918-51F3C74F8300}</Project>
+      <Name>Weekend3.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

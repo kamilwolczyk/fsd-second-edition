@@ -43,6 +43,7 @@
     <Compile Include="Entities\Animal.cs" />
     <Compile Include="Entities\Cat.cs" />
     <Compile Include="Entities\Dog.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Enums\AnimalSpecies.cs" />
     <Compile Include="IIntroduction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
