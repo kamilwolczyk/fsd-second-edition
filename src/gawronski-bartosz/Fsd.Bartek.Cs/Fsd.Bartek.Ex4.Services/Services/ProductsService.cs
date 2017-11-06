@@ -10,7 +10,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
 {
     public class ProductsService : IProductsService
     {
-        public IEnumerable<Product> GetProducts()
+        private List<Product> Products()
         {
             return new List<Product>
             {
@@ -62,6 +62,29 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Type = ProductsType.HeadPhones
                 },
             };
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return Products();
+        }
+
+        public IEnumerable<Product> DividedList(int page, int items)
+        {
+            List<Product> products = Products();
+
+            List<Product> dividedProducts = new List<Product>();
+
+            int firstIndex = items * (page - 1);
+
+            int lastIndex = firstIndex + (items - 1);
+
+            for(int i = firstIndex; i <= lastIndex; i++)
+            {
+                dividedProducts.Add(products[i]);
+            }
+
+            return dividedProducts;            
         }
     }
 }

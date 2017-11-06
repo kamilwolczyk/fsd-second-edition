@@ -18,11 +18,9 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
             _productService = new ProductsService();
         }
 
-        // GET: Products
         public ActionResult ProductsList()
         {
             string page = Request.QueryString["page"];
-
             string items = Request.QueryString["items"];
 
             IEnumerable<Product> products = _productService.GetProducts();
@@ -45,7 +43,17 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
             }
             else
             {
-                throw new NotImplementedException();
+                list = new ProductListModel
+                {
+                    Products = _productService.DividedList(int.Parse(page), int.Parse(items)).Select(entity => new ProductModel
+                    {
+                        Producer = entity.Producer,
+                        Model = entity.Model,
+                        Price = entity.Price,
+                        ProductionData = entity.ProductionData,
+                        Type = entity.Type
+                    })
+                };
             }
 
             return View(list);
