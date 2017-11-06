@@ -1,4 +1,6 @@
-﻿using Fsd.Bartek.Ex4.Services.Services;
+﻿using Fsd.Bartek.Ex4.Data.Entities;
+using Fsd.Bartek.Ex4.Services.Services;
+using Fsd.Bartek.Ex4.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,30 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
 
             string items = Request.QueryString["items"];
 
-            return View();
+            IEnumerable<Product> products = _productService.GetProducts();
+
+            ProductListModel list;
+
+            if (page == null && items == null)
+            {
+                list = new ProductListModel
+                {
+                    Products = products.Select(entity => new ProductModel
+                    {
+                        Producer = entity.Producer,
+                        Model = entity.Model,
+                        Price = entity.Price,
+                        ProductionData = entity.ProductionData,
+                        Type = entity.Type
+                    })              
+                };
+            }
+            else
+            {
+                list = new ProductListModel();
+            }
+
+            return View(list);
         }
     }
 }

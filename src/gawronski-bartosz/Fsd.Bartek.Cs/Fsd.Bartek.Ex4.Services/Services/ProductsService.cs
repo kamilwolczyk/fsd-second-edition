@@ -19,7 +19,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Lenovo",
                     Model = "Z51",
                     Price = 2000,
-                    ProductionData = "21.02.2017",
+                    ProductionData = "20.02.2017",
                     Type = ProductsType.Computer
                 },
                 new Product
@@ -27,7 +27,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Lenovo",
                     Model = "Z50",
                     Price = 2100,
-                    ProductionData = "21.02.2016",
+                    ProductionData = "2.02.2016",
                     Type = ProductsType.Computer
                 },
                 new Product
@@ -35,14 +35,14 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Xiaomi",
                     Model = "Mi5",
                     Price = 2200,
-                    ProductionData = "21.02.2015",
+                    ProductionData = "1.02.2015",
                     Type = ProductsType.Phone
                 },
                 new Product
                 {
                     Producer = "Alicja w Krainie Czarów",
                     Price = 2300,
-                    ProductionData = "21.02.2014",
+                    ProductionData = "21.05.2014",
                     Type = ProductsType.Book
                 },
                 new Product
@@ -50,7 +50,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Office",
                     Model = "2015",
                     Price = 2400,
-                    ProductionData = "21.02.2013",
+                    ProductionData = "30.10.2013",
                     Type = ProductsType.Software
                 },
                 new Product
@@ -58,7 +58,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "JBL",
                     Model = "VTX12",
                     Price = 2500,
-                    ProductionData = "21.02.2012",
+                    ProductionData = "12.02.2012",
                     Type = ProductsType.HeadPhones
                 },
             };
