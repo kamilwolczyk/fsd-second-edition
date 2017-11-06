@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Bartek.Cs.Ex2", "Fsd.Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Bartek.Cs.Ex3", "Fsd.Bartek.Cs.Ex3\Fsd.Bartek.Cs.Ex3.csproj", "{E8A1EB0F-3E20-4351-978E-2B90DB0D8EE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Bartek.Ex4.Web", "Fsd.Bartek.Ex4.Web\Fsd.Bartek.Ex4.Web.csproj", "{3BE040D9-6E85-4BE1-87A5-7AE9941AD7B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Bartek.Ex4.Services", "Fsd.Bartek.Ex4.Services\Fsd.Bartek.Ex4.Services.csproj", "{1C0CD4A2-34F9-48CA-8679-2C060EE130C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Bartek.Ex4.Data", "Fsd.Bartek.Ex4.Data\Fsd.Bartek.Ex4.Data.csproj", "{0E662FB4-B013-4B5E-AD61-22A0C98F0CB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{E8A1EB0F-3E20-4351-978E-2B90DB0D8EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8A1EB0F-3E20-4351-978E-2B90DB0D8EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8A1EB0F-3E20-4351-978E-2B90DB0D8EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE040D9-6E85-4BE1-87A5-7AE9941AD7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE040D9-6E85-4BE1-87A5-7AE9941AD7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE040D9-6E85-4BE1-87A5-7AE9941AD7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE040D9-6E85-4BE1-87A5-7AE9941AD7B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C0CD4A2-34F9-48CA-8679-2C060EE130C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0CD4A2-34F9-48CA-8679-2C060EE130C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0CD4A2-34F9-48CA-8679-2C060EE130C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0CD4A2-34F9-48CA-8679-2C060EE130C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E662FB4-B013-4B5E-AD61-22A0C98F0CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E662FB4-B013-4B5E-AD61-22A0C98F0CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E662FB4-B013-4B5E-AD61-22A0C98F0CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E662FB4-B013-4B5E-AD61-22A0C98F0CB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
