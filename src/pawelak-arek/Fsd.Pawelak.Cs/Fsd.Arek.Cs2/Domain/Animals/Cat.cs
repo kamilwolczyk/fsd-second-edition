@@ -3,8 +3,8 @@ using Fsd.Arek.Cs2.Domain.Animals;
 
 public class Cat : Animal, IVoice
 {
-    public Cat(string name)
-        : base(name)
+    public Cat(string name, AnimalType animalType) 
+        : base(name, animalType)
     {
     }
 

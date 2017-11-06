@@ -42,7 +42,7 @@ namespace Fsd.Arek.Cs2.Domain
             return number;
         }
 
-        public void WriteInformationFromList(List<string> list)
+        public void WriteInformationFromList(IEnumerable<string> list)
         {
             foreach (string text in list)
                 Console.WriteLine($"{text}");

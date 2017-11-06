@@ -56,16 +56,8 @@ public class Warehouse
     public int CreateProductID(string name, decimal price)
     {
         int id = 0;
-        bool state;
-
-        try
-        {
-            state = WarehouseState.Exists(x => x.Name == name) && WarehouseState.Exists(x => x.Price == price) ? true : false;
-        }
-        catch
-        {
-            state = false;
-        }
+        bool state = false;
+        state = WarehouseState.Exists(x => x.Name == name) && WarehouseState.Exists(x => x.Price == price);
         List<int> listId = new List<int>();
 
         if (state)

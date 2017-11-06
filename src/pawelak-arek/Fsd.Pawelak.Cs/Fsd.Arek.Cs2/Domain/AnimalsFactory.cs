@@ -17,16 +17,16 @@ namespace Fsd.Arek.Cs2.Domain
                 switch (animalsType)
                 {
                     case AnimalType.Dog:
-                        AnimalList.Add(new Dog($"dog{i}"));
+                        AnimalList.Add(new Dog($"dog{i}", animalsType));
                         break;
                     case AnimalType.Cat:
-                        AnimalList.Add(new Cat($"cat{i}"));
+                        AnimalList.Add(new Cat($"cat{i}", animalsType));
                         break;
                     case AnimalType.Cow:
-                        AnimalList.Add(new Cow($"cow{i}"));
+                        AnimalList.Add(new Cow($"cow{i}", animalsType));
                         break;
                     case AnimalType.Pig:
-                        AnimalList.Add(new Pig($"pig{i}"));
+                        AnimalList.Add(new Pig($"pig{i}", animalsType));
                         break;
                     default:
                         break;
@@ -34,35 +34,9 @@ namespace Fsd.Arek.Cs2.Domain
             }
         }
 
-        public List<string> PresentAnimals(AnimalType animalsType)
+        public IEnumerable<string> PresentAnimals(AnimalType animalType)
         {
-            List<string> nameAnimals = new List<string>();
-
-            foreach (Animal animal in AnimalList)
-            {
-                switch (animalsType)
-                {
-                    case AnimalType.Dog:
-                        if (animal is Dog)
-                            nameAnimals.Add($"{AnimalType.Dog} name: {animal.Name}");
-                        break;
-                    case AnimalType.Cat:
-                        if (animal is Cat)
-                            nameAnimals.Add($"{AnimalType.Cat} name: {animal.Name}");
-                        break;
-                    case AnimalType.Cow:
-                        if (animal is Cow)
-                            nameAnimals.Add($"{AnimalType.Cow} name: {animal.Name}");
-                        break;
-                    case AnimalType.Pig:
-                        if (animal is Pig)
-                            nameAnimals.Add($"{AnimalType.Pig} name: {animal.Name}");
-                        break;
-                    default:
-                        break;
-                }
-            }
-            return nameAnimals;
+            return AnimalList.Where(x => x.AnimalType == animalType).Select(x => x.GetPresenterAnimal());
         }
     }
 }

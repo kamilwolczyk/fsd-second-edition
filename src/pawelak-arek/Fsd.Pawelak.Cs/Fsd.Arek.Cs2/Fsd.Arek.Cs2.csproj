@@ -47,6 +47,7 @@
     <Compile Include="Domain\Animals\Cat.cs" />
     <Compile Include="Domain\Animals\Cow.cs" />
     <Compile Include="Domain\Animals\Dog.cs" />
+    <Compile Include="Domain\Animals\Interfaces\INamePresenter.cs" />
     <Compile Include="Domain\Animals\Interfaces\IVoice.cs" />
     <Compile Include="Domain\Animals\Pig.cs" />
     <Compile Include="Domain\ConsoleMenu.cs" />
