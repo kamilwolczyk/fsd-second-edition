@@ -45,7 +45,7 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
             }
             else
             {
-                list = new ProductListModel();
+                throw new NotImplementedException();
             }
 
             return View(list);
