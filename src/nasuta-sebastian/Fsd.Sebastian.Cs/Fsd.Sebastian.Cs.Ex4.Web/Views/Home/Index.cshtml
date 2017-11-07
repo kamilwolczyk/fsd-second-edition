@@ -1,11 +1,9 @@
-﻿@model ProductListModel
+﻿@model int
 
 @{
-    ViewBag.Title = "Home Page";
-    int productsCount = 55;//Model.Products.Count();
     string form;
 
-    if (productsCount == 1)
+    if (Model == 1)
     {
         form = "product";
     }
@@ -18,6 +16,6 @@
 <div class="jumbotron">
     <h1>Hello!</h1>
     <p class="lead">
-        We have @productsCount @form.
+        We have @Model @form.
     </p>
 </div>

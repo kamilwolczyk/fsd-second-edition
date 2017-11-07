@@ -20,26 +20,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult AllProducts()
-        {
-            IEnumerable<Product> products = _productProvider.GetAllProducts();
-
-            ProductListModel list = new ProductListModel
-            {
-                Products = products.Select(entity => new ProductModel
-                {
-                    Producer = entity.Producer,
-                    Model = entity.Model,
-                    Price = entity.Price,
-                    Date = entity.Date,
-                    Type = entity.Type
-                })
-            };
-
-            return View(list);
+            return View(_productProvider.GetProductsCount());
         }
 
         public ActionResult About()
