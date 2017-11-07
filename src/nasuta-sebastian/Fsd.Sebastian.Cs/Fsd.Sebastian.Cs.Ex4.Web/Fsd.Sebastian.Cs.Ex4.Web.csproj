@@ -142,10 +142,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Products\ProductListModel.cs" />
+    <Compile Include="Models\Products\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -183,12 +186,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\AllProducts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -202,6 +205,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fsd.Sebastian.Cs.Ex4.Data\Fsd.Sebastian.Cs.Ex4.Data.csproj">
+      <Project>{9D0E9F20-4C90-4245-AEB1-BBE8B2C3A28F}</Project>
+      <Name>Fsd.Sebastian.Cs.Ex4.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fsd.Sebastian.Cs.Ex4.Services\Fsd.Sebastian.Cs.Ex4.Services.csproj">
+      <Project>{D5421577-71B6-419C-A191-F9A8290FAB6F}</Project>
+      <Name>Fsd.Sebastian.Cs.Ex4.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
