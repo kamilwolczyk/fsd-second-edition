@@ -25,8 +25,6 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

@@ -47,8 +47,11 @@ namespace Fsd.Sebastian.Cs.Ex4.Services.Products
             return _productList.Count();
         }
 
-        public IEnumerable<Product> GetSelectedProducts()
+        public IEnumerable<Product> GetSelectedProducts(int? begin, int? count)
         {
+            if (begin.HasValue && count.HasValue)
+                return _productList.Skip(begin.Value).Take(count.Value);
+
             throw new NotImplementedException();
         }
     }
