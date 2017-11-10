@@ -22,7 +22,7 @@ namespace Fsd.Porowiec.Michal.Cs4.Controllers
                 model.Products = _productArray;
             else
             {
-                IEnumerable<Product> _slicedProductList = SliceProductArray.SliceProducts(Int32.Parse(Request.QueryString["items"]), Int32.Parse(Request.QueryString["page"]));
+                IEnumerable<Product> _slicedProductList = SliceProductArray.SliceProducts(Int32.Parse(Request.QueryString["page"]), Int32.Parse(Request.QueryString["items"]));
 
                 model.Products = _slicedProductList;
             }
