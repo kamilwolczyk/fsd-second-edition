@@ -1,0 +1,25 @@
+﻿@model UserListModel
+
+<h2>Users</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>L.p.</td>
+            <td>Imie</td>
+            <td>Nazwisko</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Users.Count(); i++)
+        {
+            UserModel user = Model.Users.ElementAt(i);
+
+            <tr>
+                <td>@(i+1)</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -8,7 +8,7 @@ namespace Fsd.Janus.Damian.Cs.Ex0
         {
             ProgramStart.RunStart(1, "Introduction");
             CharacterCounter characterCounter = new CharacterCounter();
-            characterCounter.RunCounter(args);
+            characterCounter.Conunt(args);
             ProgramEnd.RunEnd();
         }
     }
