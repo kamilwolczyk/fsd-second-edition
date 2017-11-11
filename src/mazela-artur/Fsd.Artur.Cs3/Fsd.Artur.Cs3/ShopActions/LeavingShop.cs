@@ -1,13 +1,9 @@
 ﻿using Fsd.Artur.Cs3.WareHouse;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs3.ShopActions
 {
-    public class LeaveShop
+    public class LeavingShop
     {
         public static void Leave( Warehouse store)
         {
@@ -20,7 +16,7 @@ namespace Fsd.Artur.Cs3.ShopActions
                     Console.WriteLine("Thank you for your visit.");
                     break;
                 case "N":
-                    MainViev.ShopViev(EnumAboutConsole.Old, store);
+                    MainViev.ShowView(ClearView.Old, store);
                     break;
                 default:
                     break;

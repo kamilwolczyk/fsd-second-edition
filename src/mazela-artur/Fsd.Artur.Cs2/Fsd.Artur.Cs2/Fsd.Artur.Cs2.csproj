@@ -42,16 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimalFactory.cs" />
+    <Compile Include="AnimalsFactory.cs" />
     <Compile Include="Animals\Animal.cs" />
     <Compile Include="Animals\Cat.cs" />
     <Compile Include="Animals\Cow.cs" />
     <Compile Include="Animals\Dog.cs" />
     <Compile Include="Animals\Pig.cs" />
-    <Compile Include="ConsoleActions\Readers\AnimalReader.cs" />
+    <Compile Include="ConsoleActions\Readers\ConsoleAnimalReader.cs" />
     <Compile Include="ConsoleActions\Readers\IAnimalReader.cs" />
     <Compile Include="ConsoleActions\Writers\AnimalsPresenter.cs" />
+    <Compile Include="ConsoleActions\Writers\IAnimalWriter.cs" />
     <Compile Include="ConsoleActions\Writers\ConsoleMessages.cs" />
+    <Compile Include="ConsoleActions\Writers\AnimalWriter.cs" />
+    <Compile Include="INoise.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

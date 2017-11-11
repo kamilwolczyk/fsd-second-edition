@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs3.ConsoleActions
 {
@@ -15,7 +11,7 @@ namespace Fsd.Artur.Cs3.ConsoleActions
             Console.WriteLine($"Exercise 3 - Objects{Environment.NewLine}{line}");
         }
 
-        public static void Ending()
+        public static void End()
         {
             Console.ReadKey();
         }

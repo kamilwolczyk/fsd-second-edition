@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fsd.Artur.Cs2.Animals
+﻿namespace Fsd.Artur.Cs2.Animals
 {
-    public class Dog : Animal
+    public class Dog : Animal,INoise
     {
         public Dog(string name) : base(name)
         { }

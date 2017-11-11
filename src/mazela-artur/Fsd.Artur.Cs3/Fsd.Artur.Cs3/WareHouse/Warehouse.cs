@@ -1,15 +1,10 @@
 ﻿using Fsd.Artur.Cs3.WareHouse.Products;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs3.WareHouse
 {
     public class Warehouse
     {
-
         List<Product> Shop = new List<Product>
         {
             new Product("Lenovo Tab", 950, 10),
@@ -21,7 +16,7 @@ namespace Fsd.Artur.Cs3.WareHouse
             return Shop;
         }
 
-        EnumAboutBuy AreBought = EnumAboutBuy.NotBought;
+        IsBought AreBought = IsBought.ProductNotBought;
 
         public string BuyItem(string name)
         {
@@ -33,7 +28,7 @@ namespace Fsd.Artur.Cs3.WareHouse
 
                 if (itemName == name)
                 {
-                    AreBought = EnumAboutBuy.Bought;
+                    AreBought = IsBought.ProductBought;
 
                     if (item.Count == 1)
                         Shop.Remove(item);
@@ -42,9 +37,9 @@ namespace Fsd.Artur.Cs3.WareHouse
                 }
             }
 
-            if (AreBought==EnumAboutBuy.Bought)
+            if (AreBought==IsBought.ProductBought)
             {
-                AreBought = EnumAboutBuy.NotBought;
+                AreBought = IsBought.ProductNotBought;
                 return "Thank you for bought item.)";
             }
             else
@@ -59,6 +54,5 @@ namespace Fsd.Artur.Cs3.WareHouse
 
             return "Product added to the Warehouse. Thank you.";
         }
-
     }
 }

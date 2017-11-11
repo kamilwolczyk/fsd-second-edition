@@ -1,13 +1,9 @@
 ﻿using Fsd.Artur.Cs3.WareHouse;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs3.ShopActions
 {
-    class CheckStateOfWarehouse
+    class CheckingStateOfWarehouse
     {
         public static void CheckProducts(Warehouse store)
         {
@@ -21,7 +17,7 @@ namespace Fsd.Artur.Cs3.ShopActions
                 Console.WriteLine($"|                      {item.NameOfItem}  |   {item.Price}   |   {item.Count}    |{Environment.NewLine}{line}");
             }
 
-            LeaveShop.Leave(store);
+            LeavingShop.Leave(store);
         }
     }
 }

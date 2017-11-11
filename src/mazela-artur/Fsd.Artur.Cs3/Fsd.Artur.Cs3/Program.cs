@@ -1,11 +1,5 @@
 ﻿using Fsd.Artur.Cs3.ConsoleActions;
 using Fsd.Artur.Cs3.WareHouse;
-using Fsd.Artur.Cs3.ShopActions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs3
 {
@@ -17,9 +11,9 @@ namespace Fsd.Artur.Cs3
 
             ConsoleMessage.Start();
 
-            MainViev.ShopViev(EnumAboutConsole.New, store);
+            MainViev.ShowView(ClearView.New, store);
 
-            ConsoleMessage.Ending();
+            ConsoleMessage.End();
         }
     }
 }

@@ -43,15 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleActions\ConsoleMessage.cs" />
-    <Compile Include="EnumAboutBuy.cs" />
+    <Compile Include="IsBought.cs" />
     <Compile Include="MainViev.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShopActions\AddProducts.cs" />
-    <Compile Include="ShopActions\BuyProducts.cs" />
+    <Compile Include="ShopActions\AddingProducts.cs" />
+    <Compile Include="ShopActions\BuingProducts.cs" />
     <Compile Include="ShopActions\CheckingDecision.cs" />
-    <Compile Include="ShopActions\CheckStateOfWarehouse.cs" />
-    <Compile Include="ShopActions\LeaveShop.cs" />
+    <Compile Include="ShopActions\CheckingStateOfWarehouse.cs" />
+    <Compile Include="ShopActions\LeavingShop.cs" />
     <Compile Include="WareHouse\Products\Product.cs" />
     <Compile Include="WareHouse\Warehouse.cs" />
   </ItemGroup>

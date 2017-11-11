@@ -15,16 +15,16 @@ namespace Fsd.Artur.Cs3.ShopActions
             switch (decision)
             {
                 case 1:
-                    BuyProducts.BuyOne(store);
+                    BuingProducts.BuyOne(store);
                     break;
                 case 2:
-                    CheckStateOfWarehouse.CheckProducts(store);
+                    CheckingStateOfWarehouse.CheckProducts(store);
                     break;
                 case 3:
-                    AddProducts.AddOne(store);
+                    AddingProducts.AddOne(store);
                     break;
                 case 4:
-                    LeaveShop.Leave(store);
+                    LeavingShop.Leave(store);
                     break;
                 default:
                     break;

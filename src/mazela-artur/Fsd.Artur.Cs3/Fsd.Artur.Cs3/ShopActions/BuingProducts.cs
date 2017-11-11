@@ -1,14 +1,9 @@
 ﻿using Fsd.Artur.Cs3.WareHouse;
-using Fsd.Artur.Cs3.ShopActions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fsd.Artur.Cs3.ShopActions
 {
-    public class BuyProducts
+    public class BuingProducts
     {
         public static void BuyOne(Warehouse store)
         {
@@ -16,7 +11,7 @@ namespace Fsd.Artur.Cs3.ShopActions
             Console.Write("Write name of product:");
             Console.WriteLine(SearchProductInStore(Console.ReadLine(), store));
 
-            LeaveShop.Leave(store);
+            LeavingShop.Leave(store);
         }
 
         private static string SearchProductInStore(string item, Warehouse store)
