@@ -1,17 +1,6 @@
 ﻿@model int
 
-@{
-    string form;
-
-    if (Model == 1)
-    {
-        form = "product";
-    }
-    else
-    {
-        form = "products";
-    }
-}
+@{ string form = Model == 1 ? "product" : "products"; }
 
 <div class="jumbotron">
     <h1>Hello!</h1>

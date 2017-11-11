@@ -1,31 +1,34 @@
-﻿@model ProductListModel
-
-<h2>Products</h2>
+﻿<h2>Products</h2>
 
 <table class="table">
-    <thead class="h4">
-        <tr>
-            <td>Id</td>
-            <td>Producer</td>
-            <td>Model</td>
-            <td>Price</td>
-            <td>Date</td>
-            <td>Type</td>
-        </tr>
-    </thead>
-    <tbody>
-        @for (int i = 0; i < Model.Products.Count(); i++)
-        {
-            ProductModel product = Model.Products.ElementAt(i);
-
+        <thead class="h4">
             <tr>
-                <td>@(i + 1)</td>
-                <td>@product.Producer</td>
-                <td>@product.Model</td>
-                <td>@product.Price</td>
-                <td>@product.Date.ToLongDateString()</td>
-                <td>@product.Type</td>
+                <td>Producer</td>
+                <td>Model</td>
+                <td>Price</td>
+                <td>Production date</td>
+                <td>Type</td>
             </tr>
-        }
-    </tbody>
+        </thead>
+        <tbody>
+            @foreach (var product in ViewBag.OnePageOfProducts)
+            {
+                <tr>
+                    <td>@product.Producer</td>
+                    <td>@product.Model</td>
+                    <td>@product.Price</td>
+                    <td>@product.Date.ToLongDateString()</td>
+                    <td>@product.Type</td>
+                </tr>
+            }
+        </tbody>
 </table>
+
+<div>
+    @Html.PagedListPager((IPagedList)ViewBag.OnePageOfProducts, page => Url.Action("Products", "Products", new { page, items = ViewBag.PageSize }), PagedListRenderOptions.Classic)
+
+    Items on page:
+    @Html.ActionLink("5", "Products", new { page = 1, items = 5 }) |
+    @Html.ActionLink("10", "Products", new { page = 1, items = 10 }) |
+    @Html.ActionLink($"ALL ({ViewBag.ProductsCount})", "Products", new { page = 1, items = ViewBag.ProductsCount })
+</div>

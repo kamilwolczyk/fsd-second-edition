@@ -7,8 +7,6 @@ namespace Fsd.Sebastian.Cs.Ex4.Services.Products
     {
         IEnumerable<Product> GetAllProducts();
 
-        IEnumerable<Product> GetSelectedProducts(int? begin, int? count);
-
         int GetProductsCount();
     }
 }

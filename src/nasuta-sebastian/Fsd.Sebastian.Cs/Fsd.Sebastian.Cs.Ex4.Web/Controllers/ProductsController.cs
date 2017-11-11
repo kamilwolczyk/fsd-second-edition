@@ -2,6 +2,7 @@
 using Fsd.Sebastian.Cs.Ex4.Data.Enums;
 using Fsd.Sebastian.Cs.Ex4.Services.Products;
 using Fsd.Sebastian.Cs.Ex4.Web.Models.Products;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,44 +21,29 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
 
         public ActionResult Products(int? page, int? items)
         {
-            ProductListModel list = null;
+            IEnumerable<Product> products = _productProvider.GetAllProducts();
 
-            if (page == null || items == null || page <= 0 || items <= 0)
+            ProductListModel list = new ProductListModel
             {
-                IEnumerable<Product> products = _productProvider.GetAllProducts();
-
-                list = new ProductListModel
+                Products = products.Select(entity => new ProductModel
                 {
-                    Products = products.Select(entity => new ProductModel
-                    {
-                        Producer = entity.Producer,
-                        Model = entity.Model,
-                        Price = entity.Price,
-                        Date = entity.Date,
-                        Type = entity.Type
-                    })
-                };
+                    Producer = entity.Producer,
+                    Model = entity.Model,
+                    Price = entity.Price,
+                    Date = entity.Date,
+                    Type = entity.Type
+                })
+            };
 
-                return View(list);
-            }
-            else
-            {
-                IEnumerable<Product> products = _productProvider.GetSelectedProducts((page-1)*items, items);
+            int pageNumber = (page ?? 1);
+            int pageSize = items ?? list.Products.Count();
 
-                list = new ProductListModel
-                {
-                    Products = products.Select(entity => new ProductModel
-                    {
-                        Producer = entity.Producer,
-                        Model = entity.Model,
-                        Price = entity.Price,
-                        Date = entity.Date,
-                        Type = entity.Type
-                    })
-                };
+            var pagedList = list.Products.ToPagedList(pageNumber, pageSize);
 
-                return View("ProductsFormated", list);
-            }
+            ViewBag.OnePageOfProducts = pagedList;
+            ViewBag.PageSize = pagedList.PageSize;
+            ViewBag.ProductsCount = list.Products.Count();
+            return View();
         }
     }
 }
