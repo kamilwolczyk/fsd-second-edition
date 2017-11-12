@@ -1,4 +1,6 @@
-﻿<h2>Products</h2>
+﻿@model PagedListModel
+
+<h2>Products</h2>
 
 <table class="table">
         <thead class="h4">
@@ -11,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var product in ViewBag.OnePageOfProducts)
+            @foreach (var product in Model.Products)
             {
                 <tr>
                     <td>@product.Producer</td>
@@ -25,10 +27,10 @@
 </table>
 
 <div>
-    @Html.PagedListPager((IPagedList)ViewBag.OnePageOfProducts, page => Url.Action("Products", "Products", new { page, items = ViewBag.PageSize }), PagedListRenderOptions.Classic)
+    @Html.PagedListPager((IPagedList)Model.Products, page => Url.Action("Products", "Products", new { page, items = Model.Products.PageSize }), PagedListRenderOptions.Classic)
 
     Items on page:
     @Html.ActionLink("5", "Products", new { page = 1, items = 5 }) |
     @Html.ActionLink("10", "Products", new { page = 1, items = 10 }) |
-    @Html.ActionLink($"ALL ({ViewBag.ProductsCount})", "Products", new { page = 1, items = ViewBag.ProductsCount })
+    @Html.ActionLink($"ALL ({Model.Products.TotalItemCount})", "Products", new { page = 1, items = Model.Products.TotalItemCount })
 </div>

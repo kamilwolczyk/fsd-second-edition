@@ -2,9 +2,9 @@
 {
     public enum ProductType
     {
-        Electric_Guitar,
-        Acoustic_Guitar,
-        Bass_Guitar,
+        ElectricGuitar,
+        AcousticGuitar,
+        BassGuitar,
         Drum,
         Keyboard,
         Microphone,

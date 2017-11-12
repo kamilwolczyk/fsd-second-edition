@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Fsd.Sebastian.Cs.Ex4.Web
@@ -14,7 +10,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("Home", "", new { controller = "Home", action = "Index" });
-            routes.MapRoute("Products", "products/{format}", new { controller = "Products", action = "Products", format = UrlParameter.Optional });
+            routes.MapRoute("Products", "products", new { controller = "Products", action = "Products" });
             routes.MapRoute("About", "about", new { controller = "Home", action = "About" });
 
             routes.MapRoute(
