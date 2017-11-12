@@ -5,9 +5,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
 {
     public interface IProductsService
     {
-        IEnumerable<Product> GetProducts();
-
-        IEnumerable<Product> DividedList(int page, int items);
+        IEnumerable<Product> GetProducts(int page, int items);
     }
 }
 

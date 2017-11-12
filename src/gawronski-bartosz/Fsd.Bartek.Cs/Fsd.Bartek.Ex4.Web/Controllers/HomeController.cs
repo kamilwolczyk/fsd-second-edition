@@ -19,7 +19,7 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<Product> products = _productService.GetProducts();
+            IEnumerable<Product> products = _productService.GetProducts(0, 0);
 
             int listCount = products.Count(); 
 

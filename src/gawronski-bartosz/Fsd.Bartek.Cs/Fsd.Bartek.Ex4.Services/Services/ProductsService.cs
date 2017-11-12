@@ -64,27 +64,19 @@ namespace Fsd.Bartek.Ex4.Services.Services
             };
         }
 
-        public IEnumerable<Product> GetProducts()
-        {
-            return Products();
-        }
-
-        public IEnumerable<Product> DividedList(int page, int items)
+        public IEnumerable<Product> GetProducts(int page, int items )
         {
             List<Product> products = Products();
 
-            List<Product> dividedProducts = new List<Product>();
-
-            int firstIndex = items * (page - 1);
-
-            int lastIndex = firstIndex + (items - 1);
-
-            for(int i = firstIndex; i <= lastIndex; i++)
+            if (page == 0 || items == 0)
             {
-                dividedProducts.Add(products[i]);
+                page = 0;
+                items = products.Count();
             }
 
-            return dividedProducts;            
+            IEnumerable<Product> dividedProducts = products.Skip(page == 0 ? page : (page-1)*items).Take(items);
+
+            return dividedProducts;
         }
     }
 }

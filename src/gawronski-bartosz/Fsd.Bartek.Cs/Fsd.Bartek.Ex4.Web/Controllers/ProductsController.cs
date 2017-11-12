@@ -12,49 +12,27 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
     public class ProductsController : Controller
     {
         private IProductsService _productService;
-        
+
         public ProductsController()
         {
             _productService = new ProductsService();
         }
 
-        public ActionResult ProductsList()
+        public ActionResult ProductsList(string page = null, string items = null)
         {
-            string page = Request.QueryString["page"];
-            string items = Request.QueryString["items"];
+            //IEnumerable<Product> products = _productService.GetProducts();
 
-            IEnumerable<Product> products = _productService.GetProducts();
-
-            ProductListModel list;
-
-            if (page == null && items == null)
+            ProductListModel list = new ProductListModel
             {
-                list = new ProductListModel
+                Products = _productService.GetProducts(int.Parse(page ?? "0"), int.Parse(items ?? "0")).Select(entity => new ProductModel
                 {
-                    Products = products.Select(entity => new ProductModel
-                    {
-                        Producer = entity.Producer,
-                        Model = entity.Model,
-                        Price = entity.Price,
-                        ProductionData = entity.ProductionData,
-                        Type = entity.Type
-                    })              
-                };
-            }
-            else
-            {
-                list = new ProductListModel
-                {
-                    Products = _productService.DividedList(int.Parse(page), int.Parse(items)).Select(entity => new ProductModel
-                    {
-                        Producer = entity.Producer,
-                        Model = entity.Model,
-                        Price = entity.Price,
-                        ProductionData = entity.ProductionData,
-                        Type = entity.Type
-                    })
-                };
-            }
+                    Producer = entity.Producer,
+                    Model = entity.Model,
+                    Price = entity.Price,
+                    ProductionData = entity.ProductionData,
+                    Type = entity.Type
+                })
+            };
 
             return View(list);
         }
