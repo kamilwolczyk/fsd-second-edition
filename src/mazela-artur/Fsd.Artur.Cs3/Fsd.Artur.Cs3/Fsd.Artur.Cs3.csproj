@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClearView.cs" />
     <Compile Include="ConsoleActions\ConsoleMessage.cs" />
     <Compile Include="IsBought.cs" />
     <Compile Include="MainViev.cs" />

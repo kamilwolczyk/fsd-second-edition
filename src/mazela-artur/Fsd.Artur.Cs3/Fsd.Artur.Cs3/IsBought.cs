@@ -5,9 +5,4 @@
         ProductBought,
         ProductNotBought,
     }
-    public enum ClearView
-    {
-        New,
-        Old,
-    }
 }
