@@ -74,9 +74,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                 items = products.Count();
             }
 
-            IEnumerable<Product> dividedProducts = products.Skip(page == 0 ? page : (page-1)*items).Take(items);
-
-            return dividedProducts;
+            return products.Skip(page == 0 ? page : (page - 1) * items).Take(items);            
         }
     }
 }
