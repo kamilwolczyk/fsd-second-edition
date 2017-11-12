@@ -1,0 +1,36 @@
+﻿@model PagedListModel
+
+<h2>Products</h2>
+
+<table class="table">
+        <thead class="h4">
+            <tr>
+                <td>Producer</td>
+                <td>Model</td>
+                <td>Price</td>
+                <td>Production date</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Producer</td>
+                    <td>@product.Model</td>
+                    <td>@product.Price</td>
+                    <td>@product.Date.ToLongDateString()</td>
+                    <td>@product.Type</td>
+                </tr>
+            }
+        </tbody>
+</table>
+
+<div>
+    @Html.PagedListPager((IPagedList)Model.Products, page => Url.Action("Products", "Products", new { page, items = Model.Products.PageSize }), PagedListRenderOptions.Classic)
+
+    Items on page:
+    @Html.ActionLink("5", "Products", new { page = 1, items = 5 }) |
+    @Html.ActionLink("10", "Products", new { page = 1, items = 10 }) |
+    @Html.ActionLink($"ALL ({Model.Products.TotalItemCount})", "Products", new { page = 1, items = Model.Products.TotalItemCount })
+</div>
