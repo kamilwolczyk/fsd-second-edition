@@ -1,0 +1,27 @@
+﻿@model ProductListModel
+
+<h2>Products</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Producent</td>
+            <td>Model</td>
+            <td>Cena</td>
+            <td>Data Produkcji</td>
+            <td>Typ</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductModel product in Model.Products)
+        {
+            <tr>
+                <td>@product.Producer</td>
+                <td>@product.Model</td>
+                <td>@product.Price </td>
+                <td>@product.ProductionData </td>
+                <td>@product.Type</td>
+            </tr>
+        }
+    </tbody>
+</table>
