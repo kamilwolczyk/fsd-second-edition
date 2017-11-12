@@ -25,24 +25,16 @@ namespace Fsd.Artur.Cs4.Controllers
             int takeItems;
 
             if (items == null)
-            {
-                takeItems = _productService.GetProductCount(); ;
-            }
+                takeItems = _productService.GetProductCount();
             else
-            {
                 takeItems = items.Value;
-            }
 
             int skipPage;
 
             if (page == null)
-            {
                 skipPage = 1;
-            }
             else
-            {
                 skipPage = page.Value;
-            }
 
             ProductListModel model = new ProductListModel();
             List<ProductModel> list = new List<ProductModel>();
