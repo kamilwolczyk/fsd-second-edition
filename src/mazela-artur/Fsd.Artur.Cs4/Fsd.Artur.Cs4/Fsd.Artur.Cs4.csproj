@@ -147,6 +147,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Index\IndexModel.cs" />
+    <Compile Include="Models\Products\ConvertModel.cs" />
     <Compile Include="Models\Products\ProductListModel.cs" />
     <Compile Include="Models\Products\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

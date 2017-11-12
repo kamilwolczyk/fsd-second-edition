@@ -22,44 +22,14 @@ namespace Fsd.Artur.Cs4.Controllers
         {
             IEnumerable<Product> products = _productService.GetProducts();
 
-            int takeItems;
+            int takeItems = (items == null) ? _productService.GetProductCount() : items.Value ;
 
-            if (items == null)
-                takeItems = _productService.GetProductCount();
-            else
-                takeItems = items.Value;
-
-            int skipPage;
-
-            if (page == null)
-                skipPage = 1;
-            else
-                skipPage = page.Value;
+            int skipPage = (page == null) ? 1 : page.Value;
 
             ProductListModel model = new ProductListModel();
-            List<ProductModel> list = new List<ProductModel>();
+            ConvertModel convert = new ConvertModel();
 
-            foreach (var variable in products)
-            {
-                ProductModel productModel = new ProductModel
-                {
-                    Id = variable.Id,
-
-                    Producer = variable.Producer,
-
-                    Model = variable.Model,
-
-                    Price = variable.Price,
-
-                    ProductionDate= variable.ProductionDate,
-
-                    Type = variable.Type,
-                };
-
-                list.Add(productModel);
-            }
-
-            model.Products = list;
+            model = convert.Convert(model, products);
             model.Take = takeItems;
             model.Skip = skipPage;
 

@@ -14,9 +14,6 @@ namespace Fsd.Artur.Cs2
     {
         private static void Main(string[] args)
         {
-
-
-
             ConsoleMessages.Start();
 
             ConsoleAnimalReader animalReader = new ConsoleAnimalReader();

@@ -1,4 +1,5 @@
-﻿using Fsd.Artur.Cs4.Services.Products;
+﻿using Fsd.Artur.Cs4.Models.Index;
+using Fsd.Artur.Cs4.Services.Products;
 using System.Web.Mvc;
 
 namespace Fsd.Artur.Cs4.Controllers
@@ -14,9 +15,10 @@ namespace Fsd.Artur.Cs4.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.count = _productService.GetProductCount();
+            IndexModel model = new IndexModel();
+            model.Count = _productService.GetProductCount();
 
-            return View(ViewBag.count);
+            return View(model);
         }
 
         public ActionResult About()
