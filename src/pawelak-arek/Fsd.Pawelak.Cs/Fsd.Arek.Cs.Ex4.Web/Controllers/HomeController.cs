@@ -20,12 +20,5 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
         {
             return View();
         }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }

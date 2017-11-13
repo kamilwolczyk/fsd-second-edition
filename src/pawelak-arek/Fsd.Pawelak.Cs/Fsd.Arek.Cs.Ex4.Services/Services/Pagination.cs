@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Fsd.Arek.Cs.Ex4.Services.Services
 {
-    public class Pagination : IPaginationPage
+    public class Pagination<TItems> : IPaginationPage<TItems>
     {
-        public IEnumerable<Product> CreatePagePositionList(IEnumerable<Product> list, int pageNumber, int item)
+        public IEnumerable<TItems> CreatePagePositionList(IEnumerable<TItems> list, int pageNumber, int item)
         {
             int startIndex = ((pageNumber * item) - item);
-            IEnumerable<Product> pagginationList = new List<Product>();
+            IEnumerable<TItems> pagginationList = new List<TItems>();
 
             if (pageNumber * item < list.Count())
                 return pagginationList = list.Skip(startIndex).Take(item);

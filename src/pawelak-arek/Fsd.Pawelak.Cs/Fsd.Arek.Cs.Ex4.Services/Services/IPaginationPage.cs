@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace Fsd.Arek.Cs.Ex4.Services.Services
 {
-    public interface IPaginationPage
+    public interface IPaginationPage<TItems>
     {
-        IEnumerable<Product> CreatePagePositionList(IEnumerable<Product> list, int pageNumber, int item);
+        IEnumerable<TItems> CreatePagePositionList(IEnumerable<TItems> list, int pageNumber, int item);
     }
 }

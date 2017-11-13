@@ -38,7 +38,7 @@ namespace Fsd.Arek.Cs.Ex4.Services.Services
             return _productList.Count();
         }
 
-        public IEnumerable<Product> GetAllProduct()
+        public IEnumerable<Product> GetAllProducts()
         {
             return _productList;
         }

@@ -11,6 +11,6 @@ namespace Fsd.Arek.Cs.Ex4.Services.Services
     {
         int GetProductCount();
 
-        IEnumerable<Product> GetAllProduct();
+        IEnumerable<Product> GetAllProducts();
     }
 }

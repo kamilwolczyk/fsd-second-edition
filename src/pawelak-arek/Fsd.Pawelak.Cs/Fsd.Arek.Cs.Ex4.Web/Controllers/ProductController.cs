@@ -17,29 +17,18 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
         {
             _warehause = new Warehause();
         }
-       
-        public ActionResult List()
+
+        public ActionResult List(int? page, int? items)
         {
-            IPaginationPage paginationList = new Pagination();
-            IEnumerable<Product> _listproduct;
+            IPaginationPage<Product> paginationList = new Pagination<Product>();
+            IEnumerable<Product> listproduct;
 
-            if (Request.Params["page"] != null && Request.Params["items"] != null)
-               _listproduct = paginationList.CreatePagePositionList(_warehause.GetAllProduct(), int.Parse(Request.Params["page"]), int.Parse(Request.Params["items"]));
+            if (page != null && items != null)
+                listproduct = paginationList.CreatePagePositionList(_warehause.GetAllProducts(), (int)page, (int)items);
             else
-                _listproduct = _warehause.GetAllProduct();
-
-            ProductListModel productList = new ProductListModel
-            {
-                Products = _listproduct.Select(entity => new ProductModel
-                {
-                    Producer = entity.Producer,
-                    Model = entity.Model,
-                    Price = entity.Price,
-                    Type = entity.Type,
-                    DateOfProduction = entity.DateOfProduction
-                })
-            };
-            return View(productList);
+                listproduct = _warehause.GetAllProducts();
+            
+            return View(ProductListToModelConverter.Convert(listproduct));
         }
     }
 }
