@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Fsd.Bielewicz.Jacek.Cs2")]
+[assembly: AssemblyTitle("Fsd.Jacek.Cs3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Fsd.Bielewicz.Jacek.Cs2")]
+[assembly: AssemblyProduct("Fsd.Jacek.Cs3")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a3de95b5-ee70-4170-a060-af2fb401677e")]
+[assembly: Guid("75921dae-ed89-4dee-9c9e-8f66ec9b8929")]
 
 // Version information for an assembly consists of the following four values:
 //
