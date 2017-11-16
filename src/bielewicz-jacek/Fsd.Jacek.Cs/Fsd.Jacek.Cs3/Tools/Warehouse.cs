@@ -33,7 +33,7 @@ namespace Fsd.Jacek.Cs3.Tools
 
         public bool LeaveShowpPrompt()
         {
-            Console.Write("Do you want to levae our shop? [(Y)es] [(N)p]");
+            Console.Write("Do you want to levae our shop? [(Y)es] [(N)op]");
             string input = Console.ReadLine();
 
             bool leave = input == "N" || input == "n";
