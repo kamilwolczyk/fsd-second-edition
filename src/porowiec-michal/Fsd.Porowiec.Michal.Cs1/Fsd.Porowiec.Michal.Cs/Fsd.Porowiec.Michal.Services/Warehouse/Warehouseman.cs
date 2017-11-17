@@ -7,9 +7,9 @@ using Fsd.Porowiec.Michal.Data.Products;
 
 namespace Fsd.Porowiec.Michal.Services.Warehouse
 {
-    public abstract class Warehouseman
+    public class Warehouseman
     {
-        public static List<Product> GetProducts()
+        public static List<Product> TakeProducts()
         {
             return new List<Product>
             {
@@ -30,6 +30,19 @@ namespace Fsd.Porowiec.Michal.Services.Warehouse
                 new Product("Tynk",Producer.Atlas,50.00,"05.06.2017",ProductType.BuildingMaterial),
                 new Product("Gucci GG0084S",Producer.Gucci, 1300,"05.10.2017",ProductType.Making)
             };
+        }
+
+        public IEnumerable<Product> GetProducts(int page, int items)
+        {
+            List<Product> productList = TakeProducts();
+
+            if (page == 0 || items == 0)
+            {
+                page = 0;
+                items = productList.Count();
+            }
+
+            return productList.Skip(page == 0 ? page : (page - 1) * items).Take(items);
         }
     }
 }

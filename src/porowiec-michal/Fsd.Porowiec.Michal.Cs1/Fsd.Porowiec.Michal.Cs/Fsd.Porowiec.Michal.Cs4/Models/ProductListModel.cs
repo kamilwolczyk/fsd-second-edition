@@ -8,6 +8,6 @@ namespace Fsd.Porowiec.Michal.Cs4.Models
 {
     public class ProductListModel
     {
-        public IEnumerable<Product> Products { get; set; }
+        public IEnumerable<ProductModel> Products { get; set; }
     }
 }
