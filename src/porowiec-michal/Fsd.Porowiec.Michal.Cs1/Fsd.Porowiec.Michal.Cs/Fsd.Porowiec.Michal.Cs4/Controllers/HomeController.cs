@@ -15,8 +15,6 @@ namespace Fsd.Porowiec.Michal.Cs4.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Twórca Strony: Michał Porowiec ";
-
             return View();
         }
 

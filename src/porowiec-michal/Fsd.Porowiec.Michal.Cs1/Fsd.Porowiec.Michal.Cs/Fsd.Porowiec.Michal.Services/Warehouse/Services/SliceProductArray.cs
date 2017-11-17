@@ -9,15 +9,15 @@ namespace Fsd.Porowiec.Michal.Services.Warehouse.Services
 {
     public abstract class SliceProductArray
     {
-        public static IEnumerable<Product> SliceProducts(int page, int items)
+        public static IEnumerable<Product> SliceProducts(string page, string items)
         {
             List<Product> _productArray = Warehouseman.GetProducts();
 
             List<Product> finalPage = new List<Product>();
 
-            int lowestIndex = items * (page - 1);
+            int lowestIndex = Int32.Parse(items) * (Int32.Parse(page) - 1);
 
-            for (int i = lowestIndex; i <= lowestIndex + (items - 1); i++)
+            for (int i = lowestIndex; i <= lowestIndex + (Int32.Parse(items) - 1); i++)
                 finalPage.Add(_productArray[i]);
 
             return finalPage;

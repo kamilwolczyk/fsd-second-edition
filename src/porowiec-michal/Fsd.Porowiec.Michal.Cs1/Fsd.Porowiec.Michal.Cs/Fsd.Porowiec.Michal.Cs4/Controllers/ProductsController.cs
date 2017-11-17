@@ -12,18 +12,16 @@ namespace Fsd.Porowiec.Michal.Cs4.Controllers
 {
     public class ProductsController: Controller
     {
-        IEnumerable<Product> _productArray = Warehouseman.GetProducts();
-
         public ActionResult Display()
         {
             ProductListModel model = new ProductListModel();
 
             if (Request.QueryString["items"] == null && Request.QueryString["page"] == null)
-                model.Products = _productArray;
+                model.Products = Warehouseman.GetProducts();
             else
             {
-                IEnumerable<Product> _slicedProductList = SliceProductArray.SliceProducts(Int32.Parse(Request.QueryString["page"]), Int32.Parse(Request.QueryString["items"]));
-
+                IEnumerable<Product> _slicedProductList = SliceProductArray.SliceProducts(Request.QueryString["page"], Request.QueryString["items"]);
+           
                 model.Products = _slicedProductList;
             }
 
