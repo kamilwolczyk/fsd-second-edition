@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using Pzpn.Core.Cryptography;
 using Pzpn.Team.Domain.Api.Services;
 using Pzpn.Team.Domain.Services;
 using System.Web.Mvc;
@@ -19,6 +20,8 @@ namespace Pzpn.Team.Web
             builder.RegisterSource(new ViewRegistrationSource());
             builder.RegisterFilterProvider();
 
+            builder.RegisterType<SecurityService>().As<ISecurityService>();
+            builder.RegisterType<FakeUserService>().As<IUserService>();
             builder.RegisterType<InMemoryPlayerService>().As<IPlayerService>();
 
             var container = builder.Build();
