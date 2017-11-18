@@ -1,0 +1,33 @@
+﻿@model Fsd.Janus.Damian.Cs.Ex4.Models.Products.ProductListModel
+
+<h2>Products</h2>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>L.p.</td>
+                <td>Producer</td>
+                <td>Model</td>
+                <td>Price</td>
+                <td>Production Date</td>
+                <td>Product Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Products.Count(); i++)
+            {
+                Fsd.Janus.Damian.Cs.Ex4.Models.Products.ProductModel product = Model.Products.ElementAt(i);
+
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@product.Producer</td>
+                    <td>@product.Model</td>
+                    <td>@product.Price</td>
+                    <td>@product.ProductionDate</td>
+                    <td>@product.Type</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
