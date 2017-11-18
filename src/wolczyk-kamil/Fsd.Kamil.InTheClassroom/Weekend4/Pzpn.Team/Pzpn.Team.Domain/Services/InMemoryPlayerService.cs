@@ -43,5 +43,10 @@ namespace Pzpn.Team.Domain.Services
         {
             return _players.FirstOrDefault(player => player.Number == number);
         }
+
+        public int GetPlayerCount()
+        {
+            return _players.Count();
+        }
     }
 }
