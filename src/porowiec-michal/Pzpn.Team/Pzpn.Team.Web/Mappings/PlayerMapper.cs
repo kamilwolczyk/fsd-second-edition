@@ -11,7 +11,7 @@ namespace Pzpn.Team.Web.Mappings
             {
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
-                Number = entity.Number
+                Number = entity.Number,
             };
         }
     }

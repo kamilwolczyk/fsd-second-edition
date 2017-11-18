@@ -25,5 +25,11 @@ namespace Pzpn.Team.Web.Controllers
 
             return View(list);
         }
+
+        [ActionName("details")]
+        public ActionResult DisplayPlayerDetails(uint number)
+        {
+            return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
+        }
     }
 }
