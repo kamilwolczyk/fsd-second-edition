@@ -16,6 +16,15 @@
         </div>
     </div>
     <div class="container body-content">
+        <nav class="main">
+            <ul>
+                <li>@Html.ActionLink("Start", "Home", "Site")</li>
+                <li>@Html.ActionLink("Zawodnicy", "List", "Player")</li>
+                <li>@Html.ActionLink("Kontakt", "Contact", "Site")</li>
+                <li>@Html.ActionLink("Zaloguj się", "Login", "User")</li>
+            </ul>
+        </nav>
+        
         @RenderBody()
         <hr />
         <footer>
