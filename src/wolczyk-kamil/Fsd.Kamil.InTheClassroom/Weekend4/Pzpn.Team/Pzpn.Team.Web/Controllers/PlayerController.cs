@@ -11,9 +11,9 @@ namespace Pzpn.Team.Web.Controllers
     {
         private readonly IPlayerService _playerService;
 
-        public PlayerController()
+        public PlayerController(IPlayerService playerService)
         {
-            _playerService = new InMemoryPlayerService();
+            _playerService = playerService;
         }
 
         public ActionResult List()
