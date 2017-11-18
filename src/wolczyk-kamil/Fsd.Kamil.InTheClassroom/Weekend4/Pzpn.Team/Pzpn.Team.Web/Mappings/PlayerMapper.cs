@@ -7,8 +7,6 @@ namespace Pzpn.Team.Web.Mappings
     {
         public static PlayerModel ToModel(Player entity)
         {
-            return null;
-
             return new PlayerModel
             {
                 FirstName = entity.FirstName,
