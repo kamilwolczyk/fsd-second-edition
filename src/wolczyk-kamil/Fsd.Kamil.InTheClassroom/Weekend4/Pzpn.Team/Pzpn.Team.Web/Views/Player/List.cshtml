@@ -11,6 +11,7 @@
             <th>Number</th>
             <th>Imię</th>
             <th>Nazwisko</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
                 <td>@player.Number</td>
                 <td>@player.FirstName</td>
                 <td>@player.LastName</td>
+                <td>@Html.ActionLink("szczegóły", "details", "Player", new { number = player.Number})</td>
             </tr>
         }
     </tbody>
