@@ -9,6 +9,8 @@ namespace Pzpn.Team.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("players", "players/{action}/{number}", new { controller="Player", number = UrlParameter.Optional});
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
