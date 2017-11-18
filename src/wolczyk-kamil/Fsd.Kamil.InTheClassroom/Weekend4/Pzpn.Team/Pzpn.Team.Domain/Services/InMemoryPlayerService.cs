@@ -34,6 +34,10 @@ namespace Pzpn.Team.Domain.Services
             };
         }
 
+        public IEnumerable<Player> GetAllTeam()
+        {
+            return _players;
+        }
 
         public Player GetPlayerByNumber(uint number)
         {
