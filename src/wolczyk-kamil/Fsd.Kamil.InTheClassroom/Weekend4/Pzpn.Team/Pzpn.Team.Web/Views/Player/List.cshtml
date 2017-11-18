@@ -21,7 +21,10 @@
                 <td>@player.Number</td>
                 <td>@player.FirstName</td>
                 <td>@player.LastName</td>
-                <td>@Html.ActionLink("szczegóły", "details", "Player", new { number = player.Number})</td>
+                <td>
+                 @Html.ActionLink("szczegóły", "details", new { number = player.Number})
+                 @Html.ActionLink("edytuj", "edit", new { number = player.Number })         
+                </td>
             </tr>
         }
     </tbody>

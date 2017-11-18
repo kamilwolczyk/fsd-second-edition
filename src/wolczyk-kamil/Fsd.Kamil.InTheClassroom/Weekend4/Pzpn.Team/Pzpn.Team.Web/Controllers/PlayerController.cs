@@ -30,5 +30,10 @@ namespace Pzpn.Team.Web.Controllers
         {
             return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
         }
+
+        public ActionResult Edit(uint number)
+        {
+            return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
+        }
     }
 }
