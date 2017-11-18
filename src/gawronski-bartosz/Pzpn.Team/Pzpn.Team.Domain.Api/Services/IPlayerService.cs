@@ -8,7 +8,5 @@ namespace Pzpn.Team.Domain.Api.Services
         IEnumerable<Player> GetAllTeam();
 
         Player GetPlayerByNumber(uint number);
-
-        int PlayerCount();
     }
 }

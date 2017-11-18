@@ -11,10 +11,9 @@ namespace Pzpn.Team.Web.Controllers
     {
         private readonly IPlayerService _playerService;
 
-        public PlayerController(IPlayerService playerService)
+        public PlayerController()
         {
-            //_playerService = new InMemoryPlayerService();
-            _playerService = playerService;
+            _playerService = new InMemoryPlayerService();
         }
 
         public ActionResult List()
@@ -25,27 +24,6 @@ namespace Pzpn.Team.Web.Controllers
             };
 
             return View(list);
-        }
-
-        [ActionName("details")]
-        public ActionResult DisplayPlayersDetails(uint number)
-        {
-            return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
-        }
-
-        [HttpGet]
-        public ActionResult Edit(uint number)
-        {
-            return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
-        }
-
-        [HttpPost]
-        public ActionResult Edit(uint number, PlayerModel player)
-        {
-            if (!ModelState.IsValid)
-                return View(player);
-
-            return RedirectToAction("Edit", new { number = player.Number});
         }
     }
 }

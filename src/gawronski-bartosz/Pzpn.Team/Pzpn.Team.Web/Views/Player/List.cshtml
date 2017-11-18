@@ -14,14 +14,12 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (PlayerModel player in Model.Players)
+        @foreach(PlayerModel player in Model.Players)
         {
             <tr>
                 <td>@player.Number</td>
                 <td>@player.FirstName</td>
                 <td>@player.LastName</td>
-                <td>@Html.ActionLink("szczegóły", "details", new { number = player.Number })</td>
-                <td>@Html.ActionLink("edytuj", "Edit", new { number = player.Number })</td>
             </tr>
         }
     </tbody>
