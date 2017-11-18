@@ -1,0 +1,38 @@
+﻿@model ProductListModel
+  
+@{
+    ViewBag.Title = "Product List";
+}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td><b>Lp.</b></td>
+                <td><b>Producer</b></td>
+                <td><b>Model</b></td>
+                <td><b>Price</b></td>
+                <td><b>Date of production</b></td>
+                <td><b>Type</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Products.Count(); i++)
+            {
+                ProductModel product = Model.Products.ElementAt(i);
+                <tr>
+                    <td>@(i+1)</td>
+                    <td>@product.Producer</td>
+                    <td>@product.Model</td>
+                    <td>@product.Price</td>
+                    <td>@product.ProductionDate</td>
+                    <td>@product.Type</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p>
+        <a href="../Home" class="btn btn-info" role="button">Return to Home Page&raquo;</a>
+        <a href="../products" class="btn btn-warning btn-lg" role="button">Refresh&raquo;</a>
+    </p>
+
