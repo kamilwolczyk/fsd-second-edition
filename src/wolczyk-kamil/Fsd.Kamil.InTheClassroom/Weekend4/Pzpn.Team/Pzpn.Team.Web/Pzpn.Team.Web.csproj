@@ -150,6 +150,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\SiteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +195,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Player\List.cshtml" />
     <Content Include="Views\Player\Details.cshtml" />
+    <Content Include="Views\Site\Home.cshtml" />
+    <Content Include="Views\Site\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -242,7 +245,7 @@
           <IISUrl>http://localhost:59815/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>True</UseCustomServer>
-          <CustomServerUrl>http://localhost:80</CustomServerUrl>
+          <CustomServerUrl>http://pzpn.dev</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
