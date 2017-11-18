@@ -1,0 +1,23 @@
+﻿@model Fsd.Porowiec.Michal.Cs4.Models.ProductListModel
+
+@{ var Products = Model.Products; }
+
+<table class="table">
+    <tr>
+        <th>Model</th>
+        <th>Producer</th>
+        <th>Price</th>
+        <th>Date Of Production</th>
+        <th>Type</th>
+   </tr> 
+   @foreach (var product in Model.Products)
+   {
+       <tr>
+           <td>@product.Model</td>
+           <td>@product.Producer</td>
+           <td>@product.Price</td>
+           <td>@product.DateOfProduction</td>
+           <td>@product.Type</td>
+       </tr>
+   }
+</table>
