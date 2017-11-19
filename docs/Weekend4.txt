@@ -51,3 +51,87 @@ d) Użycie połączenia bazy SQL we własnej aplikacji
  - utworzyć tabele w bazie pozwalające przechować produkty
  - wypełnić tabelę danymi
  - napisać własną mini bibliotekę do pobierania elementów i mapowania na klasy
+
+
+using (SqlConnection connection = new SqlConnection(connectionString))  
+{  
+	string queryString = "Select Count([CourseID]) FROM [MySchool].[dbo].[Course] Where Year=@Year";
+	
+	SqlParameter parameterYear = new SqlParameter("@Year", SqlDbType.Int);
+        parameterYear.Value = year;	
+
+    	SqlCommand command = new SqlCommand(queryString, connection);
+	cmd.Parameters.AddRange(parameters);
+
+        connection.Open();
+        SqlDataReader reader = command.ExecuteReader();
+        try
+        {
+            while (reader.Read())
+            {
+                Console.WriteLine(String.Format("{0}, {1}", reader[0], reader[1]));
+            }
+        }
+        finally
+        {
+            // Always call Close when done reading.
+            reader.Close();
+        }
+}  
+
+
+
+
+
+
+
+
+static class SqlHelper {
+      // Set the connection, command, and then execute the command with non query.
+      public static Int32 ExecuteNonQuery(String connectionString, String commandText,
+          CommandType commandType, params SqlParameter[] parameters) {
+         using (SqlConnection conn = new SqlConnection(connectionString)) {
+            using (SqlCommand cmd = new SqlCommand(commandText, conn)) {
+               // There're three command types: StoredProcedure, Text, TableDirect. The TableDirect 
+               // type is only for OLE DB.  
+               cmd.CommandType = commandType;
+               cmd.Parameters.AddRange(parameters);
+
+               conn.Open();
+               return cmd.ExecuteNonQuery();
+            }
+         }
+      }
+
+      // Set the connection, command, and then execute the command and only return one value.
+      public static Object ExecuteScalar(String connectionString, String commandText,
+          CommandType commandType, params SqlParameter[] parameters) {
+         using (SqlConnection conn = new SqlConnection(connectionString)) {
+            using (SqlCommand cmd = new SqlCommand(commandText, conn)) {
+               cmd.CommandType = commandType;
+               cmd.Parameters.AddRange(parameters);
+
+               conn.Open();
+               return cmd.ExecuteScalar();
+            }
+         }
+      }
+
+      // Set the connection, command, and then execute the command with query and return the reader.
+      public static SqlDataReader ExecuteReader(String connectionString, String commandText,
+          CommandType commandType, params SqlParameter[] parameters) {
+         SqlConnection conn = new SqlConnection(connectionString);
+
+         using (SqlCommand cmd = new SqlCommand(commandText, conn)) {
+            cmd.CommandType = commandType;
+            cmd.Parameters.AddRange(parameters);
+
+            conn.Open();
+            // When using CommandBehavior.CloseConnection, the connection will be closed when the 
+            // IDataReader is closed.
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+            return reader;
+         }
+      }
+   }

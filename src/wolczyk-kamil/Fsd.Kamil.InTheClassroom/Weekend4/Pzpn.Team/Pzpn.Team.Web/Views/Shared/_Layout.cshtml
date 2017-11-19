@@ -10,9 +10,10 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <h1>
+            @RenderSection("PageTitle", false)
+            @*<h1>
                 <span style="color: white">PZ</span><span style="color: red">PN</span>
-            </h1>
+            </h1>*@
         </div>
     </div>
     <div class="container body-content">
@@ -28,7 +29,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Kamil Wołczyk</p>
+            <p>&copy; @DateTime.Now.Year - Kamil Wołczyk - @RenderSection("ViewName")</p>
         </footer>
     </div>
 
