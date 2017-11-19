@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pzpn.Team.Domain.Api", "Pzp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pzpn.Core", "Pzpn.Core\Pzpn.Core.csproj", "{C43A99BA-7798-4A79-B751-4146B77D31E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{AC0BE4EE-01D1-4631-8283-B0AAE8BCCD69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C43A99BA-7798-4A79-B751-4146B77D31E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C43A99BA-7798-4A79-B751-4146B77D31E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C43A99BA-7798-4A79-B751-4146B77D31E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0BE4EE-01D1-4631-8283-B0AAE8BCCD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0BE4EE-01D1-4631-8283-B0AAE8BCCD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0BE4EE-01D1-4631-8283-B0AAE8BCCD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0BE4EE-01D1-4631-8283-B0AAE8BCCD69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

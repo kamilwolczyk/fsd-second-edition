@@ -149,6 +149,7 @@
     <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdvertsController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\SiteController.cs" />
     <Compile Include="Global.asax.cs">
@@ -156,9 +157,10 @@
     </Compile>
     <Compile Include="Mappings\PlayerMapper.cs" />
     <Compile Include="Mappings\UserMapper.cs" />
+    <Compile Include="Models\Adverts\AdvertList.cs" />
     <Compile Include="Models\Players\PlayerListModel.cs" />
     <Compile Include="Models\Players\PlayerModel.cs" />
-    <Compile Include="Models\Players\UserController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\Users\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -203,6 +205,8 @@
     <Content Include="Views\Player\Edit.cshtml" />
     <Content Include="Views\User\SuccessMessage.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutSecond.cshtml" />
+    <Content Include="Views\Adverts\Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

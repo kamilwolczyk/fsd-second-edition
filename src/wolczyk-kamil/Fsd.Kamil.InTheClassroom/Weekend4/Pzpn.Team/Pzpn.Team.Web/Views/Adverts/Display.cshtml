@@ -1,0 +1,11 @@
+﻿@model AdvertList
+
+<div style="background: yellow">
+    <h2>Reklamy - @Model</h2>
+    <ul>
+        @foreach(string item in Model.Items)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
