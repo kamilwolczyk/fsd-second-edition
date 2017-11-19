@@ -10,7 +10,7 @@ namespace Test
         {
             int selectedNumber = 16;
 
-            string connectionString = @"Server=.\SQLEXPRESS;Database=pzpn;User Id=sa;Password=123456789;";
+            string connectionString = @"Server=.\SQLEXPRESS;Database=pzpn;User Id=sa;Password=lubieplacki;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
