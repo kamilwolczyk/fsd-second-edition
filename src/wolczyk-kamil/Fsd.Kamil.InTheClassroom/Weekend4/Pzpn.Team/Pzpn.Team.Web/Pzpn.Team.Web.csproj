@@ -155,8 +155,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mappings\PlayerMapper.cs" />
+    <Compile Include="Mappings\UserMapper.cs" />
     <Compile Include="Models\Players\PlayerListModel.cs" />
     <Compile Include="Models\Players\PlayerModel.cs" />
+    <Compile Include="Models\Players\UserController.cs" />
+    <Compile Include="Models\Users\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +201,8 @@
     <Content Include="Views\Site\Home.cshtml" />
     <Content Include="Views\Site\Contact.cshtml" />
     <Content Include="Views\Player\Edit.cshtml" />
+    <Content Include="Views\User\SuccessMessage.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -216,6 +221,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pzpn.Core\Pzpn.Core.csproj">
+      <Project>{c43a99ba-7798-4a79-b751-4146b77d31e2}</Project>
+      <Name>Pzpn.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pzpn.Team.Domain.Api\Pzpn.Team.Domain.Api.csproj">
       <Project>{723db84e-8a19-4647-839d-32bc7065ec96}</Project>
       <Name>Pzpn.Team.Domain.Api</Name>
