@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\InMemoryPlayerService.cs" />
+    <Compile Include="Services\InMemoryUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pzpn.Team.Domain.Api\Pzpn.Team.Domain.Api.csproj">

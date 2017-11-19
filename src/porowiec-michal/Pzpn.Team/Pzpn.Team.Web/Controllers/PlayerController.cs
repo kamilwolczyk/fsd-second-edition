@@ -11,9 +11,9 @@ namespace Pzpn.Team.Web.Controllers
     {
         private readonly IPlayerService _playerService;
 
-        public PlayerController()
+        public PlayerController(IPlayerService playerService)
         {
-            _playerService = new InMemoryPlayerService();
+            _playerService = playerService;
         }
 
         public ActionResult List()
@@ -31,5 +31,36 @@ namespace Pzpn.Team.Web.Controllers
         {
             return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
         }
+
+
+        public ActionResult Players()
+        {
+            PlayerListModel list = new PlayerListModel
+            {
+                Players = _playerService.GetAllTeam().Select(entity => PlayerMapper.ToModel(entity))
+            };
+
+            return View(list);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(uint number)
+        {
+            ViewBag.ShouldAdvertsBeShon = true;
+
+            return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
+        }   
+
+        [HttpPost]
+        public ActionResult Edit(uint number, PlayerModel player)
+        {
+            if (!ModelState.IsValid)
+                return View(player);
+            //todo validate model and save in db 
+
+
+            return RedirectToAction("Edit", new { number = player.Number });
+        }
+
     }
 }

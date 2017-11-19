@@ -1,0 +1,37 @@
+﻿@model PlayerModel
+
+
+
+<h2>Edytuj zawodnika</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div>
+        @Html.EditorFor(model => model.Number)
+        @Html.ValidationMessageFor(model => model.Number)
+    </div>
+
+    <div>
+        @Html.EditorFor(model => model.FirstName)
+        @Html.ValidationMessageFor(model => model.Number)
+    </div>
+
+    <div>
+        @Html.EditorFor(model => model.LastName)
+        @Html.ValidationMessageFor(model => model.Number)
+    </div>
+
+    <input type="submit" />
+}
+
+@section SiteName{
+
+}
+
+@section ViewName{
+    To jest Edit Screen
+}
+
+

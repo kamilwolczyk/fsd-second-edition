@@ -1,0 +1,32 @@
+﻿@model Pzpn.Team.Web.Models.Login
+
+<div class="row">
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+
+            <div>
+                <h4>Tutaj Email</h4>
+                @Html.EditorFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+
+            <div>
+                <h4>Tutaj Hasło</h4>
+                @Html.EditorFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password)
+            </div>
+
+            <input type="submit" />
+        }
+    </div>
+</div>
+
+@section SiteName{
+
+}
+
+@section ViewName{
+    To jest Login Screen
+}

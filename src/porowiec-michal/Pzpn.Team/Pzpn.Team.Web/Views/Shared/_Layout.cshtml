@@ -7,19 +7,28 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body style="padding-top: 0px;">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="position: relative;">
         <div class="container">
             <h1>
                 <span style="color: white">PZ</span><span style="color: red">PN</span>
             </h1>
         </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Strona Startowa", "Home", "Home")</li>
+                <li>@Html.ActionLink("Wszyscy Zawodnicy", "Players", "Player")</li>
+                <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+            </ul>
+            @RenderSection("SiteName")
+        </div>
     </div>
+    <div class="row"></div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Kamil Wołczyk</p>
+            <p>&copy; @DateTime.Now.Year - Kamil Wołczyk</p> - @RenderSection("ViewName")
         </footer>
     </div>
 
