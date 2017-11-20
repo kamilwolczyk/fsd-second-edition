@@ -1,10 +1,8 @@
 ﻿@model ProductListModel
-
-<h2>Products</h2>
-
 <table class="table">
     <thead>
         <tr>
+            <td>L.p</td>
             <td>Producent</td>
             <td>Model</td>
             <td>Cena</td>
@@ -16,12 +14,16 @@
         @foreach (ProductModel product in Model.Products)
         {
             <tr>
+                <td>@product.Id</td>
                 <td>@product.Producer</td>
                 <td>@product.Model</td>
                 <td>@product.Price </td>
                 <td>@product.ProductionData </td>
                 <td>@product.Type</td>
+                <td>@Html.ActionLink("szczegóły", "details", new { id = product.Id})</td>
+                <td>@Html.ActionLink("edytuj", "edit", new { id = product.Id })</td>
             </tr>
         }
     </tbody>
 </table>
+@Html.ActionLink("Dodaj Produkt", "add")

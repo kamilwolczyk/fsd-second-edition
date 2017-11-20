@@ -9,6 +9,8 @@ namespace Fsd.Bartek.Ex4.Data.Entities
 {
     public class Product
     {
+        public int Id { get; set; }
+
         public string Producer { get; set; }
 
         public string Model { get; set; }

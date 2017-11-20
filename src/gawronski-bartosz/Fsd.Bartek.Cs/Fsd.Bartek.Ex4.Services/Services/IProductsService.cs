@@ -6,6 +6,8 @@ namespace Fsd.Bartek.Ex4.Services.Services
     public interface IProductsService
     {
         IEnumerable<Product> GetProducts(int page, int items);
+
+        Product GetProductByIdNumber(int id);
     }
 }
 
