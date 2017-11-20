@@ -7,24 +7,24 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Models.Products
 {
     public class ProductListModel
     {
-        private IProductProvider _productProvider;
+        //private IProductProvider _productProvider;
 
         public IEnumerable<ProductModel> Products { get; set; }
 
-        public ProductListModel()
-        {
-            _productProvider = new SampleProductProvider();
+        //public ProductListModel()
+        //{
+        //    _productProvider = new SampleProductProvider();
 
-            IEnumerable<Product> products = _productProvider.GetAllProducts();
+        //    IEnumerable<Product> products = _productProvider.GetAllProducts();
 
-            Products = products.Select(entity => new ProductModel
-            {
-                Producer = entity.Producer,
-                Model = entity.Model,
-                Price = entity.Price,
-                Date = entity.Date,
-                Type = entity.Type
-            });
-        }
+        //    Products = products.Select(entity => new ProductModel
+        //    {
+        //        Producer = entity.Producer,
+        //        Model = entity.Model,
+        //        Price = entity.Price,
+        //        Date = entity.Date,
+        //        Type = entity.Type
+        //    });
+        //}
     }
 }
