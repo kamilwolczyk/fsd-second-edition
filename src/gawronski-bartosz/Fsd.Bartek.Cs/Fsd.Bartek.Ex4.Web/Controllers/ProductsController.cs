@@ -38,15 +38,35 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
         [ActionName("edit")]
         public ActionResult EditProduct(int id)
         {
-           return View(ProductWithoutIdMapping.ToProductWithoutIdModel(_productService.GetProductByIdNumber(id)));
+            return View(ProductWithoutIdMapping.ToProductWithoutIdModel(_productService.GetProductByIdNumber(id)));
         }
 
         [ActionName("add")]
-        public ActionResult AddProduct(int id)
+        [HttpGet]
+        public ActionResult AddProduct()
         {
-           //TODO: Tworzenie nowego produktu
+            ProductAddModel newProduct = new ProductAddModel();
 
-            return View();
+            return View(newProduct);
+        }
+
+        [ActionName("add")]
+        [HttpPost]
+        public ActionResult AddProduct(ProductAddModel newProduct)
+        {
+            if (!ModelState.IsValid)
+                return View(newProduct);
+
+            if (!_productService.DateCheck(newProduct.ProductionData))
+            {
+                ModelState.Clear();
+                newProduct.AddFailed = true;
+                return View(newProduct);
+            }
+
+            _productService.AddProduct(newProduct.Producer, newProduct.Model, newProduct.Price, newProduct.ProductionData, newProduct.Type);
+
+            return RedirectToAction("ProductsList");
         }
     }
 }

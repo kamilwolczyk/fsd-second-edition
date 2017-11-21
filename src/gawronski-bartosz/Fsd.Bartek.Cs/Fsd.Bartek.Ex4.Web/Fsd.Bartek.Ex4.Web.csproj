@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdvertsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Core\AboutHtmlExtension.cs" />
@@ -157,8 +158,12 @@
     </Compile>
     <Compile Include="Mappings\ProductMapping.cs" />
     <Compile Include="Mappings\ProductWithoutIdMapping.cs" />
+    <Compile Include="Mappings\TypeMapping.cs" />
+    <Compile Include="Models\AdvertModel.cs" />
+    <Compile Include="Models\ProductAddModel.cs" />
     <Compile Include="Models\ProductListModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\ProductSelectType.cs" />
     <Compile Include="Models\ProductWithoutIdModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -201,6 +206,8 @@
     <Content Include="Views\About\AboutPage.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Add.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Adverts\Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

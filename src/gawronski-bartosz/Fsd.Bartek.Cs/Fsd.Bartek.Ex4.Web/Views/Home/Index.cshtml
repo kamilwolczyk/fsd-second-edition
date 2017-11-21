@@ -1,12 +1,15 @@
 ﻿@model int
-
-
-<h1 class="text-center">Cześć</h1>
-<br />
-<div class="text-center">
-    <p>Witaj na mojej liście Produktów</p>
-</div>
-<hr />
 <div>
     <p class="text-center">Mam na niej @Model produktów</p>
 </div>
+
+<div class="row">
+    <div class="col-xs-12">
+        @* TODO TEN WALONY PARTIAL VIEW NIE WIEM CZEMU NIE DZIAŁAA *@
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>
+
+@section PageTitle{
+    Witaj w naszej Bazie produktów
+    }

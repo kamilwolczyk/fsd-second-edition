@@ -1,7 +1,54 @@
-﻿
+﻿@model ProductAddModel
 @{
     ViewBag.Title = "Add";
 }
 
-<h2>AddProduc</h2>
+@using (Html.BeginForm())
+{
+    <br />
+    <div class="row">
+        <div class="col-xs-4">Producent:</div>
+        <div class="col-sm-offset-1 col-xs-4">
+            @Html.EditorFor(model => model.Producer)
+            @Html.ValidationMessageFor(model => model.Producer)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-4">Model:</div>
+        <div class="col-sm-offset-1 col-xs-4">
+            @Html.EditorFor(model => model.Model)
+            @Html.ValidationMessageFor(model => model.Model)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-4">Cena:</div>
+        <div class="col-sm-offset-1 col-xs-4">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-4">Data Produkcji:</div>
+        <div class="col-sm-offset-1 col-xs-4">
+            @Html.EditorFor(model => model.ProductionData)
+            @Html.ValidationMessageFor(model => model.ProductionData)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-xs-4">Typ:</div>
+        <div class="col-sm-offset-1 col-xs-4">
+            @Html.DropDownListFor(model => model.Type, new SelectList(Model.TypeList, "Id", "Type"))
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+    </div>
+    <br />
+    <input type="submit" value="Wyślij" />
+}
 
+@section PageTitle{
+    Dodaj Nowy Produkt
+}

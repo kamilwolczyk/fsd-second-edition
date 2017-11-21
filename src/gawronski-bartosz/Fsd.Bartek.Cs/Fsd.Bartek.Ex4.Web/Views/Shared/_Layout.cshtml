@@ -28,9 +28,16 @@
         </div>
     </div>
     <div class="container body-content">
+        <div class="row">
+            <div class="text-center" style="font-weight: 700">
+                <br />
+                <h1>@RenderSection("PageTitle")</h1>
+                <hr />
+            </div>
+        </div>
         @RenderBody()
         <hr />
-        <footer>
+        <footer class="text-center">
             <p>&copy; @DateTime.Now.Year — Bartosz Gawroński</p>
         </footer>
     </div>

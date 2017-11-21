@@ -10,10 +10,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
 {
     public class ProductsService : IProductsService
     {
-        private List<Product> Products()
-        {
-            return new List<Product>
-            {
+        private List<Product> products = new List<Product>{
                 new Product
                 {
                     Id = 1,
@@ -68,6 +65,12 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Type = ProductsType.HeadPhones
                 },
             };
+
+        private int LastId = 6;
+
+        private List<Product> Products()
+        {
+            return products;
         }
 
         public IEnumerable<Product> GetProducts(int page, int items )
@@ -86,6 +89,26 @@ namespace Fsd.Bartek.Ex4.Services.Services
         public Product GetProductByIdNumber(int id)
         {
             return Products().FirstOrDefault(product => product.Id == id);
+        }
+
+        public void AddProduct(string producer, string model, double price, string productionDate, int type)
+        {
+            products.Add(new Product
+            {
+                Id = LastId++,
+                Producer = producer,
+                Model = model,
+                Price = price,
+                ProductionData = productionDate,
+                Type = (ProductsType) type 
+            });
+        }
+
+        public bool DateCheck (string date)
+        {
+
+            //TODO implementacja
+            return true;
         }
     }
 }

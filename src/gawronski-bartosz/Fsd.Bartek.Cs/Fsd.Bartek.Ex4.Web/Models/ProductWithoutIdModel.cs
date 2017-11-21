@@ -1,4 +1,5 @@
 ﻿using Fsd.Bartek.Ex4.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace Fsd.Bartek.Ex4.Web.Models
 {
