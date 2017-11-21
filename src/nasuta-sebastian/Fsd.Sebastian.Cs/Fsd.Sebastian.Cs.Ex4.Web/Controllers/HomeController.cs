@@ -1,21 +1,18 @@
 ﻿using Fsd.Sebastian.Cs.Ex4.Services.Products;
-using Fsd.Sebastian.Cs.Ex4.Web.Mappings;
-using Fsd.Sebastian.Cs.Ex4.Web.Models.Products;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
 {
-    public class HomeController : Controller
+    public class PageController : Controller
     {
         private readonly IProductProvider _productProvider;
 
-        public HomeController(IProductProvider productProvider)
+        public PageController(IProductProvider productProvider)
         {
             _productProvider = productProvider;
         }
 
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View(_productProvider.GetProductsCount());
         }
