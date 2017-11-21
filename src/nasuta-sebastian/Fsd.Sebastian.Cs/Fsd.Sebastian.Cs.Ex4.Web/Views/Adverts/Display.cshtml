@@ -1,0 +1,11 @@
+﻿@model AdvertListModel
+
+<div style="background: midnightblue; color: goldenrod; padding: 2px 10px">
+    <h4>Adverts</h4>
+    <ul>
+        @foreach (string item in Model.Adverts)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>

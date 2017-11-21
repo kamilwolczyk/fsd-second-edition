@@ -158,12 +158,14 @@
     <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdvertsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Mappings\ProductMapper.cs" />
+    <Compile Include="Models\Adverts\AdvertListModel.cs" />
     <Compile Include="Models\PagedLists\PagedListModel.cs" />
     <Compile Include="Models\Products\ProductListModel.cs" />
     <Compile Include="Models\Products\ProductModel.cs" />
@@ -207,6 +209,7 @@
     <Content Include="Views\Page\About.cshtml" />
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Page\Home.cshtml" />
+    <Content Include="Views\Adverts\Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
