@@ -2,7 +2,7 @@
 using Pzpn.Team.Web.Models.Users;
 using System.Web.Mvc;
 
-namespace Pzpn.Team.Web.Models.Players
+namespace Pzpn.Team.Web.Controllers
 {
     public class UserController : Controller
     {
