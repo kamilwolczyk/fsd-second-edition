@@ -210,6 +210,7 @@
     <Content Include="Views\Products\Products.cshtml" />
     <Content Include="Views\Page\Home.cshtml" />
     <Content Include="Views\Adverts\Display.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

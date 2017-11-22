@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Products\SqlProductProvider.cs" />
     <Compile Include="Products\SampleProductProvider.cs" />
     <Compile Include="Products\IProductProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

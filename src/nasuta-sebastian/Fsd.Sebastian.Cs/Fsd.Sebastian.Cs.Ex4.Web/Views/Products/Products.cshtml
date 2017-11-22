@@ -7,11 +7,12 @@
 <table class="table">
         <thead class="h4">
             <tr>
-                <td>Producer</td>
-                <td>Model</td>
-                <td>Price</td>
-                <td>Production date</td>
-                <td>Type</td>
+                <th>Producer</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Production date</th>
+                <th>Type</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +22,9 @@
                     <td>@product.Producer</td>
                     <td>@product.Model</td>
                     <td>@product.Price</td>
-                    <td>@product.Date.ToLongDateString()</td>
+                    <td>@product.Date.ToShortDateString()</td>
                     <td>@product.Type</td>
+                    <td>@Html.ActionLink("details", "details", new { producer = product.Producer, model = product.Model })</td>
                 </tr>
             }
         </tbody>

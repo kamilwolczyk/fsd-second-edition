@@ -34,5 +34,10 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
             
             return View(pagedList);
         }
+
+        public ActionResult Details(string producer, string model)
+        {
+            return View(ProductMapper.ToModel(_productProvider.GetSelectedProduct(producer, model)));
+        }
     }
 }

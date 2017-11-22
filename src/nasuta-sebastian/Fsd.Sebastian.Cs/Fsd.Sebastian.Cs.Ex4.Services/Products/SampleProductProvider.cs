@@ -46,5 +46,10 @@ namespace Fsd.Sebastian.Cs.Ex4.Services.Products
         {
             return _productList.Count();
         }
+
+        public Product GetSelectedProduct(string producer, string model)
+        {
+            return _productList.First(product => (product.Producer==producer && product.Model == model));
+        }
     }
 }
