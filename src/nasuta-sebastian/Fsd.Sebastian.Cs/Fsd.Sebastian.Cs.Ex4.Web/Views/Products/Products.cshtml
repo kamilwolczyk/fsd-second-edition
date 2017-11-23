@@ -37,5 +37,6 @@
     Items on page:
     @Html.ActionLink("5", "Products", new { page = 1, items = 5 }) |
     @Html.ActionLink("10", "Products", new { page = 1, items = 10 }) |
-    @Html.ActionLink($"ALL ({Model.Products.TotalItemCount})", "Products", new { page = 1, items = Model.Products.TotalItemCount })
+    @Html.ActionLink($"ALL ({Model.Products.TotalItemCount})", "Products", new { page = 1, items = Model.Products.TotalItemCount }) |
+    @Html.ActionLink("Add new product", "Add")
 </div>

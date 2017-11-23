@@ -39,5 +39,20 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
         {
             return View(ProductMapper.ToModel(_productProvider.GetSelectedProduct(producer, model)));
         }
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View(new ProductModel());
+        }
+
+        [HttpPost]
+        public ActionResult Add(ProductModel productModel)
+        {
+            if (!ModelState.IsValid)
+                return View(productModel);
+
+            return RedirectToAction("Products");
+        }
     }
 }

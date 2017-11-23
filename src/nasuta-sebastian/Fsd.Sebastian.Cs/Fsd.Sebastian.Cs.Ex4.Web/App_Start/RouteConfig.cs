@@ -11,6 +11,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web
 
             routes.MapRoute("Home", "", new { controller = "Page", action = "Home" });
             routes.MapRoute("Products", "products", new { controller = "Products", action = "Products" });
+            routes.MapRoute("Add", "products/add", new { controller = "Products", action = "Add" });
             routes.MapRoute("About", "about", new { controller = "Page", action = "About" });
 
             routes.MapRoute(

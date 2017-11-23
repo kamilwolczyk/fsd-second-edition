@@ -158,6 +158,8 @@
     <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Attributes\GreaterThanZeroAttribute.cs" />
+    <Compile Include="Attributes\TodayIsMaxAttribute.cs" />
     <Compile Include="Controllers\AdvertsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -211,6 +213,7 @@
     <Content Include="Views\Page\Home.cshtml" />
     <Content Include="Views\Adverts\Display.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
