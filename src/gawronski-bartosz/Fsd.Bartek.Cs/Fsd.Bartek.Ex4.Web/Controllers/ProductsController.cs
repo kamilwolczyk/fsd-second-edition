@@ -1,5 +1,6 @@
 ﻿using Fsd.Bartek.Ex4.Data.Entities;
 using Fsd.Bartek.Ex4.Services.Services;
+using Fsd.Bartek.Ex4.Services.Validation;
 using Fsd.Bartek.Ex4.Web.Mappings;
 using Fsd.Bartek.Ex4.Web.Models;
 using System;
@@ -57,7 +58,14 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
             if (!ModelState.IsValid)
                 return View(newProduct);
 
-            if (!_productService.DateCheck(newProduct.ProductionData))
+            if (!DateCheck.DataChecker(newProduct.ProductionData))
+            {
+                ModelState.Clear();
+                newProduct.AddFailed = true;
+                return View(newProduct);
+            }
+
+            if (newProduct.Price == 0)
             {
                 ModelState.Clear();
                 newProduct.AddFailed = true;

@@ -103,12 +103,5 @@ namespace Fsd.Bartek.Ex4.Services.Services
                 Type = (ProductsType) type 
             });
         }
-
-        public bool DateCheck (string date)
-        {
-
-            //TODO implementacja
-            return true;
-        }
     }
 }

@@ -6,6 +6,15 @@
 @using (Html.BeginForm())
 {
     <br />
+
+    if (Model.AddFailed)
+    {
+        <div class="row">
+            <div class="col-xs-4">
+                <p>Niepoprawne Dane</p>
+            </div>
+        </div>
+    }
     <div class="row">
         <div class="col-xs-4">Producent:</div>
         <div class="col-sm-offset-1 col-xs-4">
@@ -31,7 +40,7 @@
     </div>
     <br />
     <div class="row">
-        <div class="col-xs-4">Data Produkcji:</div>
+        <div class="col-xs-4">Data Produkcji (rrrr-mm-dd):</div>
         <div class="col-sm-offset-1 col-xs-4">
             @Html.EditorFor(model => model.ProductionData)
             @Html.ValidationMessageFor(model => model.ProductionData)

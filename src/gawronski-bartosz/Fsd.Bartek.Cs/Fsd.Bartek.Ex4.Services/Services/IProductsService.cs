@@ -11,8 +11,6 @@ namespace Fsd.Bartek.Ex4.Services.Services
         Product GetProductByIdNumber(int id);
 
         void AddProduct(string producer, string model, double price, string productionDate, int Type);
-
-        bool DateCheck(string date);
     }
 }
 

@@ -8,21 +8,21 @@ namespace Fsd.Bartek.Ex4.Web.Models
     public partial class ProductAddModel
     {
         //TODO validation message
-        [Required]
+        [Required(ErrorMessage = "Pole wymagane")]
         public string Producer { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Pole wymagane")]
         public string Model { get; set; }
 
-        [Required]
-        [DataType(DataType.Currency)]
+        [Required(ErrorMessage = "Pole wymagane")]
+        [DataType(DataType.Currency, ErrorMessage = "Niepoprawny format")]
         public double Price { get; set; }
 
-        [Required]
-        [RegularExpression("([0-9][0-9][.][0-9][0-9][.][0-9]{4}|[0-9][.][0-9][0-9][.][0-9]{4})", ErrorMessage = "Invalid First Name")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        [RegularExpression("([0-9]{4}[-][0-9][0-9][-][0-9][0-9])", ErrorMessage = "Niepoprawny formay")]
         public string ProductionData { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Pole wymagane")]
         public int Type { get; set; }
 
         public IEnumerable<ProductSelectType> TypeList { get; set; }
