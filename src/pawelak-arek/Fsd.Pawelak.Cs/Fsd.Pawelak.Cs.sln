@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Arek.Cs.Ex4.Web", "Fsd.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fsd.Arek.Cs.Ex4.Core", "Fsd.Arek.Cs.Ex4.Core\Fsd.Arek.Cs.Ex4.Core.csproj", "{28EB8F52-F726-4496-A4B0-423B94B3F81F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEST", "TEST\TEST.csproj", "{4BB963A6-E397-4058-B198-3B4B0C064E38}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +51,6 @@ Global
 		{28EB8F52-F726-4496-A4B0-423B94B3F81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28EB8F52-F726-4496-A4B0-423B94B3F81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28EB8F52-F726-4496-A4B0-423B94B3F81F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4BB963A6-E397-4058-B198-3B4B0C064E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BB963A6-E397-4058-B198-3B4B0C064E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BB963A6-E397-4058-B198-3B4B0C064E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BB963A6-E397-4058-B198-3B4B0C064E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
