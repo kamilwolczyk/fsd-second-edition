@@ -17,7 +17,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Lenovo",
                     Model = "Z51",
                     Price = 2000,
-                    ProductionData = "20.02.2017",
+                    ProductionData = DateTime.Parse("20.02.2017"),
                     Type = ProductsType.Computer
                 },
                 new Product
@@ -26,7 +26,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Lenovo",
                     Model = "Z50",
                     Price = 2100,
-                    ProductionData = "2.02.2016",
+                    ProductionData = DateTime.Parse("2.02.2016"),
                     Type = ProductsType.Computer
                 },
                 new Product
@@ -35,7 +35,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Xiaomi",
                     Model = "Mi5",
                     Price = 2200,
-                    ProductionData = "1.02.2015",
+                    ProductionData = DateTime.Parse("1.02.2015"),
                     Type = ProductsType.Phone
                 },
                 new Product
@@ -43,7 +43,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Id = 4,
                     Producer = "Alicja w Krainie Czarów",
                     Price = 2300,
-                    ProductionData = "21.05.2014",
+                    ProductionData = DateTime.Parse("21.05.2014"),
                     Type = ProductsType.Book
                 },
                 new Product
@@ -52,7 +52,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "Office",
                     Model = "2015",
                     Price = 2400,
-                    ProductionData = "30.10.2013",
+                    ProductionData = DateTime.Parse("30.10.2013"),
                     Type = ProductsType.Software
                 },
                 new Product
@@ -61,7 +61,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
                     Producer = "JBL",
                     Model = "VTX12",
                     Price = 2500,
-                    ProductionData = "12.02.2012",
+                    ProductionData = DateTime.Parse("12.02.2012"),
                     Type = ProductsType.HeadPhones
                 },
             };
@@ -91,7 +91,7 @@ namespace Fsd.Bartek.Ex4.Services.Services
             return Products().FirstOrDefault(product => product.Id == id);
         }
 
-        public void AddProduct(string producer, string model, double price, string productionDate, int type)
+        public void AddProduct(string producer, string model, double price, DateTime productionDate, int type)
         {
             products.Add(new Product
             {

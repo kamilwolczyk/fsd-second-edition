@@ -19,7 +19,7 @@ namespace Fsd.Bartek.Ex4.Web.Models
         public double Price { get; set; }
 
         [Required(ErrorMessage = "Pole wymagane")]
-        [RegularExpression("([0-9]{4}[-][0-9][0-9][-][0-9][0-9])", ErrorMessage = "Niepoprawny formay")]
+        [RegularExpression("([0-9][0-9][.][0-9][0-9][.][0-9]{4})", ErrorMessage = "Niepoprawny formay")]
         public string ProductionData { get; set; }
 
         [Required(ErrorMessage = "Pole wymagane")]

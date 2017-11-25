@@ -15,16 +15,19 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
     {
         private readonly IProductsService _productService;
 
-        public ProductsController(IProductsService productService)
+        private readonly IProductsService _sqlService;
+
+        public ProductsController(IProductsService productService, IProductsService sqlService)
         {
             _productService = productService;
+            _sqlService = sqlService;
         }
 
         public ActionResult ProductsList(string page = null, string items = null)
         {
             ProductListModel list = new ProductListModel
             {
-                Products = _productService.GetProducts(int.Parse(page ?? "0"), int.Parse(items ?? "0")).Select(entity => ProductMapping.ToProductModel(entity))
+                Products = _sqlService.GetProducts(int.Parse(page ?? "0"), int.Parse(items ?? "0")).Select(entity => ProductMapping.ToProductModel(entity))
             };
 
             return View(list);
@@ -33,7 +36,7 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
         [ActionName("details")]
         public ActionResult ProductsDetails(int id)
         {
-            return View(ProductWithoutIdMapping.ToProductWithoutIdModel(_productService.GetProductByIdNumber(id)));
+            return View(ProductWithoutIdMapping.ToProductWithoutIdModel(_sqlService.GetProductByIdNumber(id)));
         }
 
         [ActionName("edit")]
@@ -72,7 +75,7 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
                 return View(newProduct);
             }
 
-            _productService.AddProduct(newProduct.Producer, newProduct.Model, newProduct.Price, newProduct.ProductionData, newProduct.Type);
+            _sqlService.AddProduct(newProduct.Producer, newProduct.Model, newProduct.Price, DateTime.Parse(newProduct.ProductionData), newProduct.Type);
 
             return RedirectToAction("ProductsList");
         }

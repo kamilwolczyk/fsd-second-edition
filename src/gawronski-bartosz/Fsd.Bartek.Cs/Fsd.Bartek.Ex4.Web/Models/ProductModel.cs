@@ -16,7 +16,7 @@ namespace Fsd.Bartek.Ex4.Web.Models
 
         public double Price { get; set; }
 
-        public string ProductionData { get; set; }
+        public DateTime ProductionData { get; set; }
 
         public ProductsType Type { get; set; }
     }

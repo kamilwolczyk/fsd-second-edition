@@ -20,6 +20,7 @@ namespace Fsd.Bartek.Ex4.Web
             builder.RegisterFilterProvider();
 
             builder.RegisterType<ProductsService>().As<IProductsService>();
+            builder.RegisterType<SqlConnect>().As<IProductsService>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

@@ -18,7 +18,7 @@
                 <td>@product.Producer</td>
                 <td>@product.Model</td>
                 <td>@product.Price </td>
-                <td>@product.ProductionData </td>
+                <td>@product.ProductionData.ToString("dd.MM.yyyy") </td>
                 <td>@product.Type</td>
                 <td>@Html.ActionLink("szczegóły", "details", new { id = product.Id})</td>
                 <td>@Html.ActionLink("edytuj", "edit", new { id = product.Id })</td>
