@@ -6,6 +6,8 @@ namespace Fsd.Arek.Cs.Ex4.Web.Models
 {
     public class ProductModel
     {
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "Required field")]
         public string Producer { get; set; }
 
@@ -23,5 +25,7 @@ namespace Fsd.Arek.Cs.Ex4.Web.Models
         [DataType(DataType.Date)]
         [GreaterThanCurrentDate]
         public DateTime DateOfProduction { get; set; }
+
+        public bool AddFailed { get; set; }
     }
 }

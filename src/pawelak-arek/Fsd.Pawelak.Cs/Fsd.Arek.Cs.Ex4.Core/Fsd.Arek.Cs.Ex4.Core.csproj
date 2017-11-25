@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQL\ISqlDatabase.cs" />
     <Compile Include="SQL\SqlHellper.cs" />
     <Compile Include="SQL\SqlDataReaderConverter.cs" />
   </ItemGroup>

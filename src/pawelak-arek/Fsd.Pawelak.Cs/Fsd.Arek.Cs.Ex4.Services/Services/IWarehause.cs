@@ -13,6 +13,8 @@ namespace Fsd.Arek.Cs.Ex4.Services.Services
 
         IEnumerable<Product> GetAllProducts();
 
-        void AddProduct();
+        void AddProduct(List<string> list);
+
+        IEnumerable<string> GetPropertyName<TType>();
     }
 }

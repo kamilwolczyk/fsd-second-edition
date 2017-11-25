@@ -222,6 +222,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Fsd.Arek.Cs.Ex4.Core\Fsd.Arek.Cs.Ex4.Core.csproj">
+      <Project>{28EB8F52-F726-4496-A4B0-423B94B3F81F}</Project>
+      <Name>Fsd.Arek.Cs.Ex4.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fsd.Arek.Cs.Ex4.Data\Fsd.Arek.Cs.Ex4.Data.csproj">
       <Project>{163902B5-401E-4F7E-8487-87FF8E3093B6}</Project>
       <Name>Fsd.Arek.Cs.Ex4.Data</Name>
