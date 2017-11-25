@@ -20,21 +20,21 @@ namespace Fsd.Sebastian.Cs.Ex4.Services.Products
 
             new Product("Rickenbacker", "4003", 2359, new DateTime(1988, 6, 21), ProductType.BassGuitar),
             new Product("Rickenbacker", "4004L", 2689, new DateTime(2001, 10, 13), ProductType.BassGuitar),
-            new Product("Yamaha", "RBX4A2", 511, new DateTime(2015, 10, 29), ProductType.BassGuitar),
-            new Product("Yamaha", "BB 235", 313, new DateTime(2016, 9, 25), ProductType.BassGuitar),
-            new Product("Yamaha", "TRBX174", 171, new DateTime(2013, 4, 2), ProductType.BassGuitar),
-            new Product("Fender", "Precision", 613, new DateTime(1999, 10, 12), ProductType.BassGuitar),
-            new Product("Fender", "Jazz", 613, new DateTime(2002, 12, 16), ProductType.BassGuitar),
-            new Product("Ibanez", "SR300", 299, new DateTime(2012, 1, 30), ProductType.BassGuitar),
+            //new Product("Yamaha", "RBX4A2", 511, new DateTime(2015, 10, 29), ProductType.BassGuitar),
+            //new Product("Yamaha", "BB 235", 313, new DateTime(2016, 9, 25), ProductType.BassGuitar),
+            //new Product("Yamaha", "TRBX174", 171, new DateTime(2013, 4, 2), ProductType.BassGuitar),
+            //new Product("Fender", "Precision", 613, new DateTime(1999, 10, 12), ProductType.BassGuitar),
+            //new Product("Fender", "Jazz", 613, new DateTime(2002, 12, 16), ProductType.BassGuitar),
+            //new Product("Ibanez", "SR300", 299, new DateTime(2012, 1, 30), ProductType.BassGuitar),
 
-            new Product("Pearl", "S1330", 179, new DateTime(2000, 12, 23), ProductType.Drum),
-            new Product("Ludwig", "LM402T", 710, new DateTime(1989, 2, 3), ProductType.Drum),
+            //new Product("Pearl", "S1330", 179, new DateTime(2000, 12, 23), ProductType.Drum),
+            //new Product("Ludwig", "LM402T", 710, new DateTime(1989, 2, 3), ProductType.Drum),
 
-            new Product("Yamaha", "EZ220", 169, new DateTime(2012, 11, 6), ProductType.Keyboard),
-            new Product("Casio", "CTK-1500", 119, new DateTime(2005, 5, 15), ProductType.Keyboard),
-            new Product("KORG", "microARRANGER", 499, new DateTime(2017, 1, 26), ProductType.Keyboard),
+            //new Product("Yamaha", "EZ220", 169, new DateTime(2012, 11, 6), ProductType.Keyboard),
+            //new Product("Casio", "CTK-1500", 119, new DateTime(2005, 5, 15), ProductType.Keyboard),
+            //new Product("KORG", "microARRANGER", 499, new DateTime(2017, 1, 26), ProductType.Keyboard),
 
-            new Product("Shure", "PGA48", 42, new DateTime(2009, 11, 15), ProductType.Microphone),
+            //new Product("Shure", "PGA48", 42, new DateTime(2009, 11, 15), ProductType.Microphone),
         };
 
         public IEnumerable<Product> GetAllProducts()

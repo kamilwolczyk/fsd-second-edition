@@ -21,7 +21,7 @@
                 <tr>
                     <td>@product.Producer</td>
                     <td>@product.Model</td>
-                    <td>@product.Price</td>
+                    <td>&pound@(product.Price)</td>
                     <td>@product.Date.ToShortDateString()</td>
                     <td>@product.Type</td>
                     <td>@Html.ActionLink("details", "details", new { producer = product.Producer, model = product.Model })</td>

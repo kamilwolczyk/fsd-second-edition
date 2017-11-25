@@ -13,7 +13,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Models.Products
         [Required(ErrorMessage = "This field is required")]
         public string Model { get; set; }
 
-        [Required(ErrorMessage = "This field is required")]
+        [Required(ErrorMessage = "This field is required")]        
         [GreaterThanZero(ErrorMessage = "Price must be greater than 0")]
         public decimal Price { get; set; }
 

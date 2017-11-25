@@ -7,7 +7,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Attributes
     {
         public override bool IsValid(object value)
         {
-            return Convert.ToInt32(value) > 0;
+            return Convert.ToDecimal(value) > 0;
         }
     }
 }

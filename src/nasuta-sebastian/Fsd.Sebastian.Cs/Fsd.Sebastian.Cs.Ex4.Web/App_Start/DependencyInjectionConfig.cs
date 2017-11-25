@@ -18,7 +18,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web
             builder.RegisterSource(new ViewRegistrationSource());
             builder.RegisterFilterProvider();
 
-            builder.RegisterType<SampleProductProvider>().As<IProductProvider>();
+            builder.RegisterType<SqlProductProvider>().As<IProductProvider>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
