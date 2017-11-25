@@ -149,12 +149,18 @@
     <Compile Include="App_Start\DependencyInjectionConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdvertController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProductListToModelConverter.cs" />
+    <Compile Include="Models\Adverts\AdvertListModel.cs" />
+    <Compile Include="Models\Adverts\AdvertToListModelConverter.cs" />
+    <Compile Include="Models\Adverts\AdvertModel.cs" />
+    <Compile Include="Models\CustomValidators\GratherThanZero.cs" />
+    <Compile Include="Models\CustomValidators\GreaterThanCurrentDate.cs" />
+    <Compile Include="Models\ProductToListModelConverter.cs" />
     <Compile Include="Models\ProductListModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +202,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Advert\Display.cshtml" />
+    <Content Include="Views\Product\AddProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

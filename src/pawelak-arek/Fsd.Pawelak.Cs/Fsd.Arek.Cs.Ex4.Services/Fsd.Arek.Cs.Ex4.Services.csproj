@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FakeAdvertServices.cs" />
+    <Compile Include="Services\IAdvertsServices.cs" />
     <Compile Include="Services\IPaginationPage.cs" />
     <Compile Include="Services\IWarehause.cs" />
     <Compile Include="Services\Pagination.cs" />

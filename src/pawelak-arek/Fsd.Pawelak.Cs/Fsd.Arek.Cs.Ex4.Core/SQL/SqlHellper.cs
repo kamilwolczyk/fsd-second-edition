@@ -22,6 +22,28 @@ namespace Fsd.Arek.Cs.Ex4.Core.SQL
         }
 
 
+        public static void InsertToDatabaseTable(string tableName)
+        {
+
+            string query = $"INSERT INTO {tableName} VALUES(" + "@Producer, @Model, @Price, @TypeN, @DateOfProduction)";
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Producer", "Audi");
+                    command.Parameters.AddWithValue("@Model", "A6");
+                    command.Parameters.AddWithValue("@Price", "12000");
+                    command.Parameters.AddWithValue("@TypeN", "Sedan");
+                    command.Parameters.AddWithValue("@DateOfProduction", "2000-12-25");
+
+                    int rows = command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
         public static Int32 ExecuteNonQuery(String connectionString, String commandText, CommandType commandType, params SqlParameter[] parameters)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))

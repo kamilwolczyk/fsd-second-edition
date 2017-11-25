@@ -1,0 +1,33 @@
+﻿@model Fsd.Arek.Cs.Ex4.Web.Models.ProductModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <h5>
+                @Html.LabelFor(model => model.Producer)<br />
+                @Html.EditorFor(model => model.Producer)<br />
+            </h5>
+            <h5>
+                @Html.LabelFor(model => model.Model)<br />
+                @Html.EditorFor(model => model.Model)<br />
+            </h5>
+            <h5>
+                @Html.LabelFor(model => model.Price)<br />
+                @Html.EditorFor(model => model.Price)<br />
+            </h5>
+            <h5>
+                @Html.LabelFor(model => model.Type)<br />
+                @Html.EditorFor(model => model.Type)<br />
+            </h5>
+            <h5>
+                @Html.LabelFor(model => model.DateOfProduction)<br />
+                @Html.EditorFor(model => model.DateOfProduction)<br />
+            </h5>
+            <input type="submit" value="Create" />
+        </div>
+    </div>
+}

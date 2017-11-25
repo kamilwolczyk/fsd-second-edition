@@ -9,7 +9,12 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IWarehause _warehause = new Warehause(); 
+        private IWarehause _warehause;
+
+        public HomeController(IWarehause warehause)
+        {
+            _warehause = warehause;
+        }
 
         public ActionResult Index()
         {

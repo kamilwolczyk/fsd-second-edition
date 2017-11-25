@@ -12,5 +12,7 @@ namespace Fsd.Arek.Cs.Ex4.Services.Services
         int GetProductCount();
 
         IEnumerable<Product> GetAllProducts();
+
+        void AddProduct();
     }
 }

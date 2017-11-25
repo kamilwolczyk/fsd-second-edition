@@ -13,9 +13,9 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
     {
         private IWarehause _warehause;
 
-        public ProductController()
+        public ProductController(IWarehause warehause)
         {
-            _warehause = new Warehause();
+            _warehause = warehause;
         }
 
         public ActionResult List(int? page, int? items)
@@ -27,8 +27,29 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
                 listproduct = paginationList.CreatePagePositionList(_warehause.GetAllProducts(), (int)page, (int)items);
             else
                 listproduct = _warehause.GetAllProducts();
-            
-            return View(ProductListToModelConverter.Convert(listproduct));
+
+            return View(ProductToListModelConverter.Convert(listproduct));
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddProduct(ProductModel productModel)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            _warehause.AddProduct();
+
+            return RedirectToAction("List");
         }
     }
 }

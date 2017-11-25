@@ -19,5 +19,10 @@ namespace Fsd.Arek.Cs.Ex4.Services.Services
         {
             return SqlDataReaderConverter.ConvertDataReaderToProduct(SqlHellper.SqlAllValue("SELECT * FROM Car")); 
         }
+
+        public void AddProduct()
+        {
+            SqlHellper.InsertToDatabaseTable("Car");
+        }
     }
 }

@@ -14,9 +14,16 @@ namespace Fsd.Arek.Cs.Ex4.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("Home", "", new { controller = "Home", action = "Index" });
-            routes.MapRoute("Product", "Products/{action}", new { controller = "Product", action = "List" });
+            //routes.MapRoute("Products", "Products/{action}", new { controller = "Product", action = "List" });
+            routes.MapRoute("Product", "Product/{action}", new { controller = "Product", action = "List" });
             routes.MapRoute("About", "About", new { controller = "Home", action = "About" });
             routes.MapRoute("Contact", "Contact", new { controller = "Home", action = "Contact" });
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }
