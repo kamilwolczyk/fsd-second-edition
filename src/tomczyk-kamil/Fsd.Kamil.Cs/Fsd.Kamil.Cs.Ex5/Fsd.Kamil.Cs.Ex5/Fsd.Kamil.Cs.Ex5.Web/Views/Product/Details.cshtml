@@ -1,0 +1,44 @@
+﻿@model ProductModel
+  
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<p><br /><br />
+    <a href="../home" class="btn btn-info" role="button">Powrót do strony głównej&raquo;</a>
+    <a href="../list" class="btn btn-info" role="button">Powrót do listy produktów&raquo;</a>
+</p>
+
+<div class="row">
+    <div class="col-sm-8">
+        <p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Producer</b></td>
+                        <td><b>Model</b></td>
+                        <td><b>Cena</b></td>
+                        <td><b>Data produkcji</b></td>
+                        <td><b>Typ</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Producer</td>
+                        <td>@Model.Model</td>
+                        <td>@Model.Price</td>
+                        <td>@Model.ProductionDate.ToShortDateString()</td>
+                        <td>@Model.Type</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+    </div>
+    <div class="col-sm-4">
+        @Html.Action("DisplaySites", "Adverts")
+    </div>
+</div>
+
+@section PageTitle{
+    <h2><span style="color: crimson">Szczegóły</span></h2>
+}
