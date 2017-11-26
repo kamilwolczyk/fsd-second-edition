@@ -13,13 +13,10 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly IProductsService _productService;
-
         private readonly IProductsService _sqlService;
 
-        public ProductsController(IProductsService productService, IProductsService sqlService)
+        public ProductsController(IProductsService sqlService)
         {
-            _productService = productService;
             _sqlService = sqlService;
         }
 
@@ -42,7 +39,7 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
         [ActionName("edit")]
         public ActionResult EditProduct(int id)
         {
-            return View(ProductWithoutIdMapping.ToProductWithoutIdModel(_productService.GetProductByIdNumber(id)));
+            return View(ProductWithoutIdMapping.ToProductWithoutIdModel(_sqlService.GetProductByIdNumber(id)));
         }
 
         [ActionName("add")]
@@ -61,7 +58,7 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
             if (!ModelState.IsValid)
                 return View(newProduct);
 
-            if (!DateCheck.DataChecker(newProduct.ProductionData))
+            if (!DateValidator.DataChecker(newProduct.ProductionData))
             {
                 ModelState.Clear();
                 newProduct.AddFailed = true;

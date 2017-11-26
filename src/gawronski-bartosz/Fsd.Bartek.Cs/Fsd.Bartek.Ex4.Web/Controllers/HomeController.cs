@@ -10,14 +10,10 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IProductsService _productService;
-
         private IProductsService _sqlServices;
 
-        public HomeController(IProductsService productService, IProductsService sqlServices)
+        public HomeController(IProductsService sqlServices)
         {
-            _productService = productService;
-
             _sqlServices = sqlServices;
         }
 
