@@ -1,10 +1,10 @@
 ﻿using Fsd.Sebastian.Cs.Ex4.Services.Products;
+using Fsd.Sebastian.Cs.Ex4.Services.Sql;
 using Fsd.Sebastian.Cs.Ex4.Web.Mappings;
 using Fsd.Sebastian.Cs.Ex4.Web.Models.PagedLists;
 using Fsd.Sebastian.Cs.Ex4.Web.Models.Products;
 using PagedList;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -49,32 +49,19 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(ProductModel productModel)
+        public ActionResult Add(ProductModel product)
         {
             if (!ModelState.IsValid)
-                return View(productModel);
+                return View(product);
             
-            string connectionString = @"Server=.\SQLEXPRESS;Database=music_equipment;User Id=sa;Password=lubieplacki;";
+            SqlSetter.Insert(product.Producer, product.Model, product.Price, product.Date, product.Type);
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand($"INSERT INTO Products(Producer, Model, Price, Date, Type) VALUES('{productModel.Producer}', '{productModel.Model}', '{productModel.Price}', '{productModel.Date}', '{productModel.Type}')", connection);
-
-                SqlDataAdapter adapter = new SqlDataAdapter();
-
-                adapter.SelectCommand = command;
-
-                adapter.Fill(new DataSet());
-
-                return RedirectToAction("Products");
-                                
-                //    throw new System.NotImplementedException();
-                
-
-            }
-                
+            return RedirectToAction("SuccessMessage", new { producer = product.Producer, model = product.Model });
+        }
+        
+        public ActionResult SuccessMessage(string producer, string model)
+        {
+            return View(ProductMapper.ToModel(_productProvider.GetSelectedProduct(producer, model)));
         }
     }
 }

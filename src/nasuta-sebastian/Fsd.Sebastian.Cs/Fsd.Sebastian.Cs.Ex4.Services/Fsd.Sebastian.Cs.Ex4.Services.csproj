@@ -44,6 +44,7 @@
     <Compile Include="Products\SampleProductProvider.cs" />
     <Compile Include="Products\IProductProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql\SqlSetter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Fsd.Sebastian.Cs.Ex4.Data\Fsd.Sebastian.Cs.Ex4.Data.csproj">
