@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Fsd.Porowiec.Michal.Data.Products;
+using Fsd.Porowiec.Michal.Services.Warehouse.Services;
 
 namespace Fsd.Porowiec.Michal.Services.Warehouse
 {
-    public class Warehouseman
+    public class Warehouseman :IWarehouseman
     {
-        public static List<Product> TakeProducts()
+        public List<Product> TakeProducts()
         {
             return new List<Product>
             {

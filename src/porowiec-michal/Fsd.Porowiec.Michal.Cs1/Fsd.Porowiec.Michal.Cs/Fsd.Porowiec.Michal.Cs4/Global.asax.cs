@@ -16,6 +16,7 @@ namespace Fsd.Porowiec.Michal.Cs4
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            DependencyIncectionStart.RegisterResolver();
         }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using Fsd.Porowiec.Michal.Cs4.Models;
+using Fsd.Porowiec.Michal.Data.Products;
 using Fsd.Porowiec.Michal.Services.Warehouse;
+using Fsd.Porowiec.Michal.Services.Warehouse.Services;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -7,11 +10,11 @@ namespace Fsd.Porowiec.Michal.Cs4.Controllers
 {
     public class ProductsController: Controller
     {
-        private Warehouseman _productService;
+        private readonly IWarehouseman _productService;
 
-        public ProductsController()
+        public ProductsController(IWarehouseman warehouseman)
         {
-            _productService = new Warehouseman();
+            _productService = warehouseman;
         }
 
         public ActionResult Display(string page = null, string items = null)
