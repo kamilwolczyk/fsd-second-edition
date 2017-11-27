@@ -1,5 +1,5 @@
 ﻿using Fsd.Sebastian.Cs.Ex4.Services.Products;
-using Fsd.Sebastian.Cs.Ex4.Services.Sql;
+using Fsd.Sebastian.Cs.Ex4.Services.Products.Sql;
 using Fsd.Sebastian.Cs.Ex4.Web.Mappings;
 using Fsd.Sebastian.Cs.Ex4.Web.Models.PagedLists;
 using Fsd.Sebastian.Cs.Ex4.Web.Models.Products;

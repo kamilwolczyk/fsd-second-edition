@@ -7,8 +7,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Web.Attributes
     {
         public override bool IsValid(object value)
         {
-            DateTime d = Convert.ToDateTime(value);
-            return d <= DateTime.Now;
+            return Convert.ToDateTime(value) <= DateTime.Now;
         }
     }
 }
