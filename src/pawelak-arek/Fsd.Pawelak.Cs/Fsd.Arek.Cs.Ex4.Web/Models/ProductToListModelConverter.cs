@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Fsd.Arek.Cs.Ex4.Web.Models
 {
-    public class ProductListToModelConverter
+    public class ProductToListModelConverter
     {
         public static ProductListModel Convert(IEnumerable<Product> ProductList)
         {

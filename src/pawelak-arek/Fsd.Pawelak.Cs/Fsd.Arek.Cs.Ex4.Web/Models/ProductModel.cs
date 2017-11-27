@@ -1,20 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Fsd.Arek.Cs.Ex4.Web.Models.CustomValidators;
+using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Fsd.Arek.Cs.Ex4.Web.Models
 {
     public class ProductModel
     {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Required field")]
         public string Producer { get; set; }
 
+        [Required(ErrorMessage = "Required field")]
         public string Model { get; set; }
 
+        [Required(ErrorMessage = "Required field")]
+        [GratherThanZero]
         public decimal Price { get; set; }
 
+        [Required(ErrorMessage = "Required field")]
         public string Type { get; set; }
 
+        [Required(ErrorMessage = "Required field")]
+        [DataType(DataType.Date)]
+        [GreaterThanCurrentDate]
         public DateTime DateOfProduction { get; set; }
+
+        public bool AddFailed { get; set; }
     }
 }
