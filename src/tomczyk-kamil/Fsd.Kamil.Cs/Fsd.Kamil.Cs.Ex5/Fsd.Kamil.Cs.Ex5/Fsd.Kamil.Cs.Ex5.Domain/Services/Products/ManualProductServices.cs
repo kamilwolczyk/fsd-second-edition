@@ -195,7 +195,7 @@ namespace Fsd.Kamil.Cs.Ex5.Domain.Services.Products
             };
         }
 
-        public IEnumerable<Product> GetProducts(int? page, int? items)
+        public IEnumerable<Product> GetProducts(int? page, int? items) // z poprzedniego zadania zostawione (Ex. 4)
         {
             List<Product> products = _products;
 
@@ -219,11 +219,6 @@ namespace Fsd.Kamil.Cs.Ex5.Domain.Services.Products
         public Product GetProductByModel(string model)
         {
             return _products.FirstOrDefault(product => product.Model == model);
-        }
-
-        public bool TryAddProduct(string producer, string model, string price, DateTime productionDate, ProductTypes type)
-        {
-            return _products.Any(product => product.Producer != producer && product.Model != model && product.Price != price && product.ProductionDate != productionDate && product.Type != type);
         }
     }
 }

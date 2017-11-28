@@ -1,13 +1,16 @@
-﻿using Fsd.Kamil.Cs.Ex5.Domain.Api.Entities;
+﻿using Fsd.Kamil.Cs.Ex5.Domain.Api.Enums;
+using Fsd.Kamil.Cs.Ex5.Domain.Services.Products;
+using System;
 using System.Data.SqlClient;
 
 namespace Fsd.Kamil.Cs.Ex5.Domain.Services.SQL
 {
     public class SqlProductServices
     {
-        public void SQLQuery(Product newProduct)
+        public static void SQLQuery(string Producer, string Model, string Price, DateTime ProductionDate, ProductTypes Type)
         {
-            string connectionString = @"Server=.\SQLEXPRESS;Database=Products;User Id=sa;Password=kamil;";
+            string connectionString = SqlMainServices.connectionString;
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "INSERT INTO Products(Producer, Model, Price, ProductionDate, Type) VALUES(@Producer, @Model, @Price, @ProductionDate, @Type)";
@@ -16,13 +19,13 @@ namespace Fsd.Kamil.Cs.Ex5.Domain.Services.SQL
                 {
                     connection.Open();
 
-                    cmd.Parameters.AddWithValue("@Producer", newProduct.Producer);
-                    cmd.Parameters.AddWithValue("@Model", newProduct.Model);
-                    cmd.Parameters.AddWithValue("@Price", newProduct.Price);
-                    cmd.Parameters.AddWithValue("@ProductionDate", newProduct.ProductionDate);
-                    cmd.Parameters.AddWithValue("@Type", newProduct.Type);
+                    cmd.Parameters.AddWithValue("@Producer", Producer);
+                    cmd.Parameters.AddWithValue("@Model", Model);
+                    cmd.Parameters.AddWithValue("@Price", Price);
+                    cmd.Parameters.AddWithValue("@ProductionDate", ProductionDate);
+                    cmd.Parameters.AddWithValue("@Type", Type);
 
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
 
                     connection.Close();
                 }

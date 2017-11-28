@@ -1,7 +1,5 @@
-﻿using Fsd.Kamil.Cs.Ex5.Domain.Api.Entities;
-using Fsd.Kamil.Cs.Ex5.Models.Products;
+﻿using Fsd.Kamil.Cs.Ex5.Models.Products;
 using Fsd.Kamil.Cs.Ex5.Domain.Services.Products;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Fsd.Kamil.Cs.Ex5.Web.Mappings;
@@ -13,31 +11,14 @@ namespace Fsd.Kamil.Cs.Ex5.Web.Controllers
     {
         private IManualProductService _productService;
 
-        public ProductController()
+        public ProductController(IManualProductService productService)
         {
-            _productService = new ManualProductService();
+            _productService = productService;
         }
 
         public ActionResult Index()
         {
             return View();
-        }
-        public ActionResult Product(int? page, int? items)
-        {
-            IEnumerable<Product> products = _productService.GetProducts(page, items);
-
-            ProductListModel list = new ProductListModel
-            {
-                Products = products.Select(entity => new ProductModel
-                {
-                    Producer = entity.Producer,
-                    Model = entity.Model,
-                    Price = entity.Price,
-                    ProductionDate = entity.ProductionDate,
-                    Type = entity.Type
-                })
-            };
-            return View(list);
         }
 
         public ActionResult List()
@@ -62,20 +43,13 @@ namespace Fsd.Kamil.Cs.Ex5.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(ProductModel productModel, SqlProductServices sql, Product product)
+        public ActionResult Add(ProductModel productModel)
         {
             if (!ModelState.IsValid)
                 return View(productModel);
 
-            if (!_productService.TryAddProduct(productModel.Producer, productModel.Model, productModel.Price, productModel.ProductionDate, productModel.Type))
-            {
-                ModelState.Clear();
-                productModel.ProductAddFailed = true;
-                return View(productModel);
-            }
-
-            sql.SQLQuery(product);
-
+            SqlProductServices.SQLQuery(productModel.Producer, productModel.Model, productModel.Price, productModel.ProductionDate, productModel.Type);
+            
             return RedirectToAction("SuccessMessage");
         }
 
