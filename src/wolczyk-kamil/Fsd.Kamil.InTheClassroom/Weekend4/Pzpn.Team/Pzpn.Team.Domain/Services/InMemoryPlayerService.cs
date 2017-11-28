@@ -39,7 +39,7 @@ namespace Pzpn.Team.Domain.Services
             return _players;
         }
 
-        public Player GetPlayerByNumber(uint number)
+        public Player GetPlayerByNumber(int number)
         {
             return _players.FirstOrDefault(player => player.Number == number);
         }

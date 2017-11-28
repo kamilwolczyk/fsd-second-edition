@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TableMappings\ITableMap.cs" />
+    <Compile Include="TableMappings\PlayerMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FakeUserService.cs" />
     <Compile Include="Services\InMemoryPlayerService.cs" />
     <Compile Include="Services\SqlPlayerService.cs" />
+    <Compile Include="Sql\IRepository.cs" />
+    <Compile Include="Sql\SqlDatabaseClient.cs" />
+    <Compile Include="Sql\TableRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pzpn.Core\Pzpn.Core.csproj">
@@ -55,8 +60,6 @@
       <Name>Pzpn.Team.Domain.Api</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sql\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,24 +1,37 @@
 ﻿using System.Collections.Generic;
 using Pzpn.Team.Domain.Api.Entities;
 using Pzpn.Team.Domain.Api.Services;
+using Pzpn.Team.Domain.Sql;
+using Pzpn.Team.Domain.Mappers;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
 
 namespace Pzpn.Team.Domain.Services
 {
-    public class SqlPlayerService : IPlayerService
+    public class SqlPlayerService : TableRepository<Player>, IPlayerService
     {
-        public IEnumerable<Player> GetAllTeam()
+        public SqlPlayerService() 
+            : base(new PlayerMap())
         {
-            throw new System.NotImplementedException();
         }
 
-        public Player GetPlayerByNumber(uint number)
+        public IEnumerable<Player> GetAllTeam()
         {
-            throw new System.NotImplementedException();
+            return GetAllEntities();
+        }
+
+        public Player GetPlayerByNumber(int number)
+        {
+            SqlParameter numberParameter = new SqlParameter("@SelectedNumber", SqlDbType.Int);
+            numberParameter.Value = number;
+
+            return GetFilteredEntities("Number=@SelectedNumber", new[] { numberParameter }).FirstOrDefault();
         }
 
         public int GetPlayerCount()
         {
-            throw new System.NotImplementedException();
+            return GetCount();
         }
     }
 }

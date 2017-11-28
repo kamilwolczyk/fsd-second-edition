@@ -11,6 +11,6 @@ namespace Pzpn.Team.Web.Models.Players
         public string LastName { get; set; }
 
         [Required]
-        public uint Number { get; set; }
+        public int Number { get; set; }
     }
 }
