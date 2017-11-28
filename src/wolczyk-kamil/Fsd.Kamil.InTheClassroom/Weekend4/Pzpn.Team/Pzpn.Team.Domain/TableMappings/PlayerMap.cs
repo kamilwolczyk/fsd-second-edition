@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace Pzpn.Team.Domain.Mappers
+namespace Pzpn.Team.Domain.TableMappings
 {
 
     public class PlayerMap : ITableMap<Player>

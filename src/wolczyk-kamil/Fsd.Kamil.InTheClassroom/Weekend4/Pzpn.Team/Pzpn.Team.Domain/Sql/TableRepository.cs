@@ -1,4 +1,4 @@
-﻿using Pzpn.Team.Domain.Mappers;
+﻿using Pzpn.Team.Domain.TableMappings;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 

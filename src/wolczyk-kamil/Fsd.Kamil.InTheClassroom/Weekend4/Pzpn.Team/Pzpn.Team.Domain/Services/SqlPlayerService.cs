@@ -2,7 +2,7 @@
 using Pzpn.Team.Domain.Api.Entities;
 using Pzpn.Team.Domain.Api.Services;
 using Pzpn.Team.Domain.Sql;
-using Pzpn.Team.Domain.Mappers;
+using Pzpn.Team.Domain.TableMappings;
 using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
