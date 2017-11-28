@@ -1,0 +1,19 @@
+﻿@model int
+@{
+    ViewBag.Title = "Home";
+}
+@section PageTitle { Home page }
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="jumbotron">
+            <h1>Hello!</h1>
+            <p class="lead">
+                We have @Model @(Model == 1 ? "product" : "products").
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>
