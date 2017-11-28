@@ -1,0 +1,8 @@
+﻿@model ProductModel
+@{
+    ViewBag.Title = "SuccessMessage";
+}
+@section PageTitle { New product }
+
+<h2>@Model.Producer @Model.Model added successfully</h2>
+<h3>@Html.ActionLink("Go to all products", "Products")</h3>

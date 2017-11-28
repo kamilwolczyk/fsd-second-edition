@@ -1,0 +1,54 @@
+﻿@model ProductModel
+@{
+    ViewBag.Title = "Add";
+}
+@section PageTitle { Adding new product }
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-xs-2">Producer</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.Producer)
+            @Html.ValidationMessageFor(model => model.Producer)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">Model</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.Model)
+            @Html.ValidationMessageFor(model => model.Model)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">Price</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">Production date</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.Date)
+            @Html.ValidationMessageFor(model => model.Date)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">Type</div>
+        <div class="col-xs-6">
+            @Html.EnumDropDownListFor(model => model.Type)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-6">
+            <input type="submit" value="Send" />
+        </div>
+    </div>
+}

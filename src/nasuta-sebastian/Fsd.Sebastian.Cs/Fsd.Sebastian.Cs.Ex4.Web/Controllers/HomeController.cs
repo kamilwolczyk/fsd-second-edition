@@ -1,16 +1,20 @@
-﻿using Fsd.Sebastian.Cs.Ex4.Web.Models.Products;
-using System.Linq;
+﻿using Fsd.Sebastian.Cs.Ex4.Services.Products;
 using System.Web.Mvc;
 
 namespace Fsd.Sebastian.Cs.Ex4.Web.Controllers
 {
-    public class HomeController : Controller
+    public class PageController : Controller
     {
-        public ActionResult Index()
-        {
-            ProductListModel list = new ProductListModel();
+        private readonly IProductProvider _productProvider;
 
-            return View(list.Products.Count());
+        public PageController(IProductProvider productProvider)
+        {
+            _productProvider = productProvider;
+        }
+
+        public ActionResult Home()
+        {
+            return View(_productProvider.GetProductsCount());
         }
 
         public ActionResult About()
