@@ -12,26 +12,15 @@ namespace Fsd.Bartek.Ex4.Services.Sql
 {
     public class SqlConnect : IProductsService
     {
-        string connectionString = @"Server=.\BARTEK;Database=Shop;User Id=sa;Password=restVen;";
-
-        SqlConnection Connect()
-        {
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            return connection;
-        }
-
         public IEnumerable<Product> GetProducts(int page, int items)
         {
             List<Product> products = new List<Product>();
 
-            using (SqlConnection connection = Connect())
+            using (SqlConnection connection = Sql.Connect())
             {
-                connection.Open();
-
                 string query = $"Select * from Products";
 
-                SqlCommand command = new SqlCommand(query, connection);
+                SqlCommand command = Sql.OpenConnect(connection, query);
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -62,15 +51,11 @@ namespace Fsd.Bartek.Ex4.Services.Sql
         {
             Product product = new Product();
 
-            using (SqlConnection connection = Connect())
+            using (SqlConnection connection = Sql.Connect())
             {
-                connection.Open();
-
                 string query = $"Select * from Products Where Id = @id";
 
-                SqlCommand command = new SqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@id", id);
+                SqlCommand command = Sql.OpenConnect(connection, query, new SqlParameters[] { new SqlParameters("@id", id) });
 
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -93,19 +78,11 @@ namespace Fsd.Bartek.Ex4.Services.Sql
 
         public void AddProduct(string producer, string model, double price, DateTime productionDate, int type)
         {
-            using (SqlConnection connection = Connect())
+            using (SqlConnection connection = Sql.Connect())
             {
-                connection.Open();
-
                 string query = $"Insert Products (Producer, Model, Price, ProductionDate, TypeId) Values(@producer,@model,@price,@productionDate,@type)";
 
-                SqlCommand command = new SqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@producer", producer);
-                command.Parameters.AddWithValue("@model", model);
-                command.Parameters.AddWithValue("@price", price);
-                command.Parameters.AddWithValue("@productionDate", productionDate);
-                command.Parameters.AddWithValue("@type", type);
+                SqlCommand command = Sql.OpenConnect(connection, query, new SqlParameters[] { new SqlParameters("@producer", producer), new SqlParameters("@model", model), new SqlParameters("@price", price), new SqlParameters("@productionDate", productionDate), new SqlParameters("@type", type)});
 
                 command.ExecuteNonQuery();
             }
