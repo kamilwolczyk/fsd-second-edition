@@ -1,0 +1,24 @@
+﻿@using Fsd.Jacek.Cs.Ex4.Data;
+@using Fsd.Jacek.Cs.Ex4.Models;
+@model ProductModel
+
+@{
+    IDictionary<ProductType, string> productViews = new Dictionary<ProductType, string>
+        {
+        {ProductType.Alkohol, "Alkohol" },
+        {ProductType.Cigarets, "Cigarets"},
+        {ProductType.Fish, "Fish"},
+        {ProductType.Fruits, "Fruits" },
+        {ProductType.Vegetable, "Vegetable" }
+
+        };
+}
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("Forms/_BaseFields", Model)
+    @Html.Partial(string.Format("Forms/Types/_{0}", productViews[Model.Type]), Model)
+
+    <input type="submit" value="Wyślij" />
+}
+
