@@ -46,7 +46,7 @@ namespace Pzpn.Team.Web.Controllers
         [HttpGet]
         public ActionResult Edit(uint number)
         {
-            ViewBag.ShouldAdvertsBeShon = true;
+            ViewBag.ShouldAdvertsBeShown = true;
 
             return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
         }   

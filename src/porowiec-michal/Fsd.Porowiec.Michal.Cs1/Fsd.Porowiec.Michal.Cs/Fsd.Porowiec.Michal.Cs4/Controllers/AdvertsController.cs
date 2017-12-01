@@ -4,12 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Pzpn.Team.Web.Controllers
+namespace Fsd.Porowiec.Michal.Cs4.Controllers
 {
-    public class AdvertController : Controller
+    public class AdvertsController : Controller
     {
-
-        // GET: Advert
+        // GET: Adverts
         public ActionResult Display()
         {
             return PartialView();

@@ -1,4 +1,5 @@
-﻿using Fsd.Porowiec.Michal.Cs4.Models;
+﻿using Fsd.Porowiec.Michal.Cs4.Mappings;
+using Fsd.Porowiec.Michal.Cs4.Models;
 using Fsd.Porowiec.Michal.Data.Products;
 using Fsd.Porowiec.Michal.Services.Warehouse;
 using Fsd.Porowiec.Michal.Services.Warehouse.Services;
@@ -34,6 +35,28 @@ namespace Fsd.Porowiec.Michal.Cs4.Controllers
             return View("Products", model);
         }
 
+        public ActionResult GetProduct(string model)
+        {
+            return View(ProductMapper.ToModel(_productService.GetProductByModel(model)));
+        }
 
+        [HttpGet]
+        public ActionResult AddProduct ()
+        {
+            return View(new ProductModel());
+        }
+
+        [HttpPost]
+        public ActionResult AddProduct (ProductModel product)
+        {
+            if(!ModelState.IsValid)
+                return View(product);
+            else
+            {
+                _productService.AddProduct(product.Model, product.Producer, product.Price, product.DateOfProduction, product.Type);
+
+                return RedirectToAction("Display");
+            }
+        }
     }
 }

@@ -1,0 +1,20 @@
+﻿@model Fsd.Porowiec.Michal.Cs4.Models.ProductModel
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+<h2>Model: @Model.Model</h2>
+<h2>Producent: @Model.Producer</h2>
+<h2>Cena: @Model.Price</h2>
+<h2>Data Produkcji: @Model.DateOfProduction</h2>
+<h2>Typ: @Model.Type</h2>
+
+<button class="btn btn-default">@Html.ActionLink("Powrót","Display")</button>
+
+<hr />
+<div class="row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-6">
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>

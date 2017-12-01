@@ -12,5 +12,9 @@ namespace Fsd.Porowiec.Michal.Services.Warehouse.Services
         IEnumerable<Product> GetProducts(int page, int items);
 
         List<Product> TakeProducts();
+
+        Product GetProductByModel(string model);
+
+        void AddProduct(string model, string producer, double price, DateTime dateOfProduction, ProductType type);
     }
 }

@@ -11,12 +11,12 @@ namespace DupaDoUsunięcia
     {
         static void Main(string[] args)
         {
-            string connectionString = @"Server=DESKTOP-IEHP3D4\SQLEXPRESS; Database=PZPN;User Id=sa; Password = vtvfbdqh12;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string connectionstring = @"server=desktop-iehp3d4\sqlexpress; database=pzpn; user id=sa; password = vtvfbdqh12;";
+            using (SqlConnection connection = new SqlConnection(connectionstring))
             {
                 connection.Open();
 
-                string query = "SELECT * FROM PLAYERS WHERE Number =@SelectedNumber";
+                string query = "select * from players where number =@selectednumber";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
@@ -24,8 +24,8 @@ namespace DupaDoUsunięcia
                 while(reader.Read())
                 {
                     int id = (int)reader[0];
-                    string FirstName = (string)reader[1];
-                    string LastName = (string)reader[2];
+                    string firstname = (string)reader[1];
+                    string lastname = (string)reader[2];
                     int number = (int)reader[3];
                 }
             };
