@@ -2,6 +2,18 @@
 @{
     ViewBag.Title = "Contact";
 }
-
-<h2>Contact</h2>
-<p>Some text here</p>
+<div class="row">
+    <div class="col-sm-8" style="background: silver">
+        <h2>Contact</h2>
+        <p>Some text here</p>
+    </div>
+    <div class="col-sm-4">
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>
+@section  PageTitle{
+    <h2>Strona główna</h2>
+}
+@section FooterPage{
+    kontakt
+}

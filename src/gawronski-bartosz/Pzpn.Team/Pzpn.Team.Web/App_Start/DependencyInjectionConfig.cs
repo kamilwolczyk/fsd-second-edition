@@ -23,6 +23,7 @@ namespace Pzpn.Team.Web
             builder.RegisterType<SecurityService>().As<ISecurityService>();
             builder.RegisterType<FakeUserService>().As<IUserService>();
             builder.RegisterType<InMemoryPlayerService>().As<IPlayerService>();
+            builder.RegisterType<SqlPlayerService>().As<IPlayerService>();
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

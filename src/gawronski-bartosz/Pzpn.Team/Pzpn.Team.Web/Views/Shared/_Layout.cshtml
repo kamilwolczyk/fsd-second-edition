@@ -10,8 +10,9 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+            @RenderSection("PageTitle", false)
             <h1>
-                <span style="color: white">PZ</span><span style="color: red">PN</span>
+                @*<span style="color: white">PZ</span><span style="color: red">PN</span>*@
             </h1>
         </div>
     </div>
@@ -24,11 +25,10 @@
                 <li>@Html.ActionLink("Zaloguj się", "Login", "User")</li>
             </ul>
         </nav>
-        
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Kamil Wołczyk</p>
+            <p>&copy; @DateTime.Now.Year - Kamil Wołczyk - @RenderSection("FooterPage")</p>
         </footer>
     </div>
 
