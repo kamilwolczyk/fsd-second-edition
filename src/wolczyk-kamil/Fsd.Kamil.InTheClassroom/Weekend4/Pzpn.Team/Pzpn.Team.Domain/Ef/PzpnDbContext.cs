@@ -12,5 +12,9 @@ namespace Pzpn.Team.Domain.Ef
         public virtual DbSet<Player> Players { get; set; }
 
         public virtual DbSet<FootballTeam> FootballTeams { get; set; }
+
+        public virtual DbSet<FootballClub> FootballClubs { get; set; }
+
+        public virtual DbSet<ClubPlayers> ClubPlayers { get; set; }
     }
 }

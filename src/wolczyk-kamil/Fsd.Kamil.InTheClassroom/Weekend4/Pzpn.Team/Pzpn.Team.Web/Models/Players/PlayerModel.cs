@@ -12,5 +12,7 @@ namespace Pzpn.Team.Web.Models.Players
 
         [Required]
         public int Number { get; set; }
+
+        public string CurrentClubName { get; set; }
     }
 }

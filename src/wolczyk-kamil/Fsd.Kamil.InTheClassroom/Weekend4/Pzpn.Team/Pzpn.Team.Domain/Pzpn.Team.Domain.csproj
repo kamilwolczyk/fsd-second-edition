@@ -51,6 +51,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ef\PzpnDbContext.cs" />
+    <Compile Include="Migrations\201712021103589_Fsd5_362BA5C345FC4B979E57FC10E0499D6C.cs" />
+    <Compile Include="Migrations\201712021103589_Fsd5_362BA5C345FC4B979E57FC10E0499D6C.Designer.cs">
+      <DependentUpon>201712021103589_Fsd5_362BA5C345FC4B979E57FC10E0499D6C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021117209_Fsd5_888D9B3B508843B49B6A7624208E0B35.cs" />
+    <Compile Include="Migrations\201712021117209_Fsd5_888D9B3B508843B49B6A7624208E0B35.Designer.cs">
+      <DependentUpon>201712021117209_Fsd5_888D9B3B508843B49B6A7624208E0B35.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021119100_Fsd5_E53E33480C904F04AA2C843D3E818B6B.cs" />
+    <Compile Include="Migrations\201712021119100_Fsd5_E53E33480C904F04AA2C843D3E818B6B.Designer.cs">
+      <DependentUpon>201712021119100_Fsd5_E53E33480C904F04AA2C843D3E818B6B.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021149414_Fsd5_18FD946917584B3EA33FA0E954C80D05.cs" />
+    <Compile Include="Migrations\201712021149414_Fsd5_18FD946917584B3EA33FA0E954C80D05.Designer.cs">
+      <DependentUpon>201712021149414_Fsd5_18FD946917584B3EA33FA0E954C80D05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021151392_Fsd_D23B9F0C51F54EF8817A794B3898995A.cs" />
+    <Compile Include="Migrations\201712021151392_Fsd_D23B9F0C51F54EF8817A794B3898995A.Designer.cs">
+      <DependentUpon>201712021151392_Fsd_D23B9F0C51F54EF8817A794B3898995A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021206065_Fsd5_597F109319C8409BA2977F6DC1EFD0EB.cs" />
+    <Compile Include="Migrations\201712021206065_Fsd5_597F109319C8409BA2977F6DC1EFD0EB.Designer.cs">
+      <DependentUpon>201712021206065_Fsd5_597F109319C8409BA2977F6DC1EFD0EB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\EfPlayerService.cs" />
     <Compile Include="TableMappings\ITableMap.cs" />
@@ -73,7 +97,26 @@
       <Name>Pzpn.Team.Domain.Api</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712021103589_Fsd5_362BA5C345FC4B979E57FC10E0499D6C.resx">
+      <DependentUpon>201712021103589_Fsd5_362BA5C345FC4B979E57FC10E0499D6C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021117209_Fsd5_888D9B3B508843B49B6A7624208E0B35.resx">
+      <DependentUpon>201712021117209_Fsd5_888D9B3B508843B49B6A7624208E0B35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021119100_Fsd5_E53E33480C904F04AA2C843D3E818B6B.resx">
+      <DependentUpon>201712021119100_Fsd5_E53E33480C904F04AA2C843D3E818B6B.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021149414_Fsd5_18FD946917584B3EA33FA0E954C80D05.resx">
+      <DependentUpon>201712021149414_Fsd5_18FD946917584B3EA33FA0E954C80D05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021151392_Fsd_D23B9F0C51F54EF8817A794B3898995A.resx">
+      <DependentUpon>201712021151392_Fsd_D23B9F0C51F54EF8817A794B3898995A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021206065_Fsd5_597F109319C8409BA2977F6DC1EFD0EB.resx">
+      <DependentUpon>201712021206065_Fsd5_597F109319C8409BA2977F6DC1EFD0EB.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
