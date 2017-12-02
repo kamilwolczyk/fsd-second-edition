@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace Pzpn.Team.Domain.Sql
 {
     public class SqlDatabaseClient
     {
-        private string _connectionString = @"Server=.\SQLEXPRESS;Database=pzpn;User Id=sa;Password=123456789;";
+        private string _connectionString = ConfigurationManager.ConnectionStrings["pzpnDev"].ConnectionString;
 
         public IEnumerable<TEntity> ExecuteQuery<TEntity>(string query, Func<SqlDataReader, TEntity> mapper, SqlParameter[] parameters = null)
         {

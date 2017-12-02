@@ -9,5 +9,9 @@
         public string LastName { get; set; }
 
         public int Number { get; set; }
+
+        public int TeamId { get; set; }
+
+        public virtual FootballTeam Team { get; set; }
     }
 }
