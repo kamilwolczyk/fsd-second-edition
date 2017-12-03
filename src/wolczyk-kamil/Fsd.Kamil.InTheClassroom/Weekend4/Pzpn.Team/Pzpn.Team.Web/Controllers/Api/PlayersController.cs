@@ -1,23 +1,27 @@
-﻿using System.Net.Http;
+﻿using Pzpn.Team.Domain.Api.Entities;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace Pzpn.Team.Web.Controllers.Api
 {
-    [RoutePrefix("api/players")]
     public class PlayersController : ApiController
     {
-        [HttpGet]
-        [Route("")]
-        public IHttpActionResult Get()
+        public List<User> Users { get; set; }
+
+        public PlayersController()
         {
-            return Ok("5");
+            Users = new List<User>
+            {
+                new User(){Email = "jan@kowalski.com", Password="króliczek"},
+                new User(){Email = "maria@gmail.com", Password="123456"},
+                new User(){Email = "stefan@gmail.com", Password="qwerty"},
+            };
         }
 
-        [HttpPut]
-        [Route("")]
-        public IHttpActionResult DoSthWithPlayer()
+        public int GetSomeNumber()
         {
-            return Ok();
+            return 5;
         }
     }
 }
