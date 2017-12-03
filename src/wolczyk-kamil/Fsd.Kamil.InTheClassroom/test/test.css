@@ -1,0 +1,22 @@
+body {
+  background: yellow; }
+
+header {
+  background: yellow;
+  height: 100px; }
+  header h1 {
+    line-height: 100px; }
+
+.cell {
+  border: solid 1 black;
+  background: yellow;
+  width: 200px;
+  height: 200px;
+  box-sizing: content-box; }
+
+.header-cell {
+  border: solid 2 black;
+  background: pink;
+  width: 200px;
+  height: 200px;
+  box-sizing: content-box; }

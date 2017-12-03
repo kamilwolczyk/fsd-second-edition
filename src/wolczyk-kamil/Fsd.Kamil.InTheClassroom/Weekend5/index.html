@@ -5,40 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        div{
-            margin: 0;
-            padding: 0;
-        }
-        .item {
-            height: 200px;
-            background: red;
-            flex-grow: 1;
-            /* margin: 10px; */
-        }
-
-        #container{
-            border: solid 1px;
-            display:flex;
-            /* flex-direction: column; */
-        }
-
-        .special{
-            background: black;
-            flex-grow: 2;
-        }
-    </style>
+    <link rel="stylesheet" href="players.css">
 </head>
 <body>
-    <div id="container">
-            <div class="item">1</div>
-            <div class="item special">2</div>
-    </div>
-
-    
+    <header>
+        <h1>Fsd app</h1>
+    </header>
+    <section class="content">
+        <aside class="left-floated left">1</aside>
+        <secttion class="left-floated center">2</secttion>
+        <aside class="left-floated right">3</aside>
+    </section>
+    <footer>
+        <p>Copyright 2017 Kamil Wołczyk</p>
+    </footer>
 </body>
 </html>
