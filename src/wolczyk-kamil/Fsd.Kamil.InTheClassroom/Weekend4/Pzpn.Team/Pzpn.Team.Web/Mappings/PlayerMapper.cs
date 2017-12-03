@@ -31,5 +31,17 @@ namespace Pzpn.Team.Web.Mappings
                 Number = entity.Number
             };
         }
+
+        public static Player ToPlayer(PlayerDto dto)
+        {
+            return new Player
+            {
+                Id = dto.Id,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+                Number = dto.Number,
+                TeamId = dto.TeamId
+            };
+        }
     }
 }

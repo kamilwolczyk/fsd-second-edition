@@ -10,5 +10,9 @@ namespace Pzpn.Team.Domain.Api.Services
         Player GetPlayerByNumber(int number);
 
         int GetPlayerCount();
+
+        void AddNewPlayer(Player player);
+
+        void DeleteById(int id);
     }
 }

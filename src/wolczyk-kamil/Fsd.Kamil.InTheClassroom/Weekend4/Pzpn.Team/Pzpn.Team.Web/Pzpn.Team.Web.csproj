@@ -182,6 +182,7 @@
     <Compile Include="Mappings\PlayerMapper.cs" />
     <Compile Include="Mappings\UserMapper.cs" />
     <Compile Include="Models\Adverts\AdvertList.cs" />
+    <Compile Include="Models\Players\PlayerDto.cs" />
     <Compile Include="Models\Players\PlayerListModel.cs" />
     <Compile Include="Models\Players\PlayerModel.cs" />
     <Compile Include="Controllers\UserController.cs" />

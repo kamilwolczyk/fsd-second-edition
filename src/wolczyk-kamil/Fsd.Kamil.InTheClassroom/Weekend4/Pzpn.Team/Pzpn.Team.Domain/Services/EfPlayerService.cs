@@ -16,6 +16,23 @@ namespace Pzpn.Team.Domain.Services
             _pzpnDb = new PzpnDbContext();
         }
 
+        public void AddNewPlayer(Player player)
+        {
+            _pzpnDb.Players.Add(player);
+            _pzpnDb.SaveChanges();
+        }
+
+        public void DeleteById(int id)
+        {
+            var player = _pzpnDb.Players.FirstOrDefault(x=>x.Id == id);
+
+            if (player == null)
+                throw new ArgumentException($"Player with id {id} has not been found");
+
+            _pzpnDb.Players.Remove(player);
+            _pzpnDb.SaveChanges();
+        }
+
         public IEnumerable<Player> GetAllTeam()
         {
             return _pzpnDb.Players;
