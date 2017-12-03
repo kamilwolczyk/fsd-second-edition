@@ -1,8 +1,8 @@
-﻿namespace Pzpn.Team.Domain.Api.Entities
+﻿namespace Pzpn.Team.Web.Models.Users
 {
-    public class User
+    public class UserDto
     {
-        public int Id { get; set; }
+        public int Id{ get; set; }
 
         public string Email { get; set; }
 

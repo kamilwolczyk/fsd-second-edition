@@ -1,27 +1,22 @@
-﻿using Pzpn.Team.Domain.Api.Entities;
-using System.Collections.Generic;
-using System.Net.Http;
+﻿using Pzpn.Team.Domain.Api.Services;
+using Pzpn.Team.Web.Mappings;
+using System.Linq;
 using System.Web.Http;
 
 namespace Pzpn.Team.Web.Controllers.Api
 {
     public class PlayersController : ApiController
     {
-        public List<User> Users { get; set; }
+        private readonly IPlayerService _playerService;
 
-        public PlayersController()
+        public PlayersController(IPlayerService playerService)
         {
-            Users = new List<User>
-            {
-                new User(){Email = "jan@kowalski.com", Password="króliczek"},
-                new User(){Email = "maria@gmail.com", Password="123456"},
-                new User(){Email = "stefan@gmail.com", Password="qwerty"},
-            };
+            _playerService = playerService;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IHttpActionResult GetList()
         {
-            return Users;
+            return Ok(_playerService.GetAllTeam().Select(PlayerMapper.ToSummaryDto));
         }
     }
 }

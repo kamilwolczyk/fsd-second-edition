@@ -20,5 +20,16 @@ namespace Pzpn.Team.Web.Mappings
                 CurrentClubName = currentClub?.FootballClub?.Name
             };
         }
+
+        public static PlayerSummaryDto ToSummaryDto(Player entity)
+        {
+            return new PlayerSummaryDto
+            {
+                Id = entity.Id,
+                FirstName = entity.FirstName,
+                LastName = entity.LastName,
+                Number = entity.Number
+            };
+        }
     }
 }
