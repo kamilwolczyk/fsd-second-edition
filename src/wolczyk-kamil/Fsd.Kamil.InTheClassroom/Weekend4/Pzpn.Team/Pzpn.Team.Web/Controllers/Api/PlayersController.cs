@@ -19,9 +19,9 @@ namespace Pzpn.Team.Web.Controllers.Api
             };
         }
 
-        public int GetSomeNumber()
+        public IEnumerable<User> GetAllUsers()
         {
-            return 5;
+            return Users;
         }
     }
 }
