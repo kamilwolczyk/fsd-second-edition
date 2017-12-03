@@ -1,0 +1,50 @@
+﻿@model ProductListModel
+  
+@{
+    ViewBag.Title = "Product List";
+}
+
+<p><br /><br />
+    <a href="../home" class="btn btn-info" role="button">Powrót do strony głównej&raquo;</a>
+</p>
+
+<div class="row">
+    <div class="col-sm-9">
+        <p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td><b>Lp.</b></td>
+                        <td><b>Producent</b></td>
+                        <td><b>Model</b></td>
+                        @*<td><b>Cena</b></td>*@
+                        @*<td><b>Data produckji</b></td>*@
+                        <td><b>Typ</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Products.Count(); i++)
+            {
+                ProductModel product = Model.Products.ElementAt(i);
+                        <tr>
+                            <td>@(i + 1)</td>
+                            <td>@product.Producer</td>
+                            <td>@product.Model</td>
+                            @*<td>@product.Price</td>*@
+                            @*<td>@product.ProductionDate</td>*@
+                            <td>@product.Type</td>
+                            <td>@Html.ActionLink("Szczegóły", "details", new { model = product.Model })</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </p>
+    </div>
+    <div class="col-sm-3">
+        @Html.Action("DisplayOtherProducts", "Adverts")
+    </div>
+</div> 
+
+@section PageTitle{
+    <h2><span style="color: crimson">Lista produktów</span></h2>
+}

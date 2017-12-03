@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Fsd.Arek.Cs.Ex4.Services.Services;
 using Fsd.Arek.Cs.Ex4.Data.Entities;
 using Fsd.Arek.Cs.Ex4.Web.Models;
+using System.Reflection;
 
 namespace Fsd.Arek.Cs.Ex4.Web.Controllers
 {
@@ -13,9 +14,11 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
     {
         private IWarehause _warehause;
 
-        public ProductController()
+        private IPaginationPage<Product> _paginationPage;
+
+        public ProductController(IWarehause warehause)
         {
-            _warehause = new Warehause();
+            _warehause = warehause;
         }
 
         public ActionResult List(int? page, int? items)
@@ -27,8 +30,38 @@ namespace Fsd.Arek.Cs.Ex4.Web.Controllers
                 listproduct = paginationList.CreatePagePositionList(_warehause.GetAllProducts(), (int)page, (int)items);
             else
                 listproduct = _warehause.GetAllProducts();
-            
-            return View(ProductListToModelConverter.Convert(listproduct));
+
+            return View(ProductToListModelConverter.Convert(listproduct));
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddProduct(ProductModel productModel)
+        {
+            List<string> productValues = new List<string>();
+            int i = 0;
+
+            foreach (PropertyInfo p in productModel.GetType().GetProperties())
+            {
+                if (i != 0)
+                    productValues.Add(Convert.ToString($"'{p.GetValue(productModel)}'"));
+                i++;
+            }
+
+            if (!ModelState.IsValid)
+                return View();
+
+            _warehause.AddProduct(productValues);
+            return RedirectToAction("List");
         }
     }
 }

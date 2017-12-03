@@ -34,12 +34,22 @@ namespace Pzpn.Team.Domain.Services
             };
         }
 
+        public void AddNewPlayer(Player player)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DeleteById(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public IEnumerable<Player> GetAllTeam()
         {
             return _players;
         }
 
-        public Player GetPlayerByNumber(uint number)
+        public Player GetPlayerByNumber(int number)
         {
             return _players.FirstOrDefault(player => player.Number == number);
         }

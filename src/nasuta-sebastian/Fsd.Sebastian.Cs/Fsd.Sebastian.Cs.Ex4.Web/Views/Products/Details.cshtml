@@ -1,0 +1,35 @@
+﻿@model ProductModel
+@{
+    ViewBag.Title = "Details";
+}
+@section PageTitle { @Model.Producer @Model.Model }
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table">
+            <tr>
+                <th>Producer:</th>
+                <td>@Model.Producer</td>
+            </tr>
+            <tr>
+                <th>Model:</th>
+                <td>@Model.Model</td>
+            </tr>
+            <tr>
+                <th>Price:</th>
+                <td>&pound@(Model.Price)</td>
+            </tr>
+            <tr>
+                <th>Production date:</th>
+                <td>@Model.Date.ToShortDateString()</td>
+            </tr>
+            <tr>
+                <th>Type:</th>
+                <td>@Model.Type</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-6">
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>

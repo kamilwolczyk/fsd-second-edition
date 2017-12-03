@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Success";
+}
+
+<br /><br />
+<div class="row">
+    <div class="col-sm-9"style="background:transparent !important" class="jumbotron">
+        <p><a href="../home" class="btn btn-info" role="button">Powrót do strony głównej&raquo;</a></p>
+    </div>
+    <div class="col-sm-3">
+        @Html.Action("DisplayOtherProducts", "Adverts")
+    </div>
+</div>
+
+@section PageTitle{
+    <h2><span style="color: crimson">Produkt dodany</span></h2>
+}
+

@@ -7,8 +7,12 @@ namespace Pzpn.Team.Domain.Api.Services
     {
         IEnumerable<Player> GetAllTeam();
 
-        Player GetPlayerByNumber(uint number);
+        Player GetPlayerByNumber(int number);
 
         int GetPlayerCount();
+
+        void AddNewPlayer(Player player);
+
+        void DeleteById(int id);
     }
 }

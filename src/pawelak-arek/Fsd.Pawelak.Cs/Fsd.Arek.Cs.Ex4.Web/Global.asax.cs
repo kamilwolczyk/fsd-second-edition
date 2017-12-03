@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fsd.Arek.Cs.Ex4.Web.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace Fsd.Arek.Cs.Ex4.Web
     {
         protected void Application_Start()
         {
+            DependencyInjectionConfig.ContainerConfig();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

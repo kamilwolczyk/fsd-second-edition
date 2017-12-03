@@ -8,5 +8,7 @@ namespace Fsd.Sebastian.Cs.Ex4.Services.Products
         IEnumerable<Product> GetAllProducts();
 
         int GetProductsCount();
+
+        Product GetSelectedProduct(string producer, string model);
     }
 }

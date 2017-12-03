@@ -26,13 +26,13 @@ namespace Pzpn.Team.Web.Controllers
         }
 
         [ActionName("details")]
-        public ActionResult DisplayPlayerDetails(uint number)
+        public ActionResult DisplayPlayerDetails(int number)
         {
             return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
         }
 
         [HttpGet]
-        public ActionResult Edit(uint number)
+        public ActionResult Edit(int number)
         {
             return View(PlayerMapper.ToModel(_playerService.GetPlayerByNumber(number)));
         }

@@ -1,0 +1,14 @@
+﻿@model AdvertList
+
+<div>
+    <h2>Reklamy!</h2>
+    <h3>Współpracujemy z:</h3>
+
+    <ul>
+        @foreach (string item in Model.Items)
+        {
+            <li>@item</li>
+        }
+    </ul>
+
+</div>

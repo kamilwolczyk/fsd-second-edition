@@ -1,0 +1,30 @@
+@import '_variables';
+
+@mixin cell($color, $borderWidth){
+    border: solid $borderWidth black;
+    background: $color;
+    width: 200px;
+    height: 200px;
+    box-sizing: content-box;
+}
+
+body{
+    background: $headerColor;
+}
+
+header{
+    background: $headerColor;
+    height: $headerHeight;
+
+    h1{
+        line-height: $headerHeight;
+    }
+}
+
+.cell{
+    @include cell(yellow, 1) 
+}
+
+.header-cell{
+    @include cell(pink, 2) 
+}
