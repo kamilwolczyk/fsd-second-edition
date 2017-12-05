@@ -3,6 +3,16 @@ body
   padding: 0;
   margin: 0;
   background: goldenrod;
+  font-family: "Georgia";
+}
+
+.site
+{
+  margin: 10px 15%;
+  padding: 0px 0px;
+  box-shadow: 0px 15px 40px;
+  background: #f2f2f2;
+  height: 100%;
 }
 
 header
@@ -10,4 +20,41 @@ header
   background: url('railway.jpg') center no-repeat;
   width: 100%;
   height: 250px;
+}
+
+header h1
+{
+  text-align: center;
+  position: relative;
+  top: 75%;
+}
+
+.red
+{
+  color: brown;
+  text-shadow: 2px 1px 1px white, -3px -2px 1px black;
+}
+
+.white
+{
+  color: sienna;
+  text-shadow: 2px 1px 1px white, -3px -2px 1px black;
+}
+
+footer
+{
+  text-align: center;
+  background: black;
+  color: #f2f2f2;
+}
+
+.inline{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+nav li:hover{
+  color: white;
 }
