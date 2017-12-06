@@ -3,7 +3,8 @@ body{
     padding:0;
     height: 100vh;
     width: 100%;
-    background-color:darkgrey;
+    background-color:#f4f4f4;
+    font-family: 'Ranchers', cursive;
 }
 p, ul{
     margin:0;
@@ -27,11 +28,25 @@ a{
 header{
     position: relative;
     top: 0;
-    background: red;
-    height: 200px;
     width:100%;
-    margin-right:auto;
-    margin-left:auto;
+    height:325px;
+}
+.header-img{
+    width:100%;
+    height:100%;
+}
+.header-title{
+    position: absolute;
+    top:50px;
+    left:100px;
+    font-size:30px;
+    font-weight: 700;
+}
+.header-title-first-word{
+    color:#ee4268;
+}
+.header-title-second-word{
+
 }
 
 nav{
@@ -60,7 +75,7 @@ a:hover{
 section{
     padding:10px;
     box-sizing: border-box;
-    min-height: calc(100vh - 330px);
+    min-height: calc(100vh - 455px);
     background-color: #fff;
 }
 
