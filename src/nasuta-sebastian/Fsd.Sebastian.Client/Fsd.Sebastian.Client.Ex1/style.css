@@ -1,60 +1,118 @@
-body
-{
+html, body{
+  position: absolute;
+  top: 0;
   padding: 0;
   margin: 0;
-  background: goldenrod;
-  font-family: "Georgia";
-}
-
-.site
-{
-  margin: 10px 15%;
-  padding: 0px 0px;
-  box-shadow: 0px 15px 40px;
-  background: #f2f2f2;
+  width: 100%;
   height: 100%;
+  background: goldenrod;
+  font-family: 'Book Antiqua', serif;
 }
 
-header
-{
+.site{
+  margin: 15px 15%;
+  padding: 0px 0px;
+  box-shadow: 0px 10px 40px;
+  background: #f2f2f2;
+  height: calc(100% - 30px);
+}
+
+header{
   background: url('railway.jpg') center no-repeat;
   width: 100%;
   height: 250px;
 }
 
-header h1
-{
+header h1{
+  margin: 0;
   text-align: center;
   position: relative;
   top: 75%;
 }
 
-.red
-{
-  color: brown;
+header h1 span{
   text-shadow: 2px 1px 1px white, -3px -2px 1px black;
 }
 
-.white
-{
-  color: sienna;
-  text-shadow: 2px 1px 1px white, -3px -2px 1px black;
+header h1 span.r{
+  color: #568A51;  
 }
 
-footer
-{
+header h1 span.rest{
+  color: #8B6E62;
+}
+
+footer{
+  background: silver;
   text-align: center;
+}
+
+.footer-list{
+  box-shadow: 0px 0px 6px black inset;
+  height: 70px;
+}
+
+.footer-list a{
+  color: black;
+  text-decoration: none;
+}
+
+.footer-list a:hover{
+  color: goldenrod;
+  text-shadow: 1px 1px 1px black;
+}
+
+footer ul{
+  padding: 0;
+  margin: 3px 0 0;
+  display: inline-block;
+  list-style-type: none;
+  width: 45%;
+}
+
+footer p{
+  margin: 0;
   background: black;
   color: #f2f2f2;
+  height: 25px;
+  line-height: 25px;
 }
 
-.inline{
+nav{
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  background: black;
+  height: 50px;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  list-style-type: none;
+}
+
+nav li{
+  margin: 10px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 1.5s;
 }
 
 nav li:hover{
-  color: white;
+  box-shadow: 0px 0px 16px black inset;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 2px black;
+  background: goldenrod;
+}
+
+.content{
+  height: calc(100% - 250px - 50px - 25px - 70px);
 }
