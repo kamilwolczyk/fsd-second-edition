@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@media only screen and (max-width: 1366px) {
+  html {
+    background: rgba(0, 128, 68, 0.829); } }
+
+@media only screen and (max-width: 480px) {
+  html {
+    background: #88b6d4; } }
+
+#mainpage {
+  left: 15%;
+  right: 15%;
+  top: 1%;
+  bottom: 1%;
+  background: white;
+  box-shadow: 0px 0px 20px black;
+  position: absolute;
+  font-family: Calibri; }
+
+#content {
+  margin: 15px;
+  font-family: Cambria; }
+
+header {
+  height: 250px;
+  background-image: url("Pictures/Bieszczady2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: center; }
+
+.button {
+  text-decoration: none;
+  color: white;
+  font-family: Arial;
+  position: relative;
+  overflow: hidden;
+  line-height: 45px;
+  /*animacja - lśniący przycisk - nauczone z Internetu*/
+  /*rozwiązanie 'transition' nauczone z Internetu*/ }
+  .button:hover {
+    background-color: #4382a7;
+    color: white; }
+  .button:before {
+    content: "";
+    background-color: #4382a7;
+    height: 100%;
+    width: 20px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    transform: skewX(-45deg) translateX(0px);
+    transition: none; }
+  .button:hover:before {
+    transform: skewX(-45deg) translateX(170px);
+    transition: all 0.5s ease-in; }
+
+ul {
+  list-style-type: none; }
+
+nav ul {
+  margin: 0;
+  padding: 0; }
+  nav ul li {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: green;
+    border-bottom-color: green;
+    background: #4382a7; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  footer h5 {
+    background: black;
+    color: white;
+    margin: 0;
+    text-align: center; }
+
+.footerLinks {
+  display: inline-block;
+  width: 45.50%;
+  text-align: center; }
+  .footerLinks a {
+    color: black; }
