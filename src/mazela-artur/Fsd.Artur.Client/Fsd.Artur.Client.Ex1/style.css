@@ -48,58 +48,74 @@ header {
 /*navigation*/
 
 nav {
+  width:100%; 
+  text-align: center;
+  background-color: rgb(31, 26, 26);
   border-top: solid 2px rgb(18, 87, 21);
 }
 
-.navbar-inverse {
-  background-color: rgb(31, 26, 26) !important;
-  z-index: 100;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-  color: white !important;   
- }
+nav ul li {
+  float: left;
+  width: 33.333%;
+}
 
 nav ul li a {
-  transition: 0.5s all;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  display: block;
+  padding: 15px 0;
+  transition: 0.5;
 }
 
 nav ul li a:hover {
   background: rgb(24, 121, 27);
-} 
+  color: rgb(31, 26, 26);
+}
 
-/*footer lists*/
 
-footer {
-  width:100%;
+/*footer*/
+
+footer{
   bottom: 0px;
-  left:15px;
+  left:0px;
   right: 0px;
   position: absolute;
   background-color: rgb(31, 26, 26);
 }
 
-.footer-list { 
-  padding-top: 10px;
+footer p{
+  background: black;
+  color: silver;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   text-align: center;
+  font-size: 14px;
+}
+
+.footer-list {
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+}
+
+.footer-list ul {
+  list-style-type: none;
 }
 
 .footer-list a{
   color: white;
-
+  text-decoration: none;
 }
 
 .footer-list a:hover{
   color: rgb(24, 121, 27);
-  text-decoration:none;
-}
-
-footer p {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  text-align: center;
-  color: silver;
-  background: black;
 }
