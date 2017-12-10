@@ -10,16 +10,16 @@ namespace Fsd.Bartek.Ex4.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IProductsService _productService;
+        private IProductsService _sqlServices;
 
-        public HomeController()
+        public HomeController(IProductsService sqlServices)
         {
-            _productService = new ProductsService();
+            _sqlServices = sqlServices;
         }
 
         public ActionResult Index()
         {
-            IEnumerable<Product> products = _productService.GetProducts(0, 0);
+            IEnumerable<Product> products = _sqlServices.GetProducts(0, 0);
 
             int listCount = products.Count(); 
 
