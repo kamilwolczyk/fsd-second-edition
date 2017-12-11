@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pzpn.Team.Domain", "Pzpn.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pzpn.Team.Domain.Api", "Pzpn.Team.Domain.Api\Pzpn.Team.Domain.Api.csproj", "{723DB84E-8A19-4647-839D-32BC7065EC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DupaDoUsunięcia", "DupaDoUsunięcia\DupaDoUsunięcia.csproj", "{B33B0EC7-9CC9-40E1-8B0A-5954CAABD53B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{723DB84E-8A19-4647-839D-32BC7065EC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723DB84E-8A19-4647-839D-32BC7065EC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723DB84E-8A19-4647-839D-32BC7065EC96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B33B0EC7-9CC9-40E1-8B0A-5954CAABD53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B33B0EC7-9CC9-40E1-8B0A-5954CAABD53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B33B0EC7-9CC9-40E1-8B0A-5954CAABD53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B33B0EC7-9CC9-40E1-8B0A-5954CAABD53B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
