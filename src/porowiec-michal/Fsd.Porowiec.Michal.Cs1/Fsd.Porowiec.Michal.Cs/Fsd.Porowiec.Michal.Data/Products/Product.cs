@@ -10,21 +10,24 @@ namespace Fsd.Porowiec.Michal.Data.Products
     {
         public string Model { get; protected set; }
 
-        public Producer Producer { get; protected set; }
+        public string Producer { get; protected set; }
 
         public double  Price { get; protected set; }
 
-        public string DateOfProduction { get; protected set; }
+        public DateTime DateOfProduction { get; protected set; }
 
         public ProductType Type { get; protected set; }
 
-        public Product (string model, Producer producer, double price, string dateOfProduction, ProductType type)
+        public int Id { get; protected set; }
+
+        public Product (string model, string producer, double price, DateTime dateOfProduction, ProductType type, int id)
         {
             Model = model;
             Producer = producer;
             Price = price;
             DateOfProduction = dateOfProduction;
             Type = type;
+            Id = id;
         }
     }
 }
