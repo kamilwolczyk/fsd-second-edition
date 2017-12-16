@@ -3,24 +3,26 @@ a) Podstawy języka javascript. Dodawanie skryptów inline do strony html. Tworz
 skryptów JS
 - opowiedzieć po co jest js (idea i potrzeba języka programowania po stronie klienta)
 - cechy języka: skryptowy, niekompilowany, 1 wątkowy, bez typowania zmiennych, więcej dobrowolności ale przez to potrzeba większej kontroli przez developera
-- podstawowa operacja matematyczna w konsoli i w nodejs
-- dodawanie skryptów do dokumentu html, wyjaśnienie co i kiedy się przetwarza
+- podstawowa operacja matematyczna w nodejs
 - zmienne: słowo kluczowe 'var'
+- puty zmiennych: number, string, boolean, undefined, null, object
 - warunki, pętle, operatory logiczne i arytmetyczne
 - najprostsza komunikacja: console.log(), console.error(), alert(), confirm(), prompt()
-- funkcje
+- funkcje: zwykła nazwana, zakres zmiennych, hoisting, anonimowa, natychmiastowa
+- dodawanie skryptów do dokumentu html, wyjaśnienie co i kiedy się przetwarza
+- obiekty złożone (new Object())
 b) Obiektowość w javascript. Wzorzec prototype
 - obiekt window, document, location, history
 - możliwość tworzenia obiektów, gdzie się tworzą?
 - zapis literałowy tworzenia obiektów
-- enkapsulacja - po co to jest
-- prototype
+- enkapsulacja - po co to jest, wzorzec module pattern
+- klasy
 c) Asynchroniczność i drzewo DOM
-- wyjaśnienie pętli zdarzeń (infinite event loop)
 - callback na przykładzie timeout/interval
-- manipulowanie drzewem DOM
+- wyjaśnienie pętli zdarzeń (infinite event loop)
+- manipulowanie drzewem DOM: getElementById itp, innerHTML, innerText,
 - zadanie "zegarek"
-- zdarzenia w przeglądarce
+- zdarzenia w przeglądarce (onclick, onload, onchange), dodać licznik kliknięć. Rejestrowanie w przeglądarce i w skrypcie
 - zadanie "logger kliknięcia"
 d) Pobre praktyki tworzenia apikacji js
 - prezentacja wzorców JS
