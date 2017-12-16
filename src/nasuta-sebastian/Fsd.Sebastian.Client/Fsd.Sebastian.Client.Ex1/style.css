@@ -1,0 +1,91 @@
+html, body {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #B5977F;
+  font-family: "Book Antiqua", serif; }
+
+.page {
+  margin: 15px 15%;
+  padding: 0;
+  background: #f2f2f2;
+  box-shadow: 0px 10px 40px;
+  height: calc(100% - 2 * 15px); }
+
+header {
+  background: url("img/railway.jpg") center no-repeat;
+  width: 100%;
+  height: 250px; }
+  header h1 {
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: 75%; }
+  header .letters-r {
+    text-shadow: 2px 1px 1px #f2f2f2, -3px -2px 1px black;
+    color: #568A51; }
+  header .letters-other {
+    text-shadow: 2px 1px 1px #f2f2f2, -3px -2px 1px black;
+    color: #8B6E62; }
+
+nav {
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  background: black;
+  height: 50px; }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row; }
+    nav ul li {
+      margin: calc((50px - calc(50px - 14px)) / 2);
+      line-height: calc(50px - 14px);
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 1.5s; }
+    nav ul li:hover {
+      background: goldenrod;
+      box-shadow: 0px 0px 16px black inset;
+      text-shadow: 1px 1px 2px black; }
+    nav ul a {
+      color: #f2f2f2;
+      text-decoration: none; }
+
+.content {
+  background: #f2f2f2;
+  box-shadow: 0px 0px 4px inset;
+  height: calc(100% - 250px - 50px - 95px); }
+
+footer {
+  background: silver;
+  box-shadow: 0px 0px 4px inset;
+  text-align: center; }
+  footer .list {
+    height: calc(95px - 25px); }
+  footer a {
+    color: black;
+    text-decoration: none; }
+  footer a:hover {
+    color: goldenrod;
+    text-shadow: 1px 1px 1px black; }
+  footer ul {
+    padding: 0;
+    margin: 3px 0 0;
+    display: inline-block;
+    list-style-type: none;
+    width: 45%; }
+  footer p {
+    font-size: 80%;
+    font-style: italic;
+    margin: 0;
+    background: black;
+    color: #f2f2f2;
+    height: 25px;
+    line-height: 25px; }

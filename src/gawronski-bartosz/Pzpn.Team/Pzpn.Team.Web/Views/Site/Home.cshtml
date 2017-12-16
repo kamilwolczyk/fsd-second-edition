@@ -1,0 +1,15 @@
+﻿@model int
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Strona główna</h2>
+
+@if(Model == 0)
+{
+    <h3>W kadrze nie ma zawodników</h3>
+}
+else
+{
+    <h3>Aktualnie w kadrze jest @Model  @(Model > 1 ? "zawodników" : "zawodnik")</h3>
+}

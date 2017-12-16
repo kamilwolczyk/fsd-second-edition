@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Warehouse\IWarehouseman.cs" />
+    <Compile Include="Warehouse\SQLWarehauseman.cs" />
     <Compile Include="Warehouse\Warehouseman.cs" />
   </ItemGroup>
   <ItemGroup>
