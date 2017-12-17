@@ -1,0 +1,144 @@
+@mixin pageSize($left, $right, $top, $bottom) {
+    left: $left;
+    right: $right;
+    top: $top;
+    bottom: $bottom;
+}
+
+@mixin button-transition() {
+    transition: all 0.5s ease-in;
+}
+
+@mixin button-look() {
+    text-decoration: none;
+    color: white;    
+    font-family: $font-family-menu;
+    position: relative;
+    overflow: hidden;    
+    line-height: 45px;
+}
+
+@mixin menu-look(){
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: green;
+    border-bottom-color: green;
+    background: $blue;
+}
+
+$green: rgba(0, 128, 68, 0.829);  
+
+$blue: #4382a7;
+
+$desktop-color: $green;
+
+$phone-color: rgb(136, 182, 212);
+
+$medium-font: 32px;
+
+$font-family-primary: Calibri;
+
+$font-family-secondary: Cambria;
+
+$font-family-menu: Arial;
+
+$phone: "only screen and (max-width: 480px)";
+
+$desktop: "only screen and (max-width: 1366px)";
+
+html{
+    @media #{$desktop} {
+        background: $desktop-color
+    }
+    @media #{$phone} {
+        background: $phone-color;
+    }  
+}
+
+#mainpage{
+    @include pageSize(15%, 15%, 1%, 1%);
+    background: white;
+    box-shadow: 0px 0px 20px black;
+    position: absolute;
+    font-family: $font-family-primary;
+}
+
+#content {
+    margin: 15px;
+    font-family: $font-family-secondary;
+}
+
+header{
+    height: 250px;
+    background-image: url("Pictures/Bieszczady2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    h1 {
+        margin: 0;
+        font-size: $medium-font;
+        text-align: center;
+    } 
+}
+
+.button{
+    @include button-look();
+    &:hover{
+        background-color: $blue;
+        color: white;  
+    }
+    /*animacja - lśniący przycisk - nauczone z Internetu*/
+    &:before {
+        content: "";
+        background-color:$blue;
+        height: 100%;
+        width: 20px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        transform: skewX(-45deg) translateX(0px);
+        transition: none;    
+    }
+    /*rozwiązanie 'transition' nauczone z Internetu*/
+    &:hover:before{
+        transform: skewX(-45deg) translateX(170px);
+        @include button-transition();
+    }
+}
+
+ul {
+    list-style-type: none;   
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    li {
+        @include menu-look();
+    } 
+}
+
+footer{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    h5{
+        background: black;
+        color: white;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.footerLinks{  
+    display: inline-block;
+    width: 45.50%;
+    text-align: center;
+    a{
+        color: black;
+    }
+}   

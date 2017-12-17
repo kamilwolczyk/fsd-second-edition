@@ -26,6 +26,12 @@ namespace Fsd.Bartek.Ex4.Web
             );
 
             routes.MapRoute(
+                name: "Product",
+                url: "products/{action}/{id}",
+                defaults: new { controller = "Products", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "About",
                 url: "about",
                 defaults: new { controller = "About", action = "AboutPage" }

@@ -1,0 +1,31 @@
+﻿@model LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Logowanie</h2>
+
+@if (Model.LoginFailed)
+{
+    <div class="alert alert-danger" role="alert">
+        Niepoprawny login lub hasło
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-sm-4">Login</div>
+        <div class="col-sm-4">@Html.EditorFor(model => model.Login)</div>
+        <div class="col-sm-4 red">@Html.ValidationMessageFor(model => model.Login)</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">Hasło</div>
+        <div class="col-sm-4">@Html.EditorFor(model => model.Password)</div>
+        <div class="col-sm-4 red">@Html.ValidationMessageFor(model => model.Password)</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12"><input type="submit" value="Zaloguj" class="btn btn-default"/></div>
+    </div>
+}
+

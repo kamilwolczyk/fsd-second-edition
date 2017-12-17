@@ -13,11 +13,36 @@
    @foreach (var product in Model.Products)
    {
        <tr>
-           <td>@product.Model</td>
-           <td>@product.Producer</td>
-           <td>@product.Price</td>
-           <td>@product.DateOfProduction</td>
-           <td>@product.Type</td>
+           <td>
+                 @product.Model
+           </td>
+           <td>
+                @product.Producer
+           </td>
+           <td>
+                @product.Price
+           </td>
+           <td>
+                @product.DateOfProduction
+           </td>
+           <td>
+                @product.Type
+           </td>
+           <td>
+           <td>
+                @Html.ActionLink("szczegóły", "GetProduct", new { model = product.Model })
+           </td>
        </tr>
    }
 </table>
+<button class="btn btn-default"> 
+    <a style="color: black;"> @Html.ActionLink("Dodaj Produkt", "AddProduct") </a>
+</button>
+
+<hr />
+<div class="row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-6">
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>
