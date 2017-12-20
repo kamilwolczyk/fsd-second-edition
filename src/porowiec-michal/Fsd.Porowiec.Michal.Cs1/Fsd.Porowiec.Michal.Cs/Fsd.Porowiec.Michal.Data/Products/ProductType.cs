@@ -8,12 +8,12 @@ namespace Fsd.Porowiec.Michal.Data.Products
 {
     public enum ProductType
     {
-        Food,
+        Food = 0,
 
-        Machine,
+        Machine = 1,
 
-        BuildingMaterial,
+        BuildingMaterial = 2,
 
-        Making
+        Making = 3
     }
 }

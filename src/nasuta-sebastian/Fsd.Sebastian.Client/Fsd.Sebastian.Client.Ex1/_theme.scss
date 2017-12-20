@@ -1,0 +1,44 @@
+$fullHeight: 100%;
+$fullWidth: 100%;
+$insideShadow: 0px 0px 4px inset;
+
+$siteBackgroundColor: #B5977F;
+$siteWhiteColor: #f2f2f2;
+$siteHoverColor: goldenrod;
+$siteFont: 'Book Antiqua', serif;
+
+$pageMarginTopBottom: 15px;
+$pageHeight: calc(#{$fullHeight} - 2 * #{$pageMarginTopBottom});
+$pageShadow: 0px 10px 40px;
+
+$headerImage: url('img/railway.jpg') center no-repeat;
+$headerHeight: 250px;
+$headerTextShadow: 2px 1px 1px $siteWhiteColor, -3px -2px 1px black;
+$rLettersColor: #568A51;
+$otherLettersColor: #8B6E62;
+
+$menuHeight: 50px;
+$menuButtonHeight: calc(#{$menuHeight} - 14px);
+$menuBackgroundColor: black;
+$menuButtonShadow: 0px 0px 16px $menuBackgroundColor inset;
+$menuTextShadow: 1px 1px 2px $menuBackgroundColor;
+$menuButtonColor: $siteHoverColor;
+$menuTextColor: $siteWhiteColor;
+
+$footerHeight: 95px;
+$footerSignatureHeight: 25px;
+$footerListHeight: calc(#{$footerHeight} - #{$footerSignatureHeight});
+$footerColumnWidth: 45%;
+$footerBoxShadow: $insideShadow;
+$footerTextHoverShadow: 1px 1px 1px black;
+$footerBackgroundColor: silver;
+$footerTextColor: black;
+$footerTextHoverColor: $siteHoverColor;
+$footerSignatureBackgroundColor: black;
+$footerSignatureColor: $siteWhiteColor;
+$footerSignatureFontSize: 80%;
+$footerSignatureFontStyle: italic;
+
+$contentHeight: calc(#{$fullWidth} - #{$headerHeight} - #{$menuHeight} - #{$footerHeight});
+$contentBoxShadow: $insideShadow;
+$contentBackgroundColor: $siteWhiteColor;

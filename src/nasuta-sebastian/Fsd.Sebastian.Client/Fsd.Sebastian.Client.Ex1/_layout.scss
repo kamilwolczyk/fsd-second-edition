@@ -1,0 +1,119 @@
+@import 'theme';
+
+@mixin headerText($textShadow, $textColor){
+    text-shadow: $textShadow;
+    color: $textColor;
+  }
+
+@mixin aDefinition($color){
+    color: $color;
+    text-decoration: none;
+}
+
+@mixin ulDefinition($padding, $margin, $display){
+    padding: $padding;
+    margin: $margin;
+    display: $display;
+    list-style-type: none;
+}
+
+@mixin itemWithBoxshadow($background, $shadow){
+    background: $background;
+    box-shadow: $shadow;
+}
+
+html, body{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: $fullWidth;
+    height: $fullHeight;
+    background: $siteBackgroundColor;
+    font-family: $siteFont;
+  }
+  
+  .page{
+    margin: $pageMarginTopBottom 15%;
+    padding: 0;
+    @include itemWithBoxshadow($siteWhiteColor, $pageShadow);
+    height: $pageHeight;
+  }
+  
+  header{
+    background: $headerImage;
+    width: $fullWidth;
+    height: $headerHeight;
+    h1{
+        margin: 0;
+        text-align: center;
+        position: relative;
+        top: 75%;
+    }
+    .letters-r{
+        @include headerText($headerTextShadow, $rLettersColor);  
+    }
+    .letters-other{
+        @include headerText($headerTextShadow, $otherLettersColor);
+    }
+  }
+  
+  nav{
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    background: $menuBackgroundColor;
+    height: $menuHeight;
+    ul{
+        @include ulDefinition(0, 0, flex);
+        flex-direction: row;
+        li{
+            margin: calc((#{$menuHeight} - #{$menuButtonHeight}) / 2);
+            line-height: $menuButtonHeight;
+            width: $fullWidth;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 1.5s;
+        }
+        li:hover{
+            @include itemWithBoxshadow($menuButtonColor, $menuButtonShadow);
+            text-shadow: $menuTextShadow;            
+        }
+        a{
+            @include aDefinition($menuTextColor);
+        }
+    }
+  }
+  
+  .content{
+    @include itemWithBoxshadow($contentBackgroundColor, $contentBoxShadow);
+    height: $contentHeight;
+  }
+  
+  footer{
+    @include itemWithBoxshadow($footerBackgroundColor, $footerBoxShadow);
+    text-align: center;
+    .list{
+        height: $footerListHeight;
+    }
+    a{
+        @include aDefinition($footerTextColor);
+    }
+    a:hover{
+        color: $footerTextHoverColor;
+        text-shadow: $footerTextHoverShadow;
+    }
+    ul{
+        @include ulDefinition(0, 3px 0 0, inline-block);
+        width: $footerColumnWidth;
+    }
+    p{
+        font-size: $footerSignatureFontSize;
+        font-style: $footerSignatureFontStyle;
+        margin: 0;
+        background: $footerSignatureBackgroundColor;
+        color: $footerSignatureColor;
+        height: $footerSignatureHeight;
+        line-height: $footerSignatureHeight;
+      }
+  }

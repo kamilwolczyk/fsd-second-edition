@@ -9,13 +9,15 @@ namespace Fsd.Bartek.Ex4.Data.Entities
 {
     public class Product
     {
+        public int Id { get; set; }
+
         public string Producer { get; set; }
 
         public string Model { get; set; }
 
         public double Price { get; set; }
 
-        public string  ProductionData { get; set; }
+        public DateTime  ProductionData { get; set; }
 
         public ProductsType Type { get; set; }
     }

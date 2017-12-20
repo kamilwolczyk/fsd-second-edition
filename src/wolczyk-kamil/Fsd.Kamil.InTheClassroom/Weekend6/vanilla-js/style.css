@@ -1,0 +1,44 @@
+#timer {
+    font-size: 35px;
+    text-align: center;
+    margin: 40px;
+}
+
+.separator {
+    color: red;
+    font-weight: bold;
+}
+
+#gates {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+}
+
+.gate {
+    border: solid 1px gray;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.gate h1 {
+}
+
+.gate span {
+    position: absolute;
+    bottom: 0;
+}
+
+.green {
+    background: greenyellow;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.red {
+    background: orangered;
+}

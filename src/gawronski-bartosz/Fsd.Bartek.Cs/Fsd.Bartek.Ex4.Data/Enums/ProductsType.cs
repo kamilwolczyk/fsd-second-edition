@@ -4,8 +4,10 @@
     {
         Computer,
         Phone,
-        HeadPhones,
         Book,
-        Software
+        Software,
+        HeadPhones,
+        Hardware,
+        Watch       
     }
 }

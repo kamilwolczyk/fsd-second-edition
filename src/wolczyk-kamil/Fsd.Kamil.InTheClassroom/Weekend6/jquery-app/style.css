@@ -1,0 +1,9 @@
+.bordered {
+    border: solid 1px black;
+}
+
+#part-page {
+    border: dashed 1px gray;
+    width: 100%;
+    height: 300px;
+}
