@@ -1,5 +1,8 @@
 var app = app || {};
 
 (function () { 
-    app.answerControler.initialize();
+    app.apiControler.initialize();
+    setTimeout(function(){
+        app.answerControler.initialize();
+    },750);
 }());

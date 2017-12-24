@@ -1,36 +1,55 @@
 var app = app || {};
 
 (function(){
+    const buttons = document.querySelectorAll('.answer');
+    const questionDiv = document.getElementById('question');
+    const questionNumber = document.getElementById('number-question');
+    const nextquestion = document.getElementById('next-question');
+
     function innerTexts(button, text){
         button.innerText = text;
     }
 
-    function changeButton( next, button){
+    function changeButton( next, button, correct){
         if(next){
             document.querySelectorAll('.answer').forEach(function(item){
-                if(item.classList.contains('btn-success')){
-                    item.classList.remove('btn-success');
-                }
-                if(item.classList.contains('btn-danger')){
-                    item.classList.remove('btn-danger');
+                if(item.classList.contains('btn-warning')){
+                    item.classList.remove('btn-warning');
                 }                
                 item.classList.add('btn-primary');
             });
         }else{
             document.querySelectorAll('.answer').forEach(function(item){
-                item.classList.remove('btn-primary');
-                item.classList.add('btn-danger');
+                if(item.classList.contains('btn-warning')){
+                    item.classList.remove('btn-warning');
+                    item.classList.add('btn-primary');
+                }                
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-warning');
             });
-    
-            if(button != null){
-                button.classList.remove("btn-danger");
-                button.classList.add('btn-success')
-            }
         }
     }
 
+    function elementText(questionNumberString, questionString, questionAnswer){
+        var indexs = app.helpers.schuffle(0,3);
+
+        innerTexts(questionNumber,questionNumberString);
+        innerTexts(questionDiv,questionString);           
+        buttons.forEach(function(button, index){innerTexts(button, questionAnswer[indexs[index]])});
+    }
+
+    function summaryDisplay(correctAnswer){
+        innerTexts(questionNumber,'Summary');
+        innerTexts(questionDiv,`Your's Correct Answer ${correctAnswer}/10`);
+        buttons.forEach(function(button){
+            button.classList.add('display-none');
+        });
+        nextquestion.classList.add('display-none');
+    }
+
     app.userInterface = {
-        innerTexts: innerTexts,
-        changeButton: changeButton
+        elementText: elementText,
+        changeButton: changeButton,
+        summaryDisplay: summaryDisplay
     };
 }());

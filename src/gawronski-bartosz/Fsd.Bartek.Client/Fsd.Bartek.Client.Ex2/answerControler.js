@@ -1,33 +1,48 @@
 var app = app || {};
 
 (function () {
+    var correctCount = 0;
+    var correctAnswer;
+
     function initialize() {
         document.querySelectorAll('.answer').forEach(function(item){
             item.addEventListener('click', checkAnswer);
         });
 
-        document.getElementById('next-question').addEventListener('click', nextQuestion)
+        document.getElementById('next-question').addEventListener('click', nextQuestion);
+
+        app.service.elementText();
     }
 
     function checkAnswer(event) {
-        const DATA_ANSWER = 'data-answer';
         const button = event.target;
-        let correct = app.service.check(button.getAttribute(DATA_ANSWER));
+        let correct = app.service.check(button.innerText);
 
         if(correct){
-            app.userInterface.changeButton(false,button);
+            app.userInterface.changeButton(false,button);      
+            correctAnswer = true;
         }else{
-            app.userInterface.changeButton(false,null);
+            app.userInterface.changeButton(false,button);
+            correctAnswer = false;
         }
     }
 
     function nextQuestion() {
-        //console.log("work");
+        var questions;
+        if(correctAnswer){
+            correctCount++;
+        }
+
         app.userInterface.changeButton(true);
-        //TODO: implementation
+        app.service.elementText();
+    }
+
+    function summary(){
+        app.userInterface.summaryDisplay(correctCount);
     }
 
     app.answerControler = {
-        initialize: initialize
+        initialize: initialize,
+        summary: summary
     };
 }());
