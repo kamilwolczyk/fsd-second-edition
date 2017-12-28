@@ -1,5 +1,5 @@
-var app = app || {}
+var app = app || {};
 
 (function () {
-
+    app.palette.initialize();
 })();
