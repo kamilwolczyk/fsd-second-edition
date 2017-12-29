@@ -5,24 +5,19 @@
     box-shadow: 0px 0px 25px black;
 }
 
-.square{
+.tile{
     width: 25%;
     height: 100px;    
     margin: 5px;
     box-shadow: 2px 2px 10px black;
 }
 
-.rectangle{
+.preview-field{
     width: 80%;
     height: 250px;
     border: solid 2px black;
     margin: 5px;
     box-shadow: 0px 0px 10px inset;
-}
-
-#selected{
-    border: solid 2px black;
-    box-shadow: 0 0 15px red;
 }
 
 .red{background: red;}
@@ -34,3 +29,8 @@
 .yellow{background: yellow;}
 .orange{background: orange;}
 .purple{background: purple;}
+
+#selected{
+    border: solid 2px black;
+    box-shadow: 0 0 15px red;
+}
