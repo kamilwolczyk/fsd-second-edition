@@ -5,30 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Color picker</title>
+    <!-- <meta http-equiv="refresh" content="5"> -->
+    <title>Quiz</title>
     <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container gray-box">
+    <div class="container text-center">
         <div class="row">
-            <div class="col-8">
-                <div class="row justify-content-center" id="color-palette"></div>
-            </div>
-            <div class="col-4">
-                <div class="preview-field"></div>
-                <p id="name-of-selected"></p>
-            </div>
+            <div class="col-10" id="category"></div>
+            <div class="col-2" id="counter">x/n</div>
         </div>
+        <div class="row">
+            <div class="col-12" id="question-text"></div>
+        </div>
+        <div class="row justify-content-center" id="answers"></div>
+    </div>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary">Next</button>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="clickEvents.js"></script>
-    <script src="palette.js"></script>
+    <script src="test.js"></script>
     <script src="app.js"></script>
 </body>
 
