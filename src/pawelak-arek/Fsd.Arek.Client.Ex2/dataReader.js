@@ -1,13 +1,11 @@
 var app = app || {};
 
 (function () {
-
-    var item;
     var questionList = new Array();
 
-    function generateQuestion(callback) {
+    function generateQuestion(numberOfQuestion, callback) {
         $.ajax({
-            url: 'https://opentdb.com/api.php?amount=10',
+            url: 'https://opentdb.com/api.php?amount=' + numberOfQuestion,
             type: 'GET',
             dataType: 'json',
             success: function (data) {
