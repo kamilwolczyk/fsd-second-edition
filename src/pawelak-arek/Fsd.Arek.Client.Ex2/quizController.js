@@ -30,7 +30,8 @@ var app = app || {};
                 } else {
                     resetQuizController();
                     //nie działa :)
-                    // app.start();
+                    //go to:
+                     app.start();
                 }
             }
         )
