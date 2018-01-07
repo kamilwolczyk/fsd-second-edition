@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Fsd.Exercise1
-{
-    internal class Program
+namespace Fsd.Maciej.Cs.Ex1
+{ 
+    class Program
     {
         private static void Main(string[] args)
         {

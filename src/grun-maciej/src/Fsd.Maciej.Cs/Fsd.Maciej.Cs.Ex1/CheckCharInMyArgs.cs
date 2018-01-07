@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Fsd.Exercise1
+namespace Fsd.Maciej.Cs.Ex1
 {
-    public class CheckCharInMyArgs
+    class CheckCharInMyArgs
     {
         private int _digitsCount = 0;
         private int _upperCount = 0;
@@ -60,4 +60,5 @@ namespace Fsd.Exercise1
             }
         }
     }
+
 }
