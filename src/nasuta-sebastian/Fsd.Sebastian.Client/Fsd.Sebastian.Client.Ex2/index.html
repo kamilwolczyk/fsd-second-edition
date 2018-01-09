@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container text-center">
+    <div class="container text-center" style="display: none;">
         <div class="row">
             <div class="col-10" id="category"></div>
             <div class="col-2" id="counter" question-count="0"></div>
@@ -23,15 +23,17 @@
         <div class="row justify-content-center" id="answers"></div>
     </div>
     <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary" onClick="app.quiz.nextClick()">Next</button>
+        <button type="button" class="btn btn-primary" id="next-button" onClick="app.clickEvents.nextClick()" style="display: none;">Next</button>
+        <button type="button" class="btn btn-primary" id="start-button" onClick="app.clickEvents.startClick()">Start</button>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="questionPrinter.js"></script>
-    <script src="helpers.js"></script>
+    <script src="viewManager.js"></script>
     <script src="clickEvents.js"></script>
+    <script src="ajaxReader.js"></script>
     <script src="quiz.js"></script>
     <script src="app.js"></script>
 </body>

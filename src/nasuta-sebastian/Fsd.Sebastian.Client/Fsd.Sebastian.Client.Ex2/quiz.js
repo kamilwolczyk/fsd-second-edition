@@ -1,63 +1,53 @@
 var app = app || {};
 
 (function () {
-    const COUNT_ATTRIBUTE = 'question-count';
-    const COUNTER = document.getElementById('counter');
-    const QUESTIONS_AMOUNT = 3;
+    const QUESTIONS_AMOUNT = 5;
+    const API_URL = `https://opentdb.com/api.php?amount=${QUESTIONS_AMOUNT}`;
     var questions = [];
     var answers = [];
 
     function initialize() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                questions = JSON.parse(this.responseText).results;
-
-                app.helpers.createAnswerFields(4);
-                nextQuestion();
-            };
-        };
-        xhttp.open("GET", `https://opentdb.com/api.php?amount=${QUESTIONS_AMOUNT}&type=multiple`, true);
-        xhttp.send();
+        app.ajaxReader.getObjectFromApi(API_URL, function (object) {
+            questions = object.results;
+        });
     };
 
-    function nextButtonClickEvent() {
-        const SELECTED = document.querySelector('.selected');
-        const ACTUAL_COUNT = parseInt(COUNTER.getAttribute(COUNT_ATTRIBUTE), 10);
-        if (SELECTED == null) {
-            return;
-        };
+    function setAnswer(number, answer) {
+        answers[number - 1] = answer;
+    };
 
-        answers[ACTUAL_COUNT - 1] = SELECTED.textContent;
-        app.helpers.clearSelect();
-
-        if (ACTUAL_COUNT == QUESTIONS_AMOUNT) {
-            app.helpers.printScore(getScore());
-        }
-        else {
-            nextQuestion();
-        };
+    function getQuestionsAmount() {
+        return QUESTIONS_AMOUNT;
     };
 
     function getScore() {
         var score = 0;
+
         for (i = 0; i < questions.length; i++) {
             if (answers[i] == questions[i].correct_answer) {
                 score++;
             }
         };
+
         return `${score}/${QUESTIONS_AMOUNT} (${Math.round(score / QUESTIONS_AMOUNT * 1000) / 10}%)`;
     };
 
     function nextQuestion() {
-        var count = parseInt(COUNTER.getAttribute(COUNT_ATTRIBUTE), 10);
-        app.questionPrinter.initialize(questions, count);
+        const COUNT_ATTRIBUTE = 'question-count';
+        const counter = document.getElementById('counter');
+
+        var count = parseInt(counter.getAttribute(COUNT_ATTRIBUTE), 10);
         count++;
-        COUNTER.setAttribute(COUNT_ATTRIBUTE, count);
+        counter.setAttribute(COUNT_ATTRIBUTE, count);
+
+        app.questionPrinter.initialize(questions, count - 1);
     };
 
     app.quiz = {
         initialize: initialize,
-        nextClick: nextButtonClickEvent
+        setAnswer: setAnswer,
+        getQuestionsAmount: getQuestionsAmount,
+        getScore: getScore,
+        nextQuestion: nextQuestion
     };
 })();

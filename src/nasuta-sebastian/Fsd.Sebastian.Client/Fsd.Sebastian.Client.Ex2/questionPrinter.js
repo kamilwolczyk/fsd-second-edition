@@ -19,7 +19,12 @@ var app = app || {};
         answers.push(question.correct_answer);
         answers = answers.concat(question.incorrect_answers);
 
-        for (i = 0; i < 4; i++) {
+        const answersAmount = answers.length;
+
+        app.viewManager.removeAllAnswerFields();
+        app.viewManager.createAnswerFields(answersAmount);
+
+        for (i = 0; i < answersAmount; i++) {
             var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
             document.getElementById(`answer${i + 1}`).innerHTML = randomAnswer;
             answers.splice(answers.indexOf(randomAnswer), 1);

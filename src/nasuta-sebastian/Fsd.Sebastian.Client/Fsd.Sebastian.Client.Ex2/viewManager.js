@@ -2,10 +2,11 @@ var app = app || {};
 
 (function () {
     function createAnswerFields(count) {
-        const ANSWERS_CONTAINER = document.getElementById('answers');
+        const answersContainer = document.getElementById('answers');
+
         for (i = 0; i < count; i++) {
-            ANSWERS_CONTAINER.appendChild(document.createElement('div')).classList.add('answer', 'col-5');
-            ANSWERS_CONTAINER.lastChild.id = `answer${i + 1}`;
+            answersContainer.appendChild(document.createElement('div')).classList.add('answer', 'col-5');
+            answersContainer.lastChild.id = `answer${i + 1}`;
 
             document.querySelectorAll('.answer').forEach(function (item) {
                 item.addEventListener('click', app.clickEvents.answerClick);
@@ -13,30 +14,35 @@ var app = app || {};
         };
     };
 
+    function removeAllAnswerFields() {
+        document.querySelectorAll('.answer').forEach(function (item) {
+            item.remove();
+        });
+    };
+
     function printScore(score) {
         leftOnlyQuestionBox();
-
         document.getElementById('question-text').innerHTML = `Your score is: ${score}`;
     };
 
     function clearSelect() {
-        const SELECTED = document.querySelector('.selected');
-        if (SELECTED) {
-            SELECTED.classList.remove('selected');
+        const selected = document.querySelector('.selected');
+
+        if (selected) {
+            selected.classList.remove('selected');
         };
     };
 
     function leftOnlyQuestionBox() {
-        document.querySelectorAll('.answer').forEach(function (item) {
-            item.remove();
-        });
+        removeAllAnswerFields();
         document.querySelector('button').remove();
         document.getElementById('category').remove();
         document.getElementById('counter').remove();
     };
 
-    app.helpers = {
+    app.viewManager = {
         createAnswerFields: createAnswerFields,
+        removeAllAnswerFields: removeAllAnswerFields,
         printScore: printScore,
         clearSelect: clearSelect
     };
