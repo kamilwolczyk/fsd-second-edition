@@ -31,11 +31,11 @@ var app = app || {};
     }
 
     function elementText(questionNumberString, questionString, questionAnswer){
-        var indexs = app.helpers.schuffle(0,3);
+        var indexs = app.helpers.schuffle(questionAnswer);
 
         innerTexts(questionNumber,questionNumberString);
         innerTexts(questionDiv,questionString);           
-        buttons.forEach(function(button, index){innerTexts(button, questionAnswer[indexs[index]])});
+        buttons.forEach(function(button, index){innerTexts(button, indexs[index])});
     }
 
     function summaryDisplay(correctAnswer){

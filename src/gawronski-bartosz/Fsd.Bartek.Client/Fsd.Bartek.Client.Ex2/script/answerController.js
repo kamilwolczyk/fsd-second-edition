@@ -5,6 +5,8 @@ var app = app || {};
     var correctAnswer;
 
     function initialize() {
+        
+
         document.querySelectorAll('.answer').forEach(function(item){
             item.addEventListener('click', checkAnswer);
         });

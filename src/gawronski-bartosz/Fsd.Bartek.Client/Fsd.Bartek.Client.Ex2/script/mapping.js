@@ -2,6 +2,10 @@ var app = app|| {};
 
 (function(){
     function question(question, number){
+        if(question == undefined){
+            return undefined;
+        }
+        
         return new Question(
             question.question, 
             number, 
