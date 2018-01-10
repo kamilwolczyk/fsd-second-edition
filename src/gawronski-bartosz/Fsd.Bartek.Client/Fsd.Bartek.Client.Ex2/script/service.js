@@ -8,10 +8,10 @@ var app = app || {};
     }
 
     function elementText(){
-        var questions = app.apiControler.getQuestion();
+        var questions = app.apiController.getQuestion();
 
         if(questions === null){
-            app.answerControler.summary();
+            app.answerController.summary();
         }else{
             app.userInterface.elementText(`Question ${questions.number+1}/10`,questions.question,questions.answer);
             correctAnswer = questions.answer[0];

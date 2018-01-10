@@ -5,25 +5,24 @@ var app = app || {};
     var question;
     var _number = 0;
     
-    function initialize() {
+    function initialize(answerController) {
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var date = xhttp.responseText;                
                 question = JSON.parse(date);
+                answerController();
             }
         };
         xhttp.open("GET", 'https://opentdb.com/api.php?amount=10', true);
         xhttp.send();
+
     }
 
     function getQuestion () { 
-        if(_number === 10){
-            return null;
-        }
         return (app.mapping.question(question.results[_number], _number++));        
     }
 
-    app.apiControler = {
+    app.apiController = {
         initialize: initialize,
         getQuestion: getQuestion
     }

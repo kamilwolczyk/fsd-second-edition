@@ -41,7 +41,7 @@ var app = app || {};
         app.userInterface.summaryDisplay(correctCount);
     }
 
-    app.answerControler = {
+    app.answerController = {
         initialize: initialize,
         summary: summary
     };
