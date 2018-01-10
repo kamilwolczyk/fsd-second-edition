@@ -1,6 +1,6 @@
 var app = app || {};
 
 (function(){
-    app.element.init();
+    app.addSqure.init();
     app.colorPicker.init();
 }());
