@@ -1,0 +1,32 @@
+#wrapper {
+    margin: auto;
+    display: flex;
+    width: 80%;
+}
+
+#color-picker {
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#color-selected {
+    width: 30%;
+}
+
+#box-color-selected {
+    display: block;
+    height: 300px;
+    width: 150px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: #ad1818;
+    margin: 1px;
+    border: 2px solid black;
+}

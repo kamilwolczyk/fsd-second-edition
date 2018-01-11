@@ -1,0 +1,27 @@
+#wrapper {
+    margin: auto;
+    width: 70%;
+}
+
+#question {
+    padding: 5px;
+    text-align: center;
+}
+
+#answer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.answer-box {
+    display: block;
+    height: 40px;
+    margin: 10px;
+    width: 400px;
+    background-color: rgb(173, 173, 20);
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+}
