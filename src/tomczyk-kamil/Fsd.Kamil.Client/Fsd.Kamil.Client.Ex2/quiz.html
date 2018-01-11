@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="quiz.css" rel="stylesheet">
+    <title>Ex 2. Quiz</title>
+</head>
+<body>
+    <header> 
+        <h1>QUIZ</h1> 
+    </header>
+    <div id="main-page">
+        <div id="quiz" count="0"></div>
+            <!-- 4 odpowiedzi na sztywno -->
+            <label class="option"><input type="radio" value="1" name="ans"/><span id="opt1"></span></label>
+            <label class="option"><input type="radio" value="2" name="ans"/><span id="opt2"></span></label>
+            <label class="option"><input type="radio" value="3" name="ans"/><span id="opt3"></span></label>
+            <label class="option"><input type="radio" value="4" name="ans"/><span id="opt4"></span></label>
+        
+            <button id="next-button" onclick="app.quiz.nextQuestion()">Następne pytanie</button>
+        <div id="quiz-result" style="display: none">
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="question.js"></script>
+    <script src="quiz.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

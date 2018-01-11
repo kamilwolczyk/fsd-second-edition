@@ -1,0 +1,74 @@
+html, body { 
+    background-image: url("cloud.jpg");
+    font-family: Calibri; }
+
+header {
+    background: rgba(153, 173, 187, 0.932); 
+    height: 25px;}
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      text-align: center;
+      color: rgba(5, 37, 61, 0.87) }
+
+#main-page{    
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+
+#quiz {
+    position: relative;
+    margin: auto;
+    top: 30px;
+    width: 80%;
+    border: 3px solid rgba(255, 251, 0, 0.897);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 24px;
+    background: rgb(0, 107, 156);
+    border-radius: 20px; }
+
+#next-button {
+    background-color: rgba(14, 99, 56, 0.671);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    position: relative;
+    top: 100px;
+    margin: 50px;
+    border-radius: 10px; }
+
+#quiz-result {
+    position: relative;
+    margin: auto;
+    top: 60px;
+    color: rgb(45, 45, 175);
+    font-size: 30px;
+    font-weight: bold;
+    height: 100px;
+    width: 300px; }
+    
+.option {
+    position: relative;
+    margin: 20px 0 30px 70px;
+    top: 100px;
+    width: 550px;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background: rgb(207, 121, 137);
+    width: 550px;
+    border-radius: 20px;
+    color: white; }
+
+.option:hover {
+    background: rgb(0, 255, 85);
+    color: brown; }
