@@ -1,0 +1,42 @@
+.html, body{
+    background: url("img/darts.jpg") center no-repeat fixed;
+    padding: 10px;
+}
+
+#category{
+    background: darkred;
+    color: whitesmoke;
+    padding: 2px 10px;
+    border-radius: 10px 0 0 0;
+    font-style: italic;
+    font-size: small;
+}
+
+#counter{
+    background: orangered;
+    padding: 2px 10px;
+    border-radius: 0 10px 0 0;
+    font-size: small;
+}
+
+#question-text{
+    background: coral;
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 0 0 10px 10px;
+    font-weight: bold;
+}
+
+.answer{
+    margin: 2px;
+    background: beige;
+    padding: 10px;
+    border: solid 2px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.selected{
+    background: greenyellow;
+    font-weight: bold;
+}
