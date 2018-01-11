@@ -1,7 +1,7 @@
 var app = app || {};
 
 (function () {
-    var questionList = new Array();
+    var questionList = [];
 
     function generateQuestion(numberOfQuestion, callback) {
         $.ajax({
@@ -9,30 +9,29 @@ var app = app || {};
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-                questionList = mappingObject(data.results);
+                questionList = createQuestionModelList(data.results);
                 callback(questionList);
             }
         })
-
     };
 
-    var mappingObject = function (params) {
-
+    var createQuestionModelList = function (params) {
         var question;
-        var listQuestion = new Array();
+        var listQuestion = [];
+
         for (var i = 0; i < params.length; i++) {
             question = {
                 category: params[i].category,
                 question: params[i].question,
                 correct_answer: params[i].correct_answer,
-                answer: CreateRandomListQuestion(params[i].correct_answer, params[i].incorrect_answers)
+                answer: createRandomListQuestion(params[i].correct_answer, params[i].incorrect_answers)
             };
             listQuestion.push(question);
         }
         return listQuestion;
     }
 
-    function CreateRandomListQuestion(listOne, listTwo) {
+    function createRandomListQuestion(listOne, listTwo) {
         var randomSortList = listTwo;
         randomSortList.splice(Math.floor(Math.random() * randomSortList.length + 1), 0, listOne);
         return randomSortList;
@@ -40,6 +39,6 @@ var app = app || {};
 
     app.dataReader = {
         initialize: generateQuestion,
-        mapping: mappingObject
+        createQuestionModelList: createQuestionModelList
     };
 })();

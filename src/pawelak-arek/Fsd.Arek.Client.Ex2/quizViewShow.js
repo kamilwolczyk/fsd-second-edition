@@ -12,21 +12,20 @@ var quizView = quizView || {};
         }
 
         for (var i = 0; i < questionModel.length; i++) {
-            quizWindow.answerContainer.append($("<div>").addClass('answer-box').html(questionModel[i]).attr("onClick", "app.quizController.checkAnswer(event)"));
+            quizWindow.answerContainer.append($("<div>")
+                                      .addClass('answer-box')
+                                      .html(questionModel[i])
+                                      .attr("onClick", "app.eventDispatcher.initialize(event)"));
         }
     }
 
     var showScore = function (text) {
         $('.answer-box').remove();
         quizWindow.question.html(text);
-    }
-
-    var setBackgroundAnswerBox = function (color) {
-        $('.answer-box').css('background-color', color);
+        quizWindow.buttonNext.hide();
     }
 
     quizView.showQuestion = showQuestion;
     quizView.showAnswer = showAnswer;
     quizView.showScore = showScore;
-    quizView.setBackgroundAnswerBox = setBackgroundAnswerBox;
 })();
