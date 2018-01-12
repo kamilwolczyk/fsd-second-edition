@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='main.css' rel='stylesheet' type='text/css'>
+    <title>quiz</title>
+</head>
+
+<body>
+    <div class="q">
+        <p>
+            <h1 id="questonCounter">Question 1/1</h1>
+        </p>
+        <p>
+            <h3 id="order">Click on the correct button</h3>
+        </p>
+        <p id="category"></p>
+        <p id="qustion"></p>
+        <div class="buttons">
+            <p>
+                <button onclick="countPoints(1); game();" id="1"></button>
+                <button onclick="countPoints(2); game();" id="2"></button>
+            </p>
+            <p>
+                <button onclick="countPoints(3); game();" id="3"></button>
+                <button onclick="countPoints(4); game();" id="4"></button>
+            </p>
+            <p>
+                <h1 id="summation"></h1>
+            </p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
