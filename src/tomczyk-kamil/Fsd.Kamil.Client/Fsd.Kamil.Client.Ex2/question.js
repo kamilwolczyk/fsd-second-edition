@@ -1,33 +1,35 @@
 var app = app || {};
 
 let questionCounter = document.getElementById('quiz');
-let answersCount = 2;
+let answersCount = 4;
+var answers = [];
 
 (function () {
     function initialize(questions, number) {
        loadQuestion(questions, number);
     };
 
-    function loadQuestion (questions, number) //(questionIndex)
-    {
-        //tu nie zdążyłem jeszcze, ale można chyba dorobić odpowiedzi w losowej kolejności
-        //bo tak to chyba średnio mądry quiz :)
+    function loadQuestion (questions, number) {
         questionCounter.innerHTML = questions[number].question;
-        opt1.innerHTML = questions[number].incorrect_answers[0]// do poprawy [randomIntFromInterval(0,answersCount)]; //
-        opt2.innerHTML = questions[number].correct_answer;
-        opt3.innerHTML = questions[number].incorrect_answers[1];
-        opt4.innerHTML = questions[number].incorrect_answers[2];
-        //można textContent, ale wtedy czasem zanikało formatowanie przy pytaniach (apostrof, itp.), tylko do tekstu
+        //można textContent, ale wtedy czasem zanikało formatowanie
+        showAnswers(questions[number]);
     };
+   
+    function showAnswers(questionNumber) {
+        answers.push(questionNumber.correct_answer); // dodanie elementu do tablicy
+        answers = answers.concat(questionNumber.incorrect_answers);
 
-    function randomIntFromInterval(min,max) //spróbuję wykorzystać tę funkcję z internetu
-    {
-        return Math.floor(Math.random()*(max - min + 1) + min);
-    }
+        for (i = 0; i < answersCount; i++   ) {
+            var randAnswer = answers[Math.floor(Math.random() * answers.length)]; //funkcja z internetu, losowy string z tablicy
+            document.getElementById('opt'.concat(i + 1)).innerHTML = randAnswer; //musimy dodać 1, bo tablica od 0
+            answers.splice(answers.indexOf(randAnswer), 1); //usuwamy to co właśnie zostało wpisane, samo 'i' nie działało, trzeba pobrać indeks
+        };
+    };
 
     app.question = {
         initialize: initialize,
-        loadQuestion: loadQuestion
+        loadQuestion: loadQuestion,
+        showAnswers: showAnswers
     };
 })();
 
