@@ -7,6 +7,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { ClockPanelComponent } from './common/clock/clock-panel/clock-panel.component';
 import { ClockSeparatorComponent } from './common/clock/clock-separator/clock-separator.component';
 import { CodeSchoolMembersComponent } from './features/code-school/code-school-members/code-school-members.component';
+import { CodeSchoolMembersListComponent } from './features/code-school/code-school-members-list/code-school-members-list.component';
+import { LoggerComponent } from './common/logger/logger.component';
+import { LoggerService } from './common/logger/logger.service';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,15 @@ import { CodeSchoolMembersComponent } from './features/code-school/code-school-m
     ClockPanelComponent,
     ClockSeparatorComponent,
     CodeSchoolMembersComponent,
+    CodeSchoolMembersListComponent,
+    LoggerComponent,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    LoggerService
+  ],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

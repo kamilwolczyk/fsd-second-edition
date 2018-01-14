@@ -6,5 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clock-separator.component.css']
 })
 export class ClockSeparatorComponent {
-  value = 'x';
+  value = ':';
 }
