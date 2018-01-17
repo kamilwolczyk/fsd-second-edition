@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container text-center" style="display: none;">
+        <div class="row">
+            <div class="col-10" id="category"></div>
+            <div class="col-2" id="counter" question-count="0"></div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="question-text"></div>
+        </div>
+        <div class="row justify-content-center" id="answers"></div>
+    </div>
+    <div class="row justify-content-center">
+        <button type="button" class="btn btn-primary" id="next-button" onClick="app.clickEvents.nextClick()" style="display: none;">Next</button>
+        <button type="button" class="btn btn-primary" id="start-button" onClick="app.clickEvents.startClick()">Start</button>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="questionPrinter.js"></script>
+    <script src="viewManager.js"></script>
+    <script src="clickEvents.js"></script>
+    <script src="ajaxReader.js"></script>
+    <script src="quiz.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

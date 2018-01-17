@@ -1,0 +1,26 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Wiek</th>
+      <th>
+        <button class="btn btn-primary btn-circle" (click)="addEmpty()">+</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of items; let i=index">
+      <td>{{i + 1}}</td>
+      <td>{{x.firstName}}</td>
+      <td>{{x.lastName}}</td>
+      <td>{{x.age}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="showMemberDetails(x)" *ngIf="x.id">
+          Szczegóły
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
