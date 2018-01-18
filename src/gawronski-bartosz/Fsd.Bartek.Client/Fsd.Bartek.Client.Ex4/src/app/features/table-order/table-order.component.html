@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <td>L.p</td>
+          <td>Produkt</td>
+          <td>Ilosć</td>
+          <td>Cena</td>
+          <td>Akcje</td>
+        </tr>
+        <tr *ngFor="let product of order; let i = index">
+          <td>
+            {{i + 1}}
+          </td>
+          <td>
+            {{product.name}}
+          </td>
+          <td>
+            {{product.many}}
+          </td>
+          <td>
+            {{product.price}}
+          </td>
+          <td>
+            <button (click)="deleteOrder(i)" class="btn btn-circle">
+              -
+            </button>
+          </td>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 offset-4">
+    <span>Total Price: {{this.orderService.totalPrice|number}} zł</span>
+  </div>
+</div>

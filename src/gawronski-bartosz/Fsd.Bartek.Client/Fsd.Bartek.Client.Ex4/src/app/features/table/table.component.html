@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <td>L.p</td>
+          <td>Nazwa</td>
+          <td>Opis</td>
+          <td>Cena</td>
+          <td>Akcje</td>
+        </tr>
+        <tr *ngFor="let product of products; let i = index">
+          <td>
+            {{i + 1}}
+          </td>
+          <td>
+            {{product.name}}
+          </td>
+          <td>
+            {{product.desciption}}
+          </td>
+          <td>
+            {{product.price}} zł
+          </td>
+          <td>
+            <button (click)="addToOrder(product)" class="btn btn-circle" >
+              +
+            </button>
+          </td>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>
