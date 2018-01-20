@@ -1,0 +1,9 @@
+th, td {
+    padding: 1px;
+}
+
+div {
+    font-weight: bolder;
+    font-size: 28px;
+    color: rgba(182, 6, 6, 0.596);
+}

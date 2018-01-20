@@ -1,0 +1,8 @@
+html, body {
+    background: rgb(47, 90, 129);
+    margin: 0;
+    padding: 0;
+    background-image: url("./assets/images/picture.jpg");
+    font-family: Calibri;
+    height: 100%;
+}

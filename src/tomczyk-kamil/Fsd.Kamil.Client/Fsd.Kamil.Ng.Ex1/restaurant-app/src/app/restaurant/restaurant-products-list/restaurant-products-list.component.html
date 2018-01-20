@@ -1,0 +1,47 @@
+<h4>Dania główne</h4>
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Cena</th>
+      <th>Wybierz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of food; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{f.name}}</td>
+      <td>{{f.details}}</td>
+      <td>{{f.price}} PLN</td>
+      <td>
+        <button class="btn btn-primary btn-circle.btn-lg" (click)="addToOrder(f)" *ngIf="f.id">+</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Drinki</h4>
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Cena</th>
+      <th>Wybierz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let d of drinks; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{d.name}}</td>
+      <td>{{d.details}}</td>
+      <td>{{d.price}} PLN</td>
+      <td>
+        <button class="btn btn-primary btn-circle.btn-lg" (click)="addToOrder(d)" *ngIf="d.id">+</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <button class="btn" [ngClass]="{'btn-success' : isTableShown,'btn-danger': !isTableShown}" (click)="changeTableVisibility()">{{statusText}}</button>
+  </div>
+    
+  <app-restaurant-products-list *ngIf="!isTableShown" 
+  [food]="food"     
+  [drinks]="drinks"
+  (someAction)="addActionHasBeenDone($event)">
+  </app-restaurant-products-list>
+      
+  <app-choice></app-choice>
+</div>
