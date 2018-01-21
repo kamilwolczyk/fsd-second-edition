@@ -7,6 +7,8 @@ import { ContainerComponent } from './layout/container/container.component';
 import { RestaurantProductTableComponent } from './feature/restaurant-orders/restaurant-product-table/restaurant-product-table.component';
 import { RestaurantProductComponent } from './feature/restaurant-orders/restaurant-product/restaurant-product.component';
 import { ProductService } from './data-source/product.service';
+import { OrderService } from './models/orders/order.service';
+import { RestaurantOrderTableComponent } from './feature/restaurant-orders/restaurant-order-table/restaurant-order-table.component';
 
 
 @NgModule({
@@ -14,13 +16,15 @@ import { ProductService } from './data-source/product.service';
     AppComponent,
     ContainerComponent,
     RestaurantProductTableComponent,
-    RestaurantProductComponent
+    RestaurantProductComponent,
+    RestaurantOrderTableComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    OrderService
   ],
   bootstrap: [AppComponent]
 })

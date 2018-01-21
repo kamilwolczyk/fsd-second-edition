@@ -5,7 +5,7 @@
       <th scope="col">Nazwa</th>
       <th scope="col">Opis</th>
       <th scope="col">Cena</th>
-      <th></th>
+      <th scope="col">Dodaj</th>
     </tr>
   </thead>
   <tbody>
@@ -15,7 +15,7 @@
       <td>{{item.description}}</td>
       <td>{{item.price}}</td>
       <td>
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" (click)="addToOrder(item, 1)">
           +
         </button>
       </td>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from '../../../data-source/product.service';
 import { Product } from '../../../models/products/product';
+import { OrderService } from '../../../models/orders/order.service';
 
 @Component({
   selector: 'app-restaurant-product-table',
@@ -9,12 +10,18 @@ import { Product } from '../../../models/products/product';
 })
 export class RestaurantProductTableComponent implements OnInit {
 
-@Input() product: Product[];
+  @Input() product: Product[];
 
-  constructor() {
+  orderService: OrderService;
+
+  constructor(orderService: OrderService) {
+    this.orderService = orderService;
   }
 
   ngOnInit() {
   }
 
+  addToOrder(product: Product, count: number) {
+    this.orderService.addOrderToList(product, count);
+  }
 }

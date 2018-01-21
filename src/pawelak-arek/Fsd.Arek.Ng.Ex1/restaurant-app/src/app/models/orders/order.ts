@@ -1,17 +1,12 @@
 import { Product } from "../products/product";
-import { OrderPosition } from "./order-position";
 
 export class Order {
 
-    orderList: Array<OrderPosition>;
+    orderItem: Product
+    count: number;
 
-    ordersValue: number;
-
-    getValue() {
-        let sum: number;
-        // for (let orderPosition in this.orderList) {
-        //     orderPosition.product
-        // }
+    constructor(product: Product, count: number) {
+        this.orderItem = product;
+        this.count = count;
     }
-
 }

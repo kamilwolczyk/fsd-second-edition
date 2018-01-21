@@ -10,11 +10,8 @@ import { Product } from '../../../models/products/product';
 export class RestaurantProductComponent implements OnInit {
 
   productService: ProductService;
-
   drinks: Product[];
-
   mainCourse: Product[];
-
 
   constructor(productService: ProductService) {
     this.productService = productService;
@@ -24,5 +21,4 @@ export class RestaurantProductComponent implements OnInit {
     this.drinks = this.productService.getDrinks();
     this.mainCourse = this.productService.getMeals();
   }
-
 }
