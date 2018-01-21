@@ -8,6 +8,8 @@ import { MenuListComponent } from './features/lists/menu-list/menu-list.componen
 import { SelectedListComponent } from './features/lists/selected-list/selected-list.component';
 import { SelectedListService } from './features/services/selected-list.service';
 import { ProductsMenuComponent } from './features/products-menu/products-menu.component';
+import { DishesService } from './features/services/dishes.service';
+import { DrinksService } from './features/services/drinks.service';
 
 
 @NgModule({
@@ -23,7 +25,11 @@ import { ProductsMenuComponent } from './features/products-menu/products-menu.co
   imports: [
     BrowserModule
   ],
-  providers: [SelectedListService],
+  providers: [
+    SelectedListService,
+    DishesService,
+    DrinksService
+  ],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

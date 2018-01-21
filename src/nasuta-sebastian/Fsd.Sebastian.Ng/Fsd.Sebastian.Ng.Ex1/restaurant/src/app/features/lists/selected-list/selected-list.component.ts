@@ -7,16 +7,10 @@ import { SelectedListItem } from '../../models/selected-list-item';
   templateUrl: './selected-list.component.html',
   styleUrls: ['./selected-list.component.css']
 })
-export class SelectedListComponent implements OnInit {
+export class SelectedListComponent {
   @Input() items: SelectedListItem[];
   @Input() totalPrice: number;
   @Output() selectionEvent = new EventEmitter();
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
 
   removeItem(item: Product) {
     this.selectionEvent.emit(item);

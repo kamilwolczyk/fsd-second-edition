@@ -8,4 +8,4 @@
   <app-menu-list [items]="drinks" (selectionEvent)="selectProduct($event)"></app-menu-list>
 </div>
 
-<app-selected-list [items]="selectedProducts" [totalPrice]="totalPrice" (selectionEvent)="removeProduct($event)"></app-selected-list>
+<app-selected-list [items]="selectedProducts" [totalPrice]="menuManager.totalPrice" (selectionEvent)="unselectProduct($event)"></app-selected-list>
