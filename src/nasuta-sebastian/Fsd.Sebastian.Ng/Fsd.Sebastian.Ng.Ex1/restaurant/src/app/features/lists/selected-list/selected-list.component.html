@@ -9,13 +9,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let x of productService; let i=index">
+    <tr *ngFor="let x of items; let i=index">
       <th class="text-center">{{i+1}}</th>
-      <td>{{x.name}}</td>
-      <td class="text-right">{{x.price.toFixed(2)}}&nbsp;zł</td>
-      <td></td>
+      <td>{{x.product.name}}</td>
+      <td class="text-right">{{x.product.price.toFixed(2)}}&nbsp;zł</td>
+      <td class="text-center">{{x.quantity}}</td>
       <td class="text-center">
-        <button class="btn btn-warning btn-sm">-</button>
+        <button class="btn btn-warning btn-sm" (click)="removeItem(x)">-</button>
       </td>
     </tr>
   </tbody>

@@ -4,11 +4,10 @@ import { MainComponent } from './main/main.component';
 import { ContainerComponent } from './layout/container/container.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { DishesComponent } from './features/products/dishes/dishes.component';
-import { DrinksComponent } from './features/products/drinks/drinks.component';
 import { MenuListComponent } from './features/lists/menu-list/menu-list.component';
 import { SelectedListComponent } from './features/lists/selected-list/selected-list.component';
-import { SelectedListService } from './features/lists/selected-list/selected-list.service';
+import { SelectedListService } from './features/services/selected-list.service';
+import { ProductsMenuComponent } from './features/products-menu/products-menu.component';
 
 
 @NgModule({
@@ -17,10 +16,9 @@ import { SelectedListService } from './features/lists/selected-list/selected-lis
     ContainerComponent,
     HeaderComponent,
     FooterComponent,
-    DishesComponent,
-    DrinksComponent,
     MenuListComponent,
     SelectedListComponent,
+    ProductsMenuComponent,
   ],
   imports: [
     BrowserModule

@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../products/models/product';
-import { SelectedListService } from './selected-list.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Product } from '../../models/product';
+import { SelectedListItem } from '../../models/selected-list-item';
 
 @Component({
   selector: 'app-selected-list',
@@ -8,13 +8,16 @@ import { SelectedListService } from './selected-list.service';
   styleUrls: ['./selected-list.component.css']
 })
 export class SelectedListComponent implements OnInit {
-  productService: Product[];
+  @Input() items: SelectedListItem[];
+  @Output() selectionEvent = new EventEmitter();
 
-  constructor(selectedService: SelectedListService) {
-    this.productService = selectedService.products;
+  constructor() {
   }
 
   ngOnInit() {
   }
 
+  removeItem(item: SelectedListItem) {
+    this.selectionEvent.emit(item);
+  }
 }

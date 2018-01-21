@@ -1,25 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Product } from '../../products/models/product';
-import { Output } from '@angular/core/src/metadata/directives';
-import { SelectedListService } from '../selected-list/selected-list.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-menu-list',
   templateUrl: './menu-list.component.html',
   styleUrls: ['./menu-list.component.css']
 })
-export class MenuListComponent implements OnInit {
+export class MenuListComponent {
   @Input() items: Product[];
-  selectedService: SelectedListService;
+  @Output() selectionEvent = new EventEmitter();
 
-  constructor(selectedService: SelectedListService) {
-    this.selectedService = selectedService;
-   }
-
-  ngOnInit() {
-  }
-
-  selectItem(item) {
-    this.selectedService.products.push(item);
+  selectItem(product: Product) {
+    this.selectionEvent.emit(product);
   }
 }
