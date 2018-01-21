@@ -1,5 +1,5 @@
-<table class="table table-sm">
-  <thead class="thead-dark">
+<table class="table table-sm" *ngIf="items.length > 0">
+  <thead class="bg-warning">
     <tr>
       <th scope="col" class="content-fit">L.p.</th>
       <th scope="col">Produkt</th>      
@@ -15,8 +15,11 @@
       <td class="text-right">{{x.product.price.toFixed(2)}}&nbsp;zł</td>
       <td class="text-center">{{x.quantity}}</td>
       <td class="text-center">
-        <button class="btn btn-warning btn-sm" (click)="removeItem(x)">-</button>
+        <button class="btn btn-warning btn-sm" (click)="removeItem(x.product)">-</button>
       </td>
+    </tr>
+    <tr class="table-warning">
+      <th colspan="3" class="text-right">Do zapłaty: {{totalPrice.toFixed(2)}}&nbsp;zł</th>
     </tr>
   </tbody>
 </table>

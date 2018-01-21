@@ -9,6 +9,7 @@ import { SelectedListItem } from '../../models/selected-list-item';
 })
 export class SelectedListComponent implements OnInit {
   @Input() items: SelectedListItem[];
+  @Input() totalPrice: number;
   @Output() selectionEvent = new EventEmitter();
 
   constructor() {
@@ -17,7 +18,7 @@ export class SelectedListComponent implements OnInit {
   ngOnInit() {
   }
 
-  removeItem(item: SelectedListItem) {
+  removeItem(item: Product) {
     this.selectionEvent.emit(item);
   }
 }

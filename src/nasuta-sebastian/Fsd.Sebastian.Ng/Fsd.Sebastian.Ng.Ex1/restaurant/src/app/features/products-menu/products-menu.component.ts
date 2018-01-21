@@ -11,6 +11,7 @@ import { SelectedListService } from '../services/selected-list.service';
 export class ProductsMenuComponent implements OnInit {
   dishes: Product[];
   drinks: Product[];
+  totalPrice: number;
 
   selectedProducts: SelectedListItem[];
 
@@ -41,15 +42,33 @@ export class ProductsMenuComponent implements OnInit {
     } else {
       select.quantity++;
     }
+
+    this.recalculateBill();
   }
 
   removeProduct(product: Product) {
-    alert('test');
+    const select = this.getSelectedProduct(product);
+
+    select.quantity--;
+
+    if (select.quantity === 0) {
+      this.selectedProducts.splice(this.selectedProducts.indexOf(select), 1);
+    }
+
+    this.recalculateBill();
   }
 
   getSelectedProduct(product: Product) {
-    const select = this.selectedProducts.find(item => item.product.name === product.name);
-    return select;
+    return this.selectedProducts.find(item => item.product.name === product.name);
+  }
+
+  recalculateBill() {
+    let sum = 0;
+    for (let i = 0; i < this.selectedProducts.length; i++) {
+      sum = sum + this.selectedProducts[i].product.price * this.selectedProducts[i].quantity;
+    }
+
+    this.totalPrice = sum;
   }
 
 }

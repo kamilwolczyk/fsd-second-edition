@@ -3,9 +3,9 @@
   <app-menu-list [items]="dishes" (selectionEvent)="selectProduct($event)"></app-menu-list>
 </div>
 
-<!-- <h3>Napoje:</h3>
+<h3>Napoje:</h3>
 <div>
   <app-menu-list [items]="drinks" (selectionEvent)="selectProduct($event)"></app-menu-list>
-</div> -->
+</div>
 
-<app-selected-list [items]="selectedProducts" (selectionEvent)="removeProduct($event)"></app-selected-list>
+<app-selected-list [items]="selectedProducts" [totalPrice]="totalPrice" (selectionEvent)="removeProduct($event)"></app-selected-list>
