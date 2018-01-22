@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../models/product';
 import { ProductChoice } from '../models/product-choice';
+import { ChoiceService } from '../services/choice.service';
 
 @Component({
   selector: 'app-restaurant-products-list',
@@ -11,13 +12,17 @@ export class RestaurantProductsListComponent {
 
   @Input() food: Product[];
   @Input() drinks: Product[];
+  @Input() products: Product[];
   @Input() choice: ProductChoice[];
-  @Output() someAction = new EventEmitter();
+  // @Output() someAction = new EventEmitter(); //rezygnacja z Emittera
+  choiceService: ChoiceService;
 
-  constructor() {}
+  constructor(choiceService: ChoiceService) {
+    this.choiceService = choiceService;
+  }
 
   addToOrder(product: Product) {
-    //alert ('działa');
-    this.someAction.emit(product);
+    // this.someAction.emit(product); //rezygnacja z Emittera
+    this.choiceService.addProductToOrder(product);
   }
 }

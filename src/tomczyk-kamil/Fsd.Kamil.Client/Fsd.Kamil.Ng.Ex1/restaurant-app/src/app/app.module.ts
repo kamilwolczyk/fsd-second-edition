@@ -7,7 +7,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { RestaurantProductsComponent } from './restaurant/restaurant-products/restaurant-products.component';
 import { RestaurantProductsListComponent } from './restaurant/restaurant-products-list/restaurant-products-list.component';
 import { ChoiceComponent } from './restaurant/choice/choice.component';
-import { ChoiceService } from './restaurant/choice/choice.service';
+import { ChoiceService } from './restaurant/services/choice.service';
+import { ProductService } from './restaurant/services/product.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { ChoiceService } from './restaurant/choice/choice.service';
   imports: [
     BrowserModule
   ],
-  providers: [ChoiceService],
+  providers: [ChoiceService, ProductService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

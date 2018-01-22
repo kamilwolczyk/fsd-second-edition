@@ -19,7 +19,7 @@
       <td>{{orderedProduct.price}} PLN</td>
       <td>{{orderedProduct.quantity}}</td> 
       <td>
-        <button class="btn btn-danger" (click)="deleteFromOrder(i)" *ngIf="orderedProduct.id">
+        <button class="btn btn-danger" (click)="deleteOrder(i)" *ngIf="orderedProduct.id">
           Usuń
         </button>
       </td>

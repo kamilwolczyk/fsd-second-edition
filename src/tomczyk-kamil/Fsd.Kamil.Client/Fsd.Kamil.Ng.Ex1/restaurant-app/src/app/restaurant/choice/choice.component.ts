@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ChoiceService } from './choice.service';
+import { Component, Input } from '@angular/core';
 import { ProductChoice } from '../models/product-choice';
+import { ChoiceService } from '../services/choice.service';
 
 @Component({
   selector: 'app-choice',
@@ -18,19 +18,9 @@ export class ChoiceComponent {
     this.choices = choiceService.choices;
   }
 
-  deleteFromOrder(id: number) {
-    if (this.choices[id].quantity === 1) {
-      this.choices.splice(id, 1); //całkowite usunięcie     
-    } 
-    else {
-      this.choices[id].quantity--; // zmniejszenie tylko ilości, bo mamy jeszcze coś w koszyku
-    }
-
-    this.summarizeAfterDeleting();
-  }
-
-  summarizeAfterDeleting() {
-    this.choiceService.summarizeOrder();
+  deleteOrder(id: number) {
+    // alert ('działa');
+    this.choiceService.deleteFromOrder(id);
   }
 
   // deleteFromOrder(id: number) {
