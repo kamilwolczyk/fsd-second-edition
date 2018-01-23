@@ -1,0 +1,22 @@
+<table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Cena</th>
+      <th>Wybierz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.details}}</td>
+      <td>{{p.price}} PLN</td>
+      <td>
+        <button class="btn btn-primary btn-circle.btn-lg" (click)="addToOrder(p)" *ngIf="p.id">+</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

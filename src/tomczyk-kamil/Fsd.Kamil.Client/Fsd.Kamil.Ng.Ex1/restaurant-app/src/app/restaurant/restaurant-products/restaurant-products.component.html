@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <button class="btn" [ngClass]="{'btn-success' : isTableShown,'btn-danger': !isTableShown}" (click)="changeTableVisibility()">{{statusText}}</button>
+  </div>
+    
+  <!-- <app-restaurant-products-list *ngIf="!isTableShown" 
+  [products]="food"     
+  (someAction)="addActionHasBeenDone($event)">
+  </app-restaurant-products-list> Zrezygnowałem z Emittera tutaj jednak, poszło do serwisu-->
+
+  <app-restaurant-products-list *ngIf="!isTableShown" 
+  [products]="food">
+  </app-restaurant-products-list>
+
+  <app-restaurant-products-list *ngIf="!isTableShown" 
+  [products]="drinks">
+  </app-restaurant-products-list>
+      
+  <app-choice></app-choice>
+</div>
