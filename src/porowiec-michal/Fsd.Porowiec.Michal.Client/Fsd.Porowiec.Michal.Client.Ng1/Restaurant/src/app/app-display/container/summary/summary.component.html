@@ -1,0 +1,23 @@
+<div class="row summary-container" *ngIf="orderedToDisplay.length > 0">
+  <table class="table table-bordered">
+      <thead>
+         <th>Nazwa</th>
+         <th>Opis</th>
+         <th>Cena</th>
+          <th>Ilość</th>
+          <th>Akcje</th>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let order of orderedToDisplay">
+            <td class="">{{order.name}}</td>
+            <td >{{order.description}}</td>
+            <td >{{order.price}} zł</td>
+            <td > {{order.displayCount()}} </td>
+            <td class="table-button"><button class="btn btn-danger" (click)="removeFromOrder(order)" >-</button></td>
+          </tr>
+        </tbody>
+    </table>
+    <div class="table-summary">
+        Całkowita suma: {{orderPrice}} zł
+    </div>
+</div>
