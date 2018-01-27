@@ -1,4 +1,6 @@
-﻿namespace Fsd.Pzpn.Crew.Api.Entities
+﻿using System.Collections.Generic;
+
+namespace Fsd.Pzpn.Crew.Api.Entities
 {
     public class Player
     {
@@ -9,5 +11,9 @@
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
+
+        public int Age { get; set; }
+
+        public ICollection<ClubPlayer> ClubPlayers { get; set; }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using Fsd.Pzpn.Crew.Api.Services;
 using Fsd.Pzpn.Crew.Services.Players;
 using Fsd.Pzpn.Crew.Services.Temp;
+using Fsd.Pzpn.Ef;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +22,9 @@ namespace Fsd.Pzpn.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<PzpnDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("PzpnDatabase")));
+
             services.AddMvc();
 
             services.AddTransient<IValuesService, ValuesService>();
