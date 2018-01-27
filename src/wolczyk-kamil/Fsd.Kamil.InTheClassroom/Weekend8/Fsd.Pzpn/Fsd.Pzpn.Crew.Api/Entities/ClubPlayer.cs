@@ -7,5 +7,9 @@
         public int PlayerId { get; set; }
 
         public int FootballClubId { get; set; }
+
+        public Player Player { get; set; }
+
+        public FootballClub FootballClub { get; set; }
     }
 }

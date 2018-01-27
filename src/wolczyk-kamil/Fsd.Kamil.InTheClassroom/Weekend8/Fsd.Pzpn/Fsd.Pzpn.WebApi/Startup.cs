@@ -1,4 +1,5 @@
 ﻿using Fsd.Pzpn.Crew.Api.Services;
+using Fsd.Pzpn.Crew.Services.Clubs;
 using Fsd.Pzpn.Crew.Services.Players;
 using Fsd.Pzpn.Crew.Services.Temp;
 using Fsd.Pzpn.Ef;
@@ -29,6 +30,7 @@ namespace Fsd.Pzpn.WebApi
 
             services.AddTransient<IValuesService, ValuesService>();
             services.AddTransient<IPlayersService, PlayersService>();
+            services.AddTransient<IClubsService, ClubsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

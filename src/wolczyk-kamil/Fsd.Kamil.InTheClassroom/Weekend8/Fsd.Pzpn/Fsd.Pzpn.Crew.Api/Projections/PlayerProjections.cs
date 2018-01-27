@@ -9,10 +9,10 @@ namespace Fsd.Pzpn.Crew.Api.Projections
         {
             return new PlayerSummaryDto
             {
-                //Id = player.Id,
+                Id = player.Id,
                 FirstName = player.FirstName,
                 LastName = player.LastName,
-                //Number = player.Number,
+                Number = player.Number,
             };
         }
     }

@@ -7,7 +7,5 @@ namespace Fsd.Pzpn.Crew.Api.Entities
         public int Id { get; set; }
 
         public string CoachName { get; set; }
-
-        public ICollection<ClubPlayer> ClubPlayers { get; set; }
     }
 }
