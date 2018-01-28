@@ -14,6 +14,11 @@ export class PlayersListComponent implements OnInit {
 
   ngOnInit() {
     this.players = this.playerService.players;
+    this.playerService.loadPlayers();
+  }
+
+  remove(player: Player) {
+    this.playerService.removePlayer(player);
   }
 
 }

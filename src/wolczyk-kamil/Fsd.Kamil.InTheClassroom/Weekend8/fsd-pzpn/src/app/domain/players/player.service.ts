@@ -1,17 +1,32 @@
 import { Injectable } from '@angular/core';
 import { Player } from './player';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PlayerService {
   players: Player[];
 
-  constructor() {
-    this.players = [
-      new Player(1, 'Jan', 'III Sobieski', 7),
-      new Player(2, 'Zygmunt', 'Stary', 9),
-      new Player(3, 'Kazimierz', 'Wielki', 1),
-      new Player(4, 'Mieszko', 'I', 4),
-    ];
+  constructor(private http: Http) {
+    this.players = [];
   }
 
+  loadPlayers() {
+    this.http.get('api/players')
+      .map(response => response.json())
+      .subscribe(data => {
+        data.forEach(element => {
+          this.players.push(element);
+        });
+      });
+  }
+
+  addNewPlayer(player: Player): void {
+    this.players.push(player);
+  }
+
+  removePlayer(player: Player): void {
+    const index = this.players.indexOf(player);
+    this.players = this.players.splice(index, 1);
+  }
 }
