@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { MainComponent } from './main/main.component';
 import { LayoutModule } from './layout/layout.module';
+import { PlayersModule } from './players/players.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { LayoutModule } from './layout/layout.module';
   ],
   imports: [
     BrowserModule,
-    LayoutModule
+    LayoutModule,
+    PlayersModule
   ],
   providers: [],
   bootstrap: [MainComponent]
