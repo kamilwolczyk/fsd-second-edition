@@ -11,14 +11,26 @@ export class PlayerService {
     this.players = [];
   }
 
-  loadPlayers() {
-    this.http.get('api/players')
-      .map(response => response.json())
+  loadPlayers(firstName?: string, lastName?: string, number?: number) {
+    this.clear();
+    this.http.get('api/players', {
+      params: {
+        firstName: firstName,
+        lastName: lastName,
+        number: number
+      }
+    }).map(response => response.json())
       .subscribe(data => {
         data.forEach(element => {
           this.players.push(element);
         });
       });
+  }
+
+  private clear() {
+    while (this.players.length > 0) {
+      this.players.pop();
+    }
   }
 
   addNewPlayer(player: Player): void {

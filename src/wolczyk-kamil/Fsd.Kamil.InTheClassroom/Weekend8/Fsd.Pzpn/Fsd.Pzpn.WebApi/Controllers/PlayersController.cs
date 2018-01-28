@@ -4,6 +4,7 @@ using Fsd.Pzpn.Crew.Api.Services;
 using Fsd.Pzpn.Crew.Api.Dtos;
 using System.Linq;
 using Fsd.Pzpn.Crew.Api.Projections;
+using Fsd.Pzpn.Crew.Api.Entities;
 
 namespace Fsd.Pzpn.WebApi.Controllers
 {
@@ -18,9 +19,11 @@ namespace Fsd.Pzpn.WebApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<PlayerSummaryDto> Get()
+        public IEnumerable<PlayerSummaryDto> Get(string firstName, string lastName, int? number)
         {
-            return _playersService.GetAll().Select(PlayerProjections.ToSummary);
+            return _playersService
+                .GetFiltered(firstName, lastName, number)
+                .Select(PlayerProjections.ToSummary);
         }
     }
 }
