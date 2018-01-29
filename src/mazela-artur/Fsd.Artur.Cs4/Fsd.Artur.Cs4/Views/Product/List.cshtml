@@ -1,0 +1,73 @@
+﻿@model ProductListModel
+
+@{
+    int pages = Model.Products.Count() / Model.Take;
+
+    if (Model.Products.Count() % Model.Take > 0)
+    {
+        pages = pages + 1;
+    }
+}
+@{ 
+    int forvariable;
+    if (Model.Skip * Model.Take > Model.Products.Count())
+    {
+        forvariable = Model.Products.Count();
+    }
+    else
+    {
+        forvariable = (Model.Skip * Model.Take);
+    }
+
+}
+<h3>Products</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Producer</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>ProductionDate</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (int i = ((Model.Skip-1)*Model.Take); i < forvariable ; i++)
+        {
+            ProductModel product = Model.Products.ElementAt(i);
+
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Producer</td>
+                <td>@product.Model</td>
+                <td>@product.Price zł</td>
+                <td>@product.Type</td>
+                <td>@product.ProductionDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td>
+                 <ul class="pagination">
+                     @for (int i = 1; i <= pages; i++)
+                      {
+                          <li>
+                              @Html.RouteLink(i.ToString(), "Product", new { page = i, items = Model.Take })
+                          </li>
+                     }
+                 </ul>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+
+</table>

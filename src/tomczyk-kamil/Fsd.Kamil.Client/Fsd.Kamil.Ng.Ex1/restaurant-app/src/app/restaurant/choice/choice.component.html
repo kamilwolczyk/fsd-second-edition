@@ -1,0 +1,30 @@
+<h4>Zamówione produkty</h4>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>L.p.</th>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Cena</th>
+      <th>Ilość</th>
+      <th>Usuń</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let orderedProduct of choices; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{orderedProduct.name}}</td>
+      <td>{{orderedProduct.details}}</td>
+      <td>{{orderedProduct.price}} PLN</td>
+      <td>{{orderedProduct.quantity}}</td> 
+      <td>
+        <button class="btn btn-danger" (click)="deleteOrder(i)" *ngIf="orderedProduct.id">
+          Usuń
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>Suma {{this.choiceService.total}} PLN</div>

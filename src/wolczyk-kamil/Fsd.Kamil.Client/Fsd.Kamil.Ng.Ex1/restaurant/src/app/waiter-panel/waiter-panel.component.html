@@ -1,0 +1,11 @@
+<section>
+  <h2>Dania:</h2>
+  <kw-product-list [configuration]="dishListConfig" (productSelectAction)="addProductToBasket($event)"></kw-product-list>
+
+  <h2>Napoje:</h2>
+  <kw-product-list [configuration]="drinkListConfig" (productSelectAction)="addProductToBasket($event)"></kw-product-list>
+</section>
+
+<section>
+  <kw-product-basket></kw-product-basket>
+</section>

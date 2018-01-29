@@ -1,0 +1,26 @@
+﻿@model Fsd.Arek.Cs.Ex4.Web.Models.ProductListModel
+
+<h2>Lista</h2>
+
+<table class="table">
+    <tr>
+        <th>Producer</th>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Date of production</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>@item.Producer</td>
+            <td>@item.Model</td>
+            <td>@item.Type</td>
+            <td>@item.DateOfProduction.ToShortDateString()</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
+
+

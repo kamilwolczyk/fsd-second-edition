@@ -1,0 +1,46 @@
+﻿1. sobota 16.12.2017
+a) Podstawy języka javascript. Dodawanie skryptów inline do strony html. Tworzenie
+skryptów JS
+- opowiedzieć po co jest js (idea i potrzeba języka programowania po stronie klienta)
+- cechy języka: skryptowy, niekompilowany, 1 wątkowy, bez typowania zmiennych, więcej dobrowolności ale przez to potrzeba większej kontroli przez developera
+- podstawowa operacja matematyczna w nodejs
+- zmienne: słowo kluczowe 'var'
+- puty zmiennych: number, string, boolean, undefined, null, object
+- warunki, pętle, operatory logiczne i arytmetyczne
+- najprostsza komunikacja: console.log(), console.error(), alert(), confirm(), prompt()
+- funkcje: zwykła nazwana, zakres zmiennych, hoisting, anonimowa, natychmiastowa
+- dodawanie skryptów do dokumentu html, wyjaśnienie co i kiedy się przetwarza
+- obiekty złożone (new Object())
+b) Obiektowość w javascript. Wzorzec prototype
+- obiekt window, document, location, history
+- możliwość tworzenia obiektów, gdzie się tworzą?
+- zapis literałowy tworzenia obiektów
+- enkapsulacja - po co to jest, wzorzec module pattern
+- klasy
+c) Asynchroniczność i drzewo DOM
+- callback na przykładzie timeout/interval
+- wyjaśnienie pętli zdarzeń (infinite event loop)
+- manipulowanie drzewem DOM: getElementById itp, innerHTML, innerText,
+- zadanie "zegarek"
+- zdarzenia w przeglądarce (onclick, onload, onchange), dodać licznik kliknięć. Rejestrowanie w przeglądarce i w skrypcie
+- zadanie "logger kliknięcia"
+d) Pobre praktyki tworzenia apikacji js
+- prezentacja wzorców JS
+- wykonanie zadań: "zegarek" i "logger kliknięcia"
+
+2. Niedziela 17.12.2017
+a) Biblioteka jQuery
+- dołączenie biblioteki do aplikacji
+- zdarzenia i callbacki
+- pobieranie elementów
+- manipulacja drzewem DOM
+b) Pobieranie danych z serwera http
+- zapytanie get i post. Odbieranie json
+- ćwiczenie z uzupełnieniem zawartości strony Client.Ex1 (dociąganie content.html poprzez get)
+c) komponenty javascript biblioteki bootstrap
+- ćwiczenie użycia gotowych kontrolek biblioteki bootstrap
+d) Nowe funkcje standardu HTML5
+- web storage
+- canvas
+- web socket
+- web worker

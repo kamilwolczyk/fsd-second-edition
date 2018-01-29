@@ -1,0 +1,43 @@
+﻿@model PagedListModel
+@{
+    ViewBag.Title = "Products";
+}
+@section PageTitle { List of products }
+
+<table class="table">
+        <thead class="h4">
+            <tr>
+                <th>Producer</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Production date</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Producer</td>
+                    <td>@product.Model</td>
+                    <td>&pound@(product.Price)</td>
+                    <td>@product.Date.ToShortDateString()</td>
+                    <td>@product.Type</td>
+                    <td>@Html.ActionLink("details", "details", new { producer = product.Producer, model = product.Model })</td>
+                </tr>
+            }
+        </tbody>
+</table>
+
+<div>@Html.ActionLink("Add new product", "Add")</div>
+
+<div>
+    @Html.PagedListPager((IPagedList)Model.Products, page => Url.Action("Products", "Products", new { page, items = Model.Products.PageSize }), PagedListRenderOptions.Classic)
+</div>
+<div>
+    Items on page:
+    @Html.ActionLink("5", "Products", new { page = 1, items = 5 }) |
+    @Html.ActionLink("10", "Products", new { page = 1, items = 10 }) |
+    @Html.ActionLink($"ALL ({Model.Products.TotalItemCount})", "Products", new { page = 1, items = Model.Products.TotalItemCount })
+</div>

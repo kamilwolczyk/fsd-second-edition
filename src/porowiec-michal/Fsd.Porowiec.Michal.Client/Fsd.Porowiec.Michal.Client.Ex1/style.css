@@ -1,0 +1,82 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: yellow;
+}
+a {
+    text-decoration: none; 
+    color: black;
+    width: 100%;
+}
+h3 {
+    margin: 0px;
+}
+.site-wrapper {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    width: 70%;
+    -webkit-box-shadow: 4px 15px 64px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 15px 64px -15px rgba(0,0,0,0.75);
+    box-shadow: 4px 15px 64px -15px rgba(0,0,0,0.75);
+    height: 100%;
+    margin: 0 auto;
+}
+.header {
+    position: relative; 
+}
+.navbar {
+    background-color: red;
+}
+.navbar-image {
+    width: 100%;
+    height: auto;
+}
+.navbar-higher-container-content {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.navbar-higher-container-content-title {
+    display: inline-block;
+    color: white;
+}
+.navbar-higher-container-content-title-hi {
+    color: yellow;
+}
+.navbar-buttons-wrapper {
+    margin: 0px;
+    height: 20%;
+}
+.navbar-button {
+    color: yellow;
+    display: inline-block;
+    border: 0px;
+    text-align: center;
+    width: 30%;
+    line-height: 32px;
+    height: 32px;
+    margin-left: 1%;
+}
+.navbar-button:first-of-type {
+    margin-left: 3.5%;
+}
+.page {
+    height: 600px;
+    background-color: #bbbbbb;
+}
+.page-content {
+    margin-left: 5%;
+}
+.footer-container {
+    position: relative;
+}
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;  
+    background-color: black;
+}

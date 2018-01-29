@@ -1,0 +1,14 @@
+<div>
+  <h2>Uczestnicy drugiej edycji code school {{members.length}}</h2>
+
+  <div>
+    <button class="btn" [ngClass]="{'btn-danger': isTableShown, 'btn-success' : !isTableShown}" (click)="toggleTable()">{{toggleButtonText}}</button>
+  </div>
+
+  <app-code-school-members-list *ngIf="isTableShown" 
+  [items]="members"
+  (someAction)="someActionHasBeenTriggered($event)">
+  </app-code-school-members-list>
+
+  <app-logger></app-logger>
+</div>

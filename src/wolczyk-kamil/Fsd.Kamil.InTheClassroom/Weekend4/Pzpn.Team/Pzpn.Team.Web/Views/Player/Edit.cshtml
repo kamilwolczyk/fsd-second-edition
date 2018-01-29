@@ -1,0 +1,44 @@
+﻿@model PlayerModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edytuj zawodnika</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div class="row">
+        <div class="col-xs-6">Numer</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.Number)
+            @Html.ValidationMessageFor(model => model.Number)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">Imię</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">Nazwisko</div>
+        <div class="col-xs-6">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+    </div>
+
+    <input type="submit" value="Wyślij"/>
+}
+
+
+
+@section ViewName{
+    Edit.cshtml
+}

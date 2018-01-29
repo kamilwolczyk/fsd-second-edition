@@ -1,0 +1,68 @@
+﻿@model ProductModel
+  
+@{
+    ViewBag.Title = "Product Add";
+}
+
+<p><br /><br />
+    <a href="../home" class="btn btn-info" role="button">Powrót do strony głównej&raquo;</a>
+    <a href="../list" class="btn btn-info" role="button">Powrót do listy produktów&raquo;</a>
+</p>
+
+@if (Model.ProductAddFailed)
+    {
+        <div class="alert alert-danger" role="alert">
+            Produkt już istnieje w bazie
+        </div>
+    }
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-xs-4">Producent</div>
+        <div class="col-xs-4">
+            @Html.EditorFor(model => model.Producer)
+            @Html.ValidationMessageFor(model => model.Producer, "" , new { @style = "color:red" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">Model</div>
+        <div class="col-xs-4">
+            @Html.EditorFor(model => model.Model)
+            @Html.ValidationMessageFor(model => model.Model, "" , new { @style = "color:red" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">Cena</div>
+        <div class="col-xs-4">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price, "" , new { @style = "color:red" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">Data produkcji</div>
+        <div class="col-xs-4">
+            @Html.TextBoxFor(model => model.ProductionDate, new { @Value = @DateTime.Now.ToString("yyyy-MM-dd") })
+            @Html.ValidationMessageFor(model => model.ProductionDate, "" , new { @style = "color:red" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-4">Typ</div>
+        <div class="col-xs-4">
+            @Html.EnumDropDownListFor(model => model.Type)
+            @Html.ValidationMessageFor(model => model.Type, "", new { @style = "color:red" })                
+        </div>
+    </div>
+
+    <div class="row"><br />
+        <div class="col-sm-12"><input type="submit" value="Dodaj" class="btn btn-default" /></div>
+    </div>
+}
+
+@section PageTitle{
+    <h2><span style="color: crimson">Dodaj produkt</span></h2>
+}

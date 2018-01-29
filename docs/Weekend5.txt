@@ -1,0 +1,51 @@
+﻿1. sobota 02.12.2017
+a) Entity framework
+ - wyjaśnić po co entity framework - co to jest i jakie ma zastosowanie
+ - zainstalować entity framework poprzez nuget package manager
+ - utworzyć connection string w aplikacji
+ - dodać kontekst bazy danych - DbContext oraz DbSet wskazujące na tabele
+ - pobranie danych poprzez entity framework
+b) Mechanizm code first w Entity Framework
+ - modyfikować encje w aplikacji
+ - wygenerować migrację poprzez komendę 'add-migration'
+ - zaktualizować bazę danych poprzez komendę 'update-database'
+ - ćwiczenie pobierania i zapisywania danych z użyciem DbContext oraz DbSet<TEntity>. Użycie metody SaveChanges()
+c) HTML - podstawy
+ - opowiedzieć o odpowiedzi tekstowej z serwera
+ - wyjaśnić jak działa html, css, javascript
+ - jak działa przeglądarka - tworzenie drzewa DOM
+ - struktura dokumentu html: head i body
+ - html5 - nowe elementy w strukturze: header, footer, nav, section, aside
+d) Css - podstawy
+ - rodzaje selektorów css: a) znacznik html  b) id, klasa  c) potomek d) atrubytut  
+ - zasady kaskadowych arkuszy styli
+ - nadawanie elementom stylu: kolor, wielkość, obramowanie
+ - model pudełka: margin, border, padding, width
+ - pozycjonowanie: static, relative, absolute, fixed
+ - sposób wyświetlenia: block, inline itp
+ - ćwiczenie na pozycjonowanie elementów
+
+2. Niedziela 03.12.2017
+a) biblioteka bootstrap
+ - instalacja visual studio code, node z narzędziem npm
+ - ogólna charakterystyka, wyjaśnienie RWD
+ - dołączenie biblioteki bootstrap do aplikacji poprzez CDN
+ - dołączenie biblioteki poprzez NPM
+ - komponenty: przyciski, panele, tła, chcionki, nagłówki
+ - ćwiczenie wyświetlenia komponentów na stronie
+b) grid system w Bootstrap
+ - omówienie 12 kolumnowego układu
+ - ćwiczenie z tworzenia układów w oparciu o kolumny: container, fluid-container
+ - ćwiczenie z łączeniem komórek, zawieraniem row w cell, offset itp
+ - wykonanie kilku komponentów na stronie: przyciski z ikonami, panele, kontenery z tłem
+c) preprocesory css: less i sass
+ - omówienie potrzeby stosowania preprocesorów
+ - sass: variables, mixins, import
+ - ćwiczenie z użycia sass - wykonanie kilku plików scss (variables, global, site1, site2) i kompilacja przez dodatek visual studio code
+d) Web API
+ - wyjaśnić po co jest api - mechanizm SinglePageApp
+ - dodać kontroler api do aplikacji
+ - stworzyć prostą metodę zwracającą obiekt listy zespołów w API
+ - skonfigurować routing webapi w aplikacji mvc
+ - skonfigurować kontener DI (AutoFac) aby działał w ApiControlerze 
+

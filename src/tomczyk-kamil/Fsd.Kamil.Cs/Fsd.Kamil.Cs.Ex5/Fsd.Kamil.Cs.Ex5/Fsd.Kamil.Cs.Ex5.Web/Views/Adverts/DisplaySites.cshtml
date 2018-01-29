@@ -1,0 +1,11 @@
+﻿@model AdvertSites
+
+<div>
+    <h2>Sprawdź naszych partnerów!</h2>
+
+    @foreach (string sites in Model.Sites)
+    {
+        <iframe src=@sites></iframe>
+    }
+    
+</div>

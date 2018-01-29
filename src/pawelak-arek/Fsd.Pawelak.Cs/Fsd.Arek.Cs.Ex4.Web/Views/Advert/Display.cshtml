@@ -1,0 +1,11 @@
+﻿@model Fsd.Arek.Cs.Ex4.Web.Models.AdvertListModel
+
+
+
+<ul class="table">
+    <h4>Reklamy</h4>
+    @foreach(var adverts in Model.Adverts)
+    {
+        <li>@adverts.Name</li>
+    }
+</ul>

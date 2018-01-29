@@ -1,0 +1,33 @@
+﻿@model ProductListModel
+<table class="table">
+    <thead>
+        <tr>
+            <td>L.p</td>
+            <td>Producent</td>
+            <td>Model</td>
+            <td>Cena</td>
+            <td>Data Produkcji</td>
+            <td>Typ</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductModel product in Model.Products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Producer</td>
+                <td>@product.Model</td>
+                <td>@product.Price </td>
+                <td>@product.ProductionData.ToString("dd.MM.yyyy") </td>
+                <td>@product.Type</td>
+                <td>@Html.ActionLink("szczegóły", "details", new { id = product.Id})</td>
+                <td>@Html.ActionLink("edytuj", "edit", new { id = product.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Dodaj Produkt", "add")
+
+@section PageTitle{
+    A o to nasze Produkty
+}

@@ -1,0 +1,26 @@
+﻿@model int
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-9" style="background-color:lavenderblush;">
+        <h1><span style="color:darkblue;font-weight:bold">M</span><span style="color:coral;font-weight:bold">I</span><span style="color:green;font-weight:bold">N</span><span style="color:gold;font-weight:bold">I</span> <span style="color:dimgrey;font-weight:bold">M</span><span style="color:tomato;font-weight:bold">A</span><span style="color:darkcyan;font-weight:bold">R</span><span style="color:crimson;font-weight:bold">K</span><span style="color:darkorange;font-weight:bold">E</span><span style="color:blue;font-weight:bold">T</span></h1>
+        <h2>Witaj w naszym sklepie!</h2>
+        <p class="lead">Dajemy Ci najlepsze produkty w przystępnej cenie.</p>
+        <p class="lead">Mamy aż @Model produktów! Super hity! Super jakość!</p>
+        <p class="lead"></p>
+        <p>
+            <a href="../list" class="btn btn-primary btn-lg">Produkty&raquo;</a>
+            <a href="../add" class="btn btn-warning btn-lg">Dodaj&raquo;</a>
+            <a href="../about" class="btn btn-success btn-lg">O mnie&raquo;</a>
+        </p>
+    </div>
+    <div class="col-sm-3"><br />
+        @Html.Action("Logo", "Site")
+    </div>
+</div>
+
+@section PageTitle{
+    <h2><span style="color: crimson">Strona główna</span></h2>
+}

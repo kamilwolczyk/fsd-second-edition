@@ -1,0 +1,49 @@
+﻿@model Fsd.Porowiec.Michal.Cs4.Models.ProductModel
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div>
+        @Html.EditorFor(model => model.Model)
+        @Html.ValidationMessageFor(model => model.Model)
+        <div class="col-sm-2">@Html.LabelForModel("Model:")</div>
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Producer)
+        @Html.ValidationMessageFor(model => model.Producer)
+        <div class="col-sm-2">@Html.LabelForModel("Producent:")</div>
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Price)
+        @Html.ValidationMessageFor(model => model.Price)
+        <div class="col-sm-2">@Html.LabelForModel("Cena:")</div>
+    </div>
+    <div>
+        @Html.EditorFor(model => model.DateOfProduction)
+        @Html.ValidationMessageFor(model => model.DateOfProduction)
+        <div class="col-sm-2">@Html.LabelForModel("Data Produkcji:")</div>
+    </div>
+    <div>
+        <select>
+            <option value="Food">Jedzenie</option>
+            <option value="Machine">Maszyna</option>
+            <option value="BuildingMaterial">MateriałBudowlany</option>
+            <option value="Making">Codziennego Użytku</option>
+        </select>
+        @Html.ValidationMessageFor(model => model.Type)
+        <div class="col-sm-2">@Html.LabelForModel("Typ:")</div>
+    </div>
+
+    <input type="submit" />
+}
+
+<hr />
+<div class="row">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-6">
+        @Html.Action("Display", "Adverts")
+    </div>
+</div>

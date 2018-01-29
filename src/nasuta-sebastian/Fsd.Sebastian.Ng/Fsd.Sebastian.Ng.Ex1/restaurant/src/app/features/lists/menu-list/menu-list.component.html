@@ -1,0 +1,22 @@
+<table class="table table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" class="content-fit">L.p.</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Opis</th>
+      <th scope="col" class="text-center content-fit">Cena</th>
+      <th scope="col" class="content-fit">Akcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of items; let i=index">
+      <th class="text-center">{{i+1}}</th>
+      <td>{{x.name}}</td>
+      <td>{{x.description}}</td>
+      <td>{{x.price.toFixed(2)}}&nbsp;zł</td>
+      <td class="text-center">
+        <button class="btn btn-warning btn-sm" (click)="selectItem(x)">+</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

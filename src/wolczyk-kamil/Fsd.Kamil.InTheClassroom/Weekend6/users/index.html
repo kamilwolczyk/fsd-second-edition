@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="http://www.atlasestateagents.co.uk/css/tether.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="alert-container"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <form id="user-form">
+                    <div class="form-group">
+                        <label>Imię</label>
+                        <input type="text" id="first-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Nazwisko</label>
+                        <input type="text" id="last-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Wyślij</button>
+                    <button type="reset" class="btn btn-warning">Wyczyść</button>
+                </form>
+
+                <button id="hide">Ukryj</button>
+                <button id="show">Pokaż</button>
+                
+            </div>
+            <div class="col-8">
+                <table class="table" id="user-grid">
+                    <thead>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="domain.js"></script>
+    <script src="grid.js"></script>
+    <script src="alert-manager.js"></script>
+    <script src="user-grid.js"></script>
+    <script src="user-editor.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

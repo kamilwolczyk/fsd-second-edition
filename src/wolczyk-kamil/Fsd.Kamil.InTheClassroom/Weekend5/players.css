@@ -1,0 +1,7 @@
+body {
+  font-family: 'Gloria Hallelujah', cursive; }
+
+.cell {
+  background: silver;
+  border: solid 1px black;
+  height: 100px; }

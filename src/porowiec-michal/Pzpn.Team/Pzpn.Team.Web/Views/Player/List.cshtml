@@ -1,0 +1,34 @@
+﻿@model PlayerListModel
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Kadra</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(PlayerModel player in Model.Players)
+        {
+            <tr>
+                <td>@player.Number</td>
+                <td>@player.FirstName</td>
+                <td>@player.LastName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section SiteName{
+
+}
+
+@section ViewName{
+    To jest List Screen
+}

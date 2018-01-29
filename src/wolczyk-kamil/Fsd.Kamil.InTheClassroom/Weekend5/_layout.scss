@@ -1,0 +1,57 @@
+@import 'theme';
+
+@mixin asideColumn($backgroundColor, $width){
+  width: $width;
+  background: $backgroundColor; 
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    width: $fullWidth;
+    height: 100%;
+  }
+  
+  header{
+    height: $headerHeight;
+    background-color: green;
+  }
+  
+  header h1{
+    line-height: $headerHeight;
+    margin: 0;
+    padding: 0 20px;
+  }
+  
+  .content{
+    height: calc(100% - #{$headerHeight} - #{$footerHeight});
+    width: $fullWidth;
+  }
+  
+  .left-floated{
+    float: left;
+    height: $fullWidth;
+  }
+  
+  .left{
+    @include asideColumn(#d2dbd0, $columnWidth);
+  }
+  
+  .center{
+    width: calc(100% - #{$columnWidth} - #{$columnWidth});
+  }
+  
+  .right{
+    @include asideColumn(#d2dbd0, $columnWidth);
+  }
+  
+  footer{
+    background-color: $footerBackgroundColor;
+    color: $footerTextColor;
+    position: absolute;
+    bottom: 0;
+    width: $fullWidth;
+    height: $footerHeight;
+    text-align: center;
+  }
+  

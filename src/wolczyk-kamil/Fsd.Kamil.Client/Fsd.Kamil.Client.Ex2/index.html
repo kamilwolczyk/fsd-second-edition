@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <button id="start-button" class="vertical-center" onClick="app.start()">Rozpocznij quiz</button>
+    
+    <div id="question-container" style="display: none;">
+      <h2 id="question-number"></h2>
+      <h3 id="question-text"></h2>
+      <div id="answers-container"></div>
+      <button id="next-button" onClick="quiz.nextQuestion()">Next</button>
+      <button id="next-button" style="display: none;">End</button>
+    </div>
+
+    <div id="result-container" style="display: none;">
+      Uzyskałeś <span id="result"></span> punktów.
+      <button onClick="app.start()">Jeszcze raz</button>
+    </div>
+
+    <script type="text/javascript" src="questionaireAsync.js"></script>
+    <script type="text/javascript" src="quiz-ui.js"></script>    
+    <script type="text/javascript" src="quiz.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

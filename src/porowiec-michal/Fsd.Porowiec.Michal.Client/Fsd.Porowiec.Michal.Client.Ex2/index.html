@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Michal Porowiec's Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="site-hidder" class="site-hidder">
+        <img class="site-hidder-loading" src="img/loading-screen.gif" alt="loading-screen">
+    </div>
+    <section id="quiz-question">
+        <section id="quiz-text-section" class="quiz-text-section">
+            <h2 id="quiz-header" class="quiz-header quiz-text">Question 0/x</h2>
+            <h2 id="quiz-text" class="quiz-text">QuestionInside</h2>    
+        </section>
+        <section id="quiz-answer-section" class="quiz-answer-section">
+            <div id="quiz-answer1" class="quiz-answer">Answer 1</div>
+            <div id="quiz-answer2" class="quiz-answer">Answer 2</div>
+            <div id="quiz-answer3" class="quiz-answer">Answer 3</div>
+            <div id="quiz-answer4" class="quiz-answer">Answer 4</div>
+            <a id="quiz-answer-button" class="quiz-answer-button">Next</a>
+        </section>
+    </section>
+    <section id="quiz-summary" class="quiz-summary">
+        <h2 class="summary-text">Congratulations!</h2>
+        <h2 id="score-input" class="summary-text"></h2>
+    </section>
+    <script src="scripts/helpers.js"></script>
+    <script src="scripts/questionGetter.js"></script>
+    <script src="scripts/questionDisplay.js"></script>
+    <script src="scripts/questionCounter.js"></script>
+    <script src="scripts/visualSiteChanges.js"></script>
+    <script src="scripts/questionManager.js"></script>
+    <script src="scripts/questionAsync.js"></script>
+</body>
+</html>

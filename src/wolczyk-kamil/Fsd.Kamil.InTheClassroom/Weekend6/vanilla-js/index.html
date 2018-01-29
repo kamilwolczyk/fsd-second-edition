@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="main-header">
+        Kamil Wołczyk
+    </header>
+    <section id="timer">
+        <span id="hours"></span>
+        <span class="separator">:</span>
+        <span id="minutes"></span>
+        <span class="separator">:</span>
+        <span id="seconds"></span>
+    </section>
+
+    <!-- <div id="box" onclick="boxClickEventHandler()"></div> -->
+    <section id="gates">
+        <div class="gate green" id="gate-1" data-count="0">
+            <h1>1</h1>
+            <span>0</span>
+        </div>
+        <div class="gate yellow" id="gate-2" data-count="0">
+            <h1>2</h1>
+            <span>0</span>
+        </div>
+        <div class="gate red" id="gate-3" data-count="0">
+            <h1>3</h1>
+            <span>0</span>
+        </div>
+        
+        <div class="gate" id="gate-4" data-count="0">
+                <h1>4</h1>
+                <span>0</span>
+            </div>
+    </section>
+
+
+    <ul id="log"></ul>
+
+    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="helpers.js"></script>
+    <script type="text/javascript" src="log.js"></script>
+    <script type="text/javascript" src="clock.js"></script>
+    <script type="text/javascript" src="counter.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

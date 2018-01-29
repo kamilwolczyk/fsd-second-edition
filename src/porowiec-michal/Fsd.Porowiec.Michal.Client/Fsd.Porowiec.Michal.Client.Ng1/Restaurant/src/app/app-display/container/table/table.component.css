@@ -1,0 +1,15 @@
+.table-component {
+    text-align: center;
+}
+.table-name {
+    width: 20%;
+}
+.table-description {
+    width: 45%;
+}
+.table-price {
+    width: 15%;
+}
+.table-button {
+    width: 15%;
+}

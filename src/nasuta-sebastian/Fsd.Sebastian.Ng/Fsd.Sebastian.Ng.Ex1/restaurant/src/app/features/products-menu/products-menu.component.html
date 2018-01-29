@@ -1,0 +1,11 @@
+<h3>Dania:</h3>
+<div>
+  <app-menu-list [items]="dishes" (selectionEvent)="selectProduct($event)"></app-menu-list>
+</div>
+
+<h3>Napoje:</h3>
+<div>
+  <app-menu-list [items]="drinks" (selectionEvent)="selectProduct($event)"></app-menu-list>
+</div>
+
+<app-selected-list [items]="selectedProducts" [totalPrice]="menuManager.totalPrice" (selectionEvent)="unselectProduct($event)"></app-selected-list>
