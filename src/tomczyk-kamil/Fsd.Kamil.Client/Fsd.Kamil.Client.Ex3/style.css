@@ -1,0 +1,86 @@
+html, body { height: 100%; }
+
+h4{
+    display: flex;
+    float: left;
+}
+
+header{
+    background: rgba(64, 112, 145, 0.932); 
+    height: 25px;}
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.87) }
+
+#main-page {
+    font-family: Calibri;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex; }
+
+#color-options {
+    border-right: dashed 1px gray;
+    width: 50%;
+    flex: none;
+    width: 50%;
+    height: 100%; 
+    border-right : 1px dashed black; }
+
+ #color-choice {
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+    padding: 20px;
+    border: solid 2px black;
+    width: 10%; 
+    height: 50%; }
+
+.square {
+    display: inline-block;
+    border: solid 1px black;
+    width: 200px;
+    height: 200px;
+    margin: 1px;
+    padding: 1px; }
+
+#selected-color{
+    height: 30px; 
+    border:1px outset black; }
+
+.selected {
+    box-shadow: 3px 3px; }
+
+.red {
+    background-color: rgb(175, 34, 34); }
+
+.blue {
+    background-color: rgb(37, 37, 192); }
+
+.green {
+    background-color: green; }
+
+.pink {
+    background-color: rgb(201, 79, 102); }
+
+.yellow {
+    background-color: rgb(228, 228, 18); }
+
+.red:hover {
+    box-shadow: 3px 3px; }
+
+.blue:hover {
+    box-shadow: 3px 3px; }
+
+.green:hover {
+    box-shadow: 3px 3px; }
+
+.pink:hover {
+    box-shadow: 3px 3px; }
+
+.yellow:hover {
+    box-shadow: 3px 3px; }
