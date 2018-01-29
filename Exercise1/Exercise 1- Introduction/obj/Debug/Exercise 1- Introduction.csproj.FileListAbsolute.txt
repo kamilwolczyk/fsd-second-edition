@@ -1,7 +1,0 @@
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\bin\Debug\Exercise 1- Introduction.exe.config
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\bin\Debug\Exercise 1- Introduction.exe
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\bin\Debug\Exercise 1- Introduction.pdb
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\obj\Debug\Exercise 1- Introduction.csproj.CoreCompileInputs.cache
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\obj\Debug\Exercise 1- Introduction.exe
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\obj\Debug\Exercise 1- Introduction.pdb
-C:\Users\Matthias\Desktop\Exercise 1- Introduction\Exercise 1- Introduction\obj\Debug\Exercise 1- Introduction.csprojResolveAssemblyReference.cache
