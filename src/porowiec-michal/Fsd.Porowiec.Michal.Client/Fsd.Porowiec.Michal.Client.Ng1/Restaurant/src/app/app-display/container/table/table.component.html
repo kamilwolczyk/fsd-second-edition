@@ -1,0 +1,19 @@
+<div class="row table-component">
+  <h2>{{tableInfo.tableName}}</h2>
+  <table class="table table-bordered">
+    <thead>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Cena</th>
+      <th>Akcje</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let table of tablePositions">
+        <td class="table-name">{{table.name}}</td>
+        <td class="table-description">{{table.description}}</td>
+        <td class="table-price">{{table.price}} zł</td>
+        <td class="table-button"><button class="btn btn-success" (click)="AddToOrder(table)" >+</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
