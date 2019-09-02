@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/tether/dist/css/tether.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <div class="col-12 text-center margin">
+                <h1 id="number-question"></h1>
+            </div>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col-12 text-center margin">
+                    <h4 id="question"></h4>
+                </div>
+            </div>
+            <div>
+                <div class="row margin">
+                    <div class="offset-2 col-4">
+                        <button type="button" class="btn btn-primary answer"></button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-primary answer"></button>
+                    </div>
+                </div>
+                <div class="row margin">
+                    <div class="offset-2 col-4">
+                        <button type="button" class="btn btn-primary answer"></button>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-primary answer"></button>
+                    </div>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="offset-4 col-4">
+                        <button type="button" class="btn btn-primary" id="next-question">NEXT</button>
+                </div>
+            </div>
+        </section>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/tether/dist/js/tether.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="script/question.js"></script>
+        <script src="script/mapping.js"></script>
+        <script src="script/apiController.js"></script>
+        <script src="script/helpers.js"></script>
+        <script src="script/userrInterface.js"></script>
+        <script src="script/service.js"></script>
+        <script src="script/answerController.js"></script>
+        <script src="script/app.js"></script>
+    </div>
+</body>
+</html>

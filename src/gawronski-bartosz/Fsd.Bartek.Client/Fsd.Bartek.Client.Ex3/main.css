@@ -1,0 +1,31 @@
+.squre{
+    cursor: pointer;
+    margin:10px;
+    height:210px;
+    width:210px;
+    border: 2px solid #000;
+}
+.pause{
+    height:20px;
+}
+.picker{
+    margin:10px;
+    border: 2px solid #000;
+    height:100%;
+}
+.squres{
+
+    width: 80%;
+    position:relative;
+    float:left;
+    display:flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.pickers{
+    position: relative;
+    height:400px;
+    float: right;
+    width:17%;
+}
