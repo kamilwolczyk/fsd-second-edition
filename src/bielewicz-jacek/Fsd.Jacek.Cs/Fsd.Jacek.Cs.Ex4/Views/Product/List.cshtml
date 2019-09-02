@@ -1,0 +1,56 @@
+﻿@using Fsd.Jacek.Cs.Ex4.Models.Pageable;
+@using Fsd.Jacek.Cs.Ex4.Models;
+@using Fsd.Jacek.Cs.Ex4.Data;
+@model DataPart<ProductModel>
+@{
+    int pages = Model.TotalCount / Model.Take;
+
+    if (Model.TotalCount % Model.Take > 0)
+    {
+        pages = pages + 1;
+    }
+}
+<h2>Available products</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Manufacterer</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Production date</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ProductModel product in Model.Items)
+        {
+            <tr>
+                <td>@product.Manufacterer</td>
+                <td>@product.Model</td>
+                <td>@product.Price zł</td>
+                <td>@product.ProductionDate.ToShortDateString()</td>
+                <td>@product.Type</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan= "4">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= pages; i++)
+                        {
+                            <li>
+                                @Html.RouteLink(i.ToString(), "Product", new { items = Model.Items, page = i })
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </td>
+            <td>Total items: @Model.TotalCount</td>
+        </tr>
+    </tfoot>
+</table>
+
+
